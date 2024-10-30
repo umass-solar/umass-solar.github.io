@@ -17,18 +17,6 @@ mo2:
   image: /img/people/mohammad.jpg
   webpage: https://groups.cs.umass.edu/hajiesmaili/
 
-jinhang:
-  display_name: Jinhang Zuo
-  image: /img/people/jinhang.jpeg
-  role: staff
-  bio: PhD from CMU, joint UMass-Caltech postdoc <br> (co-advised with Adam Wierman)
-  webpage: https://jhzuo.github.io/
-  
-jinhang2:
-  display_name: Jinhang Zuo
-  image: /img/people/jinhang.jpeg
-  webpage: https://jhzuo.github.io/
-
 xutong:
   display_name: Xutong Liu
   image: /img/xutong.jpg
@@ -229,6 +217,18 @@ fatemeh2:
 
 
 # Alumni
+
+jinhang:
+  display_name: Jinhang Zuo
+  image: /img/people/jinhang.jpeg
+  role: alum
+  bio: "joint UMass-Caltech postdoc with Adam Wierman <br> next: Assistant Professor, City University of Hong Kong"
+  webpage: https://jhzuo.github.io/
+  
+jinhang2:
+  display_name: Jinhang Zuo
+  image: /img/people/jinhang.jpeg
+  webpage: https://jhzuo.github.io/
 
 lin:
   display_name: Lin Yang (Postdoc, 2020-2022)
