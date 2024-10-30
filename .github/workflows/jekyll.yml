@@ -51,9 +51,9 @@ jobs:
       - name: Install PurgeCSS
         run: |
           npm install -g purgecss
-      - name: Compress CSS with PurgeCSS
-        run: |
-          purgecss --config purgecss.config.js
+      # - name: Compress CSS with PurgeCSS
+      #   run: |
+      #     purgecss --config purgecss.config.js
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v1
