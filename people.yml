@@ -1,0 +1,283 @@
+# Defines the structure for "people" sections on the site
+# images should be stored under /assets/people/
+# To make an image not show on the homepage (which is a smaller section)
+# set alum=false
+
+# To order alphabetically by last name, currently you need to insert the people's information into a proper location in the list
+
+mo:
+  display_name: Mohammad Hajiesmaili
+  image: /img/people/mohammad.jpg
+  role: faculty
+  bio: Assistant Professor
+  webpage: https://groups.cs.umass.edu/hajiesmaili/
+  
+mo2:
+  display_name: Mohammad Hajiesmaili
+  image: /img/people/mohammad.jpg
+  webpage: https://groups.cs.umass.edu/hajiesmaili/
+
+jinhang:
+  display_name: Jinhang Zuo
+  image: /img/people/jinhang.jpeg
+  role: staff
+  bio: PhD from CMU, joint UMass-Caltech postdoc <br> (co-advised with Adam Wierman)
+  webpage: https://jhzuo.github.io/
+  
+jinhang2:
+  display_name: Jinhang Zuo
+  image: /img/people/jinhang.jpeg
+  webpage: https://jhzuo.github.io/
+
+xutong:
+  display_name: Xutong Liu
+  image: /img/xutong.jpg
+  role: staff
+  bio: Visiting postdoc from CUHK
+  webpage: https://xutongliu.me
+
+xutong2:
+  display_name: Xutong Liu
+  image: /img/xutong.jpg
+  webpage: https://xutongliu.me
+
+russell:
+  display_name: Russell Lee
+  image: /img/people/russell.jpg
+  role: grad
+  bio: BS from CMU <br>2019-
+  webpage: https://russell-lee.github.io
+  
+  
+russell2:
+  display_name: Russell Lee
+  image: /img/people/russell.jpg
+  webpage: https://russell-lee.github.io
+
+ali:
+  display_name: Ali Zeynali
+  image: /img/people/aliz.png
+  role: grad
+  bio: BS from Sharif Uni. <br>2019- (joint with R. Sitaraman)
+  webpage: https://ali-zeynali.github.io/home/
+    
+ali2:
+  display_name: Ali Zeynali
+  image: /img/people/aliz.png
+  webpage: https://ali-zeynali.github.io/home/
+
+lingdong:
+  display_name: Lingdong Wang
+  image: /img/people/placeholder.png
+  role: grad
+  bio: BS from SJTU <br> 2020- (joint with R. Sitaraman)
+  webpage: https://scholar.google.com/citations?user=9OXXTO8AAAAJ&hl=en&oi=ao
+  
+  
+lingdong2:
+  display_name: Lingdong Wang
+  image: /img/people/placeholder.png
+  webpage: https://scholar.google.com/citations?user=9OXXTO8AAAAJ&hl=en&oi=ao
+
+
+kevin:
+  display_name: Kevin Chen
+  image: /img/people/kevinc.jpeg
+  role: grad
+  bio: BS from SJTU and UMich <br> 2020- (joint with R. Sitaraman)
+  webpage: https://www.linkedin.com/in/tianyu-chen-0b9759149/
+  
+kevin2:
+  display_name: Kevin Chen
+  image: /img/people/kevinc.jpeg
+  webpage: https://www.linkedin.com/in/tianyu-chen-0b9759149/
+
+roozbeh:
+  display_name: Roozbeh Bostandoost
+  image: /img/people/roozbehb.jpeg
+  role: grad
+  bio: BS from Uni. of Tehran <br>2021-
+  webpage: https://people.cs.umass.edu/~rbostandoost/
+  
+  
+roozbeh2:
+  display_name: Roozbeh Bostandoost
+  image: /img/people/roozbehb.jpeg
+  webpage: https://people.cs.umass.edu/~rbostandoost/
+  
+adam:
+  display_name: Adam Lechowicz
+  image: /img/people/adaml.jpg
+  role: grad
+  bio: BS from UMass <br> 2022- (joint with P. Shenoy)
+  webpage: https://adamlechowicz.github.io/
+  
+adam2:
+  display_name: Adam Lechowicz
+  image: /img/people/adaml.jpg
+  webpage: https://adamlechowicz.github.io/
+  
+amirmahdi:
+  display_name: Amirmahdi Mirfakhar
+  image: /img/people/amirmahdim.jpeg
+  role: grad
+  bio: MS from Sharif Uni. <br> 2022-(joint with Y. Zick)
+  webpage: https://solar.cs.umass.edu/
+
+amirmahdi2:
+  display_name: Amirmahdi Mirfakhar
+  image: /img/people/amirmahdim.jpeg
+  webpage: https://solar.cs.umass.edu/
+
+cooper:
+  display_name: Cooper Sigrist
+  image: /img/people/coopers.jpeg
+  role: grad
+  bio: BS from UMass <br> 2022-
+  webpage: https://www.linkedin.com/in/cooper-sigrist-23a070178/
+  
+cooper2:
+  display_name: Cooper Sigrist
+  image: /img/people/coopers.jpeg
+  webpage: https://www.linkedin.com/in/cooper-sigrist-23a070178/
+  
+mahsa:
+  display_name: Mahsa Sahebdel
+  image: /img/people/mahsas.jpeg
+  role: grad
+  bio: MS from Uni of Tehran <br> 2022-
+  webpage: https://people.cs.umass.edu/~msahebdelala/
+  
+mahsa2:
+  display_name: Mahsa Sahebdel
+  image: /img/people/mahsas.jpeg
+  webpage: https://people.cs.umass.edu/~msahebdelala/
+  
+tungi:
+  display_name: Tung-I Chen
+  image: /img/people/tungic.png
+  role: grad
+  bio: MS from NTU <br> 2023- (joint with R. Sitaraman)
+  webpage: https://tung-i.github.io/
+
+tungi2:
+  display_name: Tung-I Chen
+  image: /img/people/tungic.png
+  webpage: https://tung-i.github.io/
+
+
+helia:
+  display_name: Helia Karisani
+  image: /img/people/heliak.jpeg
+  role: grad
+  bio: BS from Sharif Uni. <br> 2023- (joint with C. Musco)
+  webpage: https://helia-karisani.github.io/
+
+helia2:
+  display_name: Helia Karisani
+  image: /img/people/heliak.jpeg
+  webpage: https://helia-karisani.github.io/
+
+mohammadreza:
+  display_name: Mohammadreza Daneshvar
+  image: /img/people/mohammadrezad.jpeg
+  role: grad
+  bio: BS from Sharif Uni. <br> 2023- (joint with C. Musco)
+  webpage: https://solar.cs.umass.edu/
+  
+mohammadreza2:
+  display_name: Mohammadreza Daneshvar
+  image: /img/people/mohammadrezad.jpeg
+  webpage: https://solar.cs.umass.edu/
+
+
+ativ:
+  display_name: Ativ Joshi
+  image: /img/people/ativj.jpeg
+  role: grad
+  bio: MS from Chennai Mathematical Institute <br> 2023-
+  webpage: https://ativjoshi.github.io/
+  
+ativ2:
+  display_name: Ativ Joshi
+  image: /img/people/ativj.jpeg
+  webpage: https://ativjoshi.github.io/
+
+
+fatemeh:
+  display_name: Fatemeh Ghaffari
+  image: /img/people/fatemehg.jpeg
+  role: grad
+  bio: BS from Uni. of Tehran <br> 2023-
+  webpage: https://www.linkedin.com/in/fatemehghaffari/
+
+fatemeh2:
+  display_name: Fatemeh Ghaffari
+  image: /img/people/fatemehg.jpeg
+  webpage: https://www.linkedin.com/in/fatemehghaffari/
+  
+
+
+# Under-grad
+
+# tergel:
+#   display_name: Tergel Molom-Ochir
+#   image: /img/people/tergel.jpeg
+#   role: ugrad
+#   bio: tmolomochir [at] umass [dot] edu
+#   webpage: https://scholar.google.com/citations?user=Uqp2VtkAAAAJ&hl=en
+
+
+# Alumni
+
+lin:
+  display_name: Lin Yang (Postdoc, 2020-2022)
+  image: /img/people/liny.jpeg
+  role: alum
+  bio: "joint with Don Towsley <br> next: Assistant Professor, Nanjing University"
+  webpage: https://yanglin2021.github.io
+
+lin2:
+  display_name: Lin Yang
+  image: /img/people/liny.jpeg
+  webpage: https://yanglin2021.github.io
+
+xuchuang:
+  display_name: Xuchuang Wang
+  image: /img/people/xuchuangw.jpeg
+  role: staff
+  bio: Ph.D. from CUHK <br> (co-advised with Don Towsley)
+  webpage: https://xuchuangw.com/
+
+lily:
+  display_name: Lily Davoren (REU, summer 2023)
+  image: /img/people/lily.jpeg
+  role: alum
+  bio: Undergraduate student (Bryn Mawr)
+  webpage: http://linkedin.com/in/lily-davoren-322b85230
+
+anu:
+  display_name: Anupama Sitaraman (REU, summer 2022)
+  image: /img/people/anu.jpeg
+  role: alum
+  bio: "next: PhD student at CMU"
+  webpage: https://www.linkedin.com/in/anusitaraman
+  
+xuchuang2:
+  display_name: Xuchuang Wang
+  image: /img/people/xuchuangw.jpeg
+  webpage: https://xuchuangw.com/
+  
+vivek:
+  display_name: Vivek Deulkar (Postdoc, 2022-2023)
+  image: /img/people/vivek.png
+  role: alum
+  bio: "next: Assistant Professor, Plaksha University"
+  webpage: https://scholar.google.com/citations?user=sfjYZBwAAAAJ&hl=en
+
+# john:
+#   display_name: John Wamburu (PhD, Fall 2022)
+#   image: /img/people/john.jpg
+#   role: alum
+#   bio: "<br>Thesis: Data-Driven Modeling and Analytics for Greening the Energy Ecosystem;<br> Research Staff, IBM Research, Kenya"
+#   webpage: https://people.cs.umass.edu/~jwamburu/

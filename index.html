@@ -1,0 +1,126 @@
+---
+layout: default
+title: Home
+notitle: true
+
+picture-role-groups:
+- {roles: [faculty, staff, grad, ugrad], width: 8}
+
+no-picture-role-groups:
+- {roles: [alum, master-alum], width: 8}
+---
+
+<img src="img/solar4.png" alt="image tooltip here" style="width:90%; display: block; margin-left: auto; margin-right: auto">
+
+<!-- {% include carousel.html height="50" unit="%" duration="7" number="1" %} -->
+
+<div class="jumbotron">
+    <p>
+        The SOLAR (Sustainability, Optimization, Learning, and Algorithms Research) Lab investigates topics centered around carbon-intelligent computing (application) 
+        and data-driven online optimization (theory). In the SOLAR Lab, we develop rigorous algorithms using data-driven online optimization and learning tools 
+        that are applicable in several domains such as data center energy optimization, electricity market, electric vehicles, smart energy systems, 
+        and networking applications such as multimedia networking and edge/cloud networking. 
+    </p>
+</div>
+
+<hr>
+
+<section class="people row justify-content-between">
+     <div class="col-md-7">
+            <h2>Recent News</h2>
+            <ul class="news list-unstyled">
+                {% for post in site.posts limit: site.front_page_news %}
+                    {% include news-item.html item=post %}
+                {% endfor %}
+            </ul>
+            {% assign numposts = site.posts | size %}
+            {% if numposts >= 1 %}
+                <p>
+                    <span class="fa fa-fw fa-history"></span>
+                    <a href="{{ site.base }}/blog.html">Older posts&hellip;</a>
+                </p>
+            {% endif %}
+     </div>
+    <div class="col-md-5">
+        <h3>Open Positions</h3>
+        <p>We are actively looking for well-motivated and talented students and postdocs to join our research group.
+        If interested, please see our recent <a href="/publications.html">publications</a> and active <a href="/research.html">research projects</a>,
+        and if still interested please apply to <a href="https://www.cics.umass.edu/degree-program/doctoral" target="_blank"> our graduate program</a> and mention our lab name.</p>
+        <h3>Funding support</h3>
+        <p>Our research is supported by a <a href="https://www.cics.umass.edu/news/cics-assistant-professor-mohammad-hajiesmaili-granted-google-research-award-machine-learning" target="_blank">Google Research Faculty Award</a>,
+                an <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2045641&HistoricalAwards=false" target="_blank">NSF CAREER Award</a>,
+                and other grants from NSF (<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2102963" target="_blank">CNS-2102963</a>, 
+                <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2106299" target="_blank">CNS-2106299</a>, 
+                <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2136199" target="_blank">CPS-2136199</a>,
+                <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2105494" target="_blank">NGSDI-2105494</a>,
+                <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1908298&HistoricalAwards=false" target="_blank">CNS-1908298</a>),
+                <a href="https://www.cics.umass.edu/news/cics-doctoral-student-adam-lechowicz-awarded-us-department-energy-computational-science" target="_blank">Department of Energy</a>,
+                <a href="https://www.cics.umass.edu/news/sitaraman-receives-amazon-research-award-adaptive-bitrate-video-streaming-research" target="_blank">Amazon</a>,
+                <a href="http://www.carbonfirst.org/" target="_blank">VMWare</a>,
+                and Adobe.
+            </p>
+         <p style="text-align:center;">
+            <img src="img/fund.png" alt="Funding support" width="95%">
+         </p>
+    </div>
+</section>
+
+<!-- <section class="people row justify-content-between">
+    {% for role-group in page.no-picture-role-groups %}
+        <div class="col-md-{{ role-group.width }}">
+            {% for role in role-group.roles %}
+                {% include role-people.html role=role image=false %}
+            {% endfor %}
+        </div>
+    {% endfor %}
+</section>
+-->
+<!-- <div class="jumbotron">
+    <p>
+        Our research is supported by a <a href="https://www.cics.umass.edu/news/cics-assistant-professor-mohammad-hajiesmaili-granted-google-research-award-machine-learning" target="_blank">Google Research Faculty Award</a>,
+        an <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2045641&HistoricalAwards=false" target="_blank">NSF CAREER Award</a>,
+        and other grants from NSF (<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2102963" target="_blank">CNS-2102963</a>, 
+        <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2106299" target="_blank">CNS-2106299</a>, 
+        <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2136199" target="_blank">CPS-2136199</a>,
+        <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2105494" target="_blank">NGSDI-2105494</a>,
+        <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1908298&HistoricalAwards=false" target="_blank">CNS-1908298</a>),
+        <a href="https://www.cics.umass.edu/news/cics-doctoral-student-adam-lechowicz-awarded-us-department-energy-computational-science" target="_blank">Department of Energy</a>,
+        <a href="https://www.cics.umass.edu/news/sitaraman-receives-amazon-research-award-adaptive-bitrate-video-streaming-research" target="_blank">Amazon</a>,
+        <a href="http://www.carbonfirst.org/" target="_blank">VMWare</a>,
+        and Adobe.
+    </p>
+    <p style="text-align:center;">
+    <img src="https://adamlechowicz.github.io/solar-lab-site/img/fund.png" alt="Funding support" width="70%" height="70%">
+    </p>
+</div>
+-->
+<!--<section>-->
+<!--    <h2>Research</h2>-->
+<!--    <div class="card-columns">-->
+<!--        {% comment %}-->
+<!--        Sort the projects by date, putting those without dates last-->
+<!--        {% endcomment %}-->
+<!--        {% assign projects_by_date = site.projects | sort: 'last-updated', 'first' %}-->
+<!--        {% assign projects_by_date = projects_by_date | reverse %}-->
+<!--        {% for p in projects_by_date %}-->
+<!--            {% if p.status != "inactive" %}-->
+<!--                {% include project-card.html project=p %}-->
+<!--            {% endif %}-->
+<!--        {% endfor %}-->
+<!--    </div>-->
+<!--</section>-->
+
+<!--<div id="people">-->
+<!--    <h2>People</h2>-->
+<!--    {% for role-table in page.role-tables %}-->
+<!--        <section class="people row justify-content-between">-->
+<!--            {% for role-column in role-table %}-->
+<!--                <div class="col-md-{{ role-column.width }}">-->
+<!--                    {% for role in role-column.roles %}-->
+<!--                        {% include role-people.html role=role image=role-column.image %}-->
+<!--                    {% endfor %}-->
+<!--                </div>-->
+<!--            {% endfor %}-->
+<!--        </section>-->
+<!--    {% endfor %}-->
+<!--</div>-->
