@@ -9,7 +9,7 @@ mo:
   display_name: Mohammad Hajiesmaili
   image: /img/people/mohammad.jpg
   role: faculty
-  bio: Assistant Professor
+  bio: Associate Professor
   webpage: https://groups.cs.umass.edu/hajiesmaili/
   
 mo2:
@@ -94,17 +94,17 @@ adam2:
   image: /img/people/adaml.jpg
   webpage: https://adamlechowicz.github.io/
   
-amirmahdi:
-  display_name: Amirmahdi Mirfakhar
-  image: /img/people/amirmahdim.jpeg
-  role: grad
-  bio: MS from Sharif Uni. <br> 2022-(joint with Y. Zick)
-  webpage: https://solar.cs.umass.edu/
+#amirmahdi:
+#  display_name: Amirmahdi Mirfakhar
+ # image: /img/people/amirmahdim.jpeg
+  #role: grad
+ # bio: MS from Sharif Uni. <br> 2022-(joint with Y. Zick)
+ # webpage: https://solar.cs.umass.edu/
 
-amirmahdi2:
-  display_name: Amirmahdi Mirfakhar
-  image: /img/people/amirmahdim.jpeg
-  webpage: https://solar.cs.umass.edu/
+#amirmahdi2:
+#  display_name: Amirmahdi Mirfakhar
+ # image: /img/people/amirmahdim.jpeg
+ # webpage: https://solar.cs.umass.edu/
 
 cooper:
   display_name: Cooper Sigrist
