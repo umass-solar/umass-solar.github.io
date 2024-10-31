@@ -218,7 +218,7 @@ jackson2:
 
 # Alumni
 xutong:
-  display_name: Xutong Liu
+  display_name: Xutong Liu (Postdoc, 2023-2024)
   image: /img/xutong.jpg
   role: alum
   bio: "Visiting postdoc from CUHK <br> next: Postdoc at CMU"
@@ -231,7 +231,7 @@ xutong2:
 
 
 jinhang:
-  display_name: Jinhang Zuo
+  display_name: Jinhang Zuo (Postdoc, 2022-2024)
   image: /img/people/jinhang.jpeg
   role: alum
   bio: "joint UMass-Caltech postdoc with Adam Wierman <br> next: Assistant Professor, City University of Hong Kong"
