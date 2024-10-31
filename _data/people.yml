@@ -17,17 +17,6 @@ mo2:
   image: /img/people/mohammad.jpg
   webpage: https://groups.cs.umass.edu/hajiesmaili/
 
-xutong:
-  display_name: Xutong Liu
-  image: /img/xutong.jpg
-  role: staff
-  bio: Visiting postdoc from CUHK
-  webpage: https://xutongliu.me
-
-xutong2:
-  display_name: Xutong Liu
-  image: /img/xutong.jpg
-  webpage: https://xutongliu.me
 
 russell:
   display_name: Russell Lee
@@ -228,6 +217,18 @@ jackson2:
 
 
 # Alumni
+xutong:
+  display_name: Xutong Liu
+  image: /img/xutong.jpg
+  role: alum
+  bio: "Visiting postdoc from CUHK <br> next: Postdoc at CMU"
+  webpage: https://xutongliu.me
+
+xutong2:
+  display_name: Xutong Liu
+  image: /img/xutong.jpg
+  webpage: https://xutongliu.me
+
 
 jinhang:
   display_name: Jinhang Zuo
