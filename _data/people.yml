@@ -261,6 +261,23 @@ xuchuang:
   bio: Ph.D. from CUHK <br> (co-advised with Don Towsley)
   webpage: https://xuchuangw.com/
 
+  xuchuang2:
+  display_name: Xuchuang Wang
+  image: /img/people/xuchuangw.jpeg
+  webpage: https://xuchuangw.com/
+
+  qingsong:
+  display_name: Qingsong Liu
+  image: /img/people/qingsong.png
+  role: staff
+  bio: Ph.D. from Tsinghua
+  webpage: https://qingsong-liu.github.io/
+
+  qingsong2:
+  display_name: Qingsong Liu
+  image: /img/people/qingsong.png
+  webpage: https://qingsong-liu.github.io/
+
 lily:
   display_name: Lily Davoren (REU, summer 2023)
   image: /img/people/lily.jpeg
@@ -275,10 +292,6 @@ anu:
   bio: "next: PhD student at CMU"
   webpage: https://www.linkedin.com/in/anusitaraman
   
-xuchuang2:
-  display_name: Xuchuang Wang
-  image: /img/people/xuchuangw.jpeg
-  webpage: https://xuchuangw.com/
   
 vivek:
   display_name: Vivek Deulkar (Postdoc, 2022-2023)
