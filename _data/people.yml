@@ -18,26 +18,14 @@ mo2:
   webpage: https://groups.cs.umass.edu/hajiesmaili/
 
 
-xuchuang:
-  display_name: Xuchuang Wang
-  image: /img/people/xuchuangw.jpeg
-  role: staff
-  bio: Ph.D. from CUHK <br> (co-advised with Don Towsley) <br> 2023-
-  webpage: https://xuchuangw.com/
-
-  xuchuang2:
-  display_name: Xuchuang Wang
-  image: /img/people/xuchuangw.jpeg
-  webpage: https://xuchuangw.com/
-
-  qingsong:
+qingsong:
   display_name: Qingsong Liu
   image: /img/people/qingsong.png
   role: staff
   bio: Ph.D. from Tsinghua <br> 2024-
   webpage: https://qingsong-liu.github.io/
 
-  qingsong2:
+qingsong2:
   display_name: Qingsong Liu
   image: /img/people/qingsong.png
   webpage: https://qingsong-liu.github.io/
@@ -239,6 +227,19 @@ jackson2:
 #   role: ugrad
 #   bio: tmolomochir [at] umass [dot] edu
 #   webpage: https://scholar.google.com/citations?user=Uqp2VtkAAAAJ&hl=en
+
+# staff
+xuchuang:
+  display_name: Xuchuang Wang
+  image: /img/people/xuchuangw.jpeg
+  role: staff
+  bio: Ph.D. from CUHK <br> (co-advised with Don Towsley) <br> 2023-
+  webpage: https://xuchuangw.com/
+
+xuchuang2:
+  display_name: Xuchuang Wang
+  image: /img/people/xuchuangw.jpeg
+  webpage: https://xuchuangw.com/
 
 
 # Alumni
