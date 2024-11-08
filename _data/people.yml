@@ -18,17 +18,6 @@ mo2:
   webpage: https://groups.cs.umass.edu/hajiesmaili/
 
 
-qingsong:
-  display_name: Qingsong Liu
-  image: /img/people/qingsong.png
-  role: staff
-  bio: Ph.D. from Tsinghua <br> 2024-
-  webpage: https://qingsong-liu.github.io/
-
-qingsong2:
-  display_name: Qingsong Liu
-  image: /img/people/qingsong.png
-  webpage: https://qingsong-liu.github.io/
 
 
 russell:
@@ -241,6 +230,17 @@ xuchuang2:
   image: /img/people/xuchuangw.jpeg
   webpage: https://xuchuangw.com/
 
+qingsong:
+  display_name: Qingsong Liu
+  image: /img/people/qingsong.png
+  role: staff
+  bio: Ph.D. from Tsinghua <br> 2024-
+  webpage: https://qingsong-liu.github.io/
+
+qingsong2:
+  display_name: Qingsong Liu
+  image: /img/people/qingsong.png
+  webpage: https://qingsong-liu.github.io/
 
 # Alumni
 xutong:
