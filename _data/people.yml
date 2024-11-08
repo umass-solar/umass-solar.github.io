@@ -18,6 +18,31 @@ mo2:
   webpage: https://groups.cs.umass.edu/hajiesmaili/
 
 
+xuchuang:
+  display_name: Xuchuang Wang
+  image: /img/people/xuchuangw.jpeg
+  role: staff
+  bio: Ph.D. from CUHK <br> (co-advised with Don Towsley)
+  webpage: https://xuchuangw.com/
+
+  xuchuang2:
+  display_name: Xuchuang Wang
+  image: /img/people/xuchuangw.jpeg
+  webpage: https://xuchuangw.com/
+
+  qingsong:
+  display_name: Qingsong Liu
+  image: /img/people/qingsong.png
+  role: staff
+  bio: Ph.D. from Tsinghua
+  webpage: https://qingsong-liu.github.io/
+
+  qingsong2:
+  display_name: Qingsong Liu
+  image: /img/people/qingsong.png
+  webpage: https://qingsong-liu.github.io/
+
+
 russell:
   display_name: Russell Lee
   image: /img/people/russell.jpg
@@ -242,6 +267,21 @@ jinhang2:
   image: /img/people/jinhang.jpeg
   webpage: https://jhzuo.github.io/
 
+  lily:
+  display_name: Lily Davoren (REU, summer 2023)
+  image: /img/people/lily.jpeg
+  role: alum
+  bio: Undergraduate student (Bryn Mawr)
+  webpage: http://linkedin.com/in/lily-davoren-322b85230
+
+
+vivek:
+  display_name: Vivek Deulkar (Postdoc, 2022-2023)
+  image: /img/people/vivek.png
+  role: alum
+  bio: "next: Assistant Professor, Plaksha University"
+  webpage: https://scholar.google.com/citations?user=sfjYZBwAAAAJ&hl=en
+  
 lin:
   display_name: Lin Yang (Postdoc, 2020-2022)
   image: /img/people/liny.jpeg
@@ -254,37 +294,6 @@ lin2:
   image: /img/people/liny.jpeg
   webpage: https://yanglin2021.github.io
 
-xuchuang:
-  display_name: Xuchuang Wang
-  image: /img/people/xuchuangw.jpeg
-  role: staff
-  bio: Ph.D. from CUHK <br> (co-advised with Don Towsley)
-  webpage: https://xuchuangw.com/
-
-  xuchuang2:
-  display_name: Xuchuang Wang
-  image: /img/people/xuchuangw.jpeg
-  webpage: https://xuchuangw.com/
-
-  qingsong:
-  display_name: Qingsong Liu
-  image: /img/people/qingsong.png
-  role: staff
-  bio: Ph.D. from Tsinghua
-  webpage: https://qingsong-liu.github.io/
-
-  qingsong2:
-  display_name: Qingsong Liu
-  image: /img/people/qingsong.png
-  webpage: https://qingsong-liu.github.io/
-
-lily:
-  display_name: Lily Davoren (REU, summer 2023)
-  image: /img/people/lily.jpeg
-  role: alum
-  bio: Undergraduate student (Bryn Mawr)
-  webpage: http://linkedin.com/in/lily-davoren-322b85230
-
 anu:
   display_name: Anupama Sitaraman (REU, summer 2022)
   image: /img/people/anu.jpeg
@@ -292,13 +301,6 @@ anu:
   bio: "next: PhD student at CMU"
   webpage: https://www.linkedin.com/in/anusitaraman
   
-  
-vivek:
-  display_name: Vivek Deulkar (Postdoc, 2022-2023)
-  image: /img/people/vivek.png
-  role: alum
-  bio: "next: Assistant Professor, Plaksha University"
-  webpage: https://scholar.google.com/citations?user=sfjYZBwAAAAJ&hl=en
 
 # john:
 #   display_name: John Wamburu (PhD, Fall 2022)
