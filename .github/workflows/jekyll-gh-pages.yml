@@ -28,13 +28,35 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+      - name: Setup Ruby, Bundler and Jekyll
+        uses: ruby/setup-ruby@v1
         with:
-          source: ./
-          destination: ./_site
+          ruby-version: '3.2.1'
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+
+      - name: Build website
+        run: |
+          bundle exec jekyll build -d _site/
+      - name: Install Minify
+        run: |
+          sudo apt-get update
+          sudo apt-get install minify
+      - name: Compress entire website
+        run: |
+          minify --all --html-keep-document-tags --html-keep-end-tags -r -o _site/ _site/
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+
+      - name: Install PurgeCSS
+        run: |
+          npm install -g purgecss
+      # - name: Build with Jekyll
+      #   uses: actions/jekyll-build-pages@v1
+      #   with:
+      #     source: ./
+      #     destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
