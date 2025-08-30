@@ -217,6 +217,57 @@ jackson2:
 #   bio: tmolomochir [at] umass [dot] edu
 #   webpage: https://scholar.google.com/citations?user=Uqp2VtkAAAAJ&hl=en
 
+ezra:
+  display_name: Ezra Johnson
+  image: /img/people/ezra.jpeg
+  role: ugrad
+  bio: "CEET REU, summer 2025 (Caltech)"
+  webpage: https://www.linkedin.com/in/ezra-johnson/
+
+alice:
+  display_name: Alice Zhang
+  image: /img/people/alice.jpeg
+  role: ugrad
+  bio: "CEET REU, summer 2025 (Columbia)"
+  webpage: https://www.linkedin.com/in/alice-zhang-2048c
+
+arky:
+  display_name: Archimedes Li
+  image: /img/people/arky.jpeg
+  role: ugrad
+  bio: "undergraduate research assistant, 2024 -- (UMass)"
+  webpage: https://www.linkedin.com/in/archimedes-li/
+
+rohan:
+  display_name: Rohan Shenoy
+  image: /img/people/rohan.jpeg
+  role: ugrad
+  bio: "undergraduate research assistant, 2024 -- (UC Berkeley)"
+  webpage: https://www.linkedin.com/in/rohanshenoy03/
+
+jovan:
+  display_name: Jovan Champ
+  image: /img/people/jovan.jpeg
+  role: ugrad
+  bio: "CEET REU, summer 2024 (U.Hartford)"
+  webpage: https://www.linkedin.com/in/jovan-champ-880bb1245/
+ 
+lily:
+  display_name: Lily Davoren
+  image: /img/people/lily.jpeg
+  role: ugrad
+  bio: "CEET REU, summer 2023 (Bryn Mawr)"
+  webpage: http://linkedin.com/in/lily-davoren-322b85230
+
+anu:
+  display_name: Anupama Sitaraman
+  image: /img/people/anu.jpeg
+  role: ugrad
+  bio: "REU, summer 2022\n next: PhD student at CMU"
+  webpage: https://www.linkedin.com/in/anusitaraman
+ 
+
+
 # staff
 xuchuang:
   display_name: Xuchuang Wang
@@ -268,14 +319,6 @@ jinhang2:
   image: /img/people/jinhang.jpeg
   webpage: https://jhzuo.github.io/
 
-  lily:
-  display_name: Lily Davoren (REU, summer 2023)
-  image: /img/people/lily.jpeg
-  role: alum
-  bio: Undergraduate student (Bryn Mawr)
-  webpage: http://linkedin.com/in/lily-davoren-322b85230
-
-
 vivek:
   display_name: Vivek Deulkar (Postdoc, 2022-2023)
   image: /img/people/vivek.png
@@ -295,13 +338,6 @@ lin2:
   image: /img/people/liny.jpeg
   webpage: https://yanglin2021.github.io
 
-anu:
-  display_name: Anupama Sitaraman (REU, summer 2022)
-  image: /img/people/anu.jpeg
-  role: alum
-  bio: "next: PhD student at CMU"
-  webpage: https://www.linkedin.com/in/anusitaraman
-  
 
 # john:
 #   display_name: John Wamburu (PhD, Fall 2022)
