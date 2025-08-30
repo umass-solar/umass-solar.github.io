@@ -219,35 +219,35 @@ jackson2:
 
 ezra:
   display_name: Ezra Johnson
-  image: /img/people/ezra.jpeg
+  image: /img/ezra.jpeg
   role: ugrad
   bio: "CEET REU, summer 2025 (Caltech)"
   webpage: https://www.linkedin.com/in/ezra-johnson/
 
 alice:
   display_name: Alice Zhang
-  image: /img/people/alice.jpeg
+  image: /img/alice.jpeg
   role: ugrad
   bio: "CEET REU, summer 2025 (Columbia)"
   webpage: https://www.linkedin.com/in/alice-zhang-2048c
 
 arky:
   display_name: Archimedes Li
-  image: /img/people/arky.jpeg
+  image: /img/arky.jpeg
   role: ugrad
   bio: "undergraduate research assistant, 2024 -- (UMass)"
   webpage: https://www.linkedin.com/in/archimedes-li/
 
 rohan:
   display_name: Rohan Shenoy
-  image: /img/people/rohan.jpeg
+  image: /img/rohan.jpeg
   role: ugrad
   bio: "undergraduate research assistant, 2024 -- (UC Berkeley)"
   webpage: https://www.linkedin.com/in/rohanshenoy03/
 
 jovan:
   display_name: Jovan Champ
-  image: /img/people/jovan.jpeg
+  image: /img/jovan.jpeg
   role: ugrad
   bio: "CEET REU, summer 2024 (U.Hartford)"
   webpage: https://www.linkedin.com/in/jovan-champ-880bb1245/
