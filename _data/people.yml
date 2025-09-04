@@ -235,14 +235,14 @@ arky:
   display_name: Archimedes Li
   image: /img/arky.jpeg
   role: ugrad
-  bio: "undergraduate research assistant, 2024 -- (UMass)"
+  bio: "undergraduate research assistant (UMass) <br> 2024 -"
   webpage: https://www.linkedin.com/in/archimedes-li/
 
 rohan:
   display_name: Rohan Shenoy
   image: /img/rohan.jpeg
   role: ugrad
-  bio: "undergraduate research assistant, 2024 -- (UC Berkeley)"
+  bio: "undergraduate research assistant (UC Berkeley) <br> 2024 -"
   webpage: https://www.linkedin.com/in/rohanshenoy03/
 
 jovan:
@@ -263,7 +263,7 @@ anu:
   display_name: Anupama Sitaraman
   image: /img/people/anu.jpeg
   role: ugrad
-  bio: "REU, summer 2022\n next: PhD student at CMU"
+  bio: "REU, summer 2022 (UMass) <br> next: PhD student at CMU"
   webpage: https://www.linkedin.com/in/anusitaraman
  
 
