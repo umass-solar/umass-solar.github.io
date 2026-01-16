@@ -50,8 +50,12 @@ navigation:
     link: /research.html
   - title: News
     link: /blog.html
+  - title: Seminar
+    link: /ai-era
   # - title: Code
   #   link: /code.html
+  # - title: Seminar        # Add your new page
+  #   link: /seminar         
   # - title: Wiki
   #   link: http://lass.cs.umass.edu/wiki/
 
