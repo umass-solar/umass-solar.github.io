@@ -172,7 +172,7 @@ TBD
 
 [David Woodruff](https://www.cs.cmu.edu/~dwoodruf/) (CMU) --  *Friday, April 17  @ 1 pm*
 
-**Category:** 
+**Category:** Theory/Automated Review
 
 <details markdown="1">
 <summary>Description</summary>
