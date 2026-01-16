@@ -4,9 +4,9 @@ title: "Research in the AI Era"
 permalink: /ai-era/
 ---
 
-<!-- # Research in the AI Era -->
+<!-- # Research in the AI Era 
 
-Research is shifting toward a world where every lab has access to powerful, fallible, semi-autonomous research co-pilots. The challenge is to shape research culture, training, and norms so we exploit AI where it amplifies creativity, rigor, and reach—while resisting it where it erodes understanding, integrity, or equity—and keeping the human parts of research (wonder, taste, responsibility) clearly in view. In the AI era, researchers increasingly act less like “push-button scientists” and more like lab heads: designing and supervising a growing cast of non-human collaborators.
+Research is shifting toward a world where every lab has access to powerful, fallible, semi-autonomous research co-pilots. The challenge is to shape research culture, training, and norms so we exploit AI where it amplifies creativity, rigor, and reach—while resisting it where it erodes understanding, integrity, or equity—and keeping the human parts of research (wonder, taste, responsibility) clearly in view. In the AI era, researchers increasingly act less like “push-button scientists” and more like lab heads: designing and supervising a growing cast of non-human collaborators.-->
 
 We are entering an era of reasoning abundance enabled by AI, much as the internet ushered in an era of information abundance, opening new opportunities and challenges for research across all areas of computer science. AI is rapidly reshaping nearly every stage of the research lifecycle, from identifying and framing research topics and conducting literature reviews to theoretical analysis, experimental design and execution, interpreting results, writing and reviewing papers, and supporting reproducibility. As these tools become more tightly integrated, sometimes augmenting and sometimes automating core tasks, our notions of contribution, rigor, and expertise are evolving.
 
@@ -25,7 +25,7 @@ This seminar series brings together speakers from across ALL areas of computer s
 
 ##### [Glia: A Human-Inspired AI for Automated Systems Design and Optimization](https://arxiv.org/abs/2510.27176)
 
-[Mohammad Alizadeh](https://people.csail.mit.edu/alizadeh/) (MIT) or [Hari Balakrishnan](http://nms.csail.mit.edu/~hari/) (MIT) --  *Friday, February 6 or 13 @ 1 pm*
+[Hari Balakrishnan](http://nms.csail.mit.edu/~hari/) (MIT) --  *Friday, February 6 @ 1 pm*
 
 **Category:** Systems
 
