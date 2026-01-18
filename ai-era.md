@@ -69,7 +69,7 @@ Policy design for various systems controllers has conventionally been a manual p
 
 [Evan Coleman](https://eacoleman.github.io/) (MIT) --  *Friday, March 6  @ 1 pm*
 
-**Category:** interdisciplinary
+**Category:** Interdisciplinary
 
 <details markdown="1">
 <summary>Description</summary>
@@ -91,7 +91,7 @@ In this talk, I will present Braintrust, an early-stage open-source effort using
 
 [Yian Yin](https://www.yianyin.net/) (Cornell) --  *Friday, March 13  @ 1 pm*
 
-**Category:** AI/interdisciplinary
+**Category:** AI/Interdisciplinary
 
 <details markdown="1">
 <summary>Description</summary>
