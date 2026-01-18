@@ -25,7 +25,7 @@ This seminar series brings together speakers from across ALL areas of computer s
 
 ##### [Glia: A Human-Inspired AI for Automated Systems Design and Optimization](https://arxiv.org/abs/2510.27176)
 
-[Hari Balakrishnan](http://nms.csail.mit.edu/~hari/) (MIT) --  *Friday, February 6 @ 1 pm*
+[Hari Balakrishnan](http://nms.csail.mit.edu/~hari/) (MIT) --  *Friday, February 13 @ 1 pm*
 
 **Category:** Systems
 
