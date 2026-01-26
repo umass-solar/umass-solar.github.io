@@ -23,11 +23,13 @@ This seminar series brings together speakers from across ALL areas of computer s
 
 ## Schedule
 
-##### Organizational Meeting
+##### [Organizational Meeting]()
 
 [Mohammad Hajiesmaili](https://groups.cs.umass.edu/hajiesmaili/) (UMass) -- *Friday, February 6 @ 1 pm [in-person]*
 
 **Category:** Overview
+
+**Location:** CSL E144
 
 <details markdown="1">
 <summary>Description</summary>
@@ -43,6 +45,8 @@ Overview and motivation for the seminar.
 
 **Category:** Systems
 
+**Location:** CSL E144
+
 <details markdown="1">
 <summary>Description</summary>
 This talk will focus on how AI can be used to autonomously design and optimize complex systems. This directly ties into the seminar's theme by showcasing how AI is automating the core tasks of experimental design and execution, bringing an era of reasoning abundance to the systems research lifecycle.
@@ -55,6 +59,18 @@ Can an AI autonomously design mechanisms for computer systems on par with the cr
 
 </details>
 
+<!-- bio -->
+<details markdown="1">
+<summary>Bio</summary>
+Hari Balakrishnan is the Fujitsu Professor of Computer Science at MIT. His research is in networked computer systems, with current interests in networking, sensing, and perception for sensor-equipped mobile devices connected to cloud or edge services. He has made many contributions to mobile and sensor computing, overlay and peer-to-peer networks, congestion control, Internet routing, and data management systems.
+
+In 2010, based on the CarTel project, Balakrishnan co-founded Cambridge Mobile Telematics (CMT). CMT's mission is to make the world's roads and drivers safer. Using mobile sensing and IoT, signal processing, machine learning, and behavioral science, CMT's platform measures driving behavior to improve driving behavior and reduce risk, provides crash alerts and roadside assistance, and creates a smooth connected claims process. Today, CMT is the world's leading telematics and analytics provider, serving many millions of users in 25 countries by partnering with insurers (including powering consumer telematics programs at 21 of the top 25 US insurers), car makers, commercial mobility providers, and the public sector.
+
+Balakrishnan received his PhD in 1998 from the EECS Department at UC Berkeley, which named him a Distinguished Alumnus in 2021, and a BTech in Computer Science in 1993 from IIT Madras, which named him a Distinguished Alumnus in 2013. He was elected to the National Academy of Engineering (2015) and to the American Academy of Arts and Sciences (2017). His honors include the Marconi Prize (2023), the ACM SIGCOMM Award for lifetime contributions to communication networks (2021), the IEEE Kobayashi Computers and Communications Award (2021), the Ernst and Young Entrepreneur of the Year Award for the New England region (2021), the Infosys Prize for Engineering and Computer Science (2020), Fellow of the IEEE (2020), Fellow of the ACM (2008), Sloan Fellow (2002), and the ACM doctoral dissertation award for Computer Science (1998). He has received several best-paper awards including six test-of-time awards for papers with long-term impact and the IEEE Bennett paper prize (2004). At MIT, he has received several honors including the Harold E. Edgerton faculty achievement award for research, teaching, and service (2003), the HKN best instructor award (2018), the Jamieson teaching award (2012), the Junior Bose teaching award (2002), and the Spira teaching award (2001). He has graduated 26 PhD students and 10 postdocs, who have made their mark in research and industry at leading universities and companies.
+
+Balakrishnan was an advisor to Meraki from its inception in 2006 to its acquisition by Cisco in 2012. In 2003, Balakrishnan co-founded StreamBase Systems (acquired by TIBCO), the first high-performance commercial stream processing (aka complex event processing) engine. Between 2000 and 2003, he helped devise the key network QoS algorithms for Sandburst (acquired by Broadcom). 
+</details>
+
 <hr>
 
 <!-- ################################### -->
@@ -64,6 +80,8 @@ Can an AI autonomously design mechanisms for computer systems on par with the cr
 [Aditya Akella](https://www.cs.utexas.edu/~akella/) (UT Austin) --  *Friday, February 27 @ 1 pm [remote]*
 
 **Category:** Systems
+
+**Location:** LGRC A112
 
 <details markdown="1">
 <summary>Description</summary>
@@ -82,6 +100,12 @@ This talk describes the main pillars of the LDOS approach. I will first describe
 <!-- Policy design for various systems controllers has conventionally been a manual process, with domain experts carefully tailoring heuristics for the specific instance in which the policy will be deployed. In this paper, we re-imagine policy design via a novel automated search technique fueled by recent advances in generative models, specifically Large Language Model (LLM)-driven code generation. We outline the design and implementation of PolicySmith, a framework that applies LLMs to synthesize instance-optimal heuristics. We apply PolicySmith to two long-standing systems policies - web caching and congestion control, highlighting the opportunities unraveled by this LLM-driven heuristic search. For caching, PolicySmith discovers heuristics that outperform established baselines on standard open-source traces. For congestion control, we show that PolicySmith can generate safe policies that integrate directly into the Linux kernel.  -->
 </details>
 
+<!-- bio -->
+<details markdown="1">
+<summary>Bio</summary>
+Aditya Akella is a Professor and Regents Chair in Computer Sciences at UT Austin and a Research Scientist at Meta. His research focuses on computer systems and their intersection with machine learning and formal methods. He leads the NSF CISE Expedition on Learning-Directed Operating Systems and serves as Founding Director of the InfraAI @ UT Center. Aditya’s work has influenced the infrastructure of large-scale online services and has been recognized with honors including ACM Fellow, SIGCOMM and IMC Test of Time Awards, the SIGCOMM Rising Star Award, the IRTF Applied Networking Research Prize, the NSF CAREER Award, and multiple best paper awards.
+</details>
+
 <hr>
 
 <!-- ################################### -->
@@ -91,6 +115,8 @@ This talk describes the main pillars of the LDOS approach. I will first describe
 [Evan Coleman](https://eacoleman.github.io/) (MIT) --  *Friday, March 6  @ 1 pm [in-person]*
 
 **Category:** Interdisciplinary
+
+**Location:** LGRC A112
 
 <details markdown="1">
 <summary>Description</summary>
@@ -103,6 +129,14 @@ Climate change presents a rare existential challenge. Nearly every economic sect
 In this talk, I will present Braintrust, an early-stage open-source effort using language models to build navigable tech trees for science. Our goal is to convene researchers, research administrators, and financiers around shared representations of scientific progress. Basic research struggles to support such coordination because expertise is fragmented, first-of-a-kind efforts are risky, and incentives are weakly coupled to downstream economic value. Braintrust models tech trees as interactive structures that evolve with new evidence and human input. This approach is orthogonal to using LLMs for scientific execution: we use semantics to surface cross-domain connections, situate speculative ideas relative to established work, and represent uncertainty at the frontier where coordination and investment decisions are made. I will provide real-world examples within climate technology, and conclude by framing social knowledge bases as fiduciary tools that can support the allocation of resources in high-risk, high-reward scientific programs.
 </details>
 
+<!-- bio -->
+<details markdown="1">
+<summary>Bio</summary>
+Evan Coleman is a Research Scientist in the MIT Climate Project working on applications of artificial intelligence and machine learning to climate change mitigation. He has a PhD in Theoretical High-Energy Physics from Stanford University (’22). Since joining MIT, his mandate has been to identify and address technical bottlenecks that inhibit the scaling and proliferation of climate technologies. 
+
+Evan’s research focuses on building data-driven algorithms, hardware, and scientific tooling that enable large-scale environmental monitoring, portable material characterization, and coordination of intelligent systems across the many disciplines relevant to climate change. His recent work includes applications to scalable prospecting of critical minerals and in situ elemental analysis. He is also the creator of Braintrust, an open-source project which is exploring the use of social knowledgebases as LLM-guided fiduciary tools for high-risk, long-horizon scientific programs.
+</details>
+
 <hr>
 
 
@@ -113,6 +147,8 @@ In this talk, I will present Braintrust, an early-stage open-source effort using
 [Yian Yin](https://www.yianyin.net/) (Cornell) --  *Friday, March 13  @ 1 pm [TBD]*
 
 **Category:** AI/Interdisciplinary
+
+**Location:** CSL E144
 
 <details markdown="1">
 <summary>Description</summary>
@@ -134,6 +170,8 @@ Despite growing excitement (and concern) about the fast adoption of generative a
 
 **Category:** Theory
 
+**Location:** LGRC A112
+
 <details markdown="1">
 <summary>Description</summary>
 As a theoretical AI researcher, Aaron Roth will likely explore the fundamental changes and challenges that AI introduces to theoretical analysis and the establishment of scientific rigor. This perspective is vital to the seminar as it examines how AI's influence is evolving our notions of contribution and expertise across all areas of computer science research. See this [X thread](https://x.com/Aaroth/status/2002816644419346517?s=20).
@@ -153,6 +191,8 @@ TBD
 [Mark Sellke](https://msellke.com/) (Harvard/OpenAI) --  *Friday, April 3  @ 1 pm [in-person]*
 
 **Category:** Theory
+
+**Location:** CSL E144
 
 <details markdown="1">
 <summary>Description</summary>
@@ -175,6 +215,8 @@ All results in this paper were derived by variants of GPT-5.2 Pro. Humans did no
 
 **Category:** Systems
 
+**Location:** CSL E144
+
 <details markdown="1">
 <summary>Description</summary>
 TBD
@@ -194,6 +236,8 @@ TBD
 [David Woodruff](https://www.cs.cmu.edu/~dwoodruf/) (CMU) --  *Friday, April 17  @ 1 pm [TBD]*
 
 **Category:** Theory/Automated Review
+
+**Location:** CSL E144
 
 <details markdown="1">
 <summary>Description</summary>
