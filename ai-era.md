@@ -23,9 +23,20 @@ This seminar series brings together speakers from across ALL areas of computer s
 
 ## Schedule
 
+##### Organizational Meeting
+
+[Mohammad Hajiesmaili](https://groups.cs.umass.edu/hajiesmaili/) (UMass) -- *Friday, February 6 @ 1 pm [in-person]*
+
+**Category:** Overview
+
+<details markdown="1">
+<summary>Description</summary>
+Overview and motivation for the seminar.
+</details>
+
 ##### [Glia: A Human-Inspired AI for Automated Systems Design and Optimization](https://arxiv.org/abs/2510.27176)
 
-[Hari Balakrishnan](http://nms.csail.mit.edu/~hari/) (MIT) --  *Friday, February 13 @ 1 pm*
+[Hari Balakrishnan](http://nms.csail.mit.edu/~hari/) (MIT) --  *Friday, February 13 @ 1 pm [in-person]*
 
 **Category:** Systems
 
@@ -45,20 +56,27 @@ Can an AI autonomously design mechanisms for computer systems on par with the cr
 
 <!-- ################################### -->
 
-##### [Man-Made Heuristics Are Dead. Long Live Code Generators!](https://arxiv.org/abs/2510.08803)
+##### [Towards A Learning-Directed Operating System]()
 
-[Aditya Akella](https://www.cs.utexas.edu/~akella/) (UT Austin) --  *Friday, February 27 @ 1 pm*
+[Aditya Akella](https://www.cs.utexas.edu/~akella/) (UT Austin) --  *Friday, February 27 @ 1 pm [remote]*
 
 **Category:** Systems
 
 <details markdown="1">
 <summary>Description</summary>
-This work suggests a focus on AI's ability to generate code and replace traditionally human-designed components (heuristics) in research. This connects to the seminar by showcasing how AI is moving beyond simple augmentation to automating core tasks within experimental design and execution, forcing researchers to redefine the role of human expertise.
+<!-- This work suggests a focus on AI's ability to generate code and replace traditionally human-designed components (heuristics) in research. This connects to the seminar by showcasing how AI is moving beyond simple augmentation to automating core tasks within experimental design and execution, forcing researchers to redefine the role of human expertise. -->
+This work describes the main pillars of a Learning-Directed Operating System that treats policy design as a data-driven, system-wide optimization problem.
 </details>
 
 <details markdown="1">
 <summary>Abstract</summary>
-Policy design for various systems controllers has conventionally been a manual process, with domain experts carefully tailoring heuristics for the specific instance in which the policy will be deployed. In this paper, we re-imagine policy design via a novel automated search technique fueled by recent advances in generative models, specifically Large Language Model (LLM)-driven code generation. We outline the design and implementation of PolicySmith, a framework that applies LLMs to synthesize instance-optimal heuristics. We apply PolicySmith to two long-standing systems policies - web caching and congestion control, highlighting the opportunities unraveled by this LLM-driven heuristic search. For caching, PolicySmith discovers heuristics that outperform established baselines on standard open-source traces. For congestion control, we show that PolicySmith can generate safe policies that integrate directly into the Linux kernel. 
+Modern applications run on increasingly heterogeneous and dynamic platforms, yet today’s operating systems (OSes) still rely on rigid, locally optimized policies that are manually designed, weakly coordinated, and slow to adapt. As a result, even when resources are plentiful, performance and tail latency are often dominated by poor policy choices rather than fundamental hardware limits.
+   
+To address this, we are building LDOS, a Learning-Directed Operating System that treats policy design as a data-driven, system-wide optimization problem. In contrast to Linux, where mechanisms and policies are tightly entangled and global system state is difficult to observe or act upon, LDOS is designed from the ground up to expose rich observability, support fast feedback loops, and enable coordinated and trustworthy machine-learned control.
+   
+This talk describes the main pillars of the LDOS approach. I will first describe UNUM, which constructs system-wide state embeddings to enable higher-quality and coordinated policy decisions. I will then introduce Darwin, a family of techniques that make ML-driven policies practical by balancing instance-optimal decisions with generalization and runtime overhead. Next, I will present C3, a framework that enforces system-wide and tail-latency guarantees despite learned, adaptive control. The talk will conclude with the core design principles behind LDOS’s clean-slate prototype and an overview of its current status.
+
+<!-- Policy design for various systems controllers has conventionally been a manual process, with domain experts carefully tailoring heuristics for the specific instance in which the policy will be deployed. In this paper, we re-imagine policy design via a novel automated search technique fueled by recent advances in generative models, specifically Large Language Model (LLM)-driven code generation. We outline the design and implementation of PolicySmith, a framework that applies LLMs to synthesize instance-optimal heuristics. We apply PolicySmith to two long-standing systems policies - web caching and congestion control, highlighting the opportunities unraveled by this LLM-driven heuristic search. For caching, PolicySmith discovers heuristics that outperform established baselines on standard open-source traces. For congestion control, we show that PolicySmith can generate safe policies that integrate directly into the Linux kernel.  -->
 </details>
 
 <hr>
@@ -67,7 +85,7 @@ Policy design for various systems controllers has conventionally been a manual p
 
 ##### [Braintrust: social knowledgebases as scientific fiduciaries]()
 
-[Evan Coleman](https://eacoleman.github.io/) (MIT) --  *Friday, March 6  @ 1 pm*
+[Evan Coleman](https://eacoleman.github.io/) (MIT) --  *Friday, March 6  @ 1 pm [in-person]*
 
 **Category:** Interdisciplinary
 
@@ -89,7 +107,7 @@ In this talk, I will present Braintrust, an early-stage open-source effort using
 
 ##### [Scientific production in the era of large language models](https://www.science.org/doi/10.1126/science.adw3000)
 
-[Yian Yin](https://www.yianyin.net/) (Cornell) --  *Friday, March 13  @ 1 pm*
+[Yian Yin](https://www.yianyin.net/) (Cornell) --  *Friday, March 13  @ 1 pm [TBD]*
 
 **Category:** AI/Interdisciplinary
 
@@ -109,7 +127,7 @@ Despite growing excitement (and concern) about the fast adoption of generative a
 
 ##### [TBD]()
 
-[Aaron Roth](https://www.cis.upenn.edu/~aaroth/) (UPenn) --  *Friday, March 27  @ 1 pm*
+[Aaron Roth](https://www.cis.upenn.edu/~aaroth/) (UPenn) --  *Friday, March 27  @ 1 pm [remote]*
 
 **Category:** Theory
 
@@ -129,7 +147,7 @@ TBD
 
 ##### [On Learning-Curve Monotonicity for Maximum Likelihood Estimators](https://arxiv.org/abs/2512.10220)
 
-[Mark Sellke](https://msellke.com/) (Harvard/OpenAI) --  *Friday, April 3  @ 1 pm*
+[Mark Sellke](https://msellke.com/) (Harvard/OpenAI) --  *Friday, April 3  @ 1 pm [in-person]*
 
 **Category:** Theory
 
@@ -150,7 +168,7 @@ All results in this paper were derived by variants of GPT-5.2 Pro. Humans did no
 
 ##### [TBD]()
 
-[Amir Yazdanbakhsh](https://www.ayazdan.com/) (Google) --  *Friday, April 10  @ 1 pm*
+[Amir Yazdanbakhsh](https://www.ayazdan.com/) (Google) --  *Friday, April 10  @ 1 pm [remote]*
 
 **Category:** Systems
 
@@ -170,7 +188,7 @@ TBD
 
 ##### [Gemini-based automated feedback for theoretical CS papers](https://research.google/blog/gemini-provides-automated-feedback-for-theoretical-computer-scientists-at-stoc-2026/)
 
-[David Woodruff](https://www.cs.cmu.edu/~dwoodruf/) (CMU) --  *Friday, April 17  @ 1 pm*
+[David Woodruff](https://www.cs.cmu.edu/~dwoodruf/) (CMU) --  *Friday, April 17  @ 1 pm [TBD]*
 
 **Category:** Theory/Automated Review
 
