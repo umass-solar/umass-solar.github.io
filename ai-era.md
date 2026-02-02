@@ -209,31 +209,9 @@ All results in this paper were derived by variants of GPT-5.2 Pro. Humans did no
 
 <!-- ################################### -->
 
-##### [TBD]()
-
-[Amir Yazdanbakhsh](https://www.ayazdan.com/) (Google) --  *Friday, April 10  @ 1 pm [remote]*
-
-**Category:** Systems
-
-**Location:** CSL E144
-
-<details markdown="1">
-<summary>Description</summary>
-TBD
-</details>
-
-<details markdown="1">
-<summary>Abstract</summary>
-TBD
-</details>
-
-<hr>
-
-<!-- ################################### -->
-
 ##### [Gemini-based automated feedback for theoretical CS papers](https://research.google/blog/gemini-provides-automated-feedback-for-theoretical-computer-scientists-at-stoc-2026/)
 
-[David Woodruff](https://www.cs.cmu.edu/~dwoodruf/) (CMU) --  *Friday, April 17  @ 1 pm [TBD]*
+[David Woodruff](https://www.cs.cmu.edu/~dwoodruf/) (CMU) --  *Friday, April 10  @ 1 pm [TBD]*
 
 **Category:** Theory/Automated Review
 
@@ -252,6 +230,28 @@ To test this potential, we created an experimental program for the Annual ACM Sy
 
 The responses were very positive: the tool successfully identified a variety of issues, including calculation and logic errors. Here we report how we developed the tool and the results of its use.
 </details>
+
+<hr>
+
+<!-- ###################################
+
+##### [TBD]()
+
+[Amir Yazdanbakhsh](https://www.ayazdan.com/) (Google) --  *Friday, April 10  @ 1 pm [remote]*
+
+**Category:** Systems
+
+**Location:** CSL E144
+
+<details markdown="1">
+<summary>Description</summary>
+TBD
+</details>
+
+<details markdown="1">
+<summary>Abstract</summary>
+TBD
+</details> -->
 
 <hr>
 
