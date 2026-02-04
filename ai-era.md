@@ -23,7 +23,7 @@ This seminar series brings together speakers from across ALL areas of computer s
 
 ## Schedule
 
-##### [What Claude and I Did This Winter! *An informal talk about how everything has suddenly changed*]()
+##### [What Claude and I Did This Winter!](*An informal talk about how everything has suddenly changed!*)
 
 [Emery Berger](https://github.com/emeryberger) (UMass Amherst) -- *Friday, February 6 @ 1 pm [in-person]*
 
