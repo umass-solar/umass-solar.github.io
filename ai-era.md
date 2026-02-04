@@ -23,17 +23,17 @@ This seminar series brings together speakers from across ALL areas of computer s
 
 ## Schedule
 
-##### [Organizational Meeting]()
+##### [What Claude and I Did This Winter! *An informal talk about how everything has suddenly changed*]()
 
-[Mohammad Hajiesmaili](https://groups.cs.umass.edu/hajiesmaili/) (UMass) -- *Friday, February 6 @ 1 pm [in-person]*
+[Emery Berger](https://github.com/emeryberger) (UMass Amherst) -- *Friday, February 6 @ 1 pm [in-person]*
 
-**Category:** Overview
+**Category:** systems
 
 **Location:** CSL E144
 
 <details markdown="1">
 <summary>Description</summary>
-Overview and motivation for the seminar.
+Coding agents have arrived, and they represent a sea change. I spent a few weeks working with one of them (Claude Code) and was blown away. To convey just how powerful these agents are, I will talk about just a sampling of the wide range of projects Claude and I were able to get done in an absurdly small amount of time.
 </details>
 
 <hr>
