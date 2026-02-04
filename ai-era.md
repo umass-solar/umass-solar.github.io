@@ -233,6 +233,21 @@ The responses were very positive: the tool successfully identified a variety of 
 
 <hr>
 
+<!-- ################################### -->
+
+##### [The Impact Market to Save Conference Peer Review](https://arxiv.org/abs/2512.14104)
+
+[Karu Sankaralingam](https://karu.sites.cs.wisc.edu/wiki/) (UW Madison / NVIDIA) --  *Friday, April 17  @ 1 pm [TBD]*
+
+**Category:** systems/interdisciplinary/review process
+
+**Location:** CSL E144
+
+<details markdown="1">
+<summary>Description</summary>
+This talk introduces the Impact Market, a market-based mechanism for conference peer review that decouples dissemination from credentialing. It proposes a multi-stage process that combines broad access to publication with longer-horizon, incentive-aligned evaluation to produce a more stable and interpretable signal of impact. This directly ties to the seminar’s theme by examining how AI-era scale and automation are pressuring us to redesign research incentives, review processes, and what “quality” and “contribution” should mean in the first place.
+</details>
+
 <!-- ###################################
 
 ##### [TBD]()
