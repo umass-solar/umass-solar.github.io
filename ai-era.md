@@ -18,8 +18,9 @@ This seminar series brings together speakers from across ALL areas of computer s
 - **Organizer**: Mohammad Hajiesmaili
 - **When:** Select Fridays during the Spring 2026, immediately after the student/faculty lunch  
 - **Time:** **1:00–2:00 pm ET**
-- **Where:** UMass Amherst CSL E144 
-- **Audience:** Faculty, students, and visitors interested in how AI is changing research practice and norms  
+- **Where:** UMass Amherst CSL E144/LGRC A112 
+- **Audience:** Faculty, students, and visitors interested in how AI is changing research practice and norms
+- **Zoom:** Please register [here](https://docs.google.com/forms/d/e/1FAIpQLSdwbWoOK0wnzyOVLSMSwyR9p_r3wlBFAo3GMighjqqwRy-TVQ/viewform?usp=dialog) to receive the Zoom link.
 
 ## Schedule
 
