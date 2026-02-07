@@ -15,10 +15,10 @@ This seminar series brings together speakers from across ALL areas of computer s
 
 ## Format & timing
 
-- **Organizer**: Mohammad Hajiesmaili
+- **Organizer**: [Mohammad Hajiesmaili](https://groups.cs.umass.edu/hajiesmaili/), [Ativ Joshi](https://ativjoshi.github.io/)
 - **When:** Select Fridays during the Spring 2026, immediately after the student/faculty lunch  
 - **Time:** **1:00–2:00 pm ET**
-- **Where:** UMass Amherst CSL E144/LGRC A112 
+- **Where:** UMass Amherst CSL E144 OR LGRC A112 
 - **Audience:** Faculty, students, and visitors interested in how AI is changing research practice and norms
 - **Zoom:** Please register [here](https://docs.google.com/forms/d/e/1FAIpQLSdwbWoOK0wnzyOVLSMSwyR9p_r3wlBFAo3GMighjqqwRy-TVQ/viewform?usp=dialog) to receive the Zoom link.
 
@@ -28,12 +28,17 @@ This seminar series brings together speakers from across ALL areas of computer s
 
 [Emery Berger](https://github.com/emeryberger) (UMass Amherst) -- *Friday, February 6 @ 1 pm [in-person]*
 
-**Category:** systems / *An informal talk about how everything has suddenly changed!*
+**Category:** Systems 
 
 **Location:** CSL E144
 
 <details markdown="1">
 <summary>Description</summary>
+An informal talk about how everything has suddenly changed!*
+</details>
+
+<details markdown="1">
+<summary>Abstract</summary>
 Coding agents have arrived, and they represent a sea change. I spent a few weeks working with one of them (Claude Code) and was blown away. To convey just how powerful these agents are, I will talk about just a sampling of the wide range of projects Claude and I were able to get done in an absurdly small amount of time.
 </details>
 
