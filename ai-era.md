@@ -83,7 +83,7 @@ Balakrishnan was an advisor to Meraki from its inception in 2006 to its acquisit
 
 ##### [Towards A Learning-Directed Operating System]()
 
-[Aditya Akella](https://www.cs.utexas.edu/~akella/) (UT Austin) --  *Friday, February 27 @ 1 pm [remote]*
+[Aditya Akella](https://www.cs.utexas.edu/~akella/) (UT Austin) --  *Friday, February 27 @ 1 pm [in-person]*
 
 **Category:** Systems
 
