@@ -22,7 +22,6 @@
       --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
     }
 
-    /* System preference default */
     @media (prefers-color-scheme: light){
       :root{
         --bg:#f7fafc;
@@ -35,7 +34,6 @@
       }
     }
 
-    /* Manual override via <html data-theme="..."> */
     html[data-theme="dark"]{
       color-scheme: dark;
       --bg: #0b0f14;
@@ -175,6 +173,13 @@
       text-transform: uppercase;
     }
     tr:hover td{background: color-mix(in oklab, var(--panel2) 92%, transparent);}
+
+    /* ✅ Row selection highlight */
+    tr.isSelected td{
+      background: color-mix(in oklab, var(--panel2) 86%, transparent) !important;
+      box-shadow: inset 0 0 0 999px color-mix(in oklab, var(--accent) 6%, transparent);
+    }
+
     .badge{
       display:inline-flex; gap:6px; align-items:center;
       padding: 4px 8px; border-radius: 999px;
@@ -193,7 +198,7 @@
     .rightTitle{display:flex; flex-direction:column; gap:3px;}
     .rightTitle .big{
       font-size: 16px; font-weight: 750; letter-spacing: .2px;
-      display:flex; gap:10px; flex-wrap:wrap; align-items:baseline;
+      display:flex; gap:10px; flex-wrap:wrap; align-items:center;
     }
     .rightTitle .meta{font-size: 12px; color: var(--muted); display:flex; gap:10px; flex-wrap:wrap;}
     .toast{
@@ -211,7 +216,6 @@
     .toast.show{display:block}
     .mono{font-family: var(--mono)}
 
-    /* Small nicer select in the topbar pill */
     .pill select{
       border: 0;
       background: transparent;
@@ -221,6 +225,38 @@
       padding: 0;
       width: auto;
     }
+
+    /* ✅ csrankings-like profile icons */
+    .nameCell{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .icons{
+      display:inline-flex;
+      gap:6px;
+      align-items:center;
+    }
+    .iconBtn{
+      width: 22px; height: 22px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: color-mix(in oklab, var(--panel2) 92%, transparent);
+      color: var(--muted);
+      text-decoration:none;
+      cursor:pointer;
+      user-select:none;
+    }
+    .iconBtn:hover{
+      color: var(--text);
+      box-shadow: 0 6px 18px rgba(0,0,0,.18);
+      transform: translateY(-1px);
+    }
+    .iconBtn svg{ width: 14px; height: 14px; }
   </style>
 
   <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
@@ -301,7 +337,7 @@
             <label>Year range <span class="small mono" id="yearRangeLabel">—</span></label>
             <div class="row">
               <!-- ✅ Default year range requested: 2015–2026 -->
-              <input id="yearMin" type="range" min="1974" max="2026" value="2010" />
+              <input id="yearMin" type="range" min="1974" max="2026" value="2015" />
               <input id="yearMax" type="range" min="1974" max="2026" value="2026" />
             </div>
             <div class="small muted">
@@ -348,6 +384,7 @@
           <div class="rightTitle">
             <div class="big">
               <span id="selAuthor">Select an author</span>
+              <span id="selIcons" class="icons"></span>
               <span class="badge" id="selBadge" style="display:none"><span class="b"></span><span id="selBadgeText"></span></span>
             </div>
             <div class="meta" id="selMeta">Click a row in the table to inspect an author.</div>
@@ -409,7 +446,7 @@
               <div style="height:12px"></div>
               <div class="small muted">
                 Data source: local <span class="mono">./data/sigmetrics.json</span> (preferred), fallback dblp Search API (JSONP).
-                Authors are unified by dblp person id (pid) when present.
+                Extra links: optional local <span class="mono">./data/author_links.json</span>.
               </div>
             </div>
           </div>
@@ -423,13 +460,6 @@
   <div class="toast" id="toast"></div>
 
 <script>
-/**
- * Offline-first SIGMETRICS Authors Dashboard
- * - Prefers local data/sigmetrics.json
- * - Falls back to dblp JSONP if local file missing
- * - Author identity merged by pid when available
- */
-
 /* ---------- Theme helpers ---------- */
 function getEffectiveTheme(){
   const manual = document.documentElement.getAttribute("data-theme");
@@ -454,7 +484,7 @@ function plotThemeLayout(){
   };
 }
 
-const CACHE_KEY = "sigmetrics_authors_dashboard_v3_pid_merge";
+const CACHE_KEY = "sigmetrics_authors_dashboard_v4_icons_rowclick";
 const CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 14;
 const MAX_HITS_PER_TOC = 1000;
 const START_YEAR = 1974;
@@ -523,6 +553,29 @@ function fmt(n){
 }
 function escapeHtml(s){
   return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+/* ---------- Icons (inline SVG) ---------- */
+function svgIcon(kind){
+  if(kind === "home"){
+    return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M3 10.5 12 3l9 7.5"></path><path d="M5 10v10h14V10"></path>
+    </svg>`;
+  }
+  if(kind === "dblp"){
+    return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path>
+    </svg>`;
+  }
+  // scholar
+  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M12 3 2 8l10 5 10-5-10-5Z"></path>
+    <path d="M2 8v6l10 5 10-5V8"></path>
+  </svg>`;
+}
+function iconLink(href, title, kind){
+  if(!href) return "";
+  return `<a class="iconBtn" href="${escapeHtml(href)}" target="_blank" rel="noreferrer" title="${escapeHtml(title)}">${svgIcon(kind)}</a>`;
 }
 
 /* ---------- JSONP helper (fallback) ---------- */
@@ -603,6 +656,9 @@ let dataset = null;
 let filteredAuthors = [];
 let selectedAuthorId = null;
 
+/* ✅ Offline author links (optional) */
+let authorLinks = { byPid: {}, byName: {} };
+
 /* ---------- Cache ---------- */
 function loadCache(){
   try{
@@ -642,13 +698,48 @@ function authorProfileUrl(authorId){
   return `https://dblp.org/pid/${pid}.html`;
 }
 
+/* ✅ Resolve links for an author (pid preferred, then name, then aliases) */
+function resolveAuthorLinks(authorId){
+  const meta = dataset?.authorMeta?.[authorId] || {};
+  const pid = meta.pid || (authorId.startsWith("pid:") ? authorId.slice(4) : null);
+  const canonical = meta.canonicalName || meta.name || null;
+  const aliases = meta.aliases || [];
+
+  // allow both "49/7911" and "pid:49/7911" in file
+  const pidObj = pid ? (authorLinks.byPid[pid] || authorLinks.byPid[("pid:" + pid)]) : null;
+  if(pidObj) return { pid, canonical, ...pidObj };
+
+  if(canonical && authorLinks.byName[canonical]) return { pid, canonical, ...authorLinks.byName[canonical] };
+  for(const a of aliases){
+    if(authorLinks.byName[a]) return { pid, canonical, ...authorLinks.byName[a] };
+  }
+  return { pid, canonical };
+}
+
+/* ✅ Render icon set */
+function renderIconsForAuthor(authorId){
+  const meta = dataset?.authorMeta?.[authorId] || {};
+  const pid = meta.pid || (authorId.startsWith("pid:") ? authorId.slice(4) : null);
+  const dblp = pid ? `https://dblp.org/pid/${pid}.html` : null;
+
+  const L = resolveAuthorLinks(authorId);
+  const home = L.home || L.homepage || null;
+  const scholar = L.scholar || L.googleScholar || null;
+
+  return `
+    ${iconLink(home, "Homepage", "home")}
+    ${iconLink(dblp, "DBLP", "dblp")}
+    ${iconLink(scholar, "Google Scholar", "scholar")}
+  `.trim();
+}
+
+/* ✅ Apply filters and keep selection consistent */
 function applyFilters(){
   if(!dataset) return;
 
   const {q, sortMetric, minPubs, yMin, yMax} = getFilters();
   const recs = dataset.records.filter(r => r.year >= yMin && r.year <= yMax);
 
-  // recompute per-author within range
   const tmp = new Map();
   const getA = (id) => {
     if(!tmp.has(id)) tmp.set(id, {
@@ -670,7 +761,6 @@ function applyFilters(){
       if(team === 1) s.solo += 1;
       if(i === 0) s.firstAuth += 1;
       if(i === r.authors.length-1) s.lastAuth += 1;
-
       for(let j=0;j<r.authors.length;j++){
         if(j===i) continue;
         s.coauthors.add(r.authors[j].id);
@@ -725,25 +815,28 @@ function applyFilters(){
   refreshSelectedAuthor();
 }
 
-/* ---------- Table ---------- */
+/* ---------- Table (FIXED) ---------- */
 function renderTable(rows){
   const tbody = el("authorsTbl").querySelector("tbody");
   tbody.innerHTML = "";
   const frag = document.createDocumentFragment();
 
   for(const r of rows){
-    const url = authorProfileUrl(r.id);
-
-    const nameCell = url
-      ? `<a class="link" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(r.name)}</a>`
-      : `<span class="link" data-authorid="${escapeHtml(r.id)}">${escapeHtml(r.name)}</span>`;
+    const tr = document.createElement("tr");
+    tr.dataset.authorid = r.id;
 
     const aliases = (r.aliases || []).filter(a => a && a !== r.name);
     const aliasesTxt = aliases.length ? escapeHtml(aliases.slice(0,4).join(" · ")) + (aliases.length > 4 ? " …" : "") : "—";
 
-    const tr = document.createElement("tr");
+    // ✅ Name selects. Icons open external links.
+    const iconsHtml = renderIconsForAuthor(r.id);
     tr.innerHTML = `
-      <td>${nameCell}</td>
+      <td>
+        <div class="nameCell">
+          <span class="link" data-authorid="${escapeHtml(r.id)}">${escapeHtml(r.name)}</span>
+          <span class="icons">${iconsHtml}</span>
+        </div>
+      </td>
       <td>${fmt(r.pubs)}</td>
       <td>${fmt(r.activeYears)}</td>
       <td>${fmt(r.firstAuth)}</td>
@@ -755,20 +848,41 @@ function renderTable(rows){
       <td>${fmt(r.lastYear)}</td>
       <td class="muted">${aliasesTxt}</td>
     `;
+
+    // ✅ Row click selects; clicking on icons should NOT select (prevent row click)
+    tr.addEventListener("click", (ev) => {
+      const tgt = ev.target;
+      if(tgt && (tgt.closest?.("a.iconBtn"))) return;
+      selectAuthor(r.id);
+    });
+
     frag.appendChild(tr);
   }
 
   tbody.appendChild(frag);
 
+  // name click selects
   tbody.querySelectorAll("[data-authorid]").forEach(a => {
-    a.addEventListener("click", () => {
+    a.addEventListener("click", (ev) => {
+      ev.preventDefault();
+      ev.stopPropagation();
       const id = a.getAttribute("data-authorid");
       if(id) selectAuthor(id);
     });
   });
+
+  // ✅ highlight selected row
+  markSelectedRow();
 }
 
-/* ---------- Charts (Plotly themed) ---------- */
+function markSelectedRow(){
+  const tbody = el("authorsTbl").querySelector("tbody");
+  tbody.querySelectorAll("tr").forEach(tr => {
+    tr.classList.toggle("isSelected", !!selectedAuthorId && tr.dataset.authorid === selectedAuthorId);
+  });
+}
+
+/* ---------- Charts ---------- */
 function renderTopAuthors(rows){
   const top = rows.slice(0, 25).reverse();
   const names = top.map(r => r.name);
@@ -798,11 +912,7 @@ function renderTopAuthors(rows){
     paper_bgcolor: "rgba(0,0,0,0)",
     plot_bgcolor: "rgba(0,0,0,0)",
     font: theme.font,
-    xaxis: {
-      title: "Publications",
-      automargin: true,
-      ...theme.xaxis
-    },
+    xaxis: { title: "Publications", automargin: true, ...theme.xaxis },
     yaxis: {
       type: "category",
       tickmode: "array",
@@ -876,7 +986,7 @@ function renderAuthorYears(authorId){
   Plotly.newPlot("chartAuthorYears", [trace], layout, {displayModeBar:false, responsive:true});
 }
 
-/* ---------- Coauthor network (less crowded + hover highlight + short labels) ---------- */
+/* ---------- Coauthor network ---------- */
 function shortName(full){
   const s = (full || "").trim();
   if(!s) return "";
@@ -914,7 +1024,7 @@ function renderCoauthorNetwork(authorId){
     }
   }
 
-  const MAX_NODES = 16; // 12–18 works best
+  const MAX_NODES = 16;
   const top = [...co.entries()].sort((a,b)=>b[1]-a[1]).slice(0, MAX_NODES);
 
   const nodes = [{id: authorId, w: 0}, ...top.map(([id,w]) => ({id, w}))];
@@ -1011,6 +1121,7 @@ function renderCoauthorNetwork(authorId){
 /* ---------- Selection ---------- */
 function selectAuthor(authorId){
   selectedAuthorId = authorId;
+  markSelectedRow();
   refreshSelectedAuthor();
 }
 
@@ -1019,11 +1130,13 @@ function refreshSelectedAuthor(){
     el("selAuthor").textContent = "Select an author";
     el("selMeta").textContent = "Click a row in the table to inspect an author.";
     el("selBadge").style.display = "none";
+    el("selIcons").innerHTML = "";
     Plotly.purge("chartAuthorYears");
     renderCoauthorNetwork(null);
     return;
   }
   if(!selectedAuthorId){
+    el("selIcons").innerHTML = "";
     renderCoauthorNetwork(null);
     return;
   }
@@ -1059,11 +1172,10 @@ function refreshSelectedAuthor(){
   }).join(" · ");
 
   el("selAuthor").textContent = name;
+  el("selIcons").innerHTML = renderIconsForAuthor(selectedAuthorId);
+
   el("selBadge").style.display = "inline-flex";
   el("selBadgeText").textContent = `${pubs} pubs`;
-
-  const prof = authorProfileUrl(selectedAuthorId);
-  const profHtml = prof ? ` · <a class="link" href="${escapeHtml(prof)}" target="_blank" rel="noreferrer">dblp profile</a>` : "";
 
   el("selMeta").innerHTML = `
     <span><b>${fmt(firstYear)}</b> → <b>${fmt(lastYear)}</b></span>
@@ -1073,7 +1185,6 @@ function refreshSelectedAuthor(){
     <span>avg team: <b>${fmt(avgTeam)}</b></span>
     <span class="muted">·</span>
     <span>top coauthors: <span class="muted">${escapeHtml(topCo || "—")}</span></span>
-    ${profHtml}
   `;
 
   renderAuthorYears(selectedAuthorId);
@@ -1124,7 +1235,7 @@ function setupYearSliders(){
   yMin.min = minY; yMin.max = maxY;
   yMax.min = minY; yMax.max = maxY;
 
-  // Respect the HTML defaults (2015–2026), but clamp into available range
+  // Respect HTML defaults (2015–2026), but clamp
   yMin.value = clamp(+yMin.value || minY, minY, maxY);
   yMax.value = clamp(+yMax.value || maxY, minY, maxY);
 
@@ -1152,17 +1263,28 @@ function setupTableHeaderSorting(){
   });
 }
 
-/* ---------- Dataset builders ---------- */
-function chooseCanonicalName(aliasCounts){
-  const entries = [...aliasCounts.entries()];
-  entries.sort((a,b) => (b[1]-a[1]) || (a[0].length-b[0].length));
-  return entries[0]?.[0] || null;
-}
-
+/* ---------- Dataset loaders ---------- */
 async function loadLocalDataset(){
   const res = await fetch("./data/sigmetrics.json", { cache: "no-store" });
   if(!res.ok) throw new Error("Local dataset not found: data/sigmetrics.json");
   return res.json();
+}
+
+/* ✅ Optional: load offline author links */
+async function loadAuthorLinks(){
+  try{
+    const res = await fetch("./data/author_links.json", { cache: "no-store" });
+    if(!res.ok) throw new Error("author_links.json missing");
+    const obj = await res.json();
+    authorLinks = {
+      byPid: obj.byPid || {},
+      byName: obj.byName || {}
+    };
+    return true;
+  }catch{
+    authorLinks = { byPid: {}, byName: {} };
+    return false;
+  }
 }
 
 async function buildDatasetFromDblpJsonp(){
@@ -1172,8 +1294,8 @@ async function buildDatasetFromDblpJsonp(){
 
   const endYear = new Date().getFullYear();
   const allRecords = [];
-
   const authorMetaAgg = new Map();
+
   function observeAuthor(a){
     if(!authorMetaAgg.has(a.id)){
       authorMetaAgg.set(a.id, { id:a.id, pid:a.pid, aliasCounts:new Map() });
@@ -1182,6 +1304,12 @@ async function buildDatasetFromDblpJsonp(){
     m.pid = m.pid || a.pid || null;
     const nm = (a.name || "").trim();
     if(nm) m.aliasCounts.set(nm, (m.aliasCounts.get(nm)||0) + 1);
+  }
+
+  function chooseCanonicalName(aliasCounts){
+    const entries = [...aliasCounts.entries()];
+    entries.sort((a,b) => (b[1]-a[1]) || (a[0].length-b[0].length));
+    return entries[0]?.[0] || null;
   }
 
   for(let year = START_YEAR; year <= endYear; year++){
@@ -1278,7 +1406,6 @@ async function buildDatasetFromDblpJsonp(){
     const yearsActive = [...s.years.keys()].sort((a,b)=>a-b);
     const firstYear = yearsActive[0] ?? null;
     const lastYear  = yearsActive[yearsActive.length-1] ?? null;
-
     const meta = authorMeta[s.id] || {};
     const avgTeam = s.teamSizes.length ? (s.teamSizes.reduce((a,b)=>a+b,0) / s.teamSizes.length) : 0;
 
@@ -1308,6 +1435,10 @@ async function buildDatasetFromDblpJsonp(){
 /* ---------- Init ---------- */
 async function init({forceRefresh=false}={}){
   setCacheState();
+
+  // load links (optional) first so table/icons can render
+  const linksLoaded = await loadAuthorLinks();
+  if(linksLoaded) showToast("Loaded offline author links.");
 
   // Prefer local dataset if present
   try{
@@ -1372,6 +1503,7 @@ el("btnClearCache").addEventListener("click", () => {
   el("yearSpan").textContent = "—";
   el("datasetStamp").textContent = "dataset: —";
   selectedAuthorId = null;
+  el("selIcons").innerHTML = "";
 
   Plotly.purge("chartTopAuthors");
   Plotly.purge("chartAuthorYears");
@@ -1388,7 +1520,6 @@ el("minPubs").addEventListener("change", () => applyFilters());
 setupTableHeaderSorting();
 renderCoauthorNetwork(null);
 
-/* Init theme before auto-init */
 initTheme();
 if (window.matchMedia) {
   const mq = window.matchMedia("(prefers-color-scheme: dark)");
@@ -1400,7 +1531,6 @@ if (window.matchMedia) {
   });
 }
 
-/* Auto-init */
 init();
 </script>
 </body>
