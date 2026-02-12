@@ -573,9 +573,21 @@ function svgIcon(kind){
     <path d="M2 8v6l10 5 10-5V8"></path>
   </svg>`;
 }
+function normalizeHref(href){
+  if(!href) return null;
+  const h = String(href).trim();
+  if(!h) return null;
+  // If it looks like a bare domain, prefix https://
+  if(!/^([a-zA-Z][a-zA-Z0-9+.-]*:)?\/\//.test(h) && !/^(mailto:|tel:)/i.test(h)){
+    return "https://" + h.replace(/^\/+/, "");
+  }
+  return h;
+}
+
 function iconLink(href, title, kind){
-  if(!href) return "";
-  return `<a class="iconBtn" href="${escapeHtml(href)}" target="_blank" rel="noreferrer" title="${escapeHtml(title)}">${svgIcon(kind)}</a>`;
+  const u = normalizeHref(href);
+  if(!u) return "";
+  return `<a class="iconBtn" href="${escapeHtml(u)}" target="_blank" rel="noreferrer noopener" title="${escapeHtml(title)}">${svgIcon(kind)}</a>`;
 }
 
 /* ---------- JSONP helper (fallback) ---------- */
@@ -868,6 +880,19 @@ function renderTable(rows){
       ev.stopPropagation();
       const id = a.getAttribute("data-authorid");
       if(id) selectAuthor(id);
+    });
+  });
+
+  // ✅ Ensure icon clicks always open (and never get swallowed by row handlers)
+  tbody.querySelectorAll('a.iconBtn').forEach(a => {
+    a.addEventListener('click', (ev) => {
+      ev.stopPropagation();
+      const href = a.getAttribute('href');
+      if(href){
+        // Use window.open to be robust across table/row click handlers
+        ev.preventDefault();
+        window.open(href, '_blank', 'noopener,noreferrer');
+      }
     });
   });
 
