@@ -1,0 +1,23 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <img class="brand-logo" src="{{ '/assets/img/logo.png' | relative_url }}" alt="SIGMETRICS logo" />
+      <div class="brand-text">
+        <div class="brand-title">ACM SIGMETRICS</div>
+        <div class="brand-subtitle">special interest group on performance evaluation</div>
+      </div>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="window.__toggleNav && window.__toggleNav()">
+      ☰
+    </button>
+
+    <nav class="nav" id="site-nav">
+      {% for item in site.data.navigation %}
+        {% assign current = page.url | relative_url %}
+        {% assign item_url = item.url | relative_url %}
+        <a class="nav-link {% if current == item_url %}active{% endif %}" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>

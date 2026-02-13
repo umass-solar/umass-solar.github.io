@@ -1,0 +1,8 @@
+---
+layout: page
+title: ACM OpenTOC
+subtitle: Open table-of-contents links and explanation.
+---
+
+{% capture md %}{% include_relative pages/opentoc.md %}{% endcapture %}
+{{ md | markdownify }}
