@@ -1,7 +1,0 @@
----
-const { cols } = Astro.props as { cols?: 2 | 3 };
-const cls = cols === 3 ? "grid grid-3" : "grid grid-2";
----
-<div class={cls}>
-  <slot />
-</div>
