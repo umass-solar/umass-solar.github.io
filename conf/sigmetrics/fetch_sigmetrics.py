@@ -1,21 +1,33 @@
 #!/usr/bin/env python3
+"""
+fetch_sigmetrics.py
+
+Downloads SIGMETRICS TOC records from dblp Search API and writes a local JSON dataset.
+
+Key behaviors (per your requirements):
+- Tries multiple dblp TOC keys per year (2-digit and 4-digit year formats).
+- Retries with exponential backoff on HTTP 429 (Too Many Requests) + transient network errors.
+- Excludes "Editorship" and other clearly non-conference entries (keeps Conference/Workshop; permissive if type is missing).
+- Poster filtering by page length:
+    * For years 1974–2016: exclude entries with < 5 pages (based on numeric page ranges like "369-370").
+    * For 2017+: no page-length filtering.
+
+Output: data/sigmetrics.json by default
+"""
+
 import argparse
 import json
 import os
 import random
-import re
 import time
 import urllib.parse
 import urllib.request
 from collections import defaultdict, Counter
 from urllib.error import HTTPError, URLError
 
+
 MAX_HITS_PER_TOC = 1000
 DEFAULT_START_YEAR = 1974
-
-# Poster/full-paper heuristic defaults
-DEFAULT_POSTER_FILTER_UNTIL = 2017  # apply filter for years <= this
-DEFAULT_MIN_FULL_PAGES = 5          # drop items with < this many pages (inclusive count)
 
 
 def build_api_url_for_toc(bht_key: str) -> str:
@@ -30,20 +42,22 @@ def build_api_url_for_toc(bht_key: str) -> str:
 
 def candidate_bht_keys(year: int):
     """
-    dblp SIGMETRICS TOC keys vary:
-      - many years use 2-digit suffix: sigmetrics96, sigmetrics14, sigmetrics00
-      - some tooling/pages may use 4-digit: sigmetrics2014
-    We try both.
+    dblp SIGMETRICS TOC keys vary across years:
+      - often 2-digit suffix: sigmetrics96, sigmetrics14, sigmetrics00, sigmetrics74
+      - sometimes 4-digit suffix: sigmetrics2014
+    We try both (4-digit first tends to work for many modern years; 2-digit is critical for older years).
     """
     yy = f"{year % 100:02d}"
     return [
-        # Prefer the 2-digit key first (covers many older years like sigmetrics74)
-        f"db/conf/sigmetrics/sigmetrics{yy}.bht",
-        f"db/conf/sigmetrics/sigmetrics{year}.bht",
+        f"db/conf/sigmetrics/sigmetrics{year}.bht",  # 4-digit
+        f"db/conf/sigmetrics/sigmetrics{yy}.bht",    # 2-digit
     ]
 
 
 def fetch_json_with_retries(url: str, timeout: int, retries: int, base_delay: float, jitter: float = 0.25):
+    """
+    Fetch JSON with retry/backoff handling for rate limits (HTTP 429) and transient errors.
+    """
     headers = {
         "User-Agent": "sigmetrics-dashboard/1.4 (offline builder; polite crawler)",
         "Accept": "application/json",
@@ -57,6 +71,7 @@ def fetch_json_with_retries(url: str, timeout: int, retries: int, base_delay: fl
             return json.loads(data.decode("utf-8"))
 
         except HTTPError as e:
+            # Rate limit handling
             if e.code == 429:
                 retry_after = e.headers.get("Retry-After")
                 if retry_after:
@@ -67,19 +82,20 @@ def fetch_json_with_retries(url: str, timeout: int, retries: int, base_delay: fl
                 else:
                     wait_s = base_delay * (2 ** attempt)
 
+                # Add jitter so multiple runs don't synchronize
                 wait_s = wait_s * (1.0 + random.uniform(-jitter, jitter))
                 wait_s = max(1.0, wait_s)
 
                 if attempt < retries:
-                    print(
-                        f"    429 Too Many Requests → sleeping {wait_s:.1f}s then retrying "
-                        f"(attempt {attempt+1}/{retries})"
-                    )
+                    print(f"    429 Too Many Requests → sleeping {wait_s:.1f}s then retrying (attempt {attempt+1}/{retries})")
                     time.sleep(wait_s)
                     continue
+
+            # Non-429 HTTP error, or final attempt
             raise
 
         except (URLError, TimeoutError) as e:
+            # Transient network issues
             wait_s = base_delay * (2 ** attempt)
             wait_s = wait_s * (1.0 + random.uniform(-jitter, jitter))
             wait_s = max(0.5, wait_s)
@@ -89,6 +105,13 @@ def fetch_json_with_retries(url: str, timeout: int, retries: int, base_delay: fl
                 time.sleep(wait_s)
                 continue
             raise
+
+
+def extract_hits(data):
+    hits = (((data or {}).get("result") or {}).get("hits") or {}).get("hit")
+    if not hits:
+        return []
+    return [hits] if isinstance(hits, dict) else list(hits)
 
 
 def to_author_obj(x):
@@ -122,6 +145,7 @@ def normalize_authors(auth_node):
 
 
 def choose_canonical_name(alias_counts: Counter):
+    # highest count; tie -> shortest
     if not alias_counts:
         return None
     items = list(alias_counts.items())
@@ -131,11 +155,11 @@ def choose_canonical_name(alias_counts: Counter):
 
 def is_conference_like(info_type: str) -> bool:
     """
-    The dblp Search API does NOT use 'c'/'e' letters.
-    It uses strings like:
+    dblp Search API 'type' looks like:
       - "Conference and Workshop Papers"
       - "Editorship"
-    We keep conference/workshop papers, and drop editorship.
+      - sometimes missing in older entries
+    We drop editorship and clearly non-conference types.
     """
     if not info_type:
         # If missing, be permissive (older records sometimes omit it)
@@ -151,47 +175,68 @@ def is_conference_like(info_type: str) -> bool:
     if "conference" in t or "workshop" in t:
         return True
 
-    # otherwise, conservative: exclude things that are clearly not papers
+    # otherwise, exclude things that are clearly not conference papers
     if "journal" in t or "book" in t or "thesis" in t:
         return False
 
-    # default: keep
+    # default: keep (SIGMETRICS TOC is usually conference-like)
     return True
 
 
-def extract_hits(data):
-    hits = (((data or {}).get("result") or {}).get("hits") or {}).get("hit")
-    if not hits:
-        return []
-    return [hits] if isinstance(hits, dict) else list(hits)
-
-
-def page_count(pages: str):
+def parse_page_count(pages: str):
     """
-    Return inclusive page count, or None if unknown/unparseable.
+    Attempts to parse numeric page ranges like:
+      - "83-94"  -> 12 pages
+      - "369-370" -> 2 pages
 
-    Common dblp 'pages' formats:
-      - "83-94" -> 12
-      - "369-370" -> 2
-      - "1:83-1:94" -> 12 (we take last two numbers)
-      - "83" -> 1
+    Returns:
+      int page_count if confidently parsed,
+      None if unknown/unparseable.
     """
     if not pages:
         return None
-    s = str(pages).strip()
-    if not s:
+
+    s = pages.strip()
+
+    # dblp sometimes uses commas or multiple ranges; we take the first numeric range
+    # Examples: "83-94" or "83-94, 107-118" (rare in TOC, but safe)
+    first = s.split(",")[0].strip()
+
+    if "-" not in first:
         return None
 
-    nums = [int(x) for x in re.findall(r"\d+", s)]
-    if not nums:
-        return None
-    if len(nums) == 1:
-        return 1
+    a, b = first.split("-", 1)
+    a = a.strip()
+    b = b.strip()
 
-    start, end = nums[-2], nums[-1]
-    if end < start:
+    # Strictly numeric only; ignore "e1-e12" etc.
+    if not a.isdigit() or not b.isdigit():
         return None
-    return (end - start) + 1
+
+    start = int(a)
+    end = int(b)
+    if start <= 0 or end <= 0:
+        return None
+
+    # Handle inverted ranges defensively
+    lo = min(start, end)
+    hi = max(start, end)
+    return (hi - lo + 1)
+
+
+def keep_by_page_rule(year: int, pages: str, page_filter_end_year: int, min_pages_pre: int) -> bool:
+    """
+    For years <= page_filter_end_year (default 2016): drop if page_count is known and < min_pages_pre.
+    For years >  page_filter_end_year: keep always (no page-length filtering).
+    If page_count cannot be parsed: keep (avoid false drops).
+    """
+    if year > page_filter_end_year:
+        return True
+
+    pc = parse_page_count(pages)
+    if pc is None:
+        return True
+    return pc >= min_pages_pre
 
 
 def main():
@@ -202,55 +247,36 @@ def main():
     ap.add_argument("--timeout", type=int, default=30, help="HTTP timeout seconds (default: 30)")
     ap.add_argument("--retries", type=int, default=6, help="Retries on 429/transient errors (default: 6)")
     ap.add_argument("--out", type=str, default="data/sigmetrics.json", help="Output JSON path (default: data/sigmetrics.json)")
-    ap.add_argument("--conf-only", action="store_true", help="Only keep conference/workshop papers; drop editorship (recommended)")
 
-    # Poster filter options
-    ap.add_argument(
-        "--no-poster-filter",
-        action="store_true",
-        help="Disable poster filtering by pages (default is enabled for years <= 2017)",
-    )
-    ap.add_argument(
-        "--poster-filter-until",
-        type=int,
-        default=DEFAULT_POSTER_FILTER_UNTIL,
-        help=f"Apply poster filter for years <= this year (default: {DEFAULT_POSTER_FILTER_UNTIL})",
-    )
-    ap.add_argument(
-        "--min-full-pages",
-        type=int,
-        default=DEFAULT_MIN_FULL_PAGES,
-        help=f"Minimum pages to keep for years covered by poster filter (default: {DEFAULT_MIN_FULL_PAGES})",
-    )
-
+    # Filtering controls
+    ap.add_argument("--min-pages-pre2017", type=int, default=5,
+                    help="For years up to --page-filter-end-year, exclude entries with fewer pages than this (default: 5)")
+    ap.add_argument("--page-filter-end-year", type=int, default=2016,
+                    help="Last year to apply page-length filtering (default: 2016). 2017+ keeps all page lengths.")
+    ap.add_argument("--keep-nonconf", action="store_true",
+                    help="If set, keep non-conference-like entries too (still drops editorship). Default: drop non-conference-like.")
     args = ap.parse_args()
 
     start_year = args.start
     end_year = args.end
     delay_s = max(0.0, args.delay)
 
-    use_poster_filter = not args.no_poster_filter
-    poster_filter_until = args.poster_filter_until
-    min_full_pages = max(1, int(args.min_full_pages))
-
     records = []
     author_meta_agg = {}  # id -> {"pid":..., "alias_counts": Counter()}
 
     print(f"Downloading SIGMETRICS TOC records from {start_year}..{end_year}")
-    print(
-        f"Using delay={delay_s:.2f}s, retries={args.retries}, conf_only={bool(args.conf_only)}, "
-        f"poster_filter={'on' if use_poster_filter else 'off'} "
-        f"(<= {poster_filter_until}, min_pages={min_full_pages})"
-    )
+    print(f"Using delay={delay_s:.2f}s, retries={args.retries}")
+    print(f"Page filter: years<= {args.page_filter_end_year} drop if pages < {args.min_pages_pre2017}; years> {args.page_filter_end_year} no filter")
+    print(f"Type filter: drop editorship; {'keep non-conf' if args.keep_nonconf else 'keep conf/workshop (or missing type) only'}")
 
-    total_skipped_type = 0
     total_years_no_hits = 0
-    total_skipped_posters = 0
+    total_skipped_type = 0
+    total_skipped_pages = 0
 
     for year in range(start_year, end_year + 1):
         print(f"  {year}: ", end="", flush=True)
 
-        year_hit_list = []
+        year_hits = []
         used_bht = None
 
         # Try multiple bht formats
@@ -264,50 +290,56 @@ def main():
                     base_delay=max(1.0, delay_s if delay_s > 0 else 1.0),
                 )
             except Exception:
-                # Try next candidate bht_key
                 continue
 
             hits = extract_hits(data)
             if hits:
-                year_hit_list = hits
+                year_hits = hits
                 used_bht = bht_key
                 break
 
-        if not year_hit_list:
+        if not year_hits:
             total_years_no_hits += 1
             print("0 records (no TOC key matched)")
             if delay_s:
                 time.sleep(delay_s)
             continue
 
-        print(f"{len(year_hit_list)} records (bht={used_bht})")
-
         kept_this_year = 0
-        skipped_non_conf_this_year = 0
-        skipped_posters_this_year = 0
+        skipped_type_this_year = 0
+        skipped_pages_this_year = 0
 
-        for h in year_hit_list:
+        # We print a single line per year to keep logs readable
+        print(f"{len(year_hits)} records (bht={used_bht})")
+
+        for h in year_hits:
             info = (h or {}).get("info") or {}
             title = (info.get("title") or "").strip()
             if not title:
                 continue
 
             info_type = (info.get("type") or "").strip()
-            if args.conf_only and (not is_conference_like(info_type)):
-                skipped_non_conf_this_year += 1
+            if "editorship" in (info_type or "").lower():
+                skipped_type_this_year += 1
+                total_skipped_type += 1
+                continue
+
+            if (not args.keep_nonconf) and (not is_conference_like(info_type)):
+                skipped_type_this_year += 1
                 total_skipped_type += 1
                 continue
 
             y = int(info.get("year") or year)
-            pages_str = (info.get("pages") or "").strip()
-
-            # ✅ Poster filter: only apply up to poster_filter_until (default: 2017)
-            if use_poster_filter and y <= poster_filter_until:
-                pc = page_count(pages_str)
-                if pc is not None and pc < min_full_pages:
-                    skipped_posters_this_year += 1
-                    total_skipped_posters += 1
-                    continue
+            pages = (info.get("pages") or "").strip()
+            if not keep_by_page_rule(
+                year=y,
+                pages=pages,
+                page_filter_end_year=args.page_filter_end_year,
+                min_pages_pre=args.min_pages_pre2017,
+            ):
+                skipped_pages_this_year += 1
+                total_skipped_pages += 1
+                continue
 
             authors = normalize_authors(info.get("authors") or {})
             for a in authors:
@@ -315,7 +347,7 @@ def main():
                 if aid not in author_meta_agg:
                     author_meta_agg[aid] = {"pid": a.get("pid"), "alias_counts": Counter()}
                 m = author_meta_agg[aid]
-                if not m["pid"] and a.get("pid"):
+                if (not m["pid"]) and a.get("pid"):
                     m["pid"] = a.get("pid")
                 nm = (a.get("name") or "").strip()
                 if nm:
@@ -329,7 +361,7 @@ def main():
                 "authors": authors,       # [{id,pid,name}, ...]
                 "authorIds": author_ids,  # [id,...]
                 "venue": info.get("venue") or "",
-                "pages": pages_str,
+                "pages": pages,
                 "doi": info.get("doi") or "",
                 "url": info.get("url") or "",
                 "key": info.get("key") or "",
@@ -337,14 +369,14 @@ def main():
             })
             kept_this_year += 1
 
-        if args.conf_only or (use_poster_filter and skipped_posters_this_year):
-            suffix = []
-            if args.conf_only and skipped_non_conf_this_year:
-                suffix.append(f"skipped_non_conf={skipped_non_conf_this_year}")
-            if use_poster_filter and skipped_posters_this_year:
-                suffix.append(f"skipped_short_pages={skipped_posters_this_year}")
-            if suffix:
-                print(f"      kept={kept_this_year}, " + ", ".join(suffix))
+        if skipped_type_this_year or skipped_pages_this_year:
+            bits = []
+            if skipped_type_this_year:
+                bits.append(f"skipped_type={skipped_type_this_year}")
+            if skipped_pages_this_year:
+                bits.append(f"skipped_pages={skipped_pages_this_year}")
+            if bits:
+                print(f"      kept={kept_this_year} ({', '.join(bits)})")
 
         if delay_s:
             time.sleep(delay_s)
@@ -362,7 +394,7 @@ def main():
             "aliases": aliases
         }
 
-    # Aggregate per-author metrics
+    # Aggregate per-author metrics (based on kept records only)
     stats = {}
 
     def get_stats(aid):
@@ -425,20 +457,16 @@ def main():
         "fetchedAt": int(time.time() * 1000),
         "startYear": start_year,
         "endYear": end_year,
-        "confOnly": bool(args.conf_only),
-        "posterFilter": {
-            "enabled": bool(use_poster_filter),
-            "untilYear": int(poster_filter_until),
-            "minFullPages": int(min_full_pages),
-        },
         "records": records,
         "authorMeta": author_meta,
         "authors": authors,
         "notes": {
-            "skippedNonConf": total_skipped_type,
-            "skippedShortPages": total_skipped_posters,
+            "maxHitsPerToc": MAX_HITS_PER_TOC,
+            "pageFilterEndYear": args.page_filter_end_year,
+            "minPagesPre2017": args.min_pages_pre2017,
+            "skippedNonConfOrEditorship": total_skipped_type,
+            "skippedByPageLength": total_skipped_pages,
             "yearsWithNoHits": total_years_no_hits,
-            "maxHitsPerToc": MAX_HITS_PER_TOC
         }
     }
 
@@ -448,10 +476,10 @@ def main():
         json.dump(out, f, ensure_ascii=False)
 
     print(f"\nWrote {out_path} ({len(records)} records, {len(authors)} authors)")
-    if args.conf_only:
-        print(f"Skipped non-conference-like entries: {total_skipped_type}")
-    if use_poster_filter:
-        print(f"Skipped short-page (poster-like) entries (<= {poster_filter_until}, < {min_full_pages} pages): {total_skipped_posters}")
+    if total_skipped_pages:
+        print(f"Skipped short entries by page rule: {total_skipped_pages}")
+    if total_skipped_type:
+        print(f"Skipped non-conference/editorship entries: {total_skipped_type}")
     if total_years_no_hits:
         print(f"Years with no hits (no TOC key matched): {total_years_no_hits}")
 
