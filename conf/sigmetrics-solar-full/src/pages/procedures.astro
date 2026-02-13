@@ -1,0 +1,24 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import Section from "../components/Section.astro";
+import CardGrid from "../components/CardGrid.astro";
+import Card from "../components/Card.astro";
+import SourceNote from "../components/SourceNote.astro";
+import { site } from "../content/site";
+
+const lead = "Formal procedures: bylaws, CACM, cooperation, and duties.";
+---
+<PageLayout pageTitle="Procedures" lead={lead}>
+  <Section title="Procedures hub">
+    <p>The official procedures page links to formal procedures regarding bylaws, CACM, cooperation, and duties.</p>
+    <CardGrid cols={2}>
+      <Card title="Recommended structure">
+        <p class="muted" style="margin:0;">Split each procedure into its own root page later (still keeping URLs stable via redirects).</p>
+      </Card>
+      <Card title="Maintainability">
+        <p class="muted" style="margin:0;">Store documents as Markdown under <span class="kbd">src/content/</span> and render them here.</p>
+      </Card>
+    </CardGrid>
+    <SourceNote href={site.originals.procedures} />
+  </Section>
+</PageLayout>

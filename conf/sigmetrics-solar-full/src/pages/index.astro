@@ -1,0 +1,61 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import Section from "../components/Section.astro";
+import CardGrid from "../components/CardGrid.astro";
+import Card from "../components/Card.astro";
+import { site, links } from "../content/site";
+
+const lead =
+  "SIGMETRICS is the ACM Special Interest Group (SIG) for the computer performance evaluation community.";
+---
+<PageLayout pageTitle={site.title} lead={lead}>
+  <Section title="About SIGMETRICS">
+    <p>
+      SIGMETRICS promotes research in performance analysis techniques as well as the advanced and innovative use of known
+      methods and tools. It sponsors conferences, such as its own annual conference (SIGMETRICS), whose papers appear in
+      <a href={links.pomacs}>POMACS</a>.
+    </p>
+    <p class="muted">
+      It also publishes a newsletter (Performance Evaluation Review) and operates a mailing list linking researchers,
+      students, and practitioners interested in performance evaluation.
+    </p>
+  </Section>
+
+  <hr />
+
+  <Section title="Quick Links">
+    <CardGrid cols={3}>
+      <a class="card" href="/awards" style="padding: 14px 14px; display:block;">Awards</a>
+      <a class="card" href="/frequent-authors" style="padding: 14px 14px; display:block;">Frequent Authors</a>
+      <a class="card" href="/history" style="padding: 14px 14px; display:block;">History</a>
+      <a class="card" href="/mailing-list" style="padding: 14px 14px; display:block;">Mailing List</a>
+      <a class="card" href="/newsletter" style="padding: 14px 14px; display:block;">Newsletter (PER)</a>
+      <a class="card" href="/procedures" style="padding: 14px 14px; display:block;">Procedures</a>
+      <a class="card" href="/student-activities" style="padding: 14px 14px; display:block;">Student Activities</a>
+      <a class="card" href="/acm-fellows" style="padding: 14px 14px; display:block;">ACM Fellows</a>
+      <a class="card" href="/acm-opentoc" style="padding: 14px 14px; display:block;">ACM OpenTOC</a>
+      <a class="card" href="/dei" style="padding: 14px 14px; display:block;">DEI</a>
+      <a class="card" href="/volunteering" style="padding: 14px 14px; display:block;">Volunteering</a>
+    </CardGrid>
+  </Section>
+
+  <hr />
+
+  <Section title="Join SIGMETRICS">
+    <CardGrid cols={2}>
+      <Card title="ACM Membership">
+        <p style="margin:0;">Join ACM first: <a href={links.joinAcm}>ACM membership</a></p>
+      </Card>
+      <Card title="Add SIGMETRICS">
+        <p style="margin:0;">Then add SIGMETRICS: <a href={links.joinSigmetrics}>SIGMETRICS quick join</a></p>
+        <p class="muted" style="margin:10px 0 0 0;">
+          Members receive the quarterly Performance Evaluation Review and may receive discounted registration for SIGMETRICS-sponsored events.
+        </p>
+      </Card>
+    </CardGrid>
+    <div class="card" style="margin-top: 14px; padding: 14px 14px;">
+      <div class="muted">Manage membership:</div>
+      <div><a href={links.acmStore}>ACM store</a></div>
+    </div>
+  </Section>
+</PageLayout>

@@ -1,0 +1,40 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import Section from "../components/Section.astro";
+import SourceNote from "../components/SourceNote.astro";
+import { site } from "../content/site";
+
+const lead = "ACM Fellows who are current or past SIGMETRICS members (excerpt).";
+const excerpt = [
+  ["Alan Smith", 2001],
+  ["Albert G. Greenberg", 2006],
+  ["Anand Sivasubramaniam", 2017],
+  ["Anant Agarwal", 2007],
+  ["Babak Falsafi", 2015],
+  ["Balaji Prabhakar", 2017],
+  ["Donald F. Towsley", 1997],
+  ["Jennifer Rexford", 2008],
+  ["Ion Stoica", 2012],
+  ["Margaret Martonosi", 2009],
+  ["Mor Harchol-Balter", 2017],
+  ["Nicholas Duffield", 2020]
+];
+---
+<PageLayout pageTitle="ACM Fellows" lead={lead}>
+  <Section title="Fellows list (excerpt)">
+    <p class="muted">
+      This is a short excerpt. Use the official page for the full list (and to ensure the latest year-of-induction data).
+    </p>
+    <table>
+      <thead>
+        <tr><th>Name</th><th>Year of Induction</th></tr>
+      </thead>
+      <tbody>
+        {excerpt.map(([name, year]) => (
+          <tr><td>{name}</td><td>{year}</td></tr>
+        ))}
+      </tbody>
+    </table>
+    <SourceNote href={site.originals.acmFellows} />
+  </Section>
+</PageLayout>

@@ -1,0 +1,30 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import Section from "../components/Section.astro";
+import SourceNote from "../components/SourceNote.astro";
+import { site } from "../content/site";
+
+const lead = "Open access table-of-contents service that enables free downloads from the ACM Digital Library.";
+const items = [
+  "Proceedings of the 2025 ACM on Internet Measurement Conference",
+  "Proceedings of the ACM on Measurement and Analysis of Computing Systems, Volume 9, Issue 2, 2025",
+  "Abstracts of the 2025 ACM SIGMETRICS International Conference on Measurement and Modeling of Computer Systems",
+  "ICPE '25 Companion: Companion of the 2025 ACM/SPEC International Conference on Performance Engineering"
+];
+---
+<PageLayout pageTitle="ACM OpenTOC" lead={lead}>
+  <Section title="What is OpenTOC?">
+    <p>
+      The ACM OpenTOC enables SIGs to open content from recently held conferences so visitors can download definitive versions
+      from the ACM Digital Library at no charge in perpetuity starting from the conference start date.
+    </p>
+    <p class="muted">Downloads are captured in official ACM statistics, improving accuracy of usage and impact measurements.</p>
+  </Section>
+
+  <Section title="Available OpenTOCs (as listed on the official page)">
+    <ul>
+      {items.map((t) => <li>{t}</li>)}
+    </ul>
+    <SourceNote href={site.originals.acmOpenTOC} />
+  </Section>
+</PageLayout>

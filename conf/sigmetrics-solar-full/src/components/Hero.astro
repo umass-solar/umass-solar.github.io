@@ -1,0 +1,19 @@
+---
+const { title, lead } = Astro.props as { title: string; lead?: string };
+---
+<section style="background: linear-gradient(180deg, #f5f8ff 0%, #ffffff 72%);">
+  <div class="container" style="padding: 26px 0 12px 0;">
+    <div class="card" style="overflow:hidden;">
+      <div style="padding: 18px 18px 6px 18px;">
+        <div class="pill" style="margin-bottom: 12px;">
+          <span>Design inspired by SOLAR Lab</span>
+          <span style="opacity:.35;">•</span>
+          <span class="muted">Modular + easy to extend</span>
+        </div>
+        <h1>{title}</h1>
+        {lead ? <p class="muted" style="font-size: 1.05rem; max-width: 78ch;">{lead}</p> : null}
+      </div>
+      <div style="height: 10px; background: #fff;"></div>
+    </div>
+  </div>
+</section>
