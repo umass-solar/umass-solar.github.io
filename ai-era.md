@@ -167,6 +167,12 @@ This topic explores scientific production in the era of LLMs, examining the prac
 The rapid adoption of AI across disciplines is reshaping the landscape of scientific production. While enthusiasm and concern about generative AI in research are surging, empirical evidence remains scattered, and systematic understanding of large language models’ (LLMs) impact is still limited. In this talk, I draw on several large-scale analyses from my group that examine how LLM use changes the productivity of individual scientists, reshapes attention to prior works, introduces hallucinated content into the scientific record, and creates new challenges for peer review. Taken together, these results provide among the first macro-level evidence on GenAI’s impact on science, highlighting the need for institutions, journals, funding agencies, and the public to rethink how scientific work should be evaluated in this new era.
 </details>
 
+<!-- bio -->
+<details markdown="1">
+<summary>Bio</summary>
+Yian Yin is an assistant professor of information science. As a computational social scientist, he applies and develops novel computational tools to understand how individual, social, and environmental processes independently and jointly promote (or inhibit) scientific progress and innovation achievements. His research has been published in top general audience venues such as Science, Nature, and Nature Human Behaviour and featured in media outlets such as Forbes, Scientific American, The Atlantic, Harvard Business Review, and MIT Technology Review. In 2023, he was named to Forbes 30 under 30: Science list. Yian received his Ph.D. in industrial engineering and management science at Northwestern University, with research affiliations at Northwestern Institute on Complex Systems and Kellogg Center for Science of Science and Innovation.
+</details>
+
 <hr>
 
 <!-- ################################### -->
