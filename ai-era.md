@@ -47,7 +47,7 @@ Coding agents have arrived, and they represent a sea change. I spent a few weeks
 
 ##### [Glia: A Human-Inspired AI for Automated Systems Design and Optimization](https://arxiv.org/abs/2510.27176)
 
-[Hari Balakrishnan](http://nms.csail.mit.edu/~hari/) (MIT) --  *Friday, February 13 @ 1 pm [in-person]*
+[Hari Balakrishnan](http://nms.csail.mit.edu/~hari/) (MIT) --  *Friday, February 13 @ 1 pm [in-person]* [recording](https://umass.sharepoint.com/:v:/s/CICSVideos/IQAJlHDCgHTqSbleeoXGGaLEAZrAnLC8t4UAf828TyRs1cI?e=kLJfLh&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 **Category:** Systems
 
@@ -83,7 +83,7 @@ Balakrishnan was an advisor to Meraki from its inception in 2006 to its acquisit
 
 ##### [Towards A Learning-Directed Operating System]()
 
-[Aditya Akella](https://www.cs.utexas.edu/~akella/) (UT Austin) --  *Friday, February 27 @ 1 pm [in-person]*
+[Aditya Akella](https://www.cs.utexas.edu/~akella/) (UT Austin) --  *Friday, February 27 @ 1 pm [in-person]* [recording](https://umass.sharepoint.com/:v:/s/CICSVideos/IQCHpES_RCdaSYQ5qbKCoOymAb0EWVqTsKncTu1cHOSL-Y4?e=WfhEsc&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 **Category:** Systems
 
