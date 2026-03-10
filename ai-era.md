@@ -21,6 +21,7 @@ This seminar series brings together speakers from across ALL areas of computer s
 - **Where:** UMass Amherst CSL E144 OR LGRC A112 
 - **Audience:** Faculty, students, and visitors interested in how AI is changing research practice and norms
 - **Zoom:** Please register [here](https://docs.google.com/forms/d/e/1FAIpQLSdwbWoOK0wnzyOVLSMSwyR9p_r3wlBFAo3GMighjqqwRy-TVQ/viewform?usp=dialog) to receive the Zoom link.
+- **Recordings:** Recorded talks can be accessed using your UMass login.
 
 ## Schedule
 
@@ -118,7 +119,7 @@ Aditya Akella is a Professor and Regents Chair in Computer Sciences at UT Austin
 
 ##### [Braintrust: social knowledgebases as scientific fiduciaries]()
 
-[Evan Coleman](https://eacoleman.github.io/) (MIT) --  *Friday, March 6  @ 1 pm [in-person]*
+[Evan Coleman](https://eacoleman.github.io/) (MIT) --  *Friday, March 6  @ 1 pm [in-person]* [(recording)](https://umass.sharepoint.com/:v:/s/CICSVideos/IQAwdof5D5f8R7KNeRgsf0SjAajWumH2lF-o54FMPWACEVM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=ZmKbHd)
 
 **Category:** Interdisciplinary
 
