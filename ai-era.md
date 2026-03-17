@@ -151,7 +151,7 @@ Evan’s research focuses on building data-driven algorithms, hardware, and scie
 
 ##### [Scientific production in the era of large language models](https://www.science.org/doi/10.1126/science.adw3000)
 
-[Yian Yin](https://www.yianyin.net/) (Cornell) --  *Friday, March 13  @ 1 pm [TBD]*
+[Yian Yin](https://www.yianyin.net/) (Cornell) --  *Friday, March 13  @ 1 pm [TBD]* [(recording)](https://umass.sharepoint.com/:v:/s/CICSVideos/IQD-LXCqsuO5Q4gZBW_sySb9Aa7nuYGEajB080qQZTu01Cw?e=JKry2P&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 **Category:** AI/Interdisciplinary
 
@@ -251,7 +251,7 @@ The responses were very positive: the tool successfully identified a variety of 
 
 ##### [The Impact Market to Save Conference Peer Review](https://arxiv.org/abs/2512.14104)
 
-[Karu Sankaralingam](https://karu.sites.cs.wisc.edu/wiki/) (UW Madison / NVIDIA) --  *Friday, April 17  @ 1 pm [TBD]*
+[Karu Sankaralingam](https://karu.sites.cs.wisc.edu/wiki/) (UW Madison / NVIDIA) --  *Friday, May 1  @ 1 pm [TBD]*
 
 **Category:** systems/interdisciplinary/review process
 
