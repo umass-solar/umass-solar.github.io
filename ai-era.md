@@ -178,7 +178,7 @@ Yian Yin is an assistant professor of information science. As a computational so
 
 <!-- ################################### -->
 
-##### [On Learning-Curve Monotonicity for Maximum Likelihood Estimators](https://arxiv.org/abs/2512.10220)
+##### [Recent mathematical advances with large language models]()
 
 [Mark Sellke](https://msellke.com/) (Harvard/OpenAI) --  *Friday, April 3  @ 1 pm [in-person]*
 
@@ -188,20 +188,26 @@ Yian Yin is an assistant professor of information science. As a computational so
 
 <details markdown="1">
 <summary>Description</summary>
-This talk is based on work, On Learning-Curve Monotonicity for Maximum Likelihood Estimators, where all the results were derived by AI models (variants of GPT-5.2 Pro) with humans only providing prompts and verification. This strikingly illustrates the seminar's theme by demonstrating AI's capacity to automate the demanding task of theoretical analysis and proof generation, profoundly challenging traditional views on human-driven discovery and scientific originality.
+Mark will speak about recent mathematical advances made by large language models. We will look at some specific new theorems where AI made a primary contribution, and discuss the directions of future progress.
 </details>
 
-<details markdown="1">
+<!-- <details markdown="1">
 <summary>Abstract</summary>
 The property of learning-curve monotonicity, highlighted in a recent series of work by Loog, Mey and Viering, describes algorithms which only improve in average performance given more data, for any underlying data distribution within a given family. We establish the first nontrivial monotonicity guarantees for the maximum likelihood estimator in a variety of well-specified parametric settings. For sequential prediction with log loss, we show monotonicity (in fact complete monotonicity) of the forward KL divergence for Gaussian vectors with unknown covariance and either known or unknown mean, as well as for Gamma variables with unknown scale parameter. The Gaussian setting was explicitly highlighted as open in the aforementioned works, even in dimension 1. Finally we observe that for reverse KL divergence, a folklore trick yields monotonicity for very general exponential families.
 All results in this paper were derived by variants of GPT-5.2 Pro. Humans did not provide any proof strategies or intermediate arguments, but only prompted the model to continue developing additional results, and verified and transcribed its proofs. 
+</details> -->
+
+<!-- bio -->
+<details markdown="1">
+<summary>Bio</summary>
+Mark Sellke is an Assistant Professor of Statistics at Harvard working in high-dimensional probability, optimization, and machine learning, and a researcher at OpenAI. His work has been recognized by best paper awards at SODA 2020 and NeurIPS 2021, and the Sloan Research Fellowship, Bernoulli New Researcher Award, and Rollo Davidson Prize.
 </details>
 
 <hr>
 
 <!-- ################################### -->
 
-##### [Gemini-based automated feedback for theoretical CS papers](https://research.google/blog/gemini-provides-automated-feedback-for-theoretical-computer-scientists-at-stoc-2026/)
+##### [Accelerating Scientific Research with Gemini: Case Studies and Common Techniques](https://arxiv.org/abs/2602.03837)
 
 [David Woodruff](https://www.cs.cmu.edu/~dwoodruf/) (CMU) --  *Friday, April 10  @ 1 pm [TBD]*
 
@@ -211,16 +217,27 @@ All results in this paper were derived by variants of GPT-5.2 Pro. Humans did no
 
 <details markdown="1">
 <summary>Description</summary>
-Focusing on Gemini-based automated feedback for theoretical CS papers, this session will cover the application of AI to the peer review process. This directly relates to the seminar series by showing how AI is being integrated into the later stages of the research lifecycle, specifically, augmenting and automating the critical tasks of writing and reviewing papers to support reproducibility and rigor.
+<!-- Focusing on Gemini-based automated feedback for theoretical CS papers, this session will cover the application of AI to the peer review process. This directly relates to the seminar series by showing how AI is being integrated into the later stages of the research lifecycle, specifically, augmenting and automating the critical tasks of writing and reviewing papers to support reproducibility and rigor. -->
+We present a collection of case studies demonstrating how researchers have successfully collaborated with advanced AI models, specifically Google's Gemini-based models (in particular Gemini Deep Think and its advanced variants), to solve open problems, refute conjectures, and generate new proofs across diverse areas in theoretical computer science, as well as other areas such as economics, optimization, and physics. This is based on a corresponding paper here, with around 18 testimonials of open problems we made progress on.
+   
+I will also discuss using such models for a STOC pre-submission feedback system, see:
+[Gemini provides automated feedback for theoretical computer scientists at STOC 2026](https://research.google/blog/gemini-provides-automated-feedback-for-theoretical-computer-scientists-at-stoc-2026/)
 </details>
 
-<details markdown="1">
+<!-- <details markdown="1">
 <summary>Abstract</summary>
 The pursuit of truth in theoretical computer science and mathematics relies on the highest standards of proof, rigor, and clarity. While peer review is the crucial final check, the process of drafting and refining complex theoretical work often takes months, with simple errors, inconsistent variables, or subtle logical gaps frequently slowing down the entire research pipeline. But could a highly specialized AI tool act as a fast, rigorous collaborator, helping authors pre-vet their work before it ever reaches human reviewers?
 
 To test this potential, we created an experimental program for the Annual ACM Symposium on Theory of Computing (STOC 2026) — one of the most prestigious venues in theoretical computer science. This program offered authors automated, pre-submission feedback generated by a specialized Gemini AI tool. Our objective was to provide constructive suggestions and identify potential technical issues within 24 hours of submission, helping authors polish their final drafts before the submission deadline.
 
 The responses were very positive: the tool successfully identified a variety of issues, including calculation and logic errors. Here we report how we developed the tool and the results of its use.
+</details> -->
+
+<!-- bio -->
+<details markdown="1">
+<summary>Bio</summary>
+David Woodruff is a professor at Carnegie Mellon University in the Computer Science Department. Before that he was a research scientist at IBM Almaden for ten years. He received his PhD from MIT in 2007. His research interests include data stream algorithms, distributed algorithms, machine learning, numerical linear algebra, optimization, sketching, and sparse recovery. He is the recipient of the 2020 Simons Investigator Award, the 2014 Presburger Award, Best Paper Awards at STOC 2013, PODS 2010, and PODS, 2020, and a STOC 2023 Test of Time Award. At IBM he was a member of the Academy of Technology and a Master Inventor.
+   <!-- Taken from https://simons.berkeley.edu/people/david-woodruff -->
 </details>
 
 <hr>
