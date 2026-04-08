@@ -209,11 +209,11 @@ Mark Sellke is an Assistant Professor of Statistics at Harvard working in high-d
 
 ##### [Accelerating Scientific Research with Gemini: Case Studies and Common Techniques](https://arxiv.org/abs/2602.03837)
 
-[David Woodruff](https://www.cs.cmu.edu/~dwoodruf/) (CMU) --  *Friday, April 10  @ 1 pm [TBD]*
+[David Woodruff](https://www.cs.cmu.edu/~dwoodruf/) (CMU) --  *Wednesday, April 15  @ 12 pm [in-person]*
 
 **Category:** Theory/Automated Review
 
-**Location:** CSL E144
+**Location:** LGRC 112
 
 <details markdown="1">
 <summary>Description</summary>
