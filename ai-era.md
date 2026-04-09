@@ -180,7 +180,7 @@ Yian Yin is an assistant professor of information science. As a computational so
 
 ##### [Recent mathematical advances with large language models]()
 
-[Mark Sellke](https://msellke.com/) (Harvard/OpenAI) --  *Friday, April 3  @ 1 pm [in-person]*
+[Mark Sellke](https://msellke.com/) (Harvard/OpenAI) --  *Friday, April 3  @ 1 pm [in-person]* [(recording)](https://umass.sharepoint.com/:v:/s/CICSVideos/IQCXHJFJjBN1TYAy0kjN2H44AX_GRf9RXtEq_rTq4vy-A-M?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=C3FFR2)
 
 **Category:** Theory
 
