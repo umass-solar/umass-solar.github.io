@@ -262,6 +262,11 @@ As a theoretical AI researcher, Aaron Roth will likely explore the fundamental c
 Calibration serves as a trustworthy interface between prediction and decision making, and has (in my opinion) been getting only more important and interesting as a research topic as AI agents become commonplace. But AI tools are also going to revolutionize how mathematical research is conducted. In this talk we'll walk through two lower bounds we have proven, establishing the optimal sample complexity for multicalibration in both the sequential and batch settings. Both of these papers were written with AI assistance, and at the end of the talk we'll describe the process and the tools we used. We will end with Q&A and unstructured musings about what AI is already very good at and where its weak spots lie.
 </details>
 
+<!-- bio -->
+<details markdown="1">
+<summary>Bio</summary>
+Calibration serves as a trustworthy interface between prediction and decision making, and has (in my opinion) been getting only more important and interesting as a research topic as AI agents become commonplace. But AI tools are also going to revolutionize how mathematical research is conducted. In this talk we'll walk through two lower bounds we have proven, establishing the optimal sample complexity for multicalibration in both the sequential and batch settings. Both of these papers were written with AI assistance, and at the end of the talk we'll describe the process and the tools we used. We will end with Q&A and unstructured musings about what AI is already very good at and where its weak spots lie.
+</details>
 <hr>
 
 <!-- ################################### -->
