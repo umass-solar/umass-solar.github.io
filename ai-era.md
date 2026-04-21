@@ -209,7 +209,7 @@ Mark Sellke is an Assistant Professor of Statistics at Harvard working in high-d
 
 ##### [Accelerating Scientific Research with Gemini: Case Studies and Common Techniques](https://arxiv.org/abs/2602.03837)
 
-[David Woodruff](https://www.cs.cmu.edu/~dwoodruf/) (CMU) --  *Wednesday, April 15  @ 12 pm [in-person]*
+[David Woodruff](https://www.cs.cmu.edu/~dwoodruf/) (CMU) --  *Wednesday, April 15  @ 12 pm [in-person]* [(recording)](https://umass.sharepoint.com/:v:/s/CICSVideos/IQCoAtSwNZD2Q7GkO_niLmw9AQxtVq5l4d-9DgbI4P4Yd-w?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=Kskhcy)
 
 **Category:** Theory/Automated Review
 
@@ -246,7 +246,7 @@ David Woodruff is a professor at Carnegie Mellon University in the Computer Scie
 
 ##### [Calibration in the Age of AI: From Prediction to Decision Making to AI Assisted Research]()
 
-[Aaron Roth](https://www.cis.upenn.edu/~aaroth/) (UPenn) --  *Friday, April 17  @ 1 pm [remote]*
+[Aaron Roth](https://www.cis.upenn.edu/~aaroth/) (UPenn) --  *Friday, April 17  @ 1 pm [remote]* [(recording)](https://umass.sharepoint.com/:v:/s/CICSVideos/IQAInsEUkN-uQovDkcjYTT20ARfniecihz3Hc95dU3-4_To?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=g2Hvw0)
 
 **Category:** Theory
 
