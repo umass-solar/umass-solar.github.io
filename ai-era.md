@@ -271,9 +271,9 @@ Calibration serves as a trustworthy interface between prediction and decision ma
 
 <!-- ################################### -->
 
-##### [The Impact Market to Save Conference Peer Review](https://arxiv.org/abs/2512.14104)
+##### [The Impact Market to Save Conference Peer Review: Decoupling Dissemination and Credentialing](https://arxiv.org/abs/2512.14104)
 
-[Karu Sankaralingam](https://karu.sites.cs.wisc.edu/wiki/) (UW Madison / NVIDIA) --  *Friday, May 1  @ 1 pm [TBD]*
+[Karu Sankaralingam](https://karu.sites.cs.wisc.edu/wiki/) (UW Madison / NVIDIA) --  *Friday, May 1  @ 1 pm [in-person]*
 
 **Category:** systems/interdisciplinary/review process
 
@@ -283,6 +283,19 @@ Calibration serves as a trustworthy interface between prediction and decision ma
 <summary>Description</summary>
 This talk introduces the Impact Market, a market-based mechanism for conference peer review that decouples dissemination from credentialing. It proposes a multi-stage process that combines broad access to publication with longer-horizon, incentive-aligned evaluation to produce a more stable and interpretable signal of impact. This directly ties to the seminar’s theme by examining how AI-era scale and automation are pressuring us to redesign research incentives, review processes, and what “quality” and “contribution” should mean in the first place.
 </details>
+
+
+<details markdown="1">
+<summary>Abstract</summary>
+Top-tier academic conferences are failing under the strain of two irreconcilable roles: (1) rapid dissemination of all sound research and (2) scarce credentialing for prestige and career advancement. This conflict has created a reviewer roulette and anonymous tribunal model - a zero-cost attack system - characterized by high-stakes subjectivity, turf wars, and the arbitrary rejection of sound research (the equivalence class problem). We propose the Impact Market (IM), a novel three-phase system that decouples publication from prestige. Phase 1 (Publication): All sound and rigorous papers are accepted via a PC review, solving the "equivalence class" problem. Phase 2 (Investment): An immediate, scarce prestige signal is created via a futures market. Senior community members invest tokens into published papers, creating a transparent, crowdsourced Net Invested Score (NIS). Phase 3 (Calibration): A 3-year lookback mechanism validates these investments against a manipulation-resistant Multi-Vector Impact Score (MVIS). This MVIS adjusts each investor's future influence (their Investor Rating), imposing a quantifiable cost on bad actors and rewarding accurate speculation. The IM model replaces a hidden, zero-cost attack system with a transparent, accountable, and data-driven market that aligns immediate credentialing with long-term, validated impact. Agent-based simulations demonstrate that while a passive market matches current protocols in low-skill environments, introducing investor agency and conviction betting increases the retrieval of high-impact papers from 28% to over 85% under identical conditions, confirming that incentivized self-selection is the mechanism required to scale peer review. 
+</details>
+
+<!-- bio -->
+<details markdown="1">
+<summary>Bio</summary>
+Karu Sankaralingam is a Director of Research at NVIDIA Research and Professor in UW-Madison. He is a researcher, inventor and entrepreneur and and works on computer architecture and deep learning. He has graduated 11 PhD students, and co-author over 100 papers with multiple award papers. He is also an IEEE Fellow and holds the Mark D. Hill and David. A. Wood Professorship.
+</details>
+<hr>
 
 <!-- ###################################
 
