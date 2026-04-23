@@ -125,12 +125,12 @@ mahsa:
   image: /img/people/mahsas.jpeg
   role: grad
   bio: MS from Uni of Tehran <br> 2022-
-  webpage: https://people.cs.umass.edu/~msahebdelala/
+  webpage: https://mahsasahebdel.github.io/
   
 mahsa2:
   display_name: Mahsa Sahebdel
   image: /img/people/mahsas.jpeg
-  webpage: https://people.cs.umass.edu/~msahebdelala/
+  webpage: https://mahsasahebdel.github.io/
   
 tungi:
   display_name: Tung-I Chen
