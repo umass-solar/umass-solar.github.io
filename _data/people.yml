@@ -18,21 +18,6 @@ mo2:
   webpage: https://groups.cs.umass.edu/hajiesmaili/
 
 
-
-
-russell:
-  display_name: Russell Lee
-  image: /img/people/russell.jpg
-  role: grad
-  bio: BS from CMU <br>2019-
-  webpage: https://russell-lee.github.io
-  
-  
-russell2:
-  display_name: Russell Lee
-  image: /img/people/russell.jpg
-  webpage: https://russell-lee.github.io
-
 ali:
   display_name: Ali Zeynali
   image: /img/people/aliz.png
@@ -276,17 +261,6 @@ anu:
 
 
 # staff
-xuchuang:
-  display_name: Xuchuang Wang
-  image: /img/people/xuchuangw.jpeg
-  role: staff
-  bio: Ph.D. from CUHK <br> (co-advised with Don Towsley) <br> 2023-
-  webpage: https://xuchuangw.com/
-
-xuchuang2:
-  display_name: Xuchuang Wang
-  image: /img/people/xuchuangw.jpeg
-  webpage: https://xuchuangw.com/
 
 qingsong:
   display_name: Qingsong Liu
@@ -301,11 +275,23 @@ qingsong2:
   webpage: https://qingsong-liu.github.io/
 
 # Alumni
+xuchuang:
+  display_name: Xuchuang Wang (Postdoc, 2023-2026)
+  image: /img/people/xuchuangw.jpeg
+  role: alum
+  bio: "joint with Don Towsley <br> next: Assistant Professor, Hong Kong Baptist University"
+  webpage: https://xuchuangw.com/
+
+xuchuang2:
+  display_name: Xuchuang Wang
+  image: /img/people/xuchuangw.jpeg
+  webpage: https://xuchuangw.com/
+
 xutong:
   display_name: Xutong Liu (Postdoc, 2023-2024)
   image: /img/xutong.jpg
   role: alum
-  bio: "Visiting postdoc from CUHK <br> next: Postdoc at CMU"
+  bio: "next: Postdoc at CMU -> Assistant Professor at UW Tacoma"
   webpage: https://xutongliu.me
 
 xutong2:
@@ -313,6 +299,18 @@ xutong2:
   image: /img/xutong.jpg
   webpage: https://xutongliu.me
 
+russell:
+  display_name: Russell Lee (PhD, 2018-2024)
+  image: /img/people/russell.jpg
+  role: alum
+  bio: "Thesis: Learning-augmented online algorithsms for energy optimization"
+  webpage: https://russell-lee.github.io
+  
+  
+russell2:
+  display_name: Russell Lee
+  image: /img/people/russell.jpg
+  webpage: https://russell-lee.github.io
 
 jinhang:
   display_name: Jinhang Zuo (Postdoc, 2022-2024)
