@@ -202,7 +202,7 @@ ezra:
   display_name: Ezra Johnson
   image: /img/ezra.jpeg
   role: ugrad
-  bio: "CEET REU, summer 2025 (Caltech)"
+  bio: "CEET REU, summer 2025 (Caltech), <br> next: PhD student at George Mason University"
   webpage: https://www.linkedin.com/in/ezra-johnson/
 
 
@@ -214,12 +214,20 @@ alice:
   bio: "CEET REU, summer 2025 (Columbia)"
   webpage: https://www.linkedin.com/in/alice-zhang-2048c
 
-  #siddu:
-  #display_name: Siddarth Sitaraman (2025)
-  #image: /img/people/anu.jpeg
-  #role: ugrad
-  #bio: "undergraduate research assistant (Brown) <br> next: PhD student at UMich <br>"
-  #webpage: https://www.linkedin.com/in/anusitaraman
+  siddu:
+  display_name: Siddarth Sitaraman (2025)
+  image: /img/people/siddu.jpeg
+  role: ugrad
+  bio: "undergraduate research assistant (Brown) <br> next: PhD student at UMich"
+  webpage: linkedin.com/in/siddusitaraman
+
+
+jingyuan:
+  display_name: Jingyuan Liu (2024-2025)
+  image: /img/people/placeholder.png
+  role: ugrad
+  bio: "undergraduate research assistant (Nanjing University) <br> next: PhD student at UC Berkeley"
+  webpage: https://scholar.google.com/citations?user=VzIIKEIAAAAJ&hl=zh-CN
 
 arky:
   display_name: Archimedes Li
