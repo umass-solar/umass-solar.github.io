@@ -96,12 +96,12 @@ adam2:
   image: /img/people/adaml.jpg
   webpage: https://adamlechowicz.github.io/
   
-#amirmahdi:
-#  display_name: Amirmahdi Mirfakhar
- # image: /img/people/amirmahdim.jpeg
-  #role: grad
- # bio: MS from Sharif Uni. <br> 2022-(joint with Y. Zick)
- # webpage: https://solar.cs.umass.edu/
+amirmahdi:
+  display_name: Amirmahdi Mirfakhar
+  image: /img/people/amirmahdim.jpeg
+  role: grad
+  bio: MS from Sharif Uni. <br> 2022-(joint with H. Beyhaghi)
+  https://amirmahdi-mirfakhar.github.io/
 
 #amirmahdi2:
 #  display_name: Amirmahdi Mirfakhar
