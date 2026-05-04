@@ -204,6 +204,13 @@ alice:
   bio: "CEET REU, summer 2025 (Columbia)"
   webpage: https://www.linkedin.com/in/alice-zhang-2048c
 
+  siddu:
+  display_name: Siddarth Sitaraman (2025)
+  image: /img/people/anu.jpeg
+  role: ugrad
+  bio: "undergraduate research assistant (Brown) <br> next: PhD student at UMich <br>"
+  webpage: https://www.linkedin.com/in/anusitaraman
+
 arky:
   display_name: Archimedes Li
   image: /img/arky.jpeg
@@ -219,10 +226,10 @@ tri:
   webpage: https://www.linkedin.com/in/thantrongtri3/
 
 rohan:
-  display_name: Rohan Shenoy
+  display_name: Rohan Shenoy (2024-2026)
   image: /img/rohan.jpeg
   role: ugrad
-  bio: "undergraduate research assistant (UC Berkeley) <br> 2024 -"
+  bio: "undergraduate research assistant (UC Berkeley) <br> next: PhD student at UPenn <br> NSF GRFP Awardee"
   webpage: https://www.linkedin.com/in/rohanshenoy03/
 
 jovan:
@@ -243,7 +250,7 @@ anu:
   display_name: Anupama Sitaraman
   image: /img/people/anu.jpeg
   role: ugrad
-  bio: "REU, summer 2022 (UMass) <br> next: PhD student at CMU"
+  bio: "REU, summer 2022 (UMass) <br> next: PhD student at CMU <br> NSF GRFP Awardee"
   webpage: https://www.linkedin.com/in/anusitaraman
  
 
