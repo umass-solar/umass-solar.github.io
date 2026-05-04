@@ -264,10 +264,10 @@ qingsong2:
 
 # Alumni
 ali:
-  display_name: Ali Zeynali (PhD, 2019-2026, joint with R. Sitaraman, BS from Sharif Uni.)
+  display_name: Ali Zeynali (PhD, 2019-2026)
   image: /img/people/aliz.png
   role: alum
-  bio:  "Thesis: Online Sequential Decision Making for Resource Allocation <br> next: Databricks"
+  bio:  "Thesis: Online Sequential Decision Making for Resource Allocation <br> joint with R. Sitaraman, BS from Sharif Uni. <br>  next: Databricks"
   webpage: https://ali-zeynali.github.io/home/
     
 ali2:
@@ -300,10 +300,10 @@ xutong2:
   webpage: https://xutongliu.me
 
 russell:
-  display_name: Russell Lee (PhD, 2018-2024, BS from CMU)
+  display_name: Russell Lee (PhD, 2018-2024)
   image: /img/people/russell.jpg
   role: alum
-  bio: "Thesis: Learning-augmented online algorithsms for energy optimization"
+  bio: "Thesis: Learning-augmented online algorithsms for energy optimization <br> BS from CMU"
   webpage: https://russell-lee.github.io
   
   
