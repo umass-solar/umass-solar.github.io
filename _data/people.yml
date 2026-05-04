@@ -204,12 +204,12 @@ alice:
   bio: "CEET REU, summer 2025 (Columbia)"
   webpage: https://www.linkedin.com/in/alice-zhang-2048c
 
-  siddu:
-  display_name: Siddarth Sitaraman (2025)
-  image: /img/people/anu.jpeg
-  role: ugrad
-  bio: "undergraduate research assistant (Brown) <br> next: PhD student at UMich <br>"
-  webpage: https://www.linkedin.com/in/anusitaraman
+  #siddu:
+  #display_name: Siddarth Sitaraman (2025)
+  #image: /img/people/anu.jpeg
+  #role: ugrad
+  #bio: "undergraduate research assistant (Brown) <br> next: PhD student at UMich <br>"
+  #webpage: https://www.linkedin.com/in/anusitaraman
 
 arky:
   display_name: Archimedes Li
