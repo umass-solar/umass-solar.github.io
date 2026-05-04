@@ -190,12 +190,22 @@ jackson2:
 #   bio: tmolomochir [at] umass [dot] edu
 #   webpage: https://scholar.google.com/citations?user=Uqp2VtkAAAAJ&hl=en
 
-ezra:
+rohan:
+  display_name: Rohan Shenoy (2024-2026)
+  image: /img/rohan.jpeg
+  role: ugrad
+  bio: "undergraduate research assistant (UC Berkeley) <br> next: PhD student at UPenn <br> NSF GRFP Awardee"
+  webpage: https://www.linkedin.com/in/rohanshenoy03/
+
+
+  ezra:
   display_name: Ezra Johnson
   image: /img/ezra.jpeg
   role: ugrad
   bio: "CEET REU, summer 2025 (Caltech)"
   webpage: https://www.linkedin.com/in/ezra-johnson/
+
+
 
 alice:
   display_name: Alice Zhang
@@ -225,12 +235,6 @@ tri:
   bio: "undergraduate research assistant (UMass) <br> 2024 -"
   webpage: https://www.linkedin.com/in/thantrongtri3/
 
-rohan:
-  display_name: Rohan Shenoy (2024-2026)
-  image: /img/rohan.jpeg
-  role: ugrad
-  bio: "undergraduate research assistant (UC Berkeley) <br> next: PhD student at UPenn <br> NSF GRFP Awardee"
-  webpage: https://www.linkedin.com/in/rohanshenoy03/
 
 jovan:
   display_name: Jovan Champ
