@@ -101,12 +101,12 @@ amirmahdi:
   image: /img/people/amirmahdim.jpeg
   role: grad
   bio: MS from Sharif Uni. <br> 2022-(joint with H. Beyhaghi)
-  https://amirmahdi-mirfakhar.github.io/
+  webpage: https://amirmahdi-mirfakhar.github.io/
 
-#amirmahdi2:
-#  display_name: Amirmahdi Mirfakhar
- # image: /img/people/amirmahdim.jpeg
- # webpage: https://solar.cs.umass.edu/
+amirmahdi2:
+  display_name: Amirmahdi Mirfakhar
+  image: /img/people/amirmahdim.jpeg
+  webpage: https://amirmahdi-mirfakhar.github.io/
 
 cooper:
   display_name: Cooper Sigrist
