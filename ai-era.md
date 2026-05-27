@@ -273,7 +273,7 @@ Calibration serves as a trustworthy interface between prediction and decision ma
 
 ##### [The Impact Market to Save Conference Peer Review: Decoupling Dissemination and Credentialing](https://arxiv.org/abs/2512.14104)
 
-[Karu Sankaralingam](https://karu.sites.cs.wisc.edu/wiki/) (UW Madison / NVIDIA) --  *Friday, May 1  @ 1 pm [in-person]*
+[Karu Sankaralingam](https://karu.sites.cs.wisc.edu/wiki/) (UW Madison / NVIDIA) --  *Friday, May 1  @ 1 pm [in-person]* [(recording)](https://umass.sharepoint.com/:v:/s/CICSVideos/IQDmB7JGH7NJTLrBEsW8_KqnAbjkupsOdIqOGdQamG76f3M?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=o1lnfG)
 
 **Category:** systems/interdisciplinary/review process
 
