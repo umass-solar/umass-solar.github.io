@@ -14,6 +14,7 @@
   --accent:#0C8593; --accent-strong:#0A6B76; --accent-soft:#E0F2F4;
   --needle:#D9801C; --needle-soft:#FBEBD6;
   --ok:#1F9D6B; --grid:#EEF0F4;
+  --pc:#6A52C2; --pc-soft:#ECE8FA;
   --c-paper:#0C8593; --c-auth:#3A4256;
   --shadow:0 1px 2px rgba(20,24,33,.05), 0 8px 24px rgba(20,24,33,.05);
   --r:10px; --r-sm:7px;
@@ -27,6 +28,7 @@ html[data-theme="dark"]{
   --accent:#2FC6D5; --accent-strong:#5BD9E6; --accent-soft:#0F3038;
   --needle:#F2A85A; --needle-soft:#3A2A15;
   --ok:#42C58C; --grid:#1E2636;
+  --pc:#B7A6F2; --pc-soft:#241E3C;
   --c-paper:#2FC6D5; --c-auth:#AEB7CC;
   --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.35);
 }
@@ -202,6 +204,8 @@ tbody tr:last-child td{border-bottom:none}
 html[data-theme="dark"] .pbadge.tot{background:#241a3a; color:#b69bf0}
 .chip.award{background:var(--needle-soft); border-color:transparent; color:var(--needle); font-weight:600}
 .chip.chair{background:var(--accent-soft); border-color:transparent; color:var(--accent-strong); font-weight:600}
+.chip.pc{background:var(--pc-soft); border-color:transparent; color:var(--pc); font-weight:600; text-transform:none; letter-spacing:0}
+.chip.pc b{font-weight:700}
 .aw-list .role{display:inline-block; font-family:var(--mono); font-size:9.5px; letter-spacing:.05em; text-transform:uppercase; padding:1px 6px; border-radius:99px; margin-right:6px; vertical-align:middle}
 .aw-list .role.gc{background:var(--needle-soft); color:var(--needle)}
 .aw-list .role.pc{background:var(--accent-soft); color:var(--accent-strong)}
@@ -245,6 +249,7 @@ html[data-theme="dark"] .pbadge.tot{background:#241a3a; color:#b69bf0}
     <button class="tab" data-route="network">Network</button>
     <button class="tab" data-route="awards">Awards</button>
     <button class="tab" data-route="chairs">Chairs</button>
+    <button class="tab" data-route="pc">PC</button>
     <button class="tab" data-route="data">Data &amp; method</button>
   </nav>
   <div class="yearbar-in" id="yearbar">
@@ -268,6 +273,7 @@ html[data-theme="dark"] .pbadge.tot{background:#241a3a; color:#b69bf0}
   <section class="view" id="view-network"></section>
   <section class="view" id="view-awards"></section>
   <section class="view" id="view-chairs"></section>
+  <section class="view" id="view-pc"></section>
   <section class="view" id="view-data"></section>
 </main>
 
@@ -287,6 +293,7 @@ const RAW = { records:[], authorMeta:{}, links:{byPid:{},byName:{}},
   totalRecords:0, totalAuthors:0, source:"",
   awards:null, titleAward:new Map(), nameAward:new Map(), nameAwardFuzzy:new Map(),
   chairs:null, nameChair:new Map(), nameChairFuzzy:new Map(),
+  pc:null, namePc:new Map(), namePcFuzzy:new Map(),
   nameToId:new Map(), fuzzyAuthors:new Map(), recByTitle:new Map() };
 const State = { authors:[], byId:new Map(), comm:null, minYear:0, maxYear:0 };
 const Range = { from:0, to:0 };
@@ -363,6 +370,15 @@ function applyChairs(raw){
   }
   RAW.nameChairFuzzy = buildFuzzyFrom(RAW.nameChair);
 }
+function applyPc(raw){
+  if(!raw) return;
+  RAW.pc = raw;
+  const add=(name,year)=>{ const k=normName(name); if(!k)return;
+    if(!RAW.namePc.has(k))RAW.namePc.set(k,[]); RAW.namePc.get(k).push({year}); };
+  for(const rec of (raw.years||[]))
+    for(const n of (rec.members||[])) add(n, rec.year);
+  RAW.namePcFuzzy = buildFuzzyFrom(RAW.namePc);
+}
 const chairLabel = r => r==="general"?"🎫 General Chair":"🪑 PC Chair";
 const chairPlain = r => r==="general"?"General Chair":"PC Chair";
 const awardLabel = t => t==="achievement"?"🏅 Achievement":(t==="rising"?"🌟 Rising Star":(t==="doctoral"?"🎓 Dissertation":t));
@@ -399,6 +415,18 @@ function honorsFor(o, exactMap, fuzzyMap, keyFn){
 }
 function awardsForAuthor(o){ return honorsFor(o, RAW.nameAward, RAW.nameAwardFuzzy, e=>e.type+e.year).sort((a,b)=>b.year-a.year); }
 function chairsForAuthor(o){ return honorsFor(o, RAW.nameChair, RAW.nameChairFuzzy, e=>e.role+e.year).sort((a,b)=>b.year-a.year); }
+// PC service years for an author (deduped, ascending), via the same exact+fuzzy matcher
+function pcYearsForAuthor(o){
+  const ys=[...new Set(honorsFor(o, RAW.namePc, RAW.namePcFuzzy, e=>String(e.year)).map(e=>e.year))];
+  return ys.sort((a,b)=>a-b);
+}
+// compact label, e.g. [2012,2015,2018,2019,2020] -> "’12, ’15, ’18–’20"
+function pcYearsLabel(years){
+  const yy=v=>"’"+String(v).slice(2); const out=[]; let i=0;
+  while(i<years.length){ let j=i; while(j+1<years.length && years[j+1]===years[j]+1) j++;
+    out.push(i===j?yy(years[i]):yy(years[i])+"–"+yy(years[j])); i=j+1; }
+  return out.join(", ");
+}
 function paperAward(title){ return RAW.titleAward.get(normTitle(title)) || null; }
 
 function parseRaw(raw){
@@ -630,7 +658,7 @@ function windowRecords(){return RAW.records.filter(r=>r.year!=null&&r.year>=Rang
 const $=s=>document.querySelector(s);
 const fmt=n=>n.toLocaleString("en-US");
 const views={overview:$("#view-overview"),authors:$("#view-authors"),detail:$("#view-detail"),
-  network:$("#view-network"),awards:$("#view-awards"),chairs:$("#view-chairs"),data:$("#view-data")};
+  network:$("#view-network"),awards:$("#view-awards"),chairs:$("#view-chairs"),pc:$("#view-pc"),data:$("#view-data")};
 let currentRoute="overview", currentPid=null;
 
 function countUp(el,to){
@@ -694,10 +722,11 @@ function authorsFiltered(){
 function renderAuthors(){
   const all=authorsFiltered(),shown=all.slice(0,AU.limit);
   const head=COLS.map(c=>`<th class="${c.left?'left':''}" ${c.nosort?'':`data-sort="${c.k}"`}>${c.label}${AU.sort===c.k?`<span class="ar">${AU.dir<0?'▾':'▴'}</span>`:''}</th>`).join("");
-  const rows=shown.map(a=>{const aw=awardsForAuthor(a), ch=chairsForAuthor(a);
+  const rows=shown.map(a=>{const aw=awardsForAuthor(a), ch=chairsForAuthor(a), pcy=pcYearsForAuthor(a);
     const med=aw.length?` <span class="medal" title="${aw.map(w=>plainLabel(w.type)+' '+w.year).join(' · ')}">🏅</span>`:"";
     const cmk=ch.length?` <span class="medal" title="${ch.map(w=>chairPlain(w.role)+' '+w.year).join(' · ')}">🪑</span>`:"";
-    return `<tr data-pid="${a.id}"><td class="left"><span class="aname">${a.name}</span>${med}${cmk}</td>
+    const pmk=pcy.length?` <span class="medal" title="Program Committee: ${pcy.join(', ')}">🧑‍⚖️</span>`:"";
+    return `<tr data-pid="${a.id}"><td class="left"><span class="aname">${a.name}</span>${med}${cmk}${pmk}</td>
     <td class="left">${sparkline(a.byYear,State.minYear,State.maxYear,a.recent>0?'var(--accent)':'var(--faint)')}</td>
     <td>${a.pubs}</td><td>${a.recent}</td><td>${a.activeYears}</td><td>${a.firstYear||'—'}</td><td>${a.lastYear||'—'}</td>
     <td>${a.coauthorCount}</td><td>${a.avgTeam.toFixed(1)}</td></tr>`;}).join("");
@@ -748,6 +777,8 @@ function openAuthor(id){
   const awChips=awEntries.map(w=>`<span class="chip award">${awardLabel(w.type)} ${w.year}</span>`).join("");
   const chEntries=chairsForAuthor(a);
   const chChips=chEntries.map(w=>`<span class="chip chair">${chairLabel(w.role)} ${w.year}</span>`).join("");
+  const pcYrs=pcYearsForAuthor(a);
+  const pcChips=pcYrs.length?`<span class="chip pc" title="Program Committee member: ${pcYrs.join(', ')}">🧑‍⚖️ PC ${pcYearsLabel(pcYrs)} <b>(${pcYrs.length})</b></span>`:"";
   views.detail.innerHTML=
     `<button class="back" onclick="history.back()">← all authors</button>
     <div class="detail-head"><div>
@@ -756,7 +787,7 @@ function openAuthor(id){
       <div class="chips">
         <span class="chip">${a.pubs} papers</span><span class="chip">${a.recent} in last 5y</span>
         <span class="chip">${a.coauthorCount} coauthors</span><span class="chip">avg team ${a.avgTeam.toFixed(1)}</span>
-        ${dormant?'<span class="chip">dormant</span>':'<span class="chip" style="color:var(--ok)">active</span>'}${note}${awChips}${chChips}</div>
+        ${dormant?'<span class="chip">dormant</span>':'<span class="chip" style="color:var(--ok)">active</span>'}${note}${awChips}${chChips}${pcChips}</div>
       <div class="chips">${authorLinks(a)}</div>
     </div></div>
     <div class="grid cols-2" style="margin-top:18px">
@@ -833,7 +864,7 @@ function renderData(){
         <li><b>Editorships and short non-papers are excluded by the fetcher</b> (posters &lt;5 pages dropped for 1974–2016; all kept 2017+).</li>
         <li><b>The year selector</b> recomputes every figure for the chosen window; "last 5 years" is relative to the window's end (${Range.to}).</li>
         <li><b>Gini and the Lorenz curve</b> describe how evenly papers spread across authors — descriptive, not evaluative.</li>
-        <li><b>Awards and conference chairs are static overlays</b> (<code>data/awards.json</code>, <code>data/chairs.json</code>) transcribed from sigmetrics.org, matched onto authors by name and onto papers by title — no refetch, no citations implied.</li>
+        <li><b>Awards, conference chairs, and program committees are static overlays</b> (<code>data/awards.json</code>, <code>data/chairs.json</code>, <code>data/pc.json</code>) transcribed from sigmetrics.org, matched onto authors by name and onto papers by title — no refetch, no citations implied.</li>
       </ul>
       <p class="muted">Fully static: one JSON file, no backend, no runtime calls to DBLP.</p>
     </div>`;
@@ -913,6 +944,37 @@ function renderChairs(){
   views.chairs.querySelectorAll("[data-openid]").forEach(el=>el.onclick=()=>openAuthor(el.getAttribute("data-openid")));
   views.chairs.querySelectorAll("[data-search]").forEach(el=>el.onclick=()=>{AU.q=el.getAttribute("data-search");AU.limit=60;location.hash="#authors";});
 }
+function renderPc(){
+  if(!RAW.pc){ views.pc.innerHTML=`<div class="center-state"><h2>No PC data</h2>
+    <p>Add <code>data/pc.json</code> (run <code>python3 make_pc.py</code>) and reload.</p></div>`; return; }
+  const Y=(RAW.pc.years||[]).slice().sort((a,b)=>b.year-a.year);   // newest first
+  // aggregate distinct people + their service years (for the leaderboard)
+  const agg=new Map();   // normName -> {display, set:Set<year>}
+  for(const rec of Y) for(const n of (rec.members||[])){
+    const k=normName(n); if(!k)continue;
+    let p=agg.get(k); if(!p){p={display:n,set:new Set()};agg.set(k,p);}
+    if(n.length>p.display.length)p.display=n; p.set.add(rec.year);
+  }
+  const people=[...agg.values()].map(p=>({name:p.display,years:[...p.set].sort((a,b)=>a-b),n:p.set.size}))
+    .sort((a,b)=>b.n-a.n||a.years[0]-b.years[0]||a.name.localeCompare(b.name));
+  const seats=Y.reduce((s,r)=>s+(r.members||[]).length,0);
+  const span=Y.length?`${Y[Y.length-1].year}–${Y[0].year}`:"—";
+  const intro=[["Conferences",Y.length],["Distinct members",people.length],["Seats filled",seats],["Span",span]];
+  const top=people.filter(p=>p.n>=6).slice(0,16);
+  views.pc.innerHTML = freshnessBanner()+
+    `<div class="awards-intro">`+intro.map(s=>`<div class="aw-card"><div class="n">${fmt(s[1])}</div><div class="l">${s[0]}</div></div>`).join("")+`</div>
+    <p class="section-h" style="margin-top:18px"><span class="hint">Technical Program Committees, ${span}. Source: each edition's committee / program-committee page on <a href="https://sigmetrics.org/" target="_blank" rel="noopener">sigmetrics.org</a>. Names link to the author dashboard.${RAW.sample?' <b style="color:var(--needle)">You are on sample data, so few names will match — load real DBLP data for full cross-linking.</b>':''}</span></p>
+
+    <div class="section-h"><h2>🧑‍⚖️ Most years of service</h2><span class="hint">people on ≥6 committees</span></div>
+    <div class="card"><ul class="aw-list">${top.map(p=>`<li><span class="yr">×${p.n}</span><div class="who">${awardAuthorLink(p.name)}<div class="sub mono" style="color:var(--faint)">${pcYearsLabel(p.years)}</div></div></li>`).join("")}</ul></div>
+
+    <div class="section-h"><h2>Committees by year</h2><span class="hint">newest first</span></div>
+    <div class="card"><ul class="aw-list">${Y.map(c=>`<li><span class="yr">${c.year}</span><div class="who">
+        <div>${(c.members||[]).map(awardAuthorLink).join(", ")||"—"}</div>
+        ${c.location?`<div class="sub">${escH(c.location)}</div>`:""}</div><span class="tag">${(c.members||[]).length} members</span></li>`).join("")}</ul></div>`;
+  views.pc.querySelectorAll("[data-openid]").forEach(el=>el.onclick=()=>openAuthor(el.getAttribute("data-openid")));
+  views.pc.querySelectorAll("[data-search]").forEach(el=>el.onclick=()=>{AU.q=el.getAttribute("data-search");AU.limit=60;location.hash="#authors";});
+}
 
 /* =================================================================
  *  YEAR CONTROLS + ROUTING
@@ -950,6 +1012,7 @@ function renderRoute(r){
   else if(r==="network")renderNetwork();
   else if(r==="awards")renderAwards();
   else if(r==="chairs")renderChairs();
+  else if(r==="pc")renderPc();
   else if(r==="data")renderData();
   switchView(r);
 }
@@ -961,7 +1024,7 @@ function rerenderCurrent(){
 function route(){
   const h=location.hash.replace(/^#/,"");
   if(h.startsWith("author/")){openAuthor(decodeURIComponent(h.slice(7)));return;}
-  renderRoute(["overview","authors","network","awards","chairs","data"].includes(h)?h:"overview");
+  renderRoute(["overview","authors","network","awards","chairs","pc","data"].includes(h)?h:"overview");
 }
 document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{location.hash="#"+t.dataset.route;});
 window.addEventListener("hashchange",route);
@@ -984,6 +1047,7 @@ fetch("data/sigmetrics.json",{cache:"no-store"})
       fetch("data/author_links.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(applyLinks).catch(()=>{}),
       fetch("data/awards.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(applyAwards).catch(()=>{}),
       fetch("data/chairs.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(applyChairs).catch(()=>{}),
+      fetch("data/pc.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(applyPc).catch(()=>{}),
     ]);
   })
   .then(()=>{
