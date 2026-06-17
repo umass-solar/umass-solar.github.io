@@ -294,6 +294,7 @@ const RAW = { records:[], authorMeta:{}, links:{byPid:{},byName:{}},
   awards:null, titleAward:new Map(), nameAward:new Map(), nameAwardFuzzy:new Map(),
   chairs:null, nameChair:new Map(), nameChairFuzzy:new Map(),
   pc:null, namePc:new Map(), namePcFuzzy:new Map(),
+  submissions:null,
   nameToId:new Map(), fuzzyAuthors:new Map(), recByTitle:new Map() };
 const State = { authors:[], byId:new Map(), comm:null, minYear:0, maxYear:0 };
 const Range = { from:0, to:0 };
@@ -379,6 +380,7 @@ function applyPc(raw){
     for(const n of (rec.members||[])) add(n, rec.year);
   RAW.namePcFuzzy = buildFuzzyFrom(RAW.namePc);
 }
+function applySubmissions(raw){ if(raw) RAW.submissions = raw; }
 const chairLabel = r => r==="general"?"🎫 General Chair":"🪑 PC Chair";
 const chairPlain = r => r==="general"?"General Chair":"PC Chair";
 const awardLabel = t => t==="achievement"?"🏅 Achievement":(t==="rising"?"🌟 Rising Star":(t==="doctoral"?"🎓 Dissertation":t));
@@ -597,6 +599,36 @@ function barChart(data,opts={}){
     if(data.length<=14||i%2===0)g+=`<text class="axis" x="${x+bw/2}" y="${H-9}" text-anchor="middle">${d[0]}</text>`;});
   return wrapSvg(W,H,g);
 }
+// stacked accepted/rejected bars (left axis = papers) + acceptance-rate line (right axis = %)
+function acceptanceChart(rows,opts={}){
+  const W=opts.w||980,H=opts.h||260,P={t:16,r:46,b:30,l:44};
+  if(!rows.length) return wrapSvg(W,H,`<text class="axis" x="${W/2}" y="${H/2}" text-anchor="middle">no submission data in this window</text>`);
+  const maxSub=Math.max(1,...rows.map(d=>d.submitted));
+  const maxRate=Math.max(20,...rows.map(d=>d.rate||0));
+  const rateTop=Math.ceil(maxRate/10)*10;
+  const bw=(W-P.l-P.r)/rows.length;
+  const Yc=v=>H-P.b-(v/maxSub)*(H-P.t-P.b);          // counts (left)
+  const Yr=v=>H-P.b-(v/rateTop)*(H-P.t-P.b);          // rate % (right)
+  let g="";
+  // left gridlines + count axis
+  for(let i=0;i<=4;i++){const v=Math.round(maxSub*i/4),y=Yc(v);
+    g+=`<line class="gridline" x1="${P.l}" y1="${y}" x2="${W-P.r}" y2="${y}"/><text class="axis" x="${P.l-6}" y="${y+3}" text-anchor="end">${v}</text>`;}
+  // right axis (%)
+  for(let i=0;i<=4;i++){const v=Math.round(rateTop*i/4),y=Yr(v);
+    g+=`<text class="axis" x="${W-P.r+7}" y="${y+3}" text-anchor="start" fill="var(--needle)">${v}%</text>`;}
+  // bars: accepted (accent) stacked under rejected (muted)
+  rows.forEach((d,i)=>{const x=P.l+i*bw+bw*.16, w=bw*.68;
+    const yAcc=Yc(d.accepted), yTop=Yc(d.submitted), base=Yc(0);
+    g+=`<rect x="${x}" y="${yTop}" width="${w}" height="${Math.max(0,yAcc-yTop)}" rx="2" fill="var(--line-strong)" data-t="${d.year}: ${d.rejected} rejected of ${d.submitted}"/>`;
+    g+=`<rect x="${x}" y="${yAcc}" width="${w}" height="${Math.max(0,base-yAcc)}" rx="2" fill="var(--accent)" data-t="${d.year}: ${d.accepted} accepted of ${d.submitted}"/>`;
+    if(rows.length<=18||i%2===0)g+=`<text class="axis" x="${x+w/2}" y="${H-9}" text-anchor="middle">${"'"+String(d.year).slice(2)}</text>`;});
+  // acceptance-rate line on right axis
+  const pts=rows.map((d,i)=>[P.l+i*bw+bw*.5, Yr(d.rate||0)]);
+  g+=`<path d="${pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ')}" fill="none" stroke="var(--needle)" stroke-width="2" stroke-linejoin="round"/>`;
+  rows.forEach((d,i)=>{g+=`<circle cx="${pts[i][0]}" cy="${pts[i][1]}" r="2.6" fill="var(--needle)"/>`;
+    g+=`<circle cx="${pts[i][0]}" cy="${pts[i][1]}" r="9" fill="transparent" data-t="${d.year}: ${d.rate}% acceptance"/>`;});
+  return wrapSvg(W,H,g);
+}
 function stackRenewal(c,opts={}){
   const W=opts.w||640,H=opts.h||220,P={t:12,r:12,b:30,l:36},years=c.years;
   if(!years.length) return wrapSvg(W,H,`<text class="axis" x="${W/2}" y="${H/2}" text-anchor="middle">no data</text>`);
@@ -678,6 +710,35 @@ function freshnessBanner(){
   return "";
 }
 
+function submissionsSection(){
+  const S=RAW.submissions; if(!S||!S.years||!S.years.length) return "";
+  const rows=S.years.filter(d=>d.year>=Range.from&&d.year<=Range.to);
+  if(!rows.length) return "";
+  const tSub=rows.reduce((s,d)=>s+d.submitted,0);
+  const tAcc=rows.reduce((s,d)=>s+d.accepted,0);
+  const tRej=tSub-tAcc;
+  const pooled=tSub?100*tAcc/tSub:0;
+  const meanYr=rows.reduce((s,d)=>s+(d.rate||0),0)/rows.length;
+  const span=`${rows[0].year}–${rows[rows.length-1].year}`;
+  const cards=[
+    ["Submissions",tSub,`SIGMETRICS, <b>${span}</b>`],
+    ["Accepted",tAcc,`published in POMACS / proceedings`],
+    ["Rejected",tRej,`not accepted for publication`],
+    ["Acceptance rate",pooled.toFixed(1)+"%",`pooled; per-year mean <b>${meanYr.toFixed(1)}%</b>`],
+  ];
+  return `<div class="section-h"><h2>Conference submissions &amp; acceptance</h2>
+      <span class="hint">SIGMETRICS, ${span} · accepted vs rejected, with acceptance rate</span></div>
+    <div class="grid cols-4">`+cards.map(s=>`<div class="card stat"><div class="k">${s[0]}</div>
+      <div class="v" data-n="${typeof s[1]==='number'?s[1]:''}">${typeof s[1]==='number'?'0':s[1]}</div>
+      <div class="d">${s[2]}</div></div>`).join("")+`</div>
+    <div class="card chart-card" style="margin-top:14px">
+      <h3>Accepted &amp; rejected papers per year</h3>
+      <p class="cap">Bars show submissions split into <b style="color:var(--accent)">accepted</b> and <b style="color:var(--line-strong)">rejected</b> (left axis); the <b style="color:var(--needle)">amber line</b> is the acceptance rate (right axis). Rate = accepted ÷ submitted; for the multi-round years, accepted and submitted are summed across rounds — the method used by <a href="https://csconferences.org/" target="_blank" rel="noopener">csconferences.org</a>.</p>
+      ${acceptanceChart(rows,{w:980,h:260})}
+      <div class="legend"><span><i style="background:var(--accent)"></i>Accepted</span><span><i style="background:var(--line-strong)"></i>Rejected</span><span><i style="background:var(--needle)"></i>Acceptance rate</span></div>
+      <p class="cap" style="margin-top:8px">Sources: <a href="https://csconferences.org/" target="_blank" rel="noopener">csconferences.org</a> (proceedings front matter + HotCRP) for 2010–2024; the three rolling HotCRP round sites (summer + fall + winter) for 2025–2026. Since 2017 SIGMETRICS reviews on rolling deadlines feeding POMACS.</p>
+    </div>`;
+}
 function renderOverview(){
   const c=State.comm;
   const meanTeam=(()=>{let s=0,n=0;for(const y in c.teamByYear){const a=c.teamByYear[y];s+=a.reduce((p,q)=>p+q,0);n+=a.length;}return n?s/n:0;})();
@@ -695,6 +756,7 @@ function renderOverview(){
   const dist=Object.keys(c.teamDist).map(Number).sort((a,b)=>a-b).map(s=>[s,c.teamDist[s]]);
   views.overview.innerHTML=freshnessBanner()+
     `<div class="grid cols-4">`+stats.map(s=>`<div class="card stat"><div class="k">${s[0]}</div><div class="v" data-n="${typeof s[1]==='number'?s[1]:''}">${typeof s[1]==='number'?'0':s[1]}</div><div class="d">${s[2]}</div></div>`).join("")+`</div>
+    ${submissionsSection()}
     <div class="section-h"><h2>Community over time</h2><span class="hint">Papers (area) and distinct active authors (line) per year</span></div>
     <div class="card chart-card">${lineAreaChart([{name:"Papers",color:"var(--c-paper)",fill:true,data:py},{name:"Authors",color:"var(--c-auth)",fill:false,data:ay}],{w:980,h:240})}
       <div class="legend"><span><i style="background:var(--c-paper)"></i>Papers</span><span><i style="background:var(--c-auth)"></i>Active authors</span></div></div>
@@ -865,6 +927,7 @@ function renderData(){
         <li><b>The year selector</b> recomputes every figure for the chosen window; "last 5 years" is relative to the window's end (${Range.to}).</li>
         <li><b>Gini and the Lorenz curve</b> describe how evenly papers spread across authors — descriptive, not evaluative.</li>
         <li><b>Awards, conference chairs, and program committees are static overlays</b> (<code>data/awards.json</code>, <code>data/chairs.json</code>, <code>data/pc.json</code>) transcribed from sigmetrics.org, matched onto authors by name and onto papers by title — no refetch, no citations implied.</li>
+        <li><b>Submission &amp; acceptance statistics</b> (<code>data/submissions.json</code>) are a static overlay: 2010–2024 from <a href="https://csconferences.org/" target="_blank" rel="noopener">csconferences.org</a> (proceedings front matter + HotCRP), 2025–2026 summed from the rolling HotCRP rounds. Per-year acceptance rate = accepted ÷ submitted, summing across rounds — the csconferences method.</li>
       </ul>
       <p class="muted">Fully static: one JSON file, no backend, no runtime calls to DBLP.</p>
     </div>`;
@@ -1048,6 +1111,7 @@ fetch("data/sigmetrics.json",{cache:"no-store"})
       fetch("data/awards.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(applyAwards).catch(()=>{}),
       fetch("data/chairs.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(applyChairs).catch(()=>{}),
       fetch("data/pc.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(applyPc).catch(()=>{}),
+      fetch("data/submissions.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(applySubmissions).catch(()=>{}),
     ]);
   })
   .then(()=>{
