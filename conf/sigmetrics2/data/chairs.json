@@ -1,0 +1,595 @@
+{
+  "generatedAt": 1781660284619,
+  "source": "https://sigmetrics.org/history_conferences.shtml (+ 2025–2027 organization pages)",
+  "conferences": [
+    {
+      "year": 2027,
+      "location": "Atlanta, Georgia, USA",
+      "general": [
+        "Siva Theja Maguluri",
+        "Debankur Mukherjee",
+        "Zhi-Li Zhang"
+      ],
+      "program": [
+        "Varun Gupta",
+        "Longbo Huang",
+        "Mahmut Taylan Kandemir"
+      ]
+    },
+    {
+      "year": 2026,
+      "location": "Ann Arbor, Michigan, USA",
+      "general": [
+        "Vijay Subramanian",
+        "Atilla Eryilmaz"
+      ],
+      "program": [
+        "Nicolas Gast",
+        "Stefan Schmid",
+        "Weina Wang"
+      ]
+    },
+    {
+      "year": 2025,
+      "location": "Stony Brook, New York, USA",
+      "general": [
+        "Anshul Gandhi",
+        "Zhenhua Liu"
+      ],
+      "program": [
+        "Sewoong Oh",
+        "Ramesh Sitaraman",
+        "Benny Van Houdt"
+      ]
+    },
+    {
+      "year": 2024,
+      "location": "Venice, Italy",
+      "general": [
+        "Andrea Marin",
+        "Michele Garetto"
+      ],
+      "program": [
+        "Giulia Fanti",
+        "Florin Ciucu",
+        "Rhonda Righter"
+      ]
+    },
+    {
+      "year": 2023,
+      "location": "Orlando, Florida, USA",
+      "general": [
+        "Evgenia Smirni"
+      ],
+      "program": [
+        "Konstantin Avrachenkov",
+        "Phillipa Gill",
+        "Bhuvan Urgaonkar"
+      ]
+    },
+    {
+      "year": 2022,
+      "location": "Mumbai, India",
+      "general": [
+        "D. Manjunath",
+        "Jayakrishnan Nair"
+      ],
+      "program": [
+        "Niklas Carlsson",
+        "Edith Cohen",
+        "Philippe Robert"
+      ]
+    },
+    {
+      "year": 2021,
+      "location": "Beijing, China",
+      "general": [
+        "Andrew C. Yao",
+        "Longbo Huang"
+      ],
+      "program": [
+        "Anshul Gandhi",
+        "Negar Kiyavash",
+        "Jia Wang"
+      ]
+    },
+    {
+      "year": 2020,
+      "location": "Boston, Massachusetts, USA",
+      "general": [
+        "Edmund Yeh"
+      ],
+      "program": [
+        "Athina Markopoulou",
+        "Y.C. Tay"
+      ]
+    },
+    {
+      "year": 2019,
+      "location": "Phoenix, Arizona, USA",
+      "general": [
+        "Erich M. Nahum"
+      ],
+      "program": [
+        "Thomas Bonald",
+        "Nick Duffield"
+      ]
+    },
+    {
+      "year": 2018,
+      "location": "Irvine, California, USA",
+      "general": [
+        "Konstantinos Psounis"
+      ],
+      "program": [
+        "Aditya Akella",
+        "Adam Wierman"
+      ]
+    },
+    {
+      "year": 2017,
+      "location": "Urbana-Champaign, Illinois, USA",
+      "general": [
+        "Bruce Hajek",
+        "Sewoong Oh"
+      ],
+      "program": [
+        "Augustin Chaintreau",
+        "Leana Golubchik",
+        "Zhi-Li Zhang"
+      ]
+    },
+    {
+      "year": 2016,
+      "location": "Antibes Juan-les-Pins, France",
+      "general": [
+        "Sara Alouf",
+        "Alain Jean-Marie"
+      ],
+      "program": [
+        "Nidhi Hegde",
+        "Alexandre Proutière"
+      ]
+    },
+    {
+      "year": 2015,
+      "location": "Portland, Oregon, USA",
+      "general": [
+        "Bill Lin",
+        "Jun (Jim) Xu"
+      ],
+      "program": [
+        "Sudipta Sengupta",
+        "Devavrat Shah"
+      ]
+    },
+    {
+      "year": 2014,
+      "location": "Austin, Texas, USA",
+      "general": [
+        "Sujay Sanghavi",
+        "Sanjay Shakkottai"
+      ],
+      "program": [
+        "Marc Lelarge",
+        "Bianca Schroeder"
+      ]
+    },
+    {
+      "year": 2013,
+      "location": "Pittsburgh, Pennsylvania, USA",
+      "general": [
+        "Mor Harchol-Balter"
+      ],
+      "program": [
+        "John Douceur",
+        "Jun Xu"
+      ]
+    },
+    {
+      "year": 2012,
+      "location": "London, UK",
+      "general": [
+        "Peter Harrison"
+      ],
+      "program": [
+        "Martin Arlitt",
+        "Giuliano Casale"
+      ]
+    },
+    {
+      "year": 2011,
+      "location": "San Jose, California, USA",
+      "general": [
+        "Arif Merchant"
+      ],
+      "program": [
+        "Kim Keeton",
+        "Dan Rubenstein"
+      ]
+    },
+    {
+      "year": 2010,
+      "location": "New York, New York, USA",
+      "general": [
+        "Vishal Misra"
+      ],
+      "program": [
+        "Paul Barford",
+        "Mark Squillante"
+      ]
+    },
+    {
+      "year": 2009,
+      "location": "Seattle, Washington, USA",
+      "general": [
+        "John Douceur",
+        "Albert Greenberg"
+      ],
+      "program": [
+        "Thomas Bonald",
+        "Jason Nieh"
+      ]
+    },
+    {
+      "year": 2008,
+      "location": "Annapolis, Maryland, USA",
+      "general": [
+        "Zhen Liu"
+      ],
+      "program": [
+        "Vishal Misra",
+        "Prashant Shenoy"
+      ]
+    },
+    {
+      "year": 2007,
+      "location": "San Diego, California, USA",
+      "general": [
+        "Leana Golubchik"
+      ],
+      "program": [
+        "Mostafa Ammar",
+        "Mor Harchol-Balter"
+      ]
+    },
+    {
+      "year": 2006,
+      "location": "Saint-Malo, France",
+      "general": [
+        "Raymond Marie"
+      ],
+      "program": [
+        "Peter Key",
+        "Evgenia Smirni"
+      ]
+    },
+    {
+      "year": 2005,
+      "location": "Banff, Alberta, Canada",
+      "general": [
+        "Derek Eager",
+        "Carey Williamson"
+      ],
+      "program": [
+        "Sem Borst",
+        "John C.S. Lui"
+      ]
+    },
+    {
+      "year": 2004,
+      "location": "New York, New York, USA",
+      "general": [
+        "Ed Coffman"
+      ],
+      "program": [
+        "Zhen Liu",
+        "Arif Merchant"
+      ]
+    },
+    {
+      "year": 2003,
+      "location": "San Diego, California, USA",
+      "general": [
+        "Bill Cheng",
+        "Satish Tripathi"
+      ],
+      "program": [
+        "Jennifer Rexford",
+        "William H. Sanders"
+      ]
+    },
+    {
+      "year": 2002,
+      "location": "Marina del Rey, California, USA",
+      "general": [
+        "Richard Muntz"
+      ],
+      "program": [
+        "Margaret Martonosi",
+        "Edmundo de Souza e Silva"
+      ]
+    },
+    {
+      "year": 2001,
+      "location": "Cambridge, Massachusetts, USA",
+      "general": [
+        "Philip Heidelberger"
+      ],
+      "program": [
+        "Ernst Biersack",
+        "Leana Golubchik"
+      ]
+    },
+    {
+      "year": 2000,
+      "location": "Santa Clara, California, USA",
+      "general": [
+        "Alexander Brandwajn"
+      ],
+      "program": [
+        "Jim Kurose",
+        "Philippe Nain"
+      ]
+    },
+    {
+      "year": 1999,
+      "location": "Atlanta, Georgia, USA",
+      "general": [
+        "Daniel Menasce"
+      ],
+      "program": [
+        "Carey Williamson"
+      ]
+    },
+    {
+      "year": 1998,
+      "location": "Madison, Wisconsin, USA",
+      "general": [
+        "Mary Vernon"
+      ],
+      "program": [
+        "Garth Gibson",
+        "Guy Latouche"
+      ]
+    },
+    {
+      "year": 1997,
+      "location": "Seattle, Washington, USA",
+      "general": [
+        "John Zahorjan"
+      ],
+      "program": [
+        "Albert Greenberg"
+      ]
+    },
+    {
+      "year": 1996,
+      "location": "Philadelphia, Pennsylvania, USA",
+      "general": [
+        "Daniel A. Reed"
+      ],
+      "program": [
+        "David Nicol"
+      ]
+    },
+    {
+      "year": 1995,
+      "location": "Ottawa, Ontario, Canada",
+      "general": [
+        "Murray Woodside"
+      ],
+      "program": [
+        "Satish Tripathi",
+        "Isi Mitrani"
+      ]
+    },
+    {
+      "year": 1994,
+      "location": "Nashville, Tennessee, USA",
+      "general": [
+        "Larry Dowdy"
+      ],
+      "program": [
+        "Rick Bunt"
+      ]
+    },
+    {
+      "year": 1993,
+      "location": "Santa Clara, California, USA",
+      "general": [
+        "Susan Owicki"
+      ],
+      "program": [
+        "Richard Muntz"
+      ]
+    },
+    {
+      "year": 1992,
+      "location": "Newport, Rhode Island, USA",
+      "general": [
+        "Linda S. Wright"
+      ],
+      "program": [
+        "Philip Heidelberger",
+        "Don Towsley"
+      ]
+    },
+    {
+      "year": 1991,
+      "location": "San Diego, California, USA",
+      "general": [
+        "Michael K. Molloy"
+      ],
+      "program": [
+        "John Zahorjan"
+      ]
+    },
+    {
+      "year": 1990,
+      "location": "Boulder, Colorado, USA",
+      "general": [
+        "Gary J. Nutt"
+      ],
+      "program": [
+        "Mary Vernon"
+      ]
+    },
+    {
+      "year": 1989,
+      "location": "Berkeley, California, USA",
+      "general": [
+        "Domenico Ferrari"
+      ],
+      "program": [
+        "Alan Jay Smith"
+      ]
+    },
+    {
+      "year": 1988,
+      "location": "Santa Fe, New Mexico, USA",
+      "general": [
+        "Connie U. Smith"
+      ],
+      "program": [
+        "Kenneth C. Sevcik"
+      ]
+    },
+    {
+      "year": 1987,
+      "location": "Banff, Alberta, Canada",
+      "general": [
+        "Rick Bunt"
+      ],
+      "program": [
+        "Derek Eager"
+      ]
+    },
+    {
+      "year": 1986,
+      "location": "Raleigh, North Carolina, USA",
+      "general": [
+        "H.G. Perros"
+      ],
+      "program": [
+        "W.J. Stewart",
+        "K.S. Trivedi"
+      ]
+    },
+    {
+      "year": 1985,
+      "location": "Austin, Texas, USA",
+      "general": [
+        "Herb D. Schwetman"
+      ],
+      "program": [
+        "Jeffrey A. Brumfield",
+        "Daniel A. Reed"
+      ]
+    },
+    {
+      "year": 1984,
+      "location": "Cambridge, Massachusetts, USA",
+      "general": [
+        "Herb D. Schwetman"
+      ],
+      "program": [
+        "James P. Bouhana",
+        "Ray Bryant"
+      ]
+    },
+    {
+      "year": 1983,
+      "location": "Minneapolis, Minnesota, USA",
+      "general": [
+        "Herb D. Schwetman"
+      ],
+      "program": [
+        "Steven Bruell",
+        "Larry Dowdy"
+      ]
+    },
+    {
+      "year": 1982,
+      "location": "Seattle, Washington, USA",
+      "general": [
+        "John Zahorjan"
+      ],
+      "program": [
+        "Edward Lazowska"
+      ]
+    },
+    {
+      "year": 1981,
+      "location": "Las Vegas, Nevada, USA",
+      "general": [
+        "Herb D. Schwetman"
+      ],
+      "program": [
+        "Stephen W. Sherman"
+      ]
+    },
+    {
+      "year": 1980,
+      "location": "Toronto, Ontario, Canada",
+      "general": [
+        "Kenneth C. Sevcik"
+      ],
+      "program": [
+        "G. Scott Graham"
+      ]
+    },
+    {
+      "year": 1979,
+      "location": "Boulder, Colorado, USA",
+      "general": [
+        "Paul F. Roth"
+      ],
+      "program": [
+        "Gary J. Nutt"
+      ]
+    },
+    {
+      "year": 1977,
+      "location": "Washington, D.C., USA",
+      "general": [
+        "Robert J. Bishop"
+      ],
+      "program": [
+        "Robert L. Morrison"
+      ]
+    },
+    {
+      "year": 1976,
+      "location": "Cambridge, Massachusetts, USA",
+      "general": [
+        "Jeff Buzen",
+        "Arnold Ockene"
+      ],
+      "program": [
+        "P.P.S. Chen",
+        "Mark Franklin"
+      ]
+    },
+    {
+      "year": 1974,
+      "location": "Montreal, Quebec, Canada",
+      "general": [
+        "James D. Connell"
+      ],
+      "program": [
+        "John H. Howard"
+      ]
+    },
+    {
+      "year": 1973,
+      "location": "Palo Alto, California, USA",
+      "general": [
+        "Don Madden"
+      ],
+      "program": [
+        "Tad Pinkerton"
+      ]
+    }
+  ]
+}

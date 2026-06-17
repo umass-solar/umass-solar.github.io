@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIGMETRICS · Author Dashboard</title>
+<style>
+/* "Calibrated" — a precision-instrument theme: cool neutrals, a cyan measurement
+   scale, an amber needle for the current selection, monospace numerics throughout. */
+:root{
+  --paper:#FBFBFD; --surface:#FFFFFF; --surface-2:#F5F6F9;
+  --line:#E7E9EF; --line-strong:#D4D8E1;
+  --ink:#15181F; --muted:#6A7184; --faint:#9AA1B2;
+  --accent:#0C8593; --accent-strong:#0A6B76; --accent-soft:#E0F2F4;
+  --needle:#D9801C; --needle-soft:#FBEBD6;
+  --ok:#1F9D6B; --grid:#EEF0F4;
+  --c-paper:#0C8593; --c-auth:#3A4256;
+  --shadow:0 1px 2px rgba(20,24,33,.05), 0 8px 24px rgba(20,24,33,.05);
+  --r:10px; --r-sm:7px;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+html[data-theme="dark"]{
+  --paper:#0D1016; --surface:#141925; --surface-2:#1A2030;
+  --line:#242C3C; --line-strong:#34405A;
+  --ink:#E8EBF2; --muted:#98A1B5; --faint:#69728A;
+  --accent:#2FC6D5; --accent-strong:#5BD9E6; --accent-soft:#0F3038;
+  --needle:#F2A85A; --needle-soft:#3A2A15;
+  --ok:#42C58C; --grid:#1E2636;
+  --c-paper:#2FC6D5; --c-auth:#AEB7CC;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--paper); color:var(--ink); font-family:var(--sans); font-size:15px;
+  line-height:1.5; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility}
+a{color:var(--accent-strong); text-decoration:none}
+a:hover{text-decoration:underline}
+.mono{font-family:var(--mono); font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--mono); font-size:10.5px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--faint)}
+
+/* ---------- sticky header stack (bar + nav + year selector) ---------- */
+.topstack{position:sticky; top:0; z-index:40; background:var(--surface);
+  border-bottom:1px solid var(--line)}
+.bar-in{max-width:1180px; margin:0 auto; padding:11px 22px; display:flex; align-items:center; gap:20px}
+.brand{display:flex; align-items:baseline; gap:10px; flex:none}
+.brand .mark{font-family:var(--mono); font-weight:600; font-size:17px; color:var(--ink)}
+.brand .mark b{color:var(--accent)}
+.brand .sub{font-size:11px; color:var(--muted)}
+.readouts{display:flex; gap:22px; margin-left:auto; align-items:center}
+.ro{display:flex; flex-direction:column; line-height:1.15}
+.ro .v{font-family:var(--mono); font-size:15px; font-weight:600; color:var(--ink); font-variant-numeric:tabular-nums}
+.ro .k{font-family:var(--mono); font-size:9.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--faint)}
+.icon-btn{background:var(--surface-2); border:1px solid var(--line); color:var(--muted);
+  width:34px; height:34px; border-radius:var(--r-sm); cursor:pointer; font-size:15px; display:grid; place-items:center}
+.icon-btn:hover{color:var(--ink); border-color:var(--line-strong)}
+.nav-in{max-width:1180px; margin:0 auto; padding:0 22px; display:flex; gap:2px; border-top:1px solid var(--line)}
+.tab{appearance:none; background:none; border:none; cursor:pointer; font-family:var(--mono);
+  font-size:12px; letter-spacing:.04em; color:var(--muted); padding:13px 14px;
+  border-bottom:2px solid transparent; text-transform:uppercase}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected="true"]{color:var(--ink); border-bottom-color:var(--accent)}
+/* year selector row */
+.yearbar-in{max-width:1180px; margin:0 auto; padding:9px 22px; display:flex; align-items:center;
+  gap:12px; border-top:1px solid var(--line); background:var(--surface-2); flex-wrap:wrap}
+.yearbar select{font-family:var(--mono); font-size:13px; color:var(--ink); background:var(--surface);
+  border:1px solid var(--line); border-radius:var(--r-sm); padding:5px 8px; cursor:pointer}
+.yearbar select:focus{outline:none; border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft)}
+.yearbar .arrow{color:var(--faint); font-family:var(--mono)}
+.presets{display:flex; gap:4px; margin-left:4px}
+.presets button{font-family:var(--mono); font-size:10.5px; letter-spacing:.06em; text-transform:uppercase;
+  background:var(--surface); border:1px solid var(--line); color:var(--muted); padding:5px 9px;
+  border-radius:99px; cursor:pointer}
+.presets button:hover{color:var(--ink); border-color:var(--line-strong)}
+.presets button[aria-pressed="true"]{background:var(--accent-soft); border-color:transparent; color:var(--accent-strong)}
+.range-readout{margin-left:auto; font-family:var(--mono); font-size:11.5px; color:var(--muted); font-variant-numeric:tabular-nums}
+.range-readout b{color:var(--ink)}
+
+/* ---------- layout ---------- */
+.wrap{max-width:1180px; margin:0 auto; padding:26px 22px 80px}
+.view{display:none}
+.view.active{display:block; animation:fade .25s ease}
+@keyframes fade{from{opacity:0; transform:translateY(4px)}to{opacity:1; transform:none}}
+.section-h{display:flex; align-items:baseline; justify-content:space-between; margin:30px 0 12px; gap:16px}
+.section-h h2{font-size:14px; font-weight:600; margin:0}
+.section-h .hint{font-size:12px; color:var(--muted)}
+
+.grid{display:grid; gap:14px}
+.cols-4{grid-template-columns:repeat(4,1fr)}
+.cols-3{grid-template-columns:repeat(3,1fr)}
+.cols-2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--surface); border:1px solid var(--line); border-radius:var(--r);
+  padding:16px 18px; box-shadow:var(--shadow)}
+.stat .k{font-family:var(--mono); font-size:10px; letter-spacing:.13em; text-transform:uppercase; color:var(--faint); margin-bottom:8px}
+.stat .v{font-family:var(--mono); font-size:30px; font-weight:600; line-height:1; color:var(--ink); font-variant-numeric:tabular-nums}
+.stat .d{font-size:12px; color:var(--muted); margin-top:7px}
+.stat .d b{color:var(--accent-strong); font-weight:600}
+.chart-card h3{margin:0 0 2px; font-size:13px; font-weight:600}
+.chart-card .cap{font-size:11.5px; color:var(--muted); margin:0 0 12px}
+
+svg{display:block; width:100%; height:auto; overflow:visible}
+.axis text{font-family:var(--mono); font-size:9.5px; fill:var(--faint)}
+.gridline{stroke:var(--grid); stroke-width:1}
+.tip{position:fixed; pointer-events:none; background:var(--ink); color:var(--paper);
+  font-family:var(--mono); font-size:11px; padding:5px 8px; border-radius:6px; opacity:0;
+  transition:opacity .1s; z-index:90; white-space:nowrap; box-shadow:var(--shadow)}
+
+.toolbar{display:flex; flex-wrap:wrap; gap:10px; align-items:center; background:var(--surface);
+  border:1px solid var(--line); border-radius:var(--r); padding:11px 13px; box-shadow:var(--shadow)}
+.field{display:flex; align-items:center; gap:7px}
+.field label{font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint)}
+input[type="search"],select{font-family:var(--sans); font-size:13.5px; color:var(--ink);
+  background:var(--surface-2); border:1px solid var(--line); border-radius:var(--r-sm); padding:7px 10px; outline:none}
+input[type="search"]{min-width:230px}
+input[type="search"]:focus,.toolbar select:focus{border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft)}
+.count-note{font-family:var(--mono); font-size:11px; color:var(--muted); margin-left:auto}
+
+.table-wrap{margin-top:14px; border:1px solid var(--line); border-radius:var(--r); overflow:hidden; background:var(--surface); box-shadow:var(--shadow)}
+table{width:100%; border-collapse:collapse}
+thead th{position:sticky; top:0; background:var(--surface-2); text-align:right; font-family:var(--mono);
+  font-size:10px; letter-spacing:.07em; text-transform:uppercase; color:var(--muted); padding:10px 12px;
+  border-bottom:1px solid var(--line); cursor:pointer; user-select:none; white-space:nowrap}
+thead th.left{text-align:left}
+thead th:hover{color:var(--ink)}
+thead th .ar{color:var(--accent); margin-left:3px}
+tbody td{padding:9px 12px; border-bottom:1px solid var(--line); text-align:right; font-family:var(--mono);
+  font-size:13px; font-variant-numeric:tabular-nums; color:var(--ink)}
+tbody td.left{text-align:left; font-family:var(--sans)}
+tbody tr{cursor:pointer}
+tbody tr:hover{background:var(--surface-2)}
+tbody tr:last-child td{border-bottom:none}
+.aname{font-weight:500}
+.spark{width:96px; height:22px}
+.btn-more{display:block; width:100%; padding:11px; text-align:center; cursor:pointer; background:var(--surface-2);
+  border:none; border-top:1px solid var(--line); font-family:var(--mono); font-size:11px; letter-spacing:.06em;
+  color:var(--accent-strong); text-transform:uppercase}
+.btn-more:hover{background:var(--accent-soft)}
+
+.back{display:inline-flex; align-items:center; gap:6px; cursor:pointer; background:none; border:none;
+  font-family:var(--mono); font-size:11px; letter-spacing:.06em; color:var(--muted); text-transform:uppercase; padding:0; margin-bottom:14px}
+.back:hover{color:var(--ink)}
+.detail-head h1{font-size:26px; margin:0 0 4px; font-weight:650; letter-spacing:-.01em}
+.detail-head .meta{font-size:12.5px; color:var(--muted)}
+.detail-head .meta b{color:var(--ink); font-weight:600}
+.chips{display:flex; gap:8px; flex-wrap:wrap; margin-top:8px}
+.chip{font-family:var(--mono); font-size:10px; letter-spacing:.05em; text-transform:uppercase;
+  background:var(--surface-2); border:1px solid var(--line); color:var(--muted); padding:4px 9px; border-radius:99px}
+.chip.warn{background:var(--needle-soft); border-color:transparent; color:var(--needle)}
+.chip.link{cursor:pointer; color:var(--accent-strong)}
+.chip.link:hover{border-color:var(--accent)}
+.collab{list-style:none; margin:0; padding:0}
+.collab li{display:flex; align-items:center; gap:10px; padding:8px 0; border-bottom:1px solid var(--line); cursor:pointer}
+.collab li:last-child{border-bottom:none}
+.collab .n{flex:1; font-size:13.5px}
+.collab li:hover .n{color:var(--accent-strong)}
+.collab .barwrap{width:90px; height:7px; background:var(--surface-2); border-radius:99px; overflow:hidden}
+.collab .barfill{height:100%; background:var(--accent)}
+.collab .c{font-family:var(--mono); font-size:12px; color:var(--muted); width:22px; text-align:right}
+.papers{list-style:none; margin:0; padding:0}
+.papers li{padding:11px 0; border-bottom:1px solid var(--line)}
+.papers li:last-child{border-bottom:none}
+.papers .t{font-size:13.5px; color:var(--ink)}
+.papers .m{font-family:var(--mono); font-size:11px; color:var(--muted); margin-top:3px}
+.papers .yr{color:var(--accent-strong)}
+.role-bar{display:flex; height:30px; border-radius:var(--r-sm); overflow:hidden; margin:10px 0 6px}
+.role-bar div{display:grid; place-items:center; font-family:var(--mono); font-size:10px; color:#fff}
+.legend{display:flex; gap:16px; flex-wrap:wrap; font-family:var(--mono); font-size:10.5px; color:var(--muted)}
+.legend i{display:inline-block; width:9px; height:9px; border-radius:2px; margin-right:5px}
+
+.banner{display:flex; gap:12px; align-items:center; padding:12px 16px; border-radius:var(--r);
+  font-size:13px; margin-bottom:18px; border:1px solid}
+.banner.sample{background:var(--needle-soft); border-color:transparent; color:var(--needle)}
+.banner.stale{background:var(--surface-2); border-color:var(--line); color:var(--muted)}
+.banner code{font-family:var(--mono); background:rgba(0,0,0,.06); padding:1px 6px; border-radius:5px}
+.center-state{text-align:center; padding:90px 20px; color:var(--muted)}
+.center-state h2{color:var(--ink); font-weight:600; margin:0 0 8px}
+.center-state code{font-family:var(--mono); background:var(--surface-2); padding:2px 8px; border-radius:6px; color:var(--ink)}
+.spin{width:26px;height:26px;border:3px solid var(--line);border-top-color:var(--accent);border-radius:50%; animation:sp .8s linear infinite; margin:0 auto 18px}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+.prose{max-width:760px}
+.prose h3{font-size:14px; margin:26px 0 8px}
+.prose p,.prose li{font-size:13.5px; color:var(--ink); line-height:1.65}
+.prose .muted{color:var(--muted)}
+.cmd{font-family:var(--mono); font-size:13px; background:var(--ink); color:var(--paper); padding:13px 16px; border-radius:var(--r); overflow-x:auto; margin:10px 0}
+.kv{display:grid; grid-template-columns:auto 1fr; gap:6px 18px; font-family:var(--mono); font-size:12.5px}
+.kv dt{color:var(--faint); text-transform:uppercase; letter-spacing:.08em; font-size:10px; align-self:center}
+.kv dd{margin:0; color:var(--ink)}
+.check{display:flex; align-items:center; gap:9px; font-family:var(--mono); font-size:12.5px; padding:5px 0}
+.check .b{width:8px; height:8px; border-radius:50%}
+.check .b.ok{background:var(--ok)} .check .b.no{background:var(--needle)}
+
+/* ---------- awards ---------- */
+.medal{font-size:11px; margin-left:5px; vertical-align:baseline; cursor:default}
+.pbadge{display:inline-block; font-family:var(--mono); font-size:9.5px; letter-spacing:.04em;
+  text-transform:uppercase; padding:2px 7px; border-radius:99px; margin-left:8px; vertical-align:middle; font-weight:600}
+.pbadge.best{background:var(--needle-soft); color:var(--needle)}
+.pbadge.student{background:var(--accent-soft); color:var(--accent-strong)}
+.pbadge.tot{background:#efe7fb; color:#6d3fc4}
+.pbadge.runner{background:var(--surface-2); color:var(--muted)}
+html[data-theme="dark"] .pbadge.tot{background:#241a3a; color:#b69bf0}
+.chip.award{background:var(--needle-soft); border-color:transparent; color:var(--needle); font-weight:600}
+.chip.chair{background:var(--accent-soft); border-color:transparent; color:var(--accent-strong); font-weight:600}
+.aw-list .role{display:inline-block; font-family:var(--mono); font-size:9.5px; letter-spacing:.05em; text-transform:uppercase; padding:1px 6px; border-radius:99px; margin-right:6px; vertical-align:middle}
+.aw-list .role.gc{background:var(--needle-soft); color:var(--needle)}
+.aw-list .role.pc{background:var(--accent-soft); color:var(--accent-strong)}
+.awards-intro{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:14px; margin-bottom:8px}
+.aw-card{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:14px 16px; box-shadow:var(--shadow)}
+.aw-card .n{font-family:var(--mono); font-size:26px; font-weight:600; color:var(--ink)}
+.aw-card .l{font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); margin-top:4px}
+.aw-list{list-style:none; margin:0; padding:0}
+.aw-list li{display:flex; gap:14px; align-items:baseline; padding:9px 0; border-bottom:1px solid var(--line)}
+.aw-list li:last-child{border-bottom:none}
+.aw-list .yr{font-family:var(--mono); font-size:12px; color:var(--accent-strong); width:42px; flex:none; font-variant-numeric:tabular-nums}
+.aw-list .who{flex:1}
+.aw-list .who a{cursor:pointer}
+.aw-list .who .sub{font-size:12px; color:var(--muted); margin-top:2px}
+.aw-list .tag{font-family:var(--mono); font-size:9.5px; letter-spacing:.04em; text-transform:uppercase; color:var(--faint); flex:none}
+.aw-matched{color:var(--ok)}
+
+@media(max-width:880px){
+  .awards-intro{grid-template-columns:repeat(2,1fr)}
+  .cols-4{grid-template-columns:repeat(2,1fr)}
+  .cols-3,.cols-2{grid-template-columns:1fr}
+  .readouts{display:none}
+  .spark{display:none}
+  .range-readout{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+</style>
+</head>
+<body>
+<div class="tip" id="tip"></div>
+
+<header class="topstack">
+  <div class="bar-in">
+    <div class="brand"><span class="mark"><b>◷</b> SIGMETRICS</span><span class="sub">Author Dashboard</span></div>
+    <div class="readouts" id="readouts"></div>
+    <button class="icon-btn" id="themeBtn" title="Toggle light / dark">◐</button>
+  </div>
+  <nav class="nav-in" id="tabs">
+    <button class="tab" data-route="overview" aria-selected="true">Overview</button>
+    <button class="tab" data-route="authors">Authors</button>
+    <button class="tab" data-route="network">Network</button>
+    <button class="tab" data-route="awards">Awards</button>
+    <button class="tab" data-route="chairs">Chairs</button>
+    <button class="tab" data-route="data">Data &amp; method</button>
+  </nav>
+  <div class="yearbar-in" id="yearbar">
+    <span class="eyebrow">Years</span>
+    <select id="fromY"></select><span class="arrow">→</span><select id="toY"></select>
+    <div class="presets" id="presets">
+      <button data-preset="all">All</button>
+      <button data-preset="20">20y</button>
+      <button data-preset="10">10y</button>
+      <button data-preset="5">5y</button>
+    </div>
+    <span class="range-readout" id="rangeReadout"></span>
+  </div>
+</header>
+
+<main class="wrap">
+  <div id="boot" class="center-state"><div class="spin"></div>Loading dataset…</div>
+  <section class="view" id="view-overview"></section>
+  <section class="view" id="view-authors"></section>
+  <section class="view" id="view-detail"></section>
+  <section class="view" id="view-network"></section>
+  <section class="view" id="view-awards"></section>
+  <section class="view" id="view-chairs"></section>
+  <section class="view" id="view-data"></section>
+</main>
+
+<script>
+"use strict";
+/* =================================================================
+ *  DATA LAYER
+ *  Reads the schema produced by fetch_sigmetrics.py:
+ *    { fetchedAt, startYear, endYear, records:[{year,title,authors:[{id,pid,name}],
+ *      pages,doi,url,key,type}], authorMeta:{ id -> {pid,canonicalName,aliases} } }
+ *  Identity is merged by author `id` ("pid:.." or "name:.."). Optional
+ *  data/author_links.json adds homepage / Google Scholar links.
+ *  Everything is recomputed for the selected year window.
+ * ================================================================= */
+const RAW = { records:[], authorMeta:{}, links:{byPid:{},byName:{}},
+  fetchedAt:0, sample:false, notes:{}, fullMin:1974, fullMax:2026,
+  totalRecords:0, totalAuthors:0, source:"",
+  awards:null, titleAward:new Map(), nameAward:new Map(), nameAwardFuzzy:new Map(),
+  chairs:null, nameChair:new Map(), nameChairFuzzy:new Map(),
+  nameToId:new Map(), fuzzyAuthors:new Map(), recByTitle:new Map() };
+const State = { authors:[], byId:new Map(), comm:null, minYear:0, maxYear:0 };
+const Range = { from:0, to:0 };
+
+const cleanName = n => (n||"").replace(/\s+\d{4}$/,"");
+const surname   = n => { const p=cleanName(n).trim().split(/\s+/); return (p[p.length-1]||"").toLowerCase(); };
+function isAlphabetical(a){ if(a.length<2)return false;
+  for(let i=1;i<a.length;i++) if(surname(a[i].name)<surname(a[i-1].name))return false; return true; }
+// normalizers used to overlay awards (matched by title / person name) onto the dataset
+const normTitle = s => (s||"").toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g," ").trim();
+const normName  = s => cleanName(s||"").toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g," ").trim();
+// Fuzzy person matching for awards: surname + first initial, tolerant of short↔full first
+// names ("Don"↔"Donald", "R."↔"Rayadurgam") and middle initials. Used only as a fallback
+// after exact match fails, and only when the identity is unambiguous in the dataset.
+const firstLastNorm = nn => { const p=nn.split(" ").filter(Boolean); return {first:p[0]||"", last:p[p.length-1]||""}; };
+const fuzzyKeyNorm  = nn => { const f=firstLastNorm(nn); return f.last+"|"+(f.first[0]||""); };
+function firstCompatible(a,b){            // are two normalized first-name tokens the same person?
+  if(!a||!b) return true;
+  if(a.length===1||b.length===1) return a[0]===b[0];      // an initial matches its expansion
+  return a===b || a.startsWith(b) || b.startsWith(a);     // Don ⊂ Donald, Ed ⊂ Edward …
+}
+// award name -> a single dataset author id (exact first, then unambiguous fuzzy)
+function resolveAuthorId(name){
+  const nn=normName(name);
+  const exact=RAW.nameToId.get(nn); if(exact) return exact;
+  const key=fuzzyKeyNorm(nn), af=firstLastNorm(nn).first;
+  const ids=[...new Set((RAW.fuzzyAuthors.get(key)||[]).filter(c=>firstCompatible(af,c.first)).map(c=>c.id))];
+  return ids.length===1 ? ids[0] : null;
+}
+
+function applyAwards(raw){
+  if(!raw) return;
+  RAW.awards = raw;
+  // title -> paper-award badge (best / student / both / runner / test-of-time)
+  for(const p of (raw.bestPaper||[])){
+    let kind,lab;
+    if(p.type==="student"){kind="student";lab="Best Student Paper";}
+    else if(p.type==="both"){kind="best";lab="Best Paper & Best Student Paper";}
+    else if(p.type==="runner"){kind="runner";lab="Best Paper Runner-Up";}
+    else {kind="best";lab="Best Paper";}
+    RAW.titleAward.set(normTitle(p.title), {kind, label:lab, paper:p});
+  }
+  for(const p of (raw.testOfTime||[])){
+    const k=normTitle(p.title); const ex=RAW.titleAward.get(k);
+    if(ex){ ex.tot=true; ex.label += " · Test of Time"; }
+    else RAW.titleAward.set(k, {kind:"tot", label:"Test of Time", paper:p});
+  }
+  // person name -> author awards (achievement / rising star / dissertation)
+  const addName=(name,obj)=>{ const k=normName(name); if(!k)return;
+    if(!RAW.nameAward.has(k))RAW.nameAward.set(k,[]); RAW.nameAward.get(k).push(obj); };
+  for(const a of (raw.achievement||[])) addName(a.name,{type:"achievement",year:a.year});
+  for(const a of (raw.risingStar||[]))  addName(a.name,{type:"rising",year:a.year});
+  for(const a of (raw.doctoral||[]))    if(a.kind==="winner") addName(a.name,{type:"doctoral",year:a.year});
+  RAW.nameAwardFuzzy = buildFuzzyFrom(RAW.nameAward);
+}
+// build fuzzyKey -> [{first, name, entries}] from an exact normName -> entries map
+function buildFuzzyFrom(exactMap){
+  const fz=new Map();
+  for(const [nn, entries] of exactMap){
+    const key=fuzzyKeyNorm(nn), first=firstLastNorm(nn).first;
+    if(!fz.has(key)) fz.set(key,[]);
+    fz.get(key).push({first, name:nn, entries});
+  }
+  return fz;
+}
+function applyChairs(raw){
+  if(!raw) return;
+  RAW.chairs = raw;
+  const add=(name,obj)=>{ const k=normName(name); if(!k)return;
+    if(!RAW.nameChair.has(k))RAW.nameChair.set(k,[]); RAW.nameChair.get(k).push(obj); };
+  for(const c of (raw.conferences||[])){
+    for(const n of (c.general||[])) add(n,{role:"general",year:c.year});
+    for(const n of (c.program||[])) add(n,{role:"program",year:c.year});
+  }
+  RAW.nameChairFuzzy = buildFuzzyFrom(RAW.nameChair);
+}
+const chairLabel = r => r==="general"?"🎫 General Chair":"🪑 PC Chair";
+const chairPlain = r => r==="general"?"General Chair":"PC Chair";
+const awardLabel = t => t==="achievement"?"🏅 Achievement":(t==="rising"?"🌟 Rising Star":(t==="doctoral"?"🎓 Dissertation":t));
+const plainLabel = t => t==="achievement"?"Achievement":(t==="rising"?"Rising Star":(t==="doctoral"?"Dissertation":t));
+// names -> author id, for jumping from the Awards tab to an author page
+function buildNameIndex(){
+  RAW.nameToId.clear(); RAW.fuzzyAuthors.clear();
+  for(const [id,m] of Object.entries(RAW.authorMeta||{})){
+    const names=[m.canonicalName, m.name, ...(m.aliases||[])];
+    for(const nm of names){ const k=normName(nm); if(!k)continue;
+      if(!RAW.nameToId.has(k)) RAW.nameToId.set(k,id);
+      const fk=fuzzyKeyNorm(k), first=firstLastNorm(k).first;
+      const arr=RAW.fuzzyAuthors.get(fk)||(RAW.fuzzyAuthors.set(fk,[]),RAW.fuzzyAuthors.get(fk));
+      if(!arr.some(c=>c.id===id&&c.first===first)) arr.push({id,first});
+    }
+  }
+}
+// generic exact-then-unambiguous-fuzzy lookup of honors (awards or chairs) for an author
+function honorsFor(o, exactMap, fuzzyMap, keyFn){
+  const names=[o.name, ...(o.aliasNames||[])]; const seen=new Set(); const out=[];
+  const add=e=>{const k=keyFn(e); if(!seen.has(k)){seen.add(k); out.push(e);}};
+  for(const nm of names) for(const e of (exactMap.get(normName(nm))||[])) add(e);
+  if(!out.length){                     // fuzzy fallback, only when unambiguous
+    for(const nm of names){
+      const nn=normName(nm), key=fuzzyKeyNorm(nn), af=firstLastNorm(nn).first;
+      const dsIds=[...new Set((RAW.fuzzyAuthors.get(key)||[]).filter(c=>firstCompatible(af,c.first)).map(c=>c.id))];
+      if(dsIds.length!==1 || dsIds[0]!==o.id) continue;          // this author must be the sole holder
+      const buckets=(fuzzyMap.get(key)||[]).filter(b=>firstCompatible(af,b.first));
+      if([...new Set(buckets.map(b=>b.name))].length!==1) continue; // one honored person only
+      for(const b of buckets) for(const e of b.entries) add(e);
+    }
+  }
+  return out;
+}
+function awardsForAuthor(o){ return honorsFor(o, RAW.nameAward, RAW.nameAwardFuzzy, e=>e.type+e.year).sort((a,b)=>b.year-a.year); }
+function chairsForAuthor(o){ return honorsFor(o, RAW.nameChair, RAW.nameChairFuzzy, e=>e.role+e.year).sort((a,b)=>b.year-a.year); }
+function paperAward(title){ return RAW.titleAward.get(normTitle(title)) || null; }
+
+function parseRaw(raw){
+  RAW.fetchedAt = raw.fetchedAt || (raw.meta&&raw.meta.generated_at&&Date.parse(raw.meta.generated_at)) || 0;
+  RAW.sample = !!(raw.sample || (raw.notes&&raw.notes.sample) || (raw.meta&&raw.meta.sample));
+  RAW.notes = raw.notes || {};
+  RAW.source = raw.source || (raw.meta&&raw.meta.source) || "dblp";
+  RAW.authorMeta = raw.authorMeta || {};
+  RAW.records = (raw.records||[]).map(r=>{
+    const authors=(r.authors||[]).map(a=>{
+      if(typeof a==="string") return {id:"name:"+a, name:cleanName(a), pid:null};
+      const id = a.id || (a.pid?("pid:"+a.pid):("name:"+(a.name||"")));
+      return {id, name:cleanName(a.name||id), pid:a.pid||null};
+    }).filter(a=>a.name);
+    return {year:r.year!=null?+r.year:null, title:(r.title||"").replace(/\.$/,""),
+      doi:r.doi||"", ee:r.url||r.ee||"", key:r.key||"", type:r.type||"",
+      pages:r.pages||"", authors};
+  });
+  const ys=RAW.records.map(r=>r.year).filter(Boolean);
+  RAW.fullMin = raw.startYear || (ys.length?Math.min(...ys):1974);
+  RAW.fullMax = raw.endYear   || (ys.length?Math.max(...ys):2026);
+  RAW.totalRecords = RAW.records.length;
+  const ids=new Set(); RAW.records.forEach(r=>r.authors.forEach(a=>ids.add(a.id)));
+  RAW.totalAuthors = ids.size;
+  RAW.recByTitle=new Map();
+  for(const r of RAW.records){ const k=normTitle(r.title); if(k&&!RAW.recByTitle.has(k))RAW.recByTitle.set(k,r); }
+  buildNameIndex();
+}
+function applyLinks(raw){ if(raw&&(raw.byPid||raw.byName)) RAW.links={byPid:raw.byPid||{},byName:raw.byName||{}}; }
+
+function ingestRecords(recs){
+  const map=new Map();
+  const meta=RAW.authorMeta;
+  const get=a=>{
+    if(!map.has(a.id)){
+      const m=meta[a.id]||{};
+      map.set(a.id,{id:a.id, realPid:a.pid||m.pid||null,
+        name:cleanName(m.canonicalName||m.name||a.name),
+        aliases:(m.aliases&&m.aliases.length)||1,
+        aliasNames:(m.aliases&&m.aliases.length?m.aliases:[m.canonicalName||m.name||a.name]),
+        pubs:0, byYear:{}, years:new Set(), coauthors:new Set(),
+        first:0,last:0,solo:0,alpha:0,multi:0,teamSizes:[],papers:[]});
+    }
+    const o=map.get(a.id); if(!o.realPid&&a.pid)o.realPid=a.pid; return o;
+  };
+  for(const r of recs){
+    const A=r.authors; if(!A.length) continue;
+    if((r.type||"").toLowerCase().includes("editor")) continue; // belt & suspenders
+    const size=A.length, alpha=isAlphabetical(A);
+    A.forEach((a,i)=>{
+      const o=get(a); o.pubs++; o.teamSizes.push(size);
+      if(r.year){o.byYear[r.year]=(o.byYear[r.year]||0)+1; o.years.add(r.year);}
+      for(let j=0;j<size;j++) if(j!==i) o.coauthors.add(A[j].id);
+      if(size===1)o.solo++; else {if(i===0)o.first++; if(i===size-1)o.last++; o.multi++; if(alpha)o.alpha++;}
+      o.papers.push({key:r.key,title:r.title,year:r.year,size,pages:r.pages,
+        pos:size===1?"solo":(i===0?"first":(i===size-1?"last":"middle")),ee:r.ee,doi:r.doi});
+    });
+  }
+  const list=[];
+  for(const o of map.values()){
+    const ys=[...o.years];
+    o.firstYear=ys.length?Math.min(...ys):0;
+    o.lastYear =ys.length?Math.max(...ys):0;
+    o.activeYears=o.years.size;
+    o.span=o.lastYear?o.lastYear-o.firstYear+1:0;
+    o.recent=Object.entries(o.byYear).reduce((s,[y,c])=>s+(+y>State.maxYear-5?c:0),0);
+    o.coauthorCount=o.coauthors.size;
+    o.avgTeam=o.teamSizes.length?o.teamSizes.reduce((a,b)=>a+b,0)/o.teamSizes.length:0;
+    o.alphaRate=o.multi?o.alpha/o.multi:0;
+    o.papers.sort((a,b)=>(b.year||0)-(a.year||0));
+    list.push(o);
+  }
+  State.authors=list; State.byId=map; State.comm=community(recs,list);
+}
+
+function gini(values){
+  const x=values.filter(v=>v>0).sort((a,b)=>a-b),n=x.length;
+  if(!n)return {g:0,lorenz:[[0,0],[1,1]]};
+  const tot=x.reduce((a,b)=>a+b,0); let cum=0; const lor=[[0,0]];
+  x.forEach((v,i)=>{cum+=v;lor.push([(i+1)/n,cum/tot]);});
+  let s=0;x.forEach((v,i)=>s+=(i+1)*v);
+  return {g:(2*s)/(n*tot)-(n+1)/n, lorenz:lor};
+}
+function community(recs,authors){
+  const papersByYear={},authorYears={},firstSeen={},teamByYear={},teamDist={};
+  let totalPapers=0,multi=0,alpha=0;
+  for(const r of recs){
+    const A=r.authors; if(!A.length||(r.type||"").toLowerCase().includes("editor"))continue;
+    totalPapers++;
+    if(A.length>1){multi++; if(isAlphabetical(A))alpha++;}
+    if(r.year){
+      papersByYear[r.year]=(papersByYear[r.year]||0)+1;
+      (teamByYear[r.year]=teamByYear[r.year]||[]).push(A.length);
+      teamDist[A.length]=(teamDist[A.length]||0)+1;
+      for(const a of A){(authorYears[r.year]=authorYears[r.year]||new Set()).add(a.id);
+        if(firstSeen[a.id]==null||r.year<firstSeen[a.id])firstSeen[a.id]=r.year;}
+    }
+  }
+  const newByYear={}; for(const id in firstSeen)newByYear[firstSeen[id]]=(newByYear[firstSeen[id]]||0)+1;
+  const years=Object.keys(papersByYear).map(Number).sort((a,b)=>a-b);
+  const adj=new Map(); const add=(a,b)=>{if(!adj.has(a))adj.set(a,new Set());adj.get(a).add(b);};
+  for(const r of recs){ if((r.type||"").toLowerCase().includes("editor"))continue;
+    const A=r.authors; for(let i=0;i<A.length;i++)for(let j=i+1;j<A.length;j++){add(A[i].id,A[j].id);add(A[j].id,A[i].id);} }
+  let pairs=0; for(const s of adj.values())pairs+=s.size; pairs/=2;
+  const seen=new Set(); let giant=0;
+  for(const node of adj.keys()){ if(seen.has(node))continue;
+    let sz=0; const q=[node]; seen.add(node);
+    while(q.length){const u=q.pop();sz++;for(const v of(adj.get(u)||[]))if(!seen.has(v)){seen.add(v);q.push(v);}}
+    giant=Math.max(giant,sz); }
+  const G=gini(authors.map(a=>a.pubs));
+  return {papersByYear,authorYears,newByYear,teamByYear,teamDist,years,totalPapers,
+    totalAuthors:authors.length,multi,alpha,alphaRate:multi?alpha/multi:0,
+    gini:G.g,lorenz:G.lorenz,adj,pairs,giant};
+}
+
+/* rebuild for the current window, then re-render whatever is on screen */
+function rebuild(){
+  State.minYear=Range.from; State.maxYear=Range.to;
+  const recs=RAW.records.filter(r=>r.year!=null&&r.year>=Range.from&&r.year<=Range.to);
+  ingestRecords(recs);
+}
+function setRange(from,to){
+  from=Math.max(RAW.fullMin,Math.min(from,RAW.fullMax));
+  to=Math.max(RAW.fullMin,Math.min(to,RAW.fullMax));
+  if(from>to)[from,to]=[to,from];
+  Range.from=from; Range.to=to;
+  rebuild(); syncYearControls(); rerenderCurrent();
+}
+
+/* =================================================================
+ *  SVG CHART TOOLKIT (no libraries)
+ * ================================================================= */
+const tip=document.getElementById("tip");
+function showTip(e,h){tip.innerHTML=h;tip.style.opacity=1;tip.style.left=(e.clientX+12)+"px";tip.style.top=(e.clientY-10)+"px";}
+function hideTip(){tip.style.opacity=0;}
+function wrapSvg(W,H,inner){return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet"
+  onmousemove="(function(e){var t=e.target.getAttribute('data-t'); if(t)showTip(e,t);})(event)" onmouseout="hideTip()">${inner}</svg>`;}
+
+function lineAreaChart(series,opts={}){
+  const W=opts.w||640,H=opts.h||220,P={t:14,r:14,b:26,l:38};
+  const xs=series.flatMap(s=>s.data.map(d=>d[0])),ys=series.flatMap(s=>s.data.map(d=>d[1]));
+  if(!xs.length) return wrapSvg(W,H,`<text class="axis" x="${W/2}" y="${H/2}" text-anchor="middle">no data in this window</text>`);
+  const x0=Math.min(...xs),x1=Math.max(...xs),y1=Math.max(1,...ys);
+  const X=v=>P.l+(v-x0)/((x1-x0)||1)*(W-P.l-P.r), Y=v=>H-P.b-(v/y1)*(H-P.t-P.b);
+  let g=""; for(let i=0;i<=4;i++){const v=Math.round(y1*i/4),y=Y(v);
+    g+=`<line class="gridline" x1="${P.l}" y1="${y}" x2="${W-P.r}" y2="${y}"/><text class="axis" x="${P.l-6}" y="${y+3}" text-anchor="end">${v}</text>`;}
+  const span=x1-x0,step=span>40?10:(span>24?5:(span>10?2:1));
+  for(let yr=Math.ceil(x0/step)*step;yr<=x1;yr+=step) g+=`<text class="axis" x="${X(yr)}" y="${H-8}" text-anchor="middle">${"'"+String(yr).slice(2)}</text>`;
+  let paths="";
+  for(const s of series){
+    const pts=s.data.map(d=>[X(d[0]),Y(d[1])]);
+    const line=pts.map((p,i)=>(i?"L":"M")+p[0].toFixed(1)+" "+p[1].toFixed(1)).join(" ");
+    if(s.fill)paths+=`<path d="${line} L ${X(x1)} ${Y(0)} L ${X(x0)} ${Y(0)} Z" fill="${s.color}" opacity=".12"/>`;
+    paths+=`<path d="${line}" fill="none" stroke="${s.color}" stroke-width="2" stroke-linejoin="round"/>`;
+    paths+=s.data.map(d=>`<circle r="9" cx="${X(d[0])}" cy="${Y(d[1])}" fill="transparent" data-t="${s.name} ${d[0]}: ${d[1]}"/>`).join("");
+    paths+=s.data.map(d=>`<circle r="2.3" cx="${X(d[0])}" cy="${Y(d[1])}" fill="${s.color}"/>`).join("");
+  }
+  return wrapSvg(W,H,g+paths);
+}
+function barChart(data,opts={}){
+  const W=opts.w||640,H=opts.h||220,P={t:12,r:12,b:30,l:36};
+  if(!data.length) return wrapSvg(W,H,`<text class="axis" x="${W/2}" y="${H/2}" text-anchor="middle">no data</text>`);
+  const y1=Math.max(1,...data.map(d=>d[1])),bw=(W-P.l-P.r)/data.length,Y=v=>H-P.b-(v/y1)*(H-P.t-P.b);
+  let g=""; for(let i=0;i<=4;i++){const v=Math.round(y1*i/4),y=Y(v);
+    g+=`<line class="gridline" x1="${P.l}" y1="${y}" x2="${W-P.r}" y2="${y}"/><text class="axis" x="${P.l-6}" y="${y+3}" text-anchor="end">${v}</text>`;}
+  data.forEach((d,i)=>{const x=P.l+i*bw,h=H-P.b-Y(d[1]);
+    g+=`<rect x="${x+bw*.16}" y="${Y(d[1])}" width="${bw*.68}" height="${Math.max(0,h)}" rx="2" fill="${opts.color||'var(--accent)'}" data-t="${opts.label||''} ${d[0]}: ${d[1]}"/>`;
+    if(data.length<=14||i%2===0)g+=`<text class="axis" x="${x+bw/2}" y="${H-9}" text-anchor="middle">${d[0]}</text>`;});
+  return wrapSvg(W,H,g);
+}
+function stackRenewal(c,opts={}){
+  const W=opts.w||640,H=opts.h||220,P={t:12,r:12,b:30,l:36},years=c.years;
+  if(!years.length) return wrapSvg(W,H,`<text class="axis" x="${W/2}" y="${H/2}" text-anchor="middle">no data</text>`);
+  const total=years.map(y=>c.authorYears[y]?c.authorYears[y].size:0),fresh=years.map(y=>c.newByYear[y]||0);
+  const y1=Math.max(1,...total),bw=(W-P.l-P.r)/years.length,Y=v=>H-P.b-(v/y1)*(H-P.t-P.b);
+  let g=""; for(let i=0;i<=4;i++){const v=Math.round(y1*i/4),y=Y(v);
+    g+=`<line class="gridline" x1="${P.l}" y1="${y}" x2="${W-P.r}" y2="${y}"/><text class="axis" x="${P.l-6}" y="${y+3}" text-anchor="end">${v}</text>`;}
+  const lbl=years.length>30?10:(years.length>14?5:2);
+  years.forEach((yr,i)=>{const x=P.l+i*bw,yt=Y(total[i]),yf=Y(fresh[i]);
+    g+=`<rect x="${x+bw*.16}" y="${yt}" width="${bw*.68}" height="${H-P.b-yt}" rx="2" fill="var(--c-auth)" opacity=".35" data-t="${yr}: ${total[i]} active, ${fresh[i]} new"/>`;
+    g+=`<rect x="${x+bw*.16}" y="${yf}" width="${bw*.68}" height="${H-P.b-yf}" rx="2" fill="var(--needle)"/>`;
+    if(i%lbl===0)g+=`<text class="axis" x="${x+bw/2}" y="${H-9}" text-anchor="middle">${"'"+String(yr).slice(2)}</text>`;});
+  return wrapSvg(W,H,g);
+}
+function lorenzChart(c,opts={}){
+  const W=opts.w||300,H=opts.h||300,P=24,X=v=>P+v*(W-2*P),Y=v=>H-P-v*(H-2*P);
+  let g=`<line class="gridline" x1="${X(0)}" y1="${Y(0)}" x2="${X(1)}" y2="${Y(1)}" stroke-dasharray="3 3"/>`;
+  const line=c.lorenz.map((p,i)=>(i?"L":"M")+X(p[0]).toFixed(1)+" "+Y(p[1]).toFixed(1)).join(" ");
+  g+=`<path d="${line} L ${X(1)} ${Y(0)} Z" fill="var(--accent)" opacity=".1"/><path d="${line}" fill="none" stroke="var(--accent)" stroke-width="2"/>`;
+  g+=`<text class="axis" x="${X(.5)}" y="${H-4}" text-anchor="middle">authors (fewest → most papers)</text>`;
+  return wrapSvg(W,H,g);
+}
+function sparkline(byYear,minY,maxY,color){
+  const W=96,H=22,P=2,span=(maxY-minY)||1,max=Math.max(1,...Object.values(byYear));
+  const X=y=>P+(y-minY)/span*(W-2*P),Y=v=>H-P-(v/max)*(H-2*P);
+  let pts=[]; for(let y=minY;y<=maxY;y++)pts.push([X(y),Y(byYear[y]||0)]);
+  return `<svg class="spark" viewBox="0 0 ${W} ${H}"><path d="${pts.map((p,i)=>(i?"L":"M")+p[0].toFixed(1)+" "+p[1].toFixed(1)).join(" ")}" fill="none" stroke="${color||'var(--accent)'}" stroke-width="1.5"/></svg>`;
+}
+function egoNetwork(author,opts={}){
+  const W=opts.w||560,H=opts.h||420,cx=W/2,cy=H/2;
+  // joint-paper counts from the current window's records
+  const freq=new Map();
+  for(const r of windowRecords()){
+    if(!r.authors.some(a=>a.id===author.id))continue;
+    for(const a of r.authors) if(a.id!==author.id) freq.set(a.id,(freq.get(a.id)||0)+1);
+  }
+  const tops=[...freq.entries()].sort((a,b)=>b[1]-a[1]).slice(0,opts.k||14);
+  if(!tops.length) return `<div class="cap">No coauthors in this window — solo contributor.</div>`;
+  const R=Math.min(W,H)/2-46,maxc=Math.max(...tops.map(t=>t[1]));
+  const nodes=tops.map(([id,c],i)=>{const ang=-Math.PI/2+i/tops.length*Math.PI*2;
+    return {id,c,x:cx+R*Math.cos(ang),y:cy+R*Math.sin(ang),name:(State.byId.get(id)||{name:id}).name};});
+  let edges="",inter="";
+  for(const n of nodes)edges+=`<line x1="${cx}" y1="${cy}" x2="${n.x}" y2="${n.y}" stroke="var(--line-strong)" stroke-width="${.6+n.c/maxc*2}"/>`;
+  for(const n of nodes){const adj=State.comm.adj.get(n.id); if(!adj)continue;
+    for(const m of nodes){if(m.id<=n.id)continue; if(adj.has(m.id))
+      inter+=`<line x1="${n.x}" y1="${n.y}" x2="${m.x}" y2="${m.y}" stroke="var(--line)" stroke-width="1" opacity=".7"/>`;}}
+  let circles="";
+  for(const n of nodes){const r=6+n.c/maxc*9;
+    circles+=`<g data-pid="${n.id}" style="cursor:pointer"><circle cx="${n.x}" cy="${n.y}" r="${r}" fill="var(--accent)" opacity=".85" data-t="${n.name}: ${n.c} joint paper${n.c>1?'s':''}"/>
+      <text x="${n.x}" y="${n.y+(n.y<cy?-r-5:r+12)}" text-anchor="middle" font-size="9.5" class="axis" fill="var(--muted)">${n.name.split(' ').slice(-1)[0]}</text></g>`;}
+  const center=`<circle cx="${cx}" cy="${cy}" r="13" fill="var(--needle)"/><text x="${cx}" y="${cy+4}" text-anchor="middle" font-size="10" fill="#fff" font-family="var(--mono)">${author.name.split(' ').map(s=>s[0]).join('').slice(0,3)}</text>`;
+  return wrapSvg(W,H,inter+edges+circles+center);
+}
+function windowRecords(){return RAW.records.filter(r=>r.year!=null&&r.year>=Range.from&&r.year<=Range.to);}
+
+/* =================================================================
+ *  VIEWS
+ * ================================================================= */
+const $=s=>document.querySelector(s);
+const fmt=n=>n.toLocaleString("en-US");
+const views={overview:$("#view-overview"),authors:$("#view-authors"),detail:$("#view-detail"),
+  network:$("#view-network"),awards:$("#view-awards"),chairs:$("#view-chairs"),data:$("#view-data")};
+let currentRoute="overview", currentPid=null;
+
+function countUp(el,to){
+  if(matchMedia("(prefers-reduced-motion:reduce)").matches){el.textContent=fmt(to);return;}
+  const t0=performance.now();(function step(t){const k=Math.min(1,(t-t0)/650),e=1-Math.pow(1-k,3);
+    el.textContent=fmt(Math.round(to*e)); if(k<1)requestAnimationFrame(step);})(t0);
+}
+function renderReadouts(){
+  document.getElementById("readouts").innerHTML=
+    [["Records",RAW.totalRecords],["Authors",RAW.totalAuthors],["Coverage",`${RAW.fullMin}–${RAW.fullMax}`]]
+    .map(([k,v])=>`<div class="ro"><span class="v">${typeof v==="number"?fmt(v):v}</span><span class="k">${k}</span></div>`).join("");
+}
+function freshnessBanner(){
+  if(RAW.sample) return `<div class="banner sample">⚠ <div><b>Sample data.</b> These figures are synthetic, for demonstration only. Run <code>python3 fetch_sigmetrics.py</code> and reload for real DBLP records.</div></div>`;
+  if(RAW.fetchedAt){const days=Math.floor((Date.now()-RAW.fetchedAt)/864e5);
+    if(days>120)return `<div class="banner stale">◷ Data last refreshed ${days} days ago. See <b>Data &amp; method</b> to refresh.</div>`;}
+  return "";
+}
+
+function renderOverview(){
+  const c=State.comm;
+  const meanTeam=(()=>{let s=0,n=0;for(const y in c.teamByYear){const a=c.teamByYear[y];s+=a.reduce((p,q)=>p+q,0);n+=a.length;}return n?s/n:0;})();
+  const recentAuthors=State.authors.filter(a=>a.recent>0).length;
+  const span=Range.to-Range.from+1;
+  const stats=[
+    ["Papers",c.totalPapers,`across <b>${span}</b> selected year${span>1?'s':''}`],
+    ["Distinct authors",c.totalAuthors,`<b>${recentAuthors}</b> active in the window's last 5 yrs`],
+    ["Mean team size",meanTeam.toFixed(2),`<b>${(c.alphaRate*100).toFixed(0)}%</b> of papers ordered alphabetically`],
+    ["Productivity Gini",c.gini.toFixed(2),`<b>${c.totalAuthors?Math.round(c.giant/c.totalAuthors*100):0}%</b> in one collaboration network`],
+  ];
+  const py=c.years.map(y=>[y,c.papersByYear[y]||0]);
+  const ay=c.years.map(y=>[y,c.authorYears[y]?c.authorYears[y].size:0]);
+  const team=c.years.map(y=>{const a=c.teamByYear[y]||[];return [y,a.length?a.reduce((p,q)=>p+q,0)/a.length:0];});
+  const dist=Object.keys(c.teamDist).map(Number).sort((a,b)=>a-b).map(s=>[s,c.teamDist[s]]);
+  views.overview.innerHTML=freshnessBanner()+
+    `<div class="grid cols-4">`+stats.map(s=>`<div class="card stat"><div class="k">${s[0]}</div><div class="v" data-n="${typeof s[1]==='number'?s[1]:''}">${typeof s[1]==='number'?'0':s[1]}</div><div class="d">${s[2]}</div></div>`).join("")+`</div>
+    <div class="section-h"><h2>Community over time</h2><span class="hint">Papers (area) and distinct active authors (line) per year</span></div>
+    <div class="card chart-card">${lineAreaChart([{name:"Papers",color:"var(--c-paper)",fill:true,data:py},{name:"Authors",color:"var(--c-auth)",fill:false,data:ay}],{w:980,h:240})}
+      <div class="legend"><span><i style="background:var(--c-paper)"></i>Papers</span><span><i style="background:var(--c-auth)"></i>Active authors</span></div></div>
+    <div class="grid cols-2" style="margin-top:14px">
+      <div class="card chart-card"><h3>Collaboration intensity</h3><p class="cap">Average authors per paper, by year — collaboration tends to grow over decades.</p>${lineAreaChart([{name:"Avg team",color:"var(--accent)",fill:true,data:team}],{w:480,h:210})}</div>
+      <div class="card chart-card"><h3>Community renewal</h3><p class="cap">Active authors each year; amber = first appearance in the selected window.</p>${stackRenewal(c,{w:480,h:210})}
+        <div class="legend"><span><i style="background:var(--needle)"></i>Newcomers</span><span><i style="background:var(--c-auth);opacity:.5"></i>Returning</span></div></div></div>
+    <div class="grid cols-2" style="margin-top:14px">
+      <div class="card chart-card"><h3>Team-size distribution</h3><p class="cap">How many papers have 1, 2, 3… authors in the window.</p>${barChart(dist,{w:480,h:210,label:"authors"})}</div>
+      <div class="card chart-card"><h3>Productivity concentration</h3><p class="cap">Lorenz curve of papers per author. Gini = <b class="mono">${c.gini.toFixed(2)}</b>; the further the curve bows from the diagonal, the more output concentrates in a few authors.</p>${lorenzChart(c,{w:430,h:300})}</div></div>`;
+  views.overview.querySelectorAll(".stat .v[data-n]").forEach(el=>{if(el.getAttribute("data-n")!=="")countUp(el,+el.getAttribute("data-n"));});
+}
+
+const AU={sort:"pubs",dir:-1,q:"",min:1,limit:60};
+const COLS=[{k:"name",label:"Author",left:true},{k:"_spark",label:"Trajectory",left:true,nosort:true},
+  {k:"pubs",label:"Papers"},{k:"recent",label:"Last 5y"},{k:"activeYears",label:"Active yrs"},
+  {k:"firstYear",label:"First"},{k:"lastYear",label:"Last"},{k:"coauthorCount",label:"Coauth."},{k:"avgTeam",label:"Avg team"}];
+function authorsFiltered(){
+  const q=AU.q.toLowerCase();
+  let r=State.authors.filter(a=>a.pubs>=AU.min&&(!q||a.name.toLowerCase().includes(q)));
+  r.sort((a,b)=>{const x=a[AU.sort],y=b[AU.sort];
+    if(typeof x==="string")return AU.dir*x.localeCompare(y); return AU.dir*((x||0)-(y||0));});
+  return r;
+}
+function renderAuthors(){
+  const all=authorsFiltered(),shown=all.slice(0,AU.limit);
+  const head=COLS.map(c=>`<th class="${c.left?'left':''}" ${c.nosort?'':`data-sort="${c.k}"`}>${c.label}${AU.sort===c.k?`<span class="ar">${AU.dir<0?'▾':'▴'}</span>`:''}</th>`).join("");
+  const rows=shown.map(a=>{const aw=awardsForAuthor(a), ch=chairsForAuthor(a);
+    const med=aw.length?` <span class="medal" title="${aw.map(w=>plainLabel(w.type)+' '+w.year).join(' · ')}">🏅</span>`:"";
+    const cmk=ch.length?` <span class="medal" title="${ch.map(w=>chairPlain(w.role)+' '+w.year).join(' · ')}">🪑</span>`:"";
+    return `<tr data-pid="${a.id}"><td class="left"><span class="aname">${a.name}</span>${med}${cmk}</td>
+    <td class="left">${sparkline(a.byYear,State.minYear,State.maxYear,a.recent>0?'var(--accent)':'var(--faint)')}</td>
+    <td>${a.pubs}</td><td>${a.recent}</td><td>${a.activeYears}</td><td>${a.firstYear||'—'}</td><td>${a.lastYear||'—'}</td>
+    <td>${a.coauthorCount}</td><td>${a.avgTeam.toFixed(1)}</td></tr>`;}).join("");
+  views.authors.innerHTML=freshnessBanner()+
+    `<div class="toolbar">
+      <div class="field"><label>Find</label><input type="search" id="q" placeholder="author name…" value="${AU.q}"></div>
+      <div class="field"><label>Min papers</label><select id="min">${[1,2,3,5,10,20].map(n=>`<option ${AU.min===n?'selected':''}>${n}</option>`).join("")}</select></div>
+      <div class="field"><label>Sort</label><select id="sortsel">${COLS.filter(c=>!c.nosort).map(c=>`<option value="${c.k}" ${AU.sort===c.k?'selected':''}>${c.label}</option>`).join("")}</select></div>
+      <span class="count-note">${fmt(shown.length)} of ${fmt(all.length)} authors · ${Range.from}–${Range.to}</span></div>
+    <div class="table-wrap"><table><thead><tr>${head}</tr></thead><tbody>${rows||`<tr><td colspan="9" class="left" style="padding:30px;color:var(--muted)">No authors match this filter and year window.</td></tr>`}</tbody></table>
+    ${all.length>AU.limit?`<button class="btn-more" id="more">Show more (${fmt(all.length-AU.limit)} remaining)</button>`:''}</div>`;
+  $("#q").oninput=e=>{AU.q=e.target.value;AU.limit=60;renderAuthors();const v=$("#q");v.focus();v.setSelectionRange(v.value.length,v.value.length);};
+  $("#min").onchange=e=>{AU.min=+e.target.value;AU.limit=60;renderAuthors();};
+  $("#sortsel").onchange=e=>{AU.sort=e.target.value;AU.dir=(AU.sort==="name"||AU.sort==="firstYear")?1:-1;renderAuthors();};
+  if($("#more"))$("#more").onclick=()=>{AU.limit+=80;renderAuthors();};
+  views.authors.querySelectorAll("th[data-sort]").forEach(th=>th.onclick=()=>{const k=th.getAttribute("data-sort");
+    if(AU.sort===k)AU.dir*=-1; else{AU.sort=k;AU.dir=(k==="name"||k==="firstYear")?1:-1;} renderAuthors();});
+  views.authors.querySelectorAll("tbody tr[data-pid]").forEach(tr=>tr.onclick=()=>openAuthor(tr.getAttribute("data-pid")));
+}
+
+function authorLinks(a){
+  const L=RAW.links.byPid[a.realPid]||RAW.links.byName[a.name]||{};
+  const dblp=L.dblp||(a.realPid?`https://dblp.org/pid/${a.realPid}.html`:null);
+  const out=[];
+  if(dblp)out.push(`<a class="chip link" href="${dblp}" target="_blank" rel="noopener">DBLP ↗</a>`);
+  if(L.homepage)out.push(`<a class="chip link" href="${L.homepage}" target="_blank" rel="noopener">Homepage ↗</a>`);
+  if(L.googleScholar)out.push(`<a class="chip link" href="${L.googleScholar}" target="_blank" rel="noopener">Scholar ↗</a>`);
+  return out.join("");
+}
+function openAuthor(id){
+  const a=State.byId.get(id);
+  currentPid=id;
+  if(!a){ views.detail.innerHTML=`<button class="back" onclick="history.back()">← all authors</button>
+    <div class="center-state"><h2>No activity in ${Range.from}–${Range.to}</h2><p>This author has no papers in the selected year window. Widen the range to see their record.</p></div>`;
+    switchView("detail"); return; }
+  location.hash="#author/"+encodeURIComponent(id);
+  const traj=[]; for(let y=a.firstYear;y<=a.lastYear;y++)traj.push([y,a.byYear[y]||0]);
+  const dormant=a.lastYear<State.maxYear-4;
+  const freq=new Map();
+  for(const r of windowRecords()){ if(!r.authors.some(x=>x.id===id))continue;
+    for(const x of r.authors)if(x.id!==id)freq.set(x.id,(freq.get(x.id)||0)+1); }
+  const topCollab=[...freq.entries()].sort((x,y)=>y[1]-x[1]).slice(0,10);
+  const maxC=topCollab.length?topCollab[0][1]:1;
+  const roleTotal=a.first+a.last+a.solo+Math.max(0,a.multi-a.first-a.last)||1;
+  const seg=(v,c,l)=>v?`<div style="flex:${v};background:${c}" title="${l}: ${v}">${v/roleTotal>0.1?v:''}</div>`:'';
+  const note=a.alphaRate>0.4?`<span class="chip warn">⚠ ${(a.alphaRate*100).toFixed(0)}% alphabetical — first/last position unreliable</span>`:'';
+  const awEntries=awardsForAuthor(a);
+  const awChips=awEntries.map(w=>`<span class="chip award">${awardLabel(w.type)} ${w.year}</span>`).join("");
+  const chEntries=chairsForAuthor(a);
+  const chChips=chEntries.map(w=>`<span class="chip chair">${chairLabel(w.role)} ${w.year}</span>`).join("");
+  views.detail.innerHTML=
+    `<button class="back" onclick="history.back()">← all authors</button>
+    <div class="detail-head"><div>
+      <h1>${a.name}</h1>
+      <div class="meta">Active <b>${a.firstYear}–${a.lastYear}</b> · <b>${a.activeYears}</b> active years over a <b>${a.span}</b>-year span${a.aliases>1?` · ${a.aliases} name variants`:''}</div>
+      <div class="chips">
+        <span class="chip">${a.pubs} papers</span><span class="chip">${a.recent} in last 5y</span>
+        <span class="chip">${a.coauthorCount} coauthors</span><span class="chip">avg team ${a.avgTeam.toFixed(1)}</span>
+        ${dormant?'<span class="chip">dormant</span>':'<span class="chip" style="color:var(--ok)">active</span>'}${note}${awChips}${chChips}</div>
+      <div class="chips">${authorLinks(a)}</div>
+    </div></div>
+    <div class="grid cols-2" style="margin-top:18px">
+      <div class="card chart-card"><h3>Publication trajectory</h3><p class="cap">SIGMETRICS papers per year within the career span.</p>${lineAreaChart([{name:"Papers",color:"var(--accent)",fill:true,data:traj.length?traj:[[a.firstYear||State.minYear,0]]}],{w:480,h:210})}</div>
+      <div class="card chart-card"><h3>Authorship role</h3><p class="cap">Position among coauthors. ${a.alphaRate>0.4?'Interpret with care — see the alphabetical flag above.':'Lower alphabetical share makes position meaningful.'}</p>
+        <div class="role-bar">${seg(a.solo,'var(--faint)','Solo')}${seg(a.first,'var(--accent)','First')}${seg(Math.max(0,a.multi-a.first-a.last),'var(--line-strong)','Middle')}${seg(a.last,'var(--needle)','Last')}</div>
+        <div class="legend"><span><i style="background:var(--faint)"></i>Solo ${a.solo}</span><span><i style="background:var(--accent)"></i>First ${a.first}</span><span><i style="background:var(--line-strong)"></i>Middle ${Math.max(0,a.multi-a.first-a.last)}</span><span><i style="background:var(--needle)"></i>Last ${a.last}</span></div></div></div>
+    <div class="grid cols-2" style="margin-top:14px">
+      <div class="card chart-card"><h3>Coauthor network</h3><p class="cap">Closest collaborators in the window; node size = joint papers. Click a node to open that author.</p>${egoNetwork(a,{w:520,h:380})}</div>
+      <div class="card"><h3 style="margin:0 0 2px;font-size:13px">Top collaborators</h3><p class="cap">By joint SIGMETRICS papers in the window.</p>
+        <ul class="collab">${topCollab.map(([cp,cc])=>{const co=State.byId.get(cp)||{name:cp};
+          return `<li data-pid="${cp}"><span class="n">${co.name}</span><span class="barwrap"><span class="barfill" style="width:${cc/maxC*100}%"></span></span><span class="c">${cc}</span></li>`;}).join("")||'<li class="n">No coauthors — solo contributor.</li>'}</ul></div></div>
+    <div class="section-h"><h2>Papers (${a.papers.length})</h2><span class="hint">Most recent first</span></div>
+    <div class="card"><ul class="papers">${a.papers.map(p=>{const aw=paperAward(p.title);const badge=aw?` <span class="pbadge ${aw.kind}">${aw.label}</span>`:"";
+      return `<li>
+      <div class="t">${p.ee||p.doi?`<a href="${p.ee||('https://doi.org/'+p.doi)}" target="_blank" rel="noopener">${p.title}</a>`:p.title}${badge}</div>
+      <div class="m"><span class="yr">${p.year||'n.d.'}</span> · ${p.pos} author · team of ${p.size}${p.pages?` · pp. ${p.pages}`:''}</div></li>`;}).join("")}</ul></div>`;
+  views.detail.querySelectorAll("li[data-pid],[data-pid] circle,g[data-pid]").forEach(el=>{
+    const host=el.closest("[data-pid]"); if(host)host.style.cursor="pointer";});
+  views.detail.querySelectorAll("[data-pid]").forEach(el=>el.onclick=()=>openAuthor(el.getAttribute("data-pid")));
+  switchView("detail");
+}
+
+function renderNetwork(){
+  const c=State.comm;
+  const top=[...State.authors].sort((a,b)=>b.coauthorCount-a.coauthorCount).slice(0,25);
+  views.network.innerHTML=freshnessBanner()+
+   `<div class="grid cols-3">
+      <div class="card stat"><div class="k">Collaboration ties</div><div class="v">${fmt(c.pairs)}</div><div class="d">distinct coauthor pairs · ${Range.from}–${Range.to}</div></div>
+      <div class="card stat"><div class="k">Largest network</div><div class="v">${fmt(c.giant)}</div><div class="d"><b>${c.totalAuthors?Math.round(c.giant/c.totalAuthors*100):0}%</b> of authors are connected</div></div>
+      <div class="card stat"><div class="k">Mean coauthors</div><div class="v">${c.totalAuthors?(State.authors.reduce((s,a)=>s+a.coauthorCount,0)/c.totalAuthors).toFixed(1):'0'}</div><div class="d">per author in the window</div></div></div>
+    <div class="section-h"><h2>Most connected authors</h2><span class="hint">By distinct coauthors — the community's hubs. Click to inspect.</span></div>
+    <div class="card chart-card">${barChart(top.map(a=>[a.name.split(' ').slice(-1)[0],a.coauthorCount]),{w:980,h:300,color:'var(--accent)',label:'coauthors'})}</div>
+    <div class="table-wrap"><table><thead><tr><th class="left">Author</th><th>Coauthors</th><th>Papers</th><th>Span</th></tr></thead>
+      <tbody>${top.map(a=>`<tr data-pid="${a.id}"><td class="left aname">${a.name}</td><td>${a.coauthorCount}</td><td>${a.pubs}</td><td>${a.firstYear}–${a.lastYear}</td></tr>`).join("")}</tbody></table></div>`;
+  views.network.querySelectorAll("tr[data-pid]").forEach(tr=>tr.onclick=()=>openAuthor(tr.getAttribute("data-pid")));
+}
+
+function renderData(){
+  const c=State.comm;
+  const noYear=RAW.records.filter(r=>!r.year).length;
+  const noPid=RAW.records.reduce((s,r)=>s+r.authors.filter(a=>!a.id.startsWith("pid:")).length,0);
+  const linkN=Object.keys(RAW.links.byPid).length+Object.keys(RAW.links.byName).length;
+  const checks=[
+    [`${fmt(RAW.totalRecords)} records loaded`,RAW.totalRecords>0],
+    [`${fmt(RAW.totalAuthors)} authors merged by DBLP id`,RAW.totalAuthors>0],
+    [`${noYear} records missing a year`,noYear===0],
+    [`${noPid} author mentions without a stable pid`,noPid===0],
+    [`${linkN?fmt(linkN)+' author_links entries loaded':'author_links.json not loaded (optional)'}`,true],
+  ];
+  const d=RAW.fetchedAt?new Date(RAW.fetchedAt):null;
+  views.data.innerHTML=freshnessBanner()+
+   `<div class="prose">
+      <div class="section-h"><h2>Dataset</h2></div>
+      <dl class="kv">
+        <dt>Venue</dt><dd>SIGMETRICS (ACM, via DBLP TOC)</dd>
+        <dt>Source</dt><dd>${RAW.source}</dd>
+        <dt>Fetched</dt><dd>${d?d.toISOString().replace('T',' ').slice(0,19)+' UTC':'unknown'}</dd>
+        <dt>Coverage</dt><dd>${RAW.fullMin}–${RAW.fullMax} · ${fmt(RAW.totalRecords)} records</dd>
+        <dt>Viewing</dt><dd>${Range.from}–${Range.to} · ${fmt(c.totalPapers)} papers · ${fmt(c.totalAuthors)} authors</dd>
+      </dl>
+      <h3>Refresh the data</h3>
+      <p class="muted">The website only reads <code>data/sigmetrics.json</code>. Rebuild it from DBLP (1974→present, year-by-year TOC keys, posters filtered for pre-2017), then reload:</p>
+      <div class="cmd">python3 fetch_sigmetrics.py</div>
+      <p class="muted">Optional — add homepage &amp; Google Scholar links from CSRankings (writes <code>data/author_links.json</code>):</p>
+      <div class="cmd">python3 make_author_links_from_csrankings.py</div>
+      <h3>Integrity checks</h3>
+      ${checks.map(([t,ok])=>`<div class="check"><span class="b ${ok?'ok':'no'}"></span>${t}</div>`).join("")}
+      <h3>What these numbers mean — and don't</h3>
+      <p>This dashboard measures <b>participation and collaboration structure</b>, not impact. DBLP records who published what, where, and when; it has <b>no citation counts and no abstracts</b>. "Prolific" means <em>frequent at SIGMETRICS</em>, never "influential".</p>
+      <ul>
+        <li><b>Identity is merged by DBLP id</b> (<code>pid:…</code>), not by name — unifying spelling variants and separating distinct people who share a name.</li>
+        <li><b>First/last-author metrics are flagged</b> where an author's papers are largely alphabetical by surname (${(c.alphaRate*100).toFixed(0)}% of multi-author papers in this window), a convention common in performance modelling.</li>
+        <li><b>Editorships and short non-papers are excluded by the fetcher</b> (posters &lt;5 pages dropped for 1974–2016; all kept 2017+).</li>
+        <li><b>The year selector</b> recomputes every figure for the chosen window; "last 5 years" is relative to the window's end (${Range.to}).</li>
+        <li><b>Gini and the Lorenz curve</b> describe how evenly papers spread across authors — descriptive, not evaluative.</li>
+        <li><b>Awards and conference chairs are static overlays</b> (<code>data/awards.json</code>, <code>data/chairs.json</code>) transcribed from sigmetrics.org, matched onto authors by name and onto papers by title — no refetch, no citations implied.</li>
+      </ul>
+      <p class="muted">Fully static: one JSON file, no backend, no runtime calls to DBLP.</p>
+    </div>`;
+}
+
+/* ---- awards ---- */
+const escH=s=>(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+function awardAuthorLink(name){
+  const id=resolveAuthorId(name);
+  return id ? `<a data-openid="${escH(id)}">${escH(name)}</a>`
+            : `<a data-search="${escH(name)}">${escH(name)}</a>`;
+}
+function paperRow(title, authors, tag, leadYear, subPrefix){
+  const rec=RAW.recByTitle.get(normTitle(title));
+  const lead = leadYear!=null?leadYear : (rec&&rec.year?rec.year:"—");
+  const link=rec&&(rec.ee||rec.doi)?(rec.ee||("https://doi.org/"+rec.doi)):null;
+  const titleHtml=link?`<a href="${link}" target="_blank" rel="noopener">${escH(title)}</a>`:escH(title);
+  const auth=(authors||[]).map(awardAuthorLink).join(", ");
+  const sub=(subPrefix?`<span class="mono" style="color:var(--faint)">${escH(subPrefix)}</span> · `:"")+auth;
+  const matched=rec?` <span class="aw-matched mono" title="matched to a record in the loaded dataset">✓ in dataset</span>`:"";
+  return `<li><span class="yr">${lead}</span><div class="who">${titleHtml}${matched}<div class="sub">${sub}</div></div><span class="tag">${tag}</span></li>`;
+}
+function renderAwards(){
+  if(!RAW.awards){ views.awards.innerHTML=`<div class="center-state"><h2>No awards data</h2>
+    <p>Add <code>data/awards.json</code> (run <code>python3 make_awards.py</code>) and reload.</p></div>`; return; }
+  const A=RAW.awards;
+  const tot=A.testOfTime||[], bp=A.bestPaper||[], doc=A.doctoral||[];
+  const best=bp.filter(p=>p.type==="best"||p.type==="both");
+  const student=bp.filter(p=>p.type==="student"||p.type==="both");
+  const runners=bp.filter(p=>p.type==="runner");
+  const intro=[["Achievement",(A.achievement||[]).length],["Rising Star",(A.risingStar||[]).length],
+               ["Test of Time",tot.length],["Best-paper awards",bp.length],["Dissertation",doc.length]];
+  const tagOf=t=>t==="student"?"Best Student":(t==="both"?"Best + Student":(t==="runner"?"Runner-Up":"Best Paper"));
+  views.awards.innerHTML = freshnessBanner()+
+    `<div class="awards-intro">`+intro.map(s=>`<div class="aw-card"><div class="n">${s[1]}</div><div class="l">${s[0]}</div></div>`).join("")+`</div>
+    <p class="section-h" style="margin-top:18px"><span class="hint">Source: <a href="${escH(A.source||'https://www.sigmetrics.org/awards.shtml')}" target="_blank" rel="noopener">sigmetrics.org/awards.shtml</a>. Names link to the author dashboard; papers found in the loaded dataset are marked <span class="aw-matched">✓ in dataset</span> and link out.${RAW.sample?' <b style="color:var(--needle)">You are on sample data, so few names/titles will match — load real DBLP data for full cross-linking.</b>':''}</span></p>
+
+    <div class="section-h"><h2>🏅 Achievement Award</h2><span class="hint">Senior researcher, long-lasting influential contributions</span></div>
+    <div class="card"><ul class="aw-list">${(A.achievement||[]).map(a=>`<li><span class="yr">${a.year}</span><div class="who">${awardAuthorLink(a.name)}</div><span class="tag">Achievement</span></li>`).join("")}</ul></div>
+
+    <div class="section-h"><h2>🌟 Rising Star Research Award</h2><span class="hint">Junior researcher, outstanding potential</span></div>
+    <div class="card"><ul class="aw-list">${(A.risingStar||[]).map(a=>`<li><span class="yr">${a.year}</span><div class="who">${awardAuthorLink(a.name)}</div><span class="tag">Rising Star</span></li>`).join("")}</ul></div>
+
+    <div class="section-h"><h2>⏳ Test of Time Award</h2><span class="hint">Year = award year; paper is from the listed SIGMETRICS year</span></div>
+    <div class="card"><ul class="aw-list">${tot.map(p=>paperRow(p.title,p.authors,"Test of Time",p.awardYear,"SIGMETRICS "+p.paperYear)).join("")}</ul></div>
+
+    <div class="section-h"><h2>🏆 Best Paper Award</h2><span class="hint">${best.length} papers</span></div>
+    <div class="card"><ul class="aw-list">${best.map(p=>paperRow(p.title,p.authors,tagOf(p.type),p.year)).join("")}</ul></div>
+
+    <div class="section-h"><h2>🎓 Best Student Paper Award</h2><span class="hint">Lavenberg / Kenneth C. Sevcik · ${student.length} papers</span></div>
+    <div class="card"><ul class="aw-list">${student.map(p=>paperRow(p.title,p.authors,tagOf(p.type),p.year)).join("")}</ul></div>
+
+    ${runners.length?`<div class="section-h"><h2>🥈 Best Paper Runners-Up</h2><span class="hint">${runners.length} papers</span></div>
+    <div class="card"><ul class="aw-list">${runners.map(p=>paperRow(p.title,p.authors,"Runner-Up",p.year)).join("")}</ul></div>`:''}
+
+    ${doc.length?`<div class="section-h"><h2>📜 Doctoral Dissertation Award</h2><span class="hint">Winners and honorable mentions</span></div>
+    <div class="card"><ul class="aw-list">${doc.map(d=>`<li><span class="yr">${d.year}</span><div class="who">${awardAuthorLink(d.name)}<div class="sub">${escH(d.title||"")}${d.institution?` · ${escH(d.institution)}`:""}${d.advisor?` · adv. ${escH(d.advisor)}`:""}</div></div><span class="tag">${d.kind==="winner"?"Winner":"Honorable"}</span></li>`).join("")}</ul></div>`:''}`;
+  views.awards.querySelectorAll("[data-openid]").forEach(el=>el.onclick=()=>openAuthor(el.getAttribute("data-openid")));
+  views.awards.querySelectorAll("[data-search]").forEach(el=>el.onclick=()=>{AU.q=el.getAttribute("data-search");AU.limit=60;location.hash="#authors";});
+}
+function renderChairs(){
+  if(!RAW.chairs){ views.chairs.innerHTML=`<div class="center-state"><h2>No chairs data</h2>
+    <p>Add <code>data/chairs.json</code> (run <code>python3 make_chairs.py</code>) and reload.</p></div>`; return; }
+  const C=(RAW.chairs.conferences||[]).slice().sort((a,b)=>b.year-a.year);
+  const gset=new Set(), pset=new Set();
+  C.forEach(c=>{(c.general||[]).forEach(n=>gset.add(normName(n))); (c.program||[]).forEach(n=>pset.add(normName(n)));});
+  const span=C.length?`${C[C.length-1].year}–${C[0].year}`:"—";
+  const intro=[["Conferences",C.length],["General chairs",gset.size],["Program chairs",pset.size],["Span",span]];
+  const names=arr=>(arr||[]).map(awardAuthorLink).join(", ")||"—";
+  views.chairs.innerHTML = freshnessBanner()+
+    `<div class="awards-intro">`+intro.map(s=>`<div class="aw-card"><div class="n">${s[1]}</div><div class="l">${s[0]}</div></div>`).join("")+`</div>
+    <p class="section-h" style="margin-top:18px"><span class="hint">Source: <a href="https://sigmetrics.org/history_conferences.shtml" target="_blank" rel="noopener">history_conferences.shtml</a> + 2025–2027 organization pages. Names link to the author dashboard.${RAW.sample?' <b style="color:var(--needle)">You are on sample data, so few names will match — load real DBLP data for full cross-linking.</b>':''}</span></p>
+    <div class="card"><ul class="aw-list">${C.map(c=>`<li><span class="yr">${c.year}</span><div class="who">
+        <div><span class="role gc">General</span> ${names(c.general)}</div>
+        <div><span class="role pc">Program</span> ${names(c.program)}</div>
+        ${c.location?`<div class="sub">${escH(c.location)}</div>`:""}</div></li>`).join("")}</ul></div>`;
+  views.chairs.querySelectorAll("[data-openid]").forEach(el=>el.onclick=()=>openAuthor(el.getAttribute("data-openid")));
+  views.chairs.querySelectorAll("[data-search]").forEach(el=>el.onclick=()=>{AU.q=el.getAttribute("data-search");AU.limit=60;location.hash="#authors";});
+}
+
+/* =================================================================
+ *  YEAR CONTROLS + ROUTING
+ * ================================================================= */
+function buildYearControls(){
+  const opt=y=>`<option value="${y}">${y}</option>`;
+  let o=""; for(let y=RAW.fullMin;y<=RAW.fullMax;y++)o+=opt(y);
+  $("#fromY").innerHTML=o; $("#toY").innerHTML=o;
+  $("#fromY").onchange=e=>setRange(+e.target.value,Range.to);
+  $("#toY").onchange=e=>setRange(Range.from,+e.target.value);
+  document.querySelectorAll("#presets button").forEach(b=>b.onclick=()=>{
+    const p=b.getAttribute("data-preset");
+    if(p==="all")setRange(RAW.fullMin,RAW.fullMax);
+    else setRange(RAW.fullMax-(+p)+1,RAW.fullMax);
+  });
+}
+function syncYearControls(){
+  $("#fromY").value=Range.from; $("#toY").value=Range.to;
+  const c=State.comm;
+  $("#rangeReadout").innerHTML=`<b>${fmt(c.totalPapers)}</b> papers · <b>${fmt(c.totalAuthors)}</b> authors · ${Range.from}–${Range.to}`;
+  const full=Range.from===RAW.fullMin&&Range.to===RAW.fullMax;
+  document.querySelectorAll("#presets button").forEach(b=>{const p=b.getAttribute("data-preset");
+    const on=(p==="all"&&full)||(p!=="all"&&Range.from===RAW.fullMax-(+p)+1&&Range.to===RAW.fullMax);
+    b.setAttribute("aria-pressed",on?"true":"false");});
+}
+function switchView(name){
+  if(name!=="detail")currentRoute=name;
+  Object.entries(views).forEach(([k,el])=>el.classList.toggle("active",k===name));
+  document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-selected",t.dataset.route===(name==="detail"?"authors":name)));
+  window.scrollTo({top:0});
+}
+function renderRoute(r){
+  if(r==="overview")renderOverview();
+  else if(r==="authors")renderAuthors();
+  else if(r==="network")renderNetwork();
+  else if(r==="awards")renderAwards();
+  else if(r==="chairs")renderChairs();
+  else if(r==="data")renderData();
+  switchView(r);
+}
+function rerenderCurrent(){
+  const h=location.hash.replace(/^#/,"");
+  if(h.startsWith("author/")){openAuthor(decodeURIComponent(h.slice(7)));return;}
+  renderRoute(currentRoute);
+}
+function route(){
+  const h=location.hash.replace(/^#/,"");
+  if(h.startsWith("author/")){openAuthor(decodeURIComponent(h.slice(7)));return;}
+  renderRoute(["overview","authors","network","awards","chairs","data"].includes(h)?h:"overview");
+}
+document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{location.hash="#"+t.dataset.route;});
+window.addEventListener("hashchange",route);
+
+/* theme */
+const themeBtn=document.getElementById("themeBtn");
+function applyTheme(t){document.documentElement.setAttribute("data-theme",t);try{localStorage.setItem("sigm-theme",t);}catch(e){}}
+themeBtn.onclick=()=>applyTheme(document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark");
+(function(){let t;try{t=localStorage.getItem("sigm-theme");}catch(e){}
+  if(!t)t=matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";applyTheme(t);})();
+
+/* =================================================================
+ *  BOOT — load data, then optional links, then render
+ * ================================================================= */
+fetch("data/sigmetrics.json",{cache:"no-store"})
+  .then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.json();})
+  .then(raw=>{
+    parseRaw(raw);
+    return Promise.all([
+      fetch("data/author_links.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(applyLinks).catch(()=>{}),
+      fetch("data/awards.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(applyAwards).catch(()=>{}),
+      fetch("data/chairs.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(applyChairs).catch(()=>{}),
+    ]);
+  })
+  .then(()=>{
+    Range.from=RAW.fullMin; Range.to=RAW.fullMax;   // default: 1974 → present
+    rebuild();
+    document.getElementById("boot").style.display="none";
+    renderReadouts(); buildYearControls(); syncYearControls();
+    route();
+  })
+  .catch(err=>{
+    document.getElementById("boot").innerHTML=
+      `<h2>Couldn't load the dataset</h2>
+       <p>The page needs <code>data/sigmetrics.json</code> and must be served over HTTP (not opened as a file).</p>
+       <p style="margin:10px 0"><code>python3 -m http.server 8000</code> &nbsp;→&nbsp; open <code>http://localhost:8000/</code></p>
+       <p>Create the data file with <code>python3 fetch_sigmetrics.py</code> (real DBLP) or <code>python3 make_sample.py</code> (demo).</p>
+       <p style="margin-top:14px;color:var(--faint)">Error: ${err.message}</p>`;
+  });
+</script>
+</body>
+</html>

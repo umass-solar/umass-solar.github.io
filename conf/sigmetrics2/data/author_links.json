@@ -1,0 +1,711 @@
+{
+  "generatedAt": 1781652050983,
+  "source": "CSRankings gh-pages/csrankings-*.csv (name→homepage+scholarid) + dblp pid from sigmetrics.json",
+  "stats": {
+    "sigmetricsAuthors": 196,
+    "authorsWithPid": 196,
+    "authorsMatchedInCSRankings": 56,
+    "csrankingsEntries": 31327
+  },
+  "byPid": {
+    "b/FrancoisBaccelli": {
+      "dblp": "https://dblp.org/pid/b/FrancoisBaccelli.html",
+      "homepage": "http://www.di.ens.fr/~baccelli"
+    },
+    "354/0152": {
+      "dblp": "https://dblp.org/pid/354/0152.html"
+    },
+    "m/MarcoAjmoneMarsan": {
+      "dblp": "https://dblp.org/pid/m/MarcoAjmoneMarsan.html",
+      "homepage": "https://networks.imdea.org/team/imdea-networks-team/people/marco-ajmone-marsan",
+      "googleScholar": "https://scholar.google.com/citations?user=oPrHUW0AAAAJ&hl=en"
+    },
+    "73/6512": {
+      "dblp": "https://dblp.org/pid/73/6512.html"
+    },
+    "342/8100": {
+      "dblp": "https://dblp.org/pid/342/8100.html"
+    },
+    "220/1659": {
+      "dblp": "https://dblp.org/pid/220/1659.html"
+    },
+    "v/GustavodeVeciana": {
+      "dblp": "https://dblp.org/pid/v/GustavodeVeciana.html"
+    },
+    "140/7690": {
+      "dblp": "https://dblp.org/pid/140/7690.html",
+      "homepage": "https://www.bbasat.com",
+      "googleScholar": "https://scholar.google.com/citations?user=6G61qDwAAAAJ&hl=en"
+    },
+    "75/7855": {
+      "dblp": "https://dblp.org/pid/75/7855.html"
+    },
+    "74/838": {
+      "dblp": "https://dblp.org/pid/74/838.html",
+      "homepage": "http://www.eecs.harvard.edu/~michaelm",
+      "googleScholar": "https://scholar.google.com/citations?user=e8aRmAsAAAAJ&hl=en"
+    },
+    "183/0710": {
+      "dblp": "https://dblp.org/pid/183/0710.html"
+    },
+    "195/8160": {
+      "dblp": "https://dblp.org/pid/195/8160.html"
+    },
+    "235/2471": {
+      "dblp": "https://dblp.org/pid/235/2471.html",
+      "homepage": "https://www.rathishdas.com",
+      "googleScholar": "https://scholar.google.com/citations?user=jONg_qUAAAAJ&hl=en"
+    },
+    "257/4172": {
+      "dblp": "https://dblp.org/pid/257/4172.html"
+    },
+    "295/8247": {
+      "dblp": "https://dblp.org/pid/295/8247.html"
+    },
+    "02/9170": {
+      "dblp": "https://dblp.org/pid/02/9170.html",
+      "homepage": "https://fxlin.github.io",
+      "googleScholar": "https://scholar.google.com/citations?user=f6FFhS8AAAAJ&hl=en"
+    },
+    "437/5397": {
+      "dblp": "https://dblp.org/pid/437/5397.html"
+    },
+    "437/4349": {
+      "dblp": "https://dblp.org/pid/437/4349.html"
+    },
+    "177/5916": {
+      "dblp": "https://dblp.org/pid/177/5916.html"
+    },
+    "164/5721": {
+      "dblp": "https://dblp.org/pid/164/5721.html",
+      "homepage": "https://www.nitindermohan.com",
+      "googleScholar": "https://scholar.google.com/citations?user=c-Ub9FYAAAAJ&hl=en"
+    },
+    "420/3544": {
+      "dblp": "https://dblp.org/pid/420/3544.html"
+    },
+    "248/7962": {
+      "dblp": "https://dblp.org/pid/248/7962.html"
+    },
+    "35/892-4": {
+      "dblp": "https://dblp.org/pid/35/892-4.html",
+      "homepage": "https://www.uottawa.ca/faculty-engineering/school-electrical-engineering-computer-science/directory/bo-sun",
+      "googleScholar": "https://scholar.google.com/citations?user=nzuTDlcAAAAJ&hl=en"
+    },
+    "59/577": {
+      "dblp": "https://dblp.org/pid/59/577.html",
+      "homepage": "http://www.cs.umanitoba.ca/~kamalis",
+      "googleScholar": "https://scholar.google.com/citations?user=hQXlVLsAAAAJ&hl=en"
+    },
+    "49/7911": {
+      "dblp": "https://dblp.org/pid/49/7911.html",
+      "homepage": "https://groups.cs.umass.edu/hajiesmaili",
+      "googleScholar": "https://scholar.google.com/citations?user=XCGuYKIAAAAJ&hl=en"
+    },
+    "422/2979": {
+      "dblp": "https://dblp.org/pid/422/2979.html"
+    },
+    "02/709": {
+      "dblp": "https://dblp.org/pid/02/709.html"
+    },
+    "119/1709": {
+      "dblp": "https://dblp.org/pid/119/1709.html"
+    },
+    "119/9062-1": {
+      "dblp": "https://dblp.org/pid/119/9062-1.html"
+    },
+    "344/1842": {
+      "dblp": "https://dblp.org/pid/344/1842.html"
+    },
+    "382/4941": {
+      "dblp": "https://dblp.org/pid/382/4941.html"
+    },
+    "265/6373": {
+      "dblp": "https://dblp.org/pid/265/6373.html"
+    },
+    "43/6625": {
+      "dblp": "https://dblp.org/pid/43/6625.html"
+    },
+    "223/8062": {
+      "dblp": "https://dblp.org/pid/223/8062.html"
+    },
+    "433/2954": {
+      "dblp": "https://dblp.org/pid/433/2954.html"
+    },
+    "40/11045": {
+      "dblp": "https://dblp.org/pid/40/11045.html",
+      "homepage": "https://sites.google.com/site/sivatheja",
+      "googleScholar": "https://scholar.google.com/citations?user=Y4e61JcAAAAJ&hl=en"
+    },
+    "183/1159": {
+      "dblp": "https://dblp.org/pid/183/1159.html"
+    },
+    "238/6272": {
+      "dblp": "https://dblp.org/pid/238/6272.html"
+    },
+    "322/4187": {
+      "dblp": "https://dblp.org/pid/322/4187.html"
+    },
+    "e/LievenEeckhout": {
+      "dblp": "https://dblp.org/pid/e/LievenEeckhout.html"
+    },
+    "18/9462-2": {
+      "dblp": "https://dblp.org/pid/18/9462-2.html",
+      "homepage": "https://www.liuhongyuan.com",
+      "googleScholar": "https://scholar.google.com/citations?user=o-tpTowAAAAJ&hl=en"
+    },
+    "180/4976-1": {
+      "dblp": "https://dblp.org/pid/180/4976-1.html",
+      "homepage": "https://jyhuang91.github.io",
+      "googleScholar": "https://scholar.google.com/citations?user=LAqRzrMAAAAJ&hl=en"
+    },
+    "20/5748": {
+      "dblp": "https://dblp.org/pid/20/5748.html"
+    },
+    "41/1662": {
+      "dblp": "https://dblp.org/pid/41/1662.html",
+      "homepage": "http://byuan.csec.rit.edu",
+      "googleScholar": "https://scholar.google.com/citations?user=utrtn3cAAAAJ&hl=en"
+    },
+    "305/7826": {
+      "dblp": "https://dblp.org/pid/305/7826.html"
+    },
+    "31/6932-1": {
+      "dblp": "https://dblp.org/pid/31/6932-1.html"
+    },
+    "03/5747-1": {
+      "dblp": "https://dblp.org/pid/03/5747-1.html"
+    },
+    "421/3652": {
+      "dblp": "https://dblp.org/pid/421/3652.html"
+    },
+    "437/4407": {
+      "dblp": "https://dblp.org/pid/437/4407.html"
+    },
+    "18/2927": {
+      "dblp": "https://dblp.org/pid/18/2927.html"
+    },
+    "437/4727": {
+      "dblp": "https://dblp.org/pid/437/4727.html"
+    },
+    "437/5634": {
+      "dblp": "https://dblp.org/pid/437/5634.html"
+    },
+    "173/5360-1": {
+      "dblp": "https://dblp.org/pid/173/5360-1.html"
+    },
+    "336/0858": {
+      "dblp": "https://dblp.org/pid/336/0858.html"
+    },
+    "437/4879": {
+      "dblp": "https://dblp.org/pid/437/4879.html"
+    },
+    "91/6142": {
+      "dblp": "https://dblp.org/pid/91/6142.html"
+    },
+    "04/5326": {
+      "dblp": "https://dblp.org/pid/04/5326.html",
+      "homepage": "http://laoutaris.info",
+      "googleScholar": "https://scholar.google.com/citations?user=KaqnVUcAAAAJ&hl=en"
+    },
+    "301/6392": {
+      "dblp": "https://dblp.org/pid/301/6392.html"
+    },
+    "24/8146": {
+      "dblp": "https://dblp.org/pid/24/8146.html"
+    },
+    "369/8396": {
+      "dblp": "https://dblp.org/pid/369/8396.html"
+    },
+    "141/9377": {
+      "dblp": "https://dblp.org/pid/141/9377.html"
+    },
+    "433/2731": {
+      "dblp": "https://dblp.org/pid/433/2731.html"
+    },
+    "12/6462": {
+      "dblp": "https://dblp.org/pid/12/6462.html",
+      "homepage": "https://www.surrey.ac.uk/people/nishanth-sastry",
+      "googleScholar": "https://scholar.google.com/citations?user=arSRJpgAAAAJ&hl=en"
+    },
+    "57/2878": {
+      "dblp": "https://dblp.org/pid/57/2878.html",
+      "homepage": "https://www.andrew.cmu.edu/user/feif",
+      "googleScholar": "https://scholar.google.com/citations?user=R6jE0VEAAAAJ&hl=en"
+    },
+    "97/4626": {
+      "dblp": "https://dblp.org/pid/97/4626.html",
+      "homepage": "https://www.cs.stonybrook.edu/people/faculty/yiliu",
+      "googleScholar": "https://scholar.google.com/citations?user=3-yC1aIAAAAJ&hl=en"
+    },
+    "70/3604": {
+      "dblp": "https://dblp.org/pid/70/3604.html",
+      "homepage": "https://www.soe.ucsc.edu/people/qian",
+      "googleScholar": "https://scholar.google.com/citations?user=QRxf7EUAAAAJ&hl=en"
+    },
+    "225/5463": {
+      "dblp": "https://dblp.org/pid/225/5463.html"
+    },
+    "37/10099": {
+      "dblp": "https://dblp.org/pid/37/10099.html"
+    },
+    "71/10180": {
+      "dblp": "https://dblp.org/pid/71/10180.html"
+    },
+    "21/8587-6": {
+      "dblp": "https://dblp.org/pid/21/8587-6.html"
+    },
+    "02/5194-4": {
+      "dblp": "https://dblp.org/pid/02/5194-4.html"
+    },
+    "132/8083-1": {
+      "dblp": "https://dblp.org/pid/132/8083-1.html",
+      "homepage": "https://zhengzhenzhe220.github.io",
+      "googleScholar": "https://scholar.google.com/citations?user=kx_5xxEAAAAJ&hl=en"
+    },
+    "264/1853": {
+      "dblp": "https://dblp.org/pid/264/1853.html"
+    },
+    "85/1868-11": {
+      "dblp": "https://dblp.org/pid/85/1868-11.html",
+      "homepage": "http://sheng.whu.edu.cn",
+      "googleScholar": "https://scholar.google.com/citations?user=4VwsT3QAAAAJ&hl=en"
+    },
+    "07/6378-6": {
+      "dblp": "https://dblp.org/pid/07/6378-6.html",
+      "homepage": "http://www.cs.sjtu.edu.cn/~fwu",
+      "googleScholar": "https://scholar.google.com/citations?user=YVKq-48AAAAJ&hl=en"
+    },
+    "51/1742": {
+      "dblp": "https://dblp.org/pid/51/1742.html",
+      "homepage": "https://cs.nju.edu.cn/gchen",
+      "googleScholar": "https://scholar.google.com/citations?user=rqZWbYgAAAAJ&hl=en"
+    },
+    "420/3715": {
+      "dblp": "https://dblp.org/pid/420/3715.html"
+    },
+    "236/2708": {
+      "dblp": "https://dblp.org/pid/236/2708.html"
+    },
+    "73/7287": {
+      "dblp": "https://dblp.org/pid/73/7287.html"
+    },
+    "321/5086": {
+      "dblp": "https://dblp.org/pid/321/5086.html"
+    },
+    "40/622-1": {
+      "dblp": "https://dblp.org/pid/40/622-1.html"
+    },
+    "360/7470": {
+      "dblp": "https://dblp.org/pid/360/7470.html"
+    },
+    "50/8499-1": {
+      "dblp": "https://dblp.org/pid/50/8499-1.html",
+      "homepage": "https://howiepku.github.io",
+      "googleScholar": "https://scholar.google.com/citations?user=b1Oh6BQAAAAJ&hl=en"
+    },
+    "247/7391": {
+      "dblp": "https://dblp.org/pid/247/7391.html"
+    },
+    "87/840": {
+      "dblp": "https://dblp.org/pid/87/840.html",
+      "homepage": "https://people.cs.uchicago.edu/~feamster",
+      "googleScholar": "https://scholar.google.com/citations?user=xYfYnG4AAAAJ&hl=en"
+    },
+    "61/1749": {
+      "dblp": "https://dblp.org/pid/61/1749.html",
+      "homepage": "https://pearce.prof",
+      "googleScholar": "https://scholar.google.com/citations?user=JvY2c4YAAAAJ&hl=en"
+    },
+    "53/10825": {
+      "dblp": "https://dblp.org/pid/53/10825.html",
+      "homepage": "https://frankli.ece.gatech.edu",
+      "googleScholar": "https://scholar.google.com/citations?user=Iv7K07UAAAAJ&hl=en"
+    },
+    "422/3792": {
+      "dblp": "https://dblp.org/pid/422/3792.html"
+    },
+    "187/2673": {
+      "dblp": "https://dblp.org/pid/187/2673.html"
+    },
+    "15/7381": {
+      "dblp": "https://dblp.org/pid/15/7381.html",
+      "homepage": "https://staff.ie.cuhk.edu.hk/~yjzhou",
+      "googleScholar": "https://scholar.google.com/citations?user=N1oeOPwAAAAJ&hl=en"
+    },
+    "y/TingYu-1": {
+      "dblp": "https://dblp.org/pid/y/TingYu-1.html",
+      "homepage": "https://mbzuai.ac.ae/study/faculty/ting-yu",
+      "googleScholar": "https://scholar.google.com/citations?user=pHMIJG8AAAAJ&hl=en"
+    },
+    "68/5597-12": {
+      "dblp": "https://dblp.org/pid/68/5597-12.html",
+      "homepage": "https://person.zju.edu.cn/lei_wu",
+      "googleScholar": "https://scholar.google.com/citations?user=xOVpf1sAAAAJ&hl=en"
+    },
+    "18/2771-1": {
+      "dblp": "https://dblp.org/pid/18/2771-1.html",
+      "homepage": "https://www.cs.cityu.edu.hk/~congwang",
+      "googleScholar": "https://scholar.google.com/citations?user=wRa_lOEAAAAJ&hl=en"
+    },
+    "359/0089": {
+      "dblp": "https://dblp.org/pid/359/0089.html"
+    },
+    "31/1595": {
+      "dblp": "https://dblp.org/pid/31/1595.html"
+    },
+    "405/4746": {
+      "dblp": "https://dblp.org/pid/405/4746.html"
+    },
+    "386/3179": {
+      "dblp": "https://dblp.org/pid/386/3179.html"
+    },
+    "208/1839": {
+      "dblp": "https://dblp.org/pid/208/1839.html",
+      "homepage": "https://profiles.rice.edu/faculty/tirthak-patel",
+      "googleScholar": "https://scholar.google.com/citations?user=tHR-61EAAAAJ&hl=en"
+    },
+    "307/4609": {
+      "dblp": "https://dblp.org/pid/307/4609.html"
+    },
+    "53/9879": {
+      "dblp": "https://dblp.org/pid/53/9879.html",
+      "homepage": "http://akyrillidis.github.io",
+      "googleScholar": "https://scholar.google.com/citations?user=TEGzkZMAAAAJ&hl=en"
+    },
+    "308/2848": {
+      "dblp": "https://dblp.org/pid/308/2848.html"
+    },
+    "209/8668": {
+      "dblp": "https://dblp.org/pid/209/8668.html",
+      "homepage": "https://www.dal.ca/faculty/computerscience/news-events/events/2017/05/01/cs_seminar__israat_haque___software_defined_architectures_and_protocols_for_emerging_wireless_networks.html",
+      "googleScholar": "https://scholar.google.com/citations?user=ZBhZBwoAAAAJ&hl=en"
+    },
+    "327/3719": {
+      "dblp": "https://dblp.org/pid/327/3719.html"
+    },
+    "33/2487": {
+      "dblp": "https://dblp.org/pid/33/2487.html"
+    },
+    "27/9796": {
+      "dblp": "https://dblp.org/pid/27/9796.html",
+      "homepage": "http://pages.cs.wisc.edu/~sinclair",
+      "googleScholar": "https://scholar.google.com/citations?user=gaDqxaQAAAAJ&hl=en"
+    },
+    "65/8569": {
+      "dblp": "https://dblp.org/pid/65/8569.html",
+      "homepage": "http://shivaram.org",
+      "googleScholar": "https://scholar.google.com/citations?user=5LLV29oAAAAJ&hl=en"
+    },
+    "346/2676": {
+      "dblp": "https://dblp.org/pid/346/2676.html"
+    },
+    "70/1047": {
+      "dblp": "https://dblp.org/pid/70/1047.html"
+    },
+    "s/YogeshSimmhan": {
+      "dblp": "https://dblp.org/pid/s/YogeshSimmhan.html",
+      "homepage": "https://cds.iisc.ac.in/faculty/simmhan",
+      "googleScholar": "https://scholar.google.com/citations?user=HIOx9E0AAAAJ&hl=en"
+    },
+    "238/8492": {
+      "dblp": "https://dblp.org/pid/238/8492.html"
+    },
+    "180/2636": {
+      "dblp": "https://dblp.org/pid/180/2636.html"
+    },
+    "159/0037": {
+      "dblp": "https://dblp.org/pid/159/0037.html"
+    },
+    "44/6944": {
+      "dblp": "https://dblp.org/pid/44/6944.html"
+    },
+    "47/9801": {
+      "dblp": "https://dblp.org/pid/47/9801.html"
+    },
+    "277/8100": {
+      "dblp": "https://dblp.org/pid/277/8100.html"
+    },
+    "124/8718": {
+      "dblp": "https://dblp.org/pid/124/8718.html"
+    },
+    "386/2422": {
+      "dblp": "https://dblp.org/pid/386/2422.html"
+    },
+    "313/9883": {
+      "dblp": "https://dblp.org/pid/313/9883.html"
+    },
+    "31/3804-7": {
+      "dblp": "https://dblp.org/pid/31/3804-7.html"
+    },
+    "07/9556": {
+      "dblp": "https://dblp.org/pid/07/9556.html"
+    },
+    "319/9419": {
+      "dblp": "https://dblp.org/pid/319/9419.html"
+    },
+    "16/866-1": {
+      "dblp": "https://dblp.org/pid/16/866-1.html"
+    },
+    "209/8649": {
+      "dblp": "https://dblp.org/pid/209/8649.html",
+      "homepage": "https://networks.imdea.org/team/imdea-networks-team/people/lucianna-kiffer",
+      "googleScholar": "https://scholar.google.com/citations?user=5Uh677EAAAAJ&hl=en"
+    },
+    "255/4911": {
+      "dblp": "https://dblp.org/pid/255/4911.html"
+    },
+    "294/8712": {
+      "dblp": "https://dblp.org/pid/294/8712.html"
+    },
+    "188/9932": {
+      "dblp": "https://dblp.org/pid/188/9932.html"
+    },
+    "147/1125": {
+      "dblp": "https://dblp.org/pid/147/1125.html"
+    },
+    "334/5368": {
+      "dblp": "https://dblp.org/pid/334/5368.html"
+    },
+    "414/3943": {
+      "dblp": "https://dblp.org/pid/414/3943.html"
+    },
+    "66/5269": {
+      "dblp": "https://dblp.org/pid/66/5269.html"
+    },
+    "75/4666": {
+      "dblp": "https://dblp.org/pid/75/4666.html"
+    },
+    "30/4395": {
+      "dblp": "https://dblp.org/pid/30/4395.html"
+    },
+    "19/8438": {
+      "dblp": "https://dblp.org/pid/19/8438.html"
+    },
+    "137/0873": {
+      "dblp": "https://dblp.org/pid/137/0873.html",
+      "homepage": "https://sites.google.com/view/syslab-cau",
+      "googleScholar": "https://scholar.google.com/citations?user=uSquPgoAAAAJ&hl=en"
+    },
+    "83/3168": {
+      "dblp": "https://dblp.org/pid/83/3168.html"
+    },
+    "311/3049": {
+      "dblp": "https://dblp.org/pid/311/3049.html"
+    },
+    "f/SoniaFahmy": {
+      "dblp": "https://dblp.org/pid/f/SoniaFahmy.html",
+      "homepage": "https://www.cs.purdue.edu/homes/fahmy",
+      "googleScholar": "https://scholar.google.com/citations?user=UEFIltYAAAAJ&hl=en"
+    },
+    "307/5199": {
+      "dblp": "https://dblp.org/pid/307/5199.html"
+    },
+    "322/8648": {
+      "dblp": "https://dblp.org/pid/322/8648.html"
+    },
+    "56/4447": {
+      "dblp": "https://dblp.org/pid/56/4447.html",
+      "homepage": "https://adamwierman.com",
+      "googleScholar": "https://scholar.google.com/citations?user=4OvOdSgAAAAJ&hl=en"
+    },
+    "s/PrashantJShenoy": {
+      "dblp": "https://dblp.org/pid/s/PrashantJShenoy.html",
+      "homepage": "https://people.cs.umass.edu/~shenoy",
+      "googleScholar": "https://scholar.google.com/citations?user=TciP6mcAAAAJ&hl=en"
+    },
+    "157/2891": {
+      "dblp": "https://dblp.org/pid/157/2891.html"
+    },
+    "140/7353-1": {
+      "dblp": "https://dblp.org/pid/140/7353-1.html",
+      "homepage": "https://tongxin.me",
+      "googleScholar": "https://scholar.google.com/citations?user=qyNc3CkAAAAJ&hl=en"
+    },
+    "96/4282": {
+      "dblp": "https://dblp.org/pid/96/4282.html",
+      "homepage": "https://www.rit.edu/directory/rxlics-rui-li",
+      "googleScholar": "https://scholar.google.com/citations?user=AHx53ngAAAAJ&hl=en"
+    },
+    "99/8875": {
+      "dblp": "https://dblp.org/pid/99/8875.html"
+    },
+    "11/760": {
+      "dblp": "https://dblp.org/pid/11/760.html"
+    },
+    "437/4234": {
+      "dblp": "https://dblp.org/pid/437/4234.html"
+    },
+    "245/7680": {
+      "dblp": "https://dblp.org/pid/245/7680.html"
+    },
+    "356/4472": {
+      "dblp": "https://dblp.org/pid/356/4472.html"
+    },
+    "09/3290-2": {
+      "dblp": "https://dblp.org/pid/09/3290-2.html"
+    },
+    "237/5155": {
+      "dblp": "https://dblp.org/pid/237/5155.html"
+    },
+    "266/4665": {
+      "dblp": "https://dblp.org/pid/266/4665.html"
+    },
+    "34/1350": {
+      "dblp": "https://dblp.org/pid/34/1350.html",
+      "homepage": "https://www.qub.ac.uk/schools/eeecs/Connect/Staff/BusinessCard/?name=h.vandierendonck",
+      "googleScholar": "https://scholar.google.com/citations?user=7e8zXI8AAAAJ&hl=en"
+    },
+    "04/8123": {
+      "dblp": "https://dblp.org/pid/04/8123.html"
+    },
+    "67/8454-1": {
+      "dblp": "https://dblp.org/pid/67/8454-1.html",
+      "homepage": "http://people.cs.vt.edu/boji",
+      "googleScholar": "https://scholar.google.com/citations?user=9ILgtvAAAAAJ&hl=en"
+    },
+    "b/AliRazaButt": {
+      "dblp": "https://dblp.org/pid/b/AliRazaButt.html",
+      "homepage": "http://people.cs.vt.edu/butta",
+      "googleScholar": "https://scholar.google.com/citations?user=oqux_wcAAAAJ&hl=en"
+    },
+    "50/1235": {
+      "dblp": "https://dblp.org/pid/50/1235.html",
+      "homepage": "https://www.dsniko.net",
+      "googleScholar": "https://scholar.google.com/citations?user=-nzj5UYAAAAJ&hl=en"
+    },
+    "69/2173": {
+      "dblp": "https://dblp.org/pid/69/2173.html"
+    },
+    "33/5797": {
+      "dblp": "https://dblp.org/pid/33/5797.html"
+    },
+    "68/11177": {
+      "dblp": "https://dblp.org/pid/68/11177.html"
+    },
+    "379/7001": {
+      "dblp": "https://dblp.org/pid/379/7001.html"
+    },
+    "06/7988": {
+      "dblp": "https://dblp.org/pid/06/7988.html"
+    },
+    "437/5343": {
+      "dblp": "https://dblp.org/pid/437/5343.html"
+    },
+    "437/4221": {
+      "dblp": "https://dblp.org/pid/437/4221.html"
+    },
+    "00/8454": {
+      "dblp": "https://dblp.org/pid/00/8454.html"
+    },
+    "49/3283-192": {
+      "dblp": "https://dblp.org/pid/49/3283-192.html",
+      "homepage": "http://www.web.uwa.edu.au/people/wei.liu",
+      "googleScholar": "https://scholar.google.com/citations?user=KTomENQAAAAJ&hl=en"
+    },
+    "373/3549": {
+      "dblp": "https://dblp.org/pid/373/3549.html"
+    },
+    "75/10258": {
+      "dblp": "https://dblp.org/pid/75/10258.html",
+      "homepage": "http://yuanjiel.com",
+      "googleScholar": "https://scholar.google.com/citations?user=CuhB7CMAAAAJ&hl=en"
+    },
+    "91/6680": {
+      "dblp": "https://dblp.org/pid/91/6680.html"
+    },
+    "433/4178": {
+      "dblp": "https://dblp.org/pid/433/4178.html"
+    },
+    "90/6339": {
+      "dblp": "https://dblp.org/pid/90/6339.html"
+    },
+    "51/8276": {
+      "dblp": "https://dblp.org/pid/51/8276.html"
+    },
+    "61/591-1": {
+      "dblp": "https://dblp.org/pid/61/591-1.html"
+    },
+    "148/1959": {
+      "dblp": "https://dblp.org/pid/148/1959.html"
+    },
+    "95/3736-63": {
+      "dblp": "https://dblp.org/pid/95/3736-63.html",
+      "homepage": "http://gr.xjtu.edu.cn/web/liukeen",
+      "googleScholar": "https://scholar.google.com/citations?user=Q5Ild8UAAAAJ&hl=en"
+    },
+    "319/3437": {
+      "dblp": "https://dblp.org/pid/319/3437.html"
+    },
+    "245/6113": {
+      "dblp": "https://dblp.org/pid/245/6113.html"
+    },
+    "05/1958": {
+      "dblp": "https://dblp.org/pid/05/1958.html"
+    },
+    "71/2791": {
+      "dblp": "https://dblp.org/pid/71/2791.html",
+      "homepage": "http://faculty.uestc.edu.cn/williamzhu/en/jsxx/262241/jsxx/jsxx.htm",
+      "googleScholar": "https://scholar.google.com/citations?user=GIwXoWAAAAAJ&hl=en"
+    },
+    "66/6852": {
+      "dblp": "https://dblp.org/pid/66/6852.html"
+    },
+    "384/0154": {
+      "dblp": "https://dblp.org/pid/384/0154.html"
+    },
+    "01/7808": {
+      "dblp": "https://dblp.org/pid/01/7808.html"
+    },
+    "41/8206-2": {
+      "dblp": "https://dblp.org/pid/41/8206-2.html"
+    },
+    "390/0218": {
+      "dblp": "https://dblp.org/pid/390/0218.html"
+    },
+    "35/295": {
+      "dblp": "https://dblp.org/pid/35/295.html",
+      "homepage": "https://www.cs.uga.edu/news/stories/2025/2025-summer-update-director-school-computing",
+      "googleScholar": "https://scholar.google.com/citations?user=Ckfl4_AAAAAJ&hl=en"
+    },
+    "86/4953": {
+      "dblp": "https://dblp.org/pid/86/4953.html"
+    },
+    "433/2528": {
+      "dblp": "https://dblp.org/pid/433/2528.html"
+    },
+    "00/4686": {
+      "dblp": "https://dblp.org/pid/00/4686.html",
+      "homepage": "https://warwick.ac.uk/fac/sci/dcs/people/arpan_mukhopadhyay",
+      "googleScholar": "https://scholar.google.com/citations?user=bmPxFagAAAAJ&hl=en"
+    },
+    "41/1652-1": {
+      "dblp": "https://dblp.org/pid/41/1652-1.html"
+    },
+    "320/3451": {
+      "dblp": "https://dblp.org/pid/320/3451.html"
+    },
+    "30/1096": {
+      "dblp": "https://dblp.org/pid/30/1096.html"
+    },
+    "312/8027": {
+      "dblp": "https://dblp.org/pid/312/8027.html"
+    },
+    "150/9685": {
+      "dblp": "https://dblp.org/pid/150/9685.html",
+      "homepage": "https://sites.google.com/view/knunextcom",
+      "googleScholar": "https://scholar.google.com/citations?user=lvU4X6IAAAAJ&hl=en"
+    },
+    "50/2220": {
+      "dblp": "https://dblp.org/pid/50/2220.html",
+      "homepage": "https://elc.yonsei.ac.kr/people.htm"
+    },
+    "326/7010": {
+      "dblp": "https://dblp.org/pid/326/7010.html"
+    },
+    "241/9840": {
+      "dblp": "https://dblp.org/pid/241/9840.html"
+    }
+  },
+  "byName": {}
+}

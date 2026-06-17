@@ -1,0 +1,147 @@
+{
+  "generatedAt": 1781645244655,
+  "sample": true,
+  "byPid": {
+    "24/4173": {
+      "dblp": "https://dblp.org/pid/24/4173.html",
+      "homepage": "https://example.edu/~rosaromano",
+      "googleScholar": "https://scholar.google.com/citations?user=rosaromanoAAAAJ&hl=en"
+    },
+    "65/7843": {
+      "dblp": "https://dblp.org/pid/65/7843.html",
+      "homepage": "https://example.edu/~hugoferreira",
+      "googleScholar": "https://scholar.google.com/citations?user=hugoferreiAAAAJ&hl=en"
+    },
+    "80/7955": {
+      "dblp": "https://dblp.org/pid/80/7955.html",
+      "homepage": "https://example.edu/~omarcohen",
+      "googleScholar": "https://scholar.google.com/citations?user=omarcohenAAAAJ&hl=en"
+    },
+    "99/5278": {
+      "dblp": "https://dblp.org/pid/99/5278.html",
+      "homepage": "https://example.edu/~koficohen",
+      "googleScholar": "https://scholar.google.com/citations?user=koficohenAAAAJ&hl=en"
+    },
+    "18/7687": {
+      "dblp": "https://dblp.org/pid/18/7687.html",
+      "homepage": "https://example.edu/~pedrovargas",
+      "googleScholar": "https://scholar.google.com/citations?user=pedrovargaAAAAJ&hl=en"
+    },
+    "53/3490": {
+      "dblp": "https://dblp.org/pid/53/3490.html",
+      "homepage": "https://example.edu/~gretaliu",
+      "googleScholar": "https://scholar.google.com/citations?user=gretaliuAAAAJ&hl=en"
+    },
+    "20/4612": {
+      "dblp": "https://dblp.org/pid/20/4612.html",
+      "homepage": "https://example.edu/~elenahaddad",
+      "googleScholar": "https://scholar.google.com/citations?user=elenahaddaAAAAJ&hl=en"
+    },
+    "71/9319": {
+      "dblp": "https://dblp.org/pid/71/9319.html",
+      "homepage": "https://example.edu/~olgawong",
+      "googleScholar": "https://scholar.google.com/citations?user=olgawongAAAAJ&hl=en"
+    },
+    "30/5051": {
+      "dblp": "https://dblp.org/pid/30/5051.html",
+      "homepage": "https://example.edu/~sofiapark",
+      "googleScholar": "https://scholar.google.com/citations?user=sofiaparkAAAAJ&hl=en"
+    },
+    "87/6640": {
+      "dblp": "https://dblp.org/pid/87/6640.html",
+      "homepage": "https://example.edu/~sofiaromano",
+      "googleScholar": "https://scholar.google.com/citations?user=sofiaromanAAAAJ&hl=en"
+    },
+    "11/5969": {
+      "dblp": "https://dblp.org/pid/11/5969.html",
+      "homepage": "https://example.edu/~ibrahimlopez",
+      "googleScholar": "https://scholar.google.com/citations?user=ibrahimlopAAAAJ&hl=en"
+    },
+    "80/5047": {
+      "dblp": "https://dblp.org/pid/80/5047.html",
+      "homepage": "https://example.edu/~kenjikhan",
+      "googleScholar": "https://scholar.google.com/citations?user=kenjikhanAAAAJ&hl=en"
+    },
+    "30/5557": {
+      "dblp": "https://dblp.org/pid/30/5557.html",
+      "homepage": "https://example.edu/~mariapark",
+      "googleScholar": "https://scholar.google.com/citations?user=mariaparkAAAAJ&hl=en"
+    },
+    "10/3454": {
+      "dblp": "https://dblp.org/pid/10/3454.html",
+      "homepage": "https://example.edu/~mariamendes",
+      "googleScholar": "https://scholar.google.com/citations?user=mariamendeAAAAJ&hl=en"
+    },
+    "88/1746": {
+      "dblp": "https://dblp.org/pid/88/1746.html",
+      "homepage": "https://example.edu/~ibrahimandersson",
+      "googleScholar": "https://scholar.google.com/citations?user=ibrahimandAAAAJ&hl=en"
+    },
+    "46/8613": {
+      "dblp": "https://dblp.org/pid/46/8613.html",
+      "homepage": "https://example.edu/~quinnpetrov",
+      "googleScholar": "https://scholar.google.com/citations?user=quinnpetroAAAAJ&hl=en"
+    },
+    "58/3231": {
+      "dblp": "https://dblp.org/pid/58/3231.html",
+      "homepage": "https://example.edu/~tarasato",
+      "googleScholar": "https://scholar.google.com/citations?user=tarasatoAAAAJ&hl=en"
+    },
+    "25/3448": {
+      "dblp": "https://dblp.org/pid/25/3448.html",
+      "homepage": "https://example.edu/~aishanovak",
+      "googleScholar": "https://scholar.google.com/citations?user=aishanovakAAAAJ&hl=en"
+    },
+    "50/1029": {
+      "dblp": "https://dblp.org/pid/50/1029.html",
+      "homepage": "https://example.edu/~arjunito",
+      "googleScholar": "https://scholar.google.com/citations?user=arjunitoAAAAJ&hl=en"
+    },
+    "85/3987": {
+      "dblp": "https://dblp.org/pid/85/3987.html",
+      "homepage": "https://example.edu/~anshulibrahim",
+      "googleScholar": "https://scholar.google.com/citations?user=anshulibraAAAAJ&hl=en"
+    },
+    "88/6220": {
+      "dblp": "https://dblp.org/pid/88/6220.html",
+      "homepage": "https://example.edu/~olgahaddad",
+      "googleScholar": "https://scholar.google.com/citations?user=olgahaddadAAAAJ&hl=en"
+    },
+    "75/8778": {
+      "dblp": "https://dblp.org/pid/75/8778.html",
+      "homepage": "https://example.edu/~pedrorossi",
+      "googleScholar": "https://scholar.google.com/citations?user=pedrorossiAAAAJ&hl=en"
+    },
+    "55/1474": {
+      "dblp": "https://dblp.org/pid/55/1474.html",
+      "homepage": "https://example.edu/~kenjiibrahim",
+      "googleScholar": "https://scholar.google.com/citations?user=kenjiibrahAAAAJ&hl=en"
+    },
+    "74/2104": {
+      "dblp": "https://dblp.org/pid/74/2104.html",
+      "homepage": "https://example.edu/~yukilarsson",
+      "googleScholar": "https://scholar.google.com/citations?user=yukilarssoAAAAJ&hl=en"
+    },
+    "21/8241": {
+      "dblp": "https://dblp.org/pid/21/8241.html",
+      "homepage": "https://example.edu/~sanjayhaddad",
+      "googleScholar": "https://scholar.google.com/citations?user=sanjayhaddAAAAJ&hl=en"
+    },
+    "29/9577": {
+      "dblp": "https://dblp.org/pid/29/9577.html",
+      "homepage": "https://example.edu/~jiamensah",
+      "googleScholar": "https://scholar.google.com/citations?user=jiamensahAAAAJ&hl=en"
+    },
+    "11/2158": {
+      "dblp": "https://dblp.org/pid/11/2158.html",
+      "homepage": "https://example.edu/~rajwang",
+      "googleScholar": "https://scholar.google.com/citations?user=rajwangAAAAJ&hl=en"
+    },
+    "43/4663": {
+      "dblp": "https://dblp.org/pid/43/4663.html",
+      "homepage": "https://example.edu/~sofiaokonkwo",
+      "googleScholar": "https://scholar.google.com/citations?user=sofiaokonkAAAAJ&hl=en"
+    }
+  },
+  "byName": {}
+}

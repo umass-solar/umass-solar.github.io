@@ -1,0 +1,1059 @@
+{
+  "generatedAt": 1781658971004,
+  "source": "https://www.sigmetrics.org/awards.shtml",
+  "achievement": [
+    {
+      "year": 2026,
+      "name": "Alexandre Proutiere"
+    },
+    {
+      "year": 2025,
+      "name": "Devavrat Shah"
+    },
+    {
+      "year": 2024,
+      "name": "Marco Ajmone Marsan"
+    },
+    {
+      "year": 2023,
+      "name": "Laurent Massoulié"
+    },
+    {
+      "year": 2022,
+      "name": "Balaji Prabhakar"
+    },
+    {
+      "year": 2021,
+      "name": "R. Srikant"
+    },
+    {
+      "year": 2020,
+      "name": "Leandros Tassiulas"
+    },
+    {
+      "year": 2019,
+      "name": "Mary Vernon"
+    },
+    {
+      "year": 2018,
+      "name": "Jim Dai"
+    },
+    {
+      "year": 2017,
+      "name": "Sem Borst"
+    },
+    {
+      "year": 2016,
+      "name": "John Tsitsiklis"
+    },
+    {
+      "year": 2015,
+      "name": "Bruce Hajek"
+    },
+    {
+      "year": 2014,
+      "name": "François Baccelli"
+    },
+    {
+      "year": 2013,
+      "name": "Jean Walrand"
+    },
+    {
+      "year": 2012,
+      "name": "Debasis Mitra"
+    },
+    {
+      "year": 2011,
+      "name": "Onno J. Boxma"
+    },
+    {
+      "year": 2010,
+      "name": "Jeffrey P. Buzen"
+    },
+    {
+      "year": 2009,
+      "name": "Frank Kelly"
+    },
+    {
+      "year": 2008,
+      "name": "Erol Gelenbe"
+    },
+    {
+      "year": 2007,
+      "name": "Don F. Towsley"
+    },
+    {
+      "year": 2006,
+      "name": "Richard R. Muntz"
+    },
+    {
+      "year": 2005,
+      "name": "Stephen S. Lavenberg"
+    },
+    {
+      "year": 2004,
+      "name": "Ken C. Sevcik"
+    },
+    {
+      "year": 2003,
+      "name": "Ed G. Coffman"
+    }
+  ],
+  "risingStar": [
+    {
+      "year": 2026,
+      "name": "Sangeetha Abdu Jyothi"
+    },
+    {
+      "year": 2025,
+      "name": "Debankur Mukherjee"
+    },
+    {
+      "year": 2024,
+      "name": "Christina Lee Yu"
+    },
+    {
+      "year": 2023,
+      "name": "Weina Wang"
+    },
+    {
+      "year": 2022,
+      "name": "Giulia Fanti"
+    },
+    {
+      "year": 2021,
+      "name": "Zhenhua Liu"
+    },
+    {
+      "year": 2020,
+      "name": "Kuang Xu"
+    },
+    {
+      "year": 2019,
+      "name": "Anshul Gandhi"
+    },
+    {
+      "year": 2018,
+      "name": "Longbo Huang"
+    },
+    {
+      "year": 2017,
+      "name": "Sewoong Oh"
+    },
+    {
+      "year": 2016,
+      "name": "Yi Lu"
+    },
+    {
+      "year": 2015,
+      "name": "Jinwoo Shin"
+    },
+    {
+      "year": 2014,
+      "name": "Florian Simatos"
+    },
+    {
+      "year": 2013,
+      "name": "Augustin Chaintreau"
+    },
+    {
+      "year": 2012,
+      "name": "Marc Lelarge"
+    },
+    {
+      "year": 2011,
+      "name": "Adam Wierman"
+    },
+    {
+      "year": 2010,
+      "name": "Milan Vojnovic"
+    },
+    {
+      "year": 2009,
+      "name": "Alexandre Proutiere"
+    },
+    {
+      "year": 2008,
+      "name": "Devavrat Shah"
+    }
+  ],
+  "testOfTime": [
+    {
+      "awardYear": 2026,
+      "paperYear": 2016,
+      "title": "On the Approximation Error of Mean-Field Models",
+      "authors": [
+        "Lei Ying"
+      ]
+    },
+    {
+      "awardYear": 2025,
+      "paperYear": 2015,
+      "title": "Learning to Rank: Regret Lower Bounds and Efficient Algorithms",
+      "authors": [
+        "Richard Combes",
+        "Stefan Magureanu",
+        "Alexandre Proutiere",
+        "Cyrille Laroche"
+      ]
+    },
+    {
+      "awardYear": 2024,
+      "paperYear": 2014,
+      "title": "A Measurement Study of Google Play",
+      "authors": [
+        "Nicolas Viennot",
+        "Edward Garcia",
+        "Jason Nieh"
+      ]
+    },
+    {
+      "awardYear": 2023,
+      "paperYear": 2013,
+      "title": "Root Cause Detection in a Service-Oriented Architecture",
+      "authors": [
+        "Myunghwan Kim",
+        "Roshan Sumbaly",
+        "Sam Shah"
+      ]
+    },
+    {
+      "awardYear": 2022,
+      "paperYear": 2012,
+      "title": "Workload Analysis of a Large-Scale Key-Value Store",
+      "authors": [
+        "Berk Atikoglu",
+        "Yuehai Xu",
+        "Eitan Frachtenberg",
+        "Song Jiang",
+        "Mike Paleczny"
+      ]
+    },
+    {
+      "awardYear": 2021,
+      "paperYear": 2011,
+      "title": "Greening Geographical Load Balancing",
+      "authors": [
+        "Zhenhua Liu",
+        "Minghong Lin",
+        "Adam Wierman",
+        "Steven Low",
+        "Lachlan L.H. Andrew"
+      ]
+    },
+    {
+      "awardYear": 2020,
+      "paperYear": 2010,
+      "title": "Detecting Sources of Computer Viruses in Networks: Theory and Experiment",
+      "authors": [
+        "Devavrat Shah",
+        "Tauhid Zaman"
+      ]
+    },
+    {
+      "awardYear": 2019,
+      "paperYear": 2009,
+      "title": "Network adiabatic theorem: an efficient randomized protocol for contention resolution",
+      "authors": [
+        "Shreevatsa Rajagopalan",
+        "Devavrat Shah",
+        "Jinwoo Shin"
+      ]
+    },
+    {
+      "awardYear": 2018,
+      "paperYear": 2008,
+      "title": "Counter braids: a novel counter architecture for per-flow measurement",
+      "authors": [
+        "Yi Lu",
+        "Andrea Montanari",
+        "Balaji Prabhakar",
+        "Sarang Dharmapurikar",
+        "Abdul Kabbani"
+      ]
+    },
+    {
+      "awardYear": 2017,
+      "paperYear": 2007,
+      "title": "An analysis of latent sector errors in disk drives",
+      "authors": [
+        "Lakshmi N. Bairavasundaram",
+        "Garth R. Goodson",
+        "Shankar Pasupathy",
+        "Jiri Schindler"
+      ]
+    },
+    {
+      "awardYear": 2016,
+      "paperYear": 2005,
+      "title": "An analytical model for multi-tier internet services and its applications",
+      "authors": [
+        "Bhuvan Urgaonkar",
+        "Giovanni Pacifici",
+        "Prashant Shenoy",
+        "Mike Spreitzer",
+        "Asser Tantawi"
+      ]
+    },
+    {
+      "awardYear": 2015,
+      "paperYear": 2005,
+      "title": "Internet Traffic Classification Using Bayesian Analysis Techniques",
+      "authors": [
+        "Andrew W. Moore",
+        "Denis Zuev"
+      ]
+    },
+    {
+      "awardYear": 2014,
+      "paperYear": 2004,
+      "title": "Myths and Realities: the Performance Impact of Garbage Collection",
+      "authors": [
+        "Stephen Blackburn",
+        "Perry Cheng",
+        "Kathryn McKinley"
+      ]
+    },
+    {
+      "awardYear": 2013,
+      "paperYear": 2003,
+      "title": "Fast Accurate Computation of Large-Scale IP Traffic Matrices from Link Loads",
+      "authors": [
+        "Yin Zhang",
+        "Matthew Roughan",
+        "Nick Duffield",
+        "Albert Greenberg"
+      ]
+    },
+    {
+      "awardYear": 2012,
+      "paperYear": 2002,
+      "title": "Network Tomography on General Topologies",
+      "authors": [
+        "Tian Bu",
+        "Nick Duffield",
+        "Francesco Lo Presti",
+        "Don Towsley"
+      ]
+    },
+    {
+      "awardYear": 2011,
+      "paperYear": 2000,
+      "title": "A Case for End System Multicast",
+      "authors": [
+        "Yang-hua Chu",
+        "Sanjay Rao",
+        "Hui Zhang"
+      ]
+    },
+    {
+      "awardYear": 2011,
+      "paperYear": 2000,
+      "title": "Stable Internet Routing without Global Coordination",
+      "authors": [
+        "Lixin Gao",
+        "Jennifer Rexford"
+      ]
+    },
+    {
+      "awardYear": 2010,
+      "paperYear": 1976,
+      "title": "Fundamental Laws of Computer System Performance",
+      "authors": [
+        "Jeffrey P. Buzen"
+      ]
+    },
+    {
+      "awardYear": 2010,
+      "paperYear": 1985,
+      "title": "A Comparison of Receiver-initiated and Sender-initiated Adaptive Load Sharing",
+      "authors": [
+        "Derek Eager",
+        "Ed Lazowska",
+        "John Zahorjan"
+      ]
+    },
+    {
+      "awardYear": 2010,
+      "paperYear": 1996,
+      "title": "Self-similarity in World Wide Web Traffic: Evidence and Possible Causes",
+      "authors": [
+        "Mark E. Crovella",
+        "Azer Bestavros"
+      ]
+    }
+  ],
+  "bestPaper": [
+    {
+      "year": 2026,
+      "title": "Sequential Fair Allocation With Replenishments: A Little Envy Goes An Exponentially Long Way",
+      "authors": [
+        "Chido Onyeze",
+        "Sean R. Sinclair",
+        "Chamsi Hssaine",
+        "Siddhartha Banerjee"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 2026,
+      "title": "Wasserstein-p Central Limit Theorem Rates: From Local Dependence to Markov Chains",
+      "authors": [
+        "Yixuan Zhang",
+        "Qiaomin Xie"
+      ],
+      "type": "student"
+    },
+    {
+      "year": 2026,
+      "title": "From Measurement to Emissions: Assessing the Carbon Footprint of Traffic Flows",
+      "authors": [
+        "Sawsan El-Zahr",
+        "Noa Zilberman"
+      ],
+      "type": "runner"
+    },
+    {
+      "year": 2026,
+      "title": "Shedding Light on Shadows: Automatically Tracing Illicit Money Flows on EVM-Compatible Blockchains",
+      "authors": [
+        "Yicheng Huo",
+        "Yufeng Hu",
+        "Yajin Zhou",
+        "Ting Yu",
+        "Lei Wu",
+        "Cong Wang"
+      ],
+      "type": "runner"
+    },
+    {
+      "year": 2026,
+      "title": "A Minimal-Assumption Analysis of Q-Learning with Time-Varying Policies",
+      "authors": [
+        "Phalguni Nanda",
+        "Zaiwei Chen"
+      ],
+      "type": "runner"
+    },
+    {
+      "year": 2025,
+      "title": "Adversarial Network Optimization under Bandit Feedback: Maximizing Utility in Non-Stationary Multi-Hop Networks",
+      "authors": [
+        "Yan Dai",
+        "Longbo Huang"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 2025,
+      "title": "Beaver: A High-Performance and Crash-Consistent File System Cache via PM-DRAM Collaborative Memory Tiering",
+      "authors": [
+        "Qinglin Pan",
+        "Ji Qi",
+        "Jiatai He",
+        "Heng Zhang",
+        "Jiageng Yu",
+        "Yanjun Wu"
+      ],
+      "type": "student"
+    },
+    {
+      "year": 2025,
+      "title": "Combinatorial Logistic Bandits",
+      "authors": [
+        "Xutong Liu",
+        "Xiangxiang Dai",
+        "Xuchuang Wang",
+        "Mohammad Hajiesmaili",
+        "John C.S. Lui"
+      ],
+      "type": "runner"
+    },
+    {
+      "year": 2025,
+      "title": "On the Distribution of Sojourn Times in Tandem Queues",
+      "authors": [
+        "Florin Ciucu",
+        "Sima Mehri"
+      ],
+      "type": "runner"
+    },
+    {
+      "year": 2025,
+      "title": "Game Theoretic Liquidity Provisioning in Concentrated Liquidity Market Makers",
+      "authors": [
+        "Weizhao Tang",
+        "Rachid Elazouzi",
+        "Cheng Han Lee",
+        "Ethan Chan",
+        "Giulia Fanti"
+      ],
+      "type": "runner"
+    },
+    {
+      "year": 2024,
+      "title": "Agents of Autonomy: A Systematic Study of Robotics on Modern Hardware",
+      "authors": [
+        "Mohammad Bakhshalipour",
+        "Phillip B. Gibbons"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 2024,
+      "title": "Strongly Tail-Optimal Scheduling in the Light-Tailed M/G/1",
+      "authors": [
+        "George Yu",
+        "Ziv Scully"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 2024,
+      "title": "Fair Resource Allocation in Virtualized O-RAN Platforms",
+      "authors": [
+        "Fatih Aslan",
+        "George Iosifidis",
+        "Jose A. Ayala-Romero",
+        "Andres Garcia-Saavedra",
+        "Xavier Costa-Perez"
+      ],
+      "type": "student"
+    },
+    {
+      "year": 2024,
+      "title": "CarbonScaler: Leveraging Cloud Workload Elasticity for Optimizing Carbon-Efficiency",
+      "authors": [
+        "Walid A. Hanafy",
+        "Qianlin Liang",
+        "Noman Bashir",
+        "David Irwin",
+        "Prashant Shenoy"
+      ],
+      "type": "student"
+    },
+    {
+      "year": 2023,
+      "title": "Mean-field Analysis for Load Balancing on Spatial Graphs",
+      "authors": [
+        "Daan Rutten",
+        "Debankur Mukherjee"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 2023,
+      "title": "Overcoming the Long Horizon Barrier for Sample-Efficient Reinforcement Learning with Latent Low-Rank Structure",
+      "authors": [
+        "Tyler Sam",
+        "Yudong Chen",
+        "Christina Lee Yu"
+      ],
+      "type": "student"
+    },
+    {
+      "year": 2022,
+      "title": "WISEFUSE: Workload Characterization and DAG Transformation for Serverless Workflows",
+      "authors": [
+        "Ashraf Mahgoub",
+        "Edgardo Barsallo Yi",
+        "Karthick Shankar",
+        "Eshaan Minocha",
+        "Somali Chaterji",
+        "Sameh Elnikety",
+        "Saurabh Bagchi"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 2022,
+      "title": "Offline and Online Algorithms for SSD Management",
+      "authors": [
+        "Tomer Lange",
+        "Joseph (Seffi) Naor",
+        "Gala Yadgar"
+      ],
+      "type": "student"
+    },
+    {
+      "year": 2021,
+      "title": "Nudge: Stochastically Improving upon FCFS",
+      "authors": [
+        "Isaac Grosof",
+        "Kunhe Yang",
+        "Ziv Scully",
+        "Mor Harchol-Balter"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 2021,
+      "title": "A Look Behind the Curtain: Traffic Classification in an Increasingly Encrypted Web",
+      "authors": [
+        "Iman Akbari",
+        "Mohammad A. Salahuddin",
+        "Shi-Han Wen",
+        "Noura Limam",
+        "Raouf Boutaba",
+        "Bertrand Mathieu",
+        "Stephanie Moteau",
+        "Stephane Tuffin"
+      ],
+      "type": "student"
+    },
+    {
+      "year": 2020,
+      "title": "Rateless Codes for Near-Perfect Load Balancing in Distributed Matrix-Vector Multiplication",
+      "authors": [
+        "Ankur Mallick",
+        "Malhar Chaudhari",
+        "Utsav Sheth",
+        "Ganesh Palanikumar",
+        "Gauri Joshi"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 2020,
+      "title": "Optimal Data Placement for Heterogeneous Cache, Memory, and Storage Systems",
+      "authors": [
+        "Lei Zhang",
+        "Reza Karimi",
+        "Irfan Ahmad",
+        "Ymir Vigfusson"
+      ],
+      "type": "student"
+    },
+    {
+      "year": 2019,
+      "title": "Computationally Efficient Estimation of the Spectral Gap of a Markov Chain",
+      "authors": [
+        "Richard Combes",
+        "Mikael Touati"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 2019,
+      "title": "Load Balancing Guardrails: Keeping Your Heavy Traffic on the Road to Low Response Times",
+      "authors": [
+        "Isaac Grosof",
+        "Ziv Scully",
+        "Mor Harchol-Balter"
+      ],
+      "type": "student"
+    },
+    {
+      "year": 2018,
+      "title": "A refined mean field approximation",
+      "authors": [
+        "Nicolas Gast",
+        "Benny van Houdt"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 2017,
+      "title": "Accelerating Performance Inference over Closed Systems by Asymptotic Methods",
+      "authors": [
+        "Giuliano Casale"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 2017,
+      "title": "Security Game with Non-additive Utilities and Multiple Attacker Resources",
+      "authors": [
+        "Sinong Wang",
+        "Ness Shroff"
+      ],
+      "type": "student"
+    },
+    {
+      "year": 2016,
+      "title": "On the Duration and Intensity of Competitions in Nonlinear Pólya Urn Processes with Fitness",
+      "authors": [
+        "Bo Jiang",
+        "Daniel R. Figueiredo",
+        "Bruno Ribeiro",
+        "Don Towsley"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 2016,
+      "title": "The Value of Privacy: Strategic Data Subjects, Incentive Mechanisms and Fundamental Limits",
+      "authors": [
+        "Weina Wang",
+        "Lei Ying",
+        "Junshan Zhang"
+      ],
+      "type": "student"
+    },
+    {
+      "year": 2015,
+      "title": "Spy vs. Spy: Rumor Source Obfuscation",
+      "authors": [
+        "Giulia Fanti",
+        "Peter Kairouz",
+        "Sewoong Oh",
+        "Pramod Viswanath"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 2015,
+      "title": "Fisher Information-based Experiment Design for Network Tomography",
+      "authors": [
+        "Ting He",
+        "Chang Liu",
+        "Ananthram Swami",
+        "Don Towsley",
+        "Theodoros Salonidis",
+        "Andrei Iu. Bejan",
+        "Paul Yu"
+      ],
+      "type": "student"
+    },
+    {
+      "year": 2014,
+      "title": "Concave switching in single and multihop networks",
+      "authors": [
+        "Neil Walton"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 2014,
+      "title": "A Measurement Study of Google Play",
+      "authors": [
+        "Nicolas Viennot",
+        "Edward Garcia",
+        "Jason Nieh"
+      ],
+      "type": "student"
+    },
+    {
+      "year": 2013,
+      "title": "Queueing System Topologies with Limited Flexibility",
+      "authors": [
+        "John N. Tsitsiklis",
+        "Kuang Xu"
+      ],
+      "type": "both"
+    },
+    {
+      "year": 2012,
+      "title": "Temperature Management in Data Centers: Why Some (Might) Like It Hot",
+      "authors": [
+        "Nosayba El-Sayed",
+        "Ioan Stefanovici",
+        "George Amvrosiadis",
+        "Andy A. Hwang",
+        "Bianca Schroeder"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 2012,
+      "title": "Optimal Queue-Size Scaling in Switched Networks",
+      "authors": [
+        "Devavrat Shah",
+        "Neil Walton",
+        "Yuan Zhong"
+      ],
+      "type": "student"
+    },
+    {
+      "year": 2011,
+      "title": "Topology Discovery of Sparse Random Graphs with Few Participants",
+      "authors": [
+        "Animashree Anandkumar",
+        "Avinatan Hassidim",
+        "Jonathan Kelner"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 2011,
+      "title": "Network Architecture for Joint Failure Recovery and Traffic Engineering",
+      "authors": [
+        "Martin Suchara",
+        "Dahai Xu",
+        "Robert Doverspike",
+        "David Johnson",
+        "Jennifer Rexford"
+      ],
+      "type": "student"
+    },
+    {
+      "year": 2010,
+      "title": "Load Balancing via Randomized Local Search in Closed and Open Systems",
+      "authors": [
+        "Ayalvadi Ganesh",
+        "Sarah Lilienthal",
+        "D. Manjunath",
+        "Alexandre Proutiere",
+        "Florian Simatos"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 2010,
+      "title": "Distributed Sensor Network Localization from Local Connectivity: Performance Analysis for the HOP-TERRAIN Algorithm",
+      "authors": [
+        "Amin Karbasi",
+        "Sewoong Oh"
+      ],
+      "type": "student"
+    },
+    {
+      "year": 2009,
+      "title": "The Age of Gossip: Spatial Mean Field Regime",
+      "authors": [
+        "Augustin Chaintreau",
+        "Jean-Yves Le Boudec",
+        "Nikodin Ristanovic"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 2009,
+      "title": "Network adiabatic theorem: An efficient randomized protocol for contention resolution",
+      "authors": [
+        "Shreevatsa Rajagopalan",
+        "Devavrat Shah",
+        "Jinwoo Shin"
+      ],
+      "type": "student"
+    },
+    {
+      "year": 2008,
+      "title": "Counter Braids: A Novel Counter Architecture for Per-Flow Measurement",
+      "authors": [
+        "Yi Lu",
+        "Andrea Montanari",
+        "Balaji Prabhakar",
+        "Sarang Dharmapurikar",
+        "Abdul Kabbani"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 2008,
+      "title": "Fully Decentralized Emulation of Best-Effort and Processor Sharing Queues",
+      "authors": [
+        "Rade Stanojevic",
+        "Robert Shorten"
+      ],
+      "type": "student"
+    },
+    {
+      "year": 2007,
+      "title": "Modeling the relative fitness of storage",
+      "authors": [
+        "Michael Mesnier",
+        "Matthew Wachs",
+        "Raja R. Sambasivan",
+        "Alice Zheng",
+        "Gregory R. Ganger"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 2007,
+      "title": "An Analysis of Latent Sector Errors in Disk Drives",
+      "authors": [
+        "Lakshmi Bairavasundaram",
+        "Garth Goodson",
+        "Shankar Pasupathy",
+        "Jiri Schindler"
+      ],
+      "type": "student"
+    },
+    {
+      "year": 2006,
+      "title": "Maximizing Throughput in Wireless Networks via Gossiping",
+      "authors": [
+        "Eytan Modiano",
+        "Devavrat Shah",
+        "Gil Zussman"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 2006,
+      "title": "GPS Scheduling: Selection of Optimal Weights and Comparison with Strict Priorities",
+      "authors": [
+        "Pascal Lieshout",
+        "Michel R.H. Mandjes",
+        "Sem Borst"
+      ],
+      "type": "student"
+    },
+    {
+      "year": 2005,
+      "title": "Coupon Replication Systems",
+      "authors": [
+        "Laurent Massoulié",
+        "Milan Vojnović"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 2005,
+      "title": "A Network Service Curve Approach for the Stochastic Analysis of Networks",
+      "authors": [
+        "Florin Ciucu",
+        "Almut Burchard",
+        "Jorg Liebeherr"
+      ],
+      "type": "student"
+    },
+    {
+      "year": 2004,
+      "title": "On performance bounds for the integration of elastic and adaptive streaming flows",
+      "authors": [
+        "Thomas Bonald",
+        "Alexandre Proutière"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 2003,
+      "title": "Classifying Scheduling Policies with respect to Unfairness in an M/GI/1",
+      "authors": [
+        "Adam Wierman",
+        "Mor Harchol-Balter"
+      ],
+      "type": "student"
+    },
+    {
+      "year": 2002,
+      "title": "PC Based Precision Timing Without GPS",
+      "authors": [
+        "Attila Pásztor",
+        "Darryl Veitch"
+      ],
+      "type": "student"
+    },
+    {
+      "year": 1996,
+      "title": "Exploiting Process Lifetime Distributions for Dynamic Load Balancing",
+      "authors": [
+        "Mor Harchol-Balter",
+        "Allen Downey"
+      ],
+      "type": "best"
+    },
+    {
+      "year": 1996,
+      "title": "Supporting stored video: reducing rate variability and end-to-end resource requirements through optimal smoothing",
+      "authors": [
+        "James D. Salehi",
+        "Zhi-Li Zhang",
+        "James F. Kurose",
+        "Don Towsley"
+      ],
+      "type": "best"
+    }
+  ],
+  "doctoral": [
+    {
+      "year": 2025,
+      "kind": "winner",
+      "name": "Weizhao Tang",
+      "institution": "Carnegie Mellon University",
+      "advisor": "Giulia Fanti",
+      "title": "Algorithmic Techniques for Utility Improvement across the Blockchain Stack"
+    },
+    {
+      "year": 2025,
+      "kind": "honorable",
+      "name": "Vamsi Addanki",
+      "institution": "Technische Universität Berlin",
+      "advisor": "Stefan Schmid",
+      "title": "Adaptive Protocols and Reconfigurable Optical Interconnects for Datacenter Networks"
+    },
+    {
+      "year": 2025,
+      "kind": "honorable",
+      "name": "Pengfei Li",
+      "institution": "University of California, Riverside",
+      "advisor": "Shaolei Ren",
+      "title": "Learning-Augmented Online Decision Making: Algorithms, Analysis, and Applications"
+    },
+    {
+      "year": 2024,
+      "kind": "winner",
+      "name": "Sushil Varma",
+      "institution": "Georgia Tech",
+      "advisor": "Siva Theja Maguluri",
+      "title": "Stochastic Matching Networks: Theory and applications to matching platforms"
+    },
+    {
+      "year": 2024,
+      "kind": "honorable",
+      "name": "Diego Goldsztajn",
+      "institution": "Eindhoven University of Technology",
+      "advisor": "Sem Borst; Johan van Leeuwaarden",
+      "title": "Fluid limits and optimal task assignment policies for locally pooled service systems"
+    },
+    {
+      "year": 2024,
+      "kind": "honorable",
+      "name": "Ayush Mishra",
+      "institution": "National University of Singapore",
+      "advisor": "Ben Leong",
+      "title": "Understanding the Modern Internet’s Heterogeneous Congestion Control Landscape"
+    },
+    {
+      "year": 2023,
+      "kind": "winner",
+      "name": "Isaac Grosof",
+      "institution": "Carnegie Mellon University",
+      "advisor": "Mor Harchol-Balter",
+      "title": "Optimal Scheduling in Multiserver Queues"
+    },
+    {
+      "year": 2023,
+      "kind": "honorable",
+      "name": "Prakirt Raj Jhunjhunwala",
+      "institution": "Georgia Institute of Technology",
+      "advisor": "Siva Theja Maguluri",
+      "title": "Design and Analysis of Stochastic Processing and Matching Networks"
+    },
+    {
+      "year": 2023,
+      "kind": "honorable",
+      "name": "Sean Sinclair",
+      "institution": "Cornell University",
+      "advisor": "Christina Lee Yu; Siddartha Banerjee",
+      "title": "Adaptivity, Structure, and Objectives in Sequential Decision-Making"
+    },
+    {
+      "year": 2022,
+      "kind": "winner",
+      "name": "Ziv Scully",
+      "institution": "Carnegie Mellon University",
+      "advisor": "Mor Harchol-Balter",
+      "title": "A New Toolbox for Scheduling Theory"
+    },
+    {
+      "year": 2022,
+      "kind": "honorable",
+      "name": "Anish Agarwal",
+      "institution": "Massachusetts Institute of Technology",
+      "advisor": "Alberto Abadie; Munther Dahleh; Devavrat Shah",
+      "title": "Causal Inference for Social and Engineering Systems"
+    },
+    {
+      "year": 2022,
+      "kind": "honorable",
+      "name": "Zaiwei Chen",
+      "institution": "Georgia Institute of Technology",
+      "advisor": "Siva Theja Maguluri; John Paul Clarke",
+      "title": "A Unified Lyapunov Framework for Finite-Sample Analysis of Reinforcement Learning Algorithms"
+    }
+  ]
+}
