@@ -1,9 +1,9 @@
 {
-  "generatedAt": 1781690643700,
-  "method": "Per year, accepted and submitted are summed across all submission rounds; rejected = submitted - accepted; acceptance rate = accepted / submitted. Matches csconferences.org.",
+  "generatedAt": 1781779859192,
+  "note": "Acceptance computed as csconferences.org does: sum accepted & submitted across rounds per year; rejected = submitted - accepted; rate = accepted/submitted.",
   "sources": {
     "2010-2024": "https://csconferences.org/",
-    "2025-2026": "https://sigmetrics.org/ HotCRP round sites"
+    "2025-2026": "SIGMETRICS HotCRP round sites (summer/fall/winter)"
   },
   "startYear": 2010,
   "endYear": 2026,
@@ -14,8 +14,7 @@
       "accepted": 29,
       "rejected": 155,
       "rate": 15.8,
-      "source": "csconferences.org",
-      "rounds": null
+      "source": "csconferences.org"
     },
     {
       "year": 2011,
@@ -23,8 +22,7 @@
       "accepted": 26,
       "rejected": 151,
       "rate": 14.7,
-      "source": "csconferences.org",
-      "rounds": null
+      "source": "csconferences.org"
     },
     {
       "year": 2012,
@@ -32,8 +30,7 @@
       "accepted": 31,
       "rejected": 172,
       "rate": 15.3,
-      "source": "csconferences.org",
-      "rounds": null
+      "source": "csconferences.org"
     },
     {
       "year": 2013,
@@ -41,8 +38,7 @@
       "accepted": 26,
       "rejected": 170,
       "rate": 13.3,
-      "source": "csconferences.org",
-      "rounds": null
+      "source": "csconferences.org"
     },
     {
       "year": 2014,
@@ -50,8 +46,7 @@
       "accepted": 40,
       "rejected": 197,
       "rate": 16.9,
-      "source": "csconferences.org",
-      "rounds": null
+      "source": "csconferences.org"
     },
     {
       "year": 2015,
@@ -59,8 +54,7 @@
       "accepted": 32,
       "rejected": 207,
       "rate": 13.4,
-      "source": "csconferences.org",
-      "rounds": null
+      "source": "csconferences.org"
     },
     {
       "year": 2016,
@@ -68,8 +62,7 @@
       "accepted": 28,
       "rejected": 175,
       "rate": 13.8,
-      "source": "csconferences.org",
-      "rounds": null
+      "source": "csconferences.org"
     },
     {
       "year": 2017,
@@ -77,8 +70,7 @@
       "accepted": 27,
       "rejected": 176,
       "rate": 13.3,
-      "source": "csconferences.org",
-      "rounds": null
+      "source": "csconferences.org"
     },
     {
       "year": 2018,
@@ -86,8 +78,7 @@
       "accepted": 54,
       "rejected": 215,
       "rate": 20.1,
-      "source": "csconferences.org",
-      "rounds": null
+      "source": "csconferences.org"
     },
     {
       "year": 2019,
@@ -95,8 +86,7 @@
       "accepted": 50,
       "rejected": 267,
       "rate": 15.8,
-      "source": "csconferences.org",
-      "rounds": null
+      "source": "csconferences.org"
     },
     {
       "year": 2020,
@@ -104,8 +94,7 @@
       "accepted": 55,
       "rejected": 225,
       "rate": 19.6,
-      "source": "csconferences.org",
-      "rounds": null
+      "source": "csconferences.org"
     },
     {
       "year": 2021,
@@ -113,8 +102,7 @@
       "accepted": 38,
       "rejected": 277,
       "rate": 12.1,
-      "source": "csconferences.org",
-      "rounds": null
+      "source": "csconferences.org"
     },
     {
       "year": 2022,
@@ -122,8 +110,7 @@
       "accepted": 59,
       "rejected": 244,
       "rate": 19.5,
-      "source": "csconferences.org",
-      "rounds": null
+      "source": "csconferences.org"
     },
     {
       "year": 2023,
@@ -131,8 +118,7 @@
       "accepted": 54,
       "rejected": 285,
       "rate": 15.9,
-      "source": "csconferences.org",
-      "rounds": null
+      "source": "csconferences.org"
     },
     {
       "year": 2024,
@@ -140,8 +126,7 @@
       "accepted": 52,
       "rejected": 284,
       "rate": 15.5,
-      "source": "csconferences.org",
-      "rounds": null
+      "source": "csconferences.org"
     },
     {
       "year": 2025,
@@ -149,25 +134,22 @@
       "accepted": 67,
       "rejected": 315,
       "rate": 17.5,
-      "source": "HotCRP (summer + fall + winter rounds)",
+      "source": "HotCRP rounds",
       "rounds": [
         {
-          "name": "Summer",
+          "round": "summer",
           "accepted": 20,
-          "submitted": 110,
-          "url": "https://sigmetrics25summer.hotcrp.com/"
+          "submitted": 110
         },
         {
-          "name": "Fall",
+          "round": "fall",
           "accepted": 15,
-          "submitted": 113,
-          "url": "https://sigmetrics25fall.hotcrp.com/"
+          "submitted": 113
         },
         {
-          "name": "Winter",
+          "round": "winter",
           "accepted": 32,
-          "submitted": 159,
-          "url": "https://sigmetrics25winter.hotcrp.com/"
+          "submitted": 159
         }
       ]
     },
@@ -177,25 +159,22 @@
       "accepted": 82,
       "rejected": 397,
       "rate": 17.1,
-      "source": "HotCRP (summer + fall + winter rounds)",
+      "source": "HotCRP rounds",
       "rounds": [
         {
-          "name": "Summer",
+          "round": "summer",
           "accepted": 24,
-          "submitted": 112,
-          "url": "https://sigmetrics26summer.hotcrp.com/"
+          "submitted": 112
         },
         {
-          "name": "Fall",
+          "round": "fall",
           "accepted": 25,
-          "submitted": 155,
-          "url": "https://sigmetrics26fall.hotcrp.com/"
+          "submitted": 155
         },
         {
-          "name": "Winter",
+          "round": "winter",
           "accepted": 33,
-          "submitted": 212,
-          "url": "https://sigmetrics26winter.hotcrp.com/"
+          "submitted": 212
         }
       ]
     }

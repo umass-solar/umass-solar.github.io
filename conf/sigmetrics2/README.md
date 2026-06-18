@@ -35,6 +35,15 @@ python3 make_awards.py
 # 2c) (optional) build the chairs overlay (general + program chairs, 1973–2027)
 python3 make_chairs.py
 
+# 2d) (optional) build the officers overlay (SIGMETRICS officers by term, 1971–present)
+python3 make_officers.py
+
+# 2e) (optional) build the PC overlay (program-committee rosters from pc_raw/yYYYY.txt)
+python3 make_pc.py
+
+# 2f) (optional) build the submissions/acceptance stats shown on the Overview page
+python3 make_submissions.py
+
 # 3) serve the folder and open it
 python3 -m http.server 8000
 ```
@@ -96,6 +105,28 @@ conference (1973–2027), transcribed from the conference history and recent org
 pages. Like awards, it's matched onto authors by name (same exact + fuzzy matcher) and needs
 no refetch. Edit the `CONF` list when a new edition is announced.
 
+### `make_officers.py` — SIGMETRICS officers overlay
+Writes `data/officers.json`: the elected/appointed officers of ACM SIGMETRICS by term
+(1971–present), transcribed from the officer archive and the current home-page listing.
+Matched onto authors by name (same exact + fuzzy matcher); no refetch. Edit the `TERMS` list
+when a new term is elected.
+
+### `make_pc.py` — program-committee overlay
+Writes `data/pc.json`: the Technical Program Committee members of each SIGMETRICS conference
+(2010–2026). It reads one-name-per-line rosters from `pc_raw/yYYYY.txt` (transcribed from each
+edition's committee / program-committee page), de-duplicates and tidies them, and matches onto
+authors by name (same exact + fuzzy matcher); no refetch. Drop a corrected `pc_raw/yYYYY.txt`
+in place and re-run to update a year.
+
+### `make_submissions.py` — submission / acceptance statistics
+Writes `data/submissions.json`: per-year SIGMETRICS submitted / accepted / rejected counts and
+acceptance rate (2010–2026), shown as a section on the **Overview** page (four stat cards that
+respect the year selector, plus a stacked accepted/rejected bar chart with an acceptance-rate
+line). 2010–2024 come from `csconferences.csv` (the csconferences.org dataset, included), using
+their exact method — sum accepted and submitted across all rounds per year, rate = accepted ÷
+submitted. 2025–2026 are summed from the public summer/fall/winter HotCRP round counts, edited
+at the top of the script. Re-run to refresh.
+
 ### `make_sample.py` — synthetic demo data
 Generates a clearly-labelled sample `data/sigmetrics.json` (+ a small `author_links.json`)
 in the exact schema `fetch_sigmetrics.py` produces, so the UI is viewable out of the box.
@@ -135,6 +166,14 @@ the data is more than ~4 months old.
 - **Chairs** — the General Chairs and Program (TPC) Chairs of every SIGMETRICS conference,
   1973–2027, with locations. Chairs are marked on author pages (🎫 General Chair / 🪑 PC
   Chair chips) and get a 🪑 marker in the authors table.
+- **Officers** — the elected/appointed SIGMETRICS officers by term, 1971–present (Chair,
+  Vice-Chair, Secretary/Treasurer, Board of Directors, editors, and so on), with the current
+  term highlighted. Officers get a 🎖 marker in the authors table and officer chips on their
+  dashboard.
+- **PC** — the Technical Program Committee members of each SIGMETRICS conference (2010–2026),
+  with a "most years of service" leaderboard and the full roster per year. PC members get a
+  🧑‍⚖️ marker in the authors table and a PC chip (with their service years) on their
+  dashboard.
 - **Data & method** — provenance, integrity checks, the refresh commands, and a plain-English
   statement of what the numbers mean and don't.
 
