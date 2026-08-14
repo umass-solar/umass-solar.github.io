@@ -499,7 +499,7 @@ permalink: /scai-symposium/
         <dt>Where</dt>
         <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=Computer+Science+Laboratories%2C+140+Governors+Dr%2C+Amherst%2C+MA+01003">Computer Science Laboratories<br>140 Governors Dr<br>Amherst, MA 01003<br>United States</a></dd>
         <dt>Format</dt>
-        <dd>Invitation-only talks, panels, and working sessions</dd>
+        <dd>Invitation-only talks, panels, and poster sessions</dd>
         <dt>Audience</dt>
         <dd>Academic, industry, government, utility, and campus leadership communities</dd>
         <dt>Agenda</dt>
