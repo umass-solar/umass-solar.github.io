@@ -10,6 +10,10 @@ permalink: /scai-symposium/
     --scai-ink: #1d252c;
     --scai-muted: #5f6b73;
     --scai-green: #2f6b4f;
+    --scai-lime: #67b42c;
+    --scai-teal: #008f86;
+    --scai-blue: #056997;
+    --scai-navy: #073666;
     --scai-cream: #f7f3ed;
     --scai-line: #ded7cc;
     color: var(--scai-ink);
@@ -32,56 +36,75 @@ permalink: /scai-symposium/
     position: relative;
     overflow: hidden;
     margin: 0 0 2.5rem;
-    padding: clamp(2rem, 6vw, 4.75rem);
-    border-radius: 0.85rem;
+    padding: clamp(2.25rem, 5.5vw, 4.5rem);
+    border: 1px solid rgba(5, 105, 151, 0.13);
+    border-radius: 1rem;
     background:
-      radial-gradient(circle at 88% 18%, rgba(255, 255, 255, 0.18), transparent 29%),
-      linear-gradient(135deg, #681111 0%, #881c1c 55%, #ad5b3d 100%);
-    box-shadow: 0 1rem 2.6rem rgba(55, 26, 22, 0.16);
+      radial-gradient(circle at 96% 4%, rgba(5, 105, 151, 0.18), transparent 33%),
+      radial-gradient(circle at 17% 106%, rgba(103, 180, 44, 0.18), transparent 36%),
+      linear-gradient(118deg, #fbfefc 0%, #eff9f5 46%, #edf7fb 100%);
+    box-shadow: 0 1rem 2.8rem rgba(7, 54, 102, 0.12);
+  }
+
+  .scai-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.42rem;
+    background: linear-gradient(90deg, var(--scai-lime), var(--scai-teal) 52%, var(--scai-navy));
   }
 
   .scai-hero::after {
     content: "";
     position: absolute;
-    right: -4rem;
-    bottom: -7rem;
-    width: 21rem;
-    height: 21rem;
-    border: 1.1rem solid rgba(255, 255, 255, 0.08);
+    right: -13rem;
+    bottom: -24rem;
+    width: 42rem;
+    height: 42rem;
+    border: 1.35rem solid rgba(5, 105, 151, 0.045);
     border-radius: 50%;
+    box-shadow:
+      0 0 0 2rem rgba(0, 143, 134, 0.035),
+      0 0 0 4rem rgba(103, 180, 44, 0.025);
   }
 
   .scai-hero-inner {
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: minmax(0, 1.45fr) minmax(230px, 0.65fr);
-    gap: clamp(1.5rem, 4vw, 3.25rem);
+    grid-template-columns: minmax(0, 1.12fr) minmax(300px, 0.88fr);
+    gap: clamp(1.75rem, 4vw, 3.75rem);
     align-items: center;
   }
 
   .scai-logo-card {
+    position: relative;
     justify-self: end;
     width: 100%;
-    max-width: 330px;
-    padding: 0.8rem;
-    border: 1px solid rgba(255, 255, 255, 0.58);
-    border-radius: 0.8rem;
-    background: #fff;
-    box-shadow: 0 0.8rem 2rem rgba(42, 18, 17, 0.2);
+    max-width: 460px;
+    aspect-ratio: 1.92 / 1;
+    overflow: hidden;
   }
 
   .scai-logo-card img {
+    position: absolute;
+    top: -11%;
+    left: -12%;
     display: block;
-    width: 100%;
+    width: 123%;
+    max-width: none;
     height: auto;
+    mix-blend-mode: multiply;
+    filter: drop-shadow(0 0.7rem 0.7rem rgba(7, 54, 102, 0.08));
   }
 
   .scai-eyebrow {
     position: relative;
     z-index: 1;
     margin: 0 0 0.7rem;
-    color: #f1d7c9 !important;
+    color: var(--scai-green) !important;
     font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.16em;
@@ -93,7 +116,7 @@ permalink: /scai-symposium/
     z-index: 1;
     max-width: 770px;
     margin: 0 0 1rem;
-    color: #fff;
+    color: var(--scai-navy);
     font-size: clamp(2rem, 5.8vw, 4.25rem);
     line-height: 0.98;
     letter-spacing: -0.045em;
@@ -104,7 +127,7 @@ permalink: /scai-symposium/
     z-index: 1;
     max-width: 690px;
     margin: 0;
-    color: #fff !important;
+    color: #24485b !important;
     font-size: clamp(1rem, 2vw, 1.22rem);
     line-height: 1.65;
   }
@@ -120,10 +143,10 @@ permalink: /scai-symposium/
 
   .scai-meta span {
     padding: 0.48rem 0.8rem;
-    border: 1px solid rgba(255, 255, 255, 0.32);
+    border: 1px solid rgba(5, 105, 151, 0.2);
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff !important;
+    background: rgba(255, 255, 255, 0.68);
+    color: var(--scai-navy) !important;
     font-size: 0.88rem;
     font-weight: 600;
   }
@@ -376,7 +399,8 @@ permalink: /scai-symposium/
 
     .scai-logo-card {
       justify-self: start;
-      max-width: 290px;
+      width: min(100%, 390px);
+      max-width: none;
     }
 
     .scai-intro,
