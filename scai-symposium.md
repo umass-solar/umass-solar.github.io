@@ -90,7 +90,7 @@ permalink: /scai-symposium/
     position: relative;
     justify-self: end;
     width: 100%;
-    max-width: 325px;
+    max-width: 350px;
     aspect-ratio: 1.92 / 1;
   }
 
