@@ -37,13 +37,13 @@ permalink: /scai-symposium/
     grid-template-columns: minmax(0, 3fr) minmax(235px, 1fr);
     gap: clamp(1rem, 2vw, 1.5rem);
     align-items: stretch;
-    margin: 0 0 3.25rem;
+    margin: 0 0 2.75rem;
   }
 
   .scai-hero {
     position: relative;
     overflow: hidden;
-    padding: clamp(2.25rem, 4vw, 3.65rem);
+    padding: clamp(1.85rem, 3vw, 2.8rem);
     border: 1px solid rgba(5, 105, 151, 0.13);
     border-radius: 1rem;
     background:
@@ -81,8 +81,8 @@ permalink: /scai-symposium/
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(245px, 0.85fr);
-    gap: clamp(1.5rem, 3vw, 2.75rem);
+    grid-template-columns: minmax(0, 1.35fr) minmax(220px, 0.65fr);
+    gap: clamp(1rem, 2.2vw, 2rem);
     align-items: center;
   }
 
@@ -90,7 +90,7 @@ permalink: /scai-symposium/
     position: relative;
     justify-self: end;
     width: 100%;
-    max-width: 390px;
+    max-width: 325px;
     aspect-ratio: 1.92 / 1;
   }
 
@@ -115,9 +115,9 @@ permalink: /scai-symposium/
   .scai-eyebrow {
     position: relative;
     z-index: 1;
-    margin: 0 0 0.7rem;
+    margin: 0 0 0.55rem;
     color: var(--scai-green) !important;
-    font-size: 0.78rem;
+    font-size: 0.73rem;
     font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -127,11 +127,11 @@ permalink: /scai-symposium/
     position: relative;
     z-index: 1;
     max-width: 770px;
-    margin: 0 0 1rem;
+    margin: 0 0 0.75rem;
     color: var(--scai-navy);
-    font-size: clamp(2rem, 4.6vw, 3.7rem);
-    line-height: 0.98;
-    letter-spacing: -0.045em;
+    font-size: clamp(1.9rem, 3.8vw, 3.15rem);
+    line-height: 1.02;
+    letter-spacing: -0.038em;
   }
 
   .scai-hero-copy {
@@ -140,37 +140,29 @@ permalink: /scai-symposium/
     max-width: 690px;
     margin: 0;
     color: #24485b !important;
-    font-size: clamp(1rem, 2vw, 1.22rem);
-    line-height: 1.65;
+    font-size: clamp(0.94rem, 1.4vw, 1.08rem);
+    line-height: 1.52;
   }
 
   .scai-hero-context {
     position: relative;
     z-index: 1;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: clamp(1.25rem, 3vw, 2.25rem);
-    margin-top: clamp(1.75rem, 3vw, 2.5rem);
-    padding-top: clamp(1.4rem, 2.5vw, 2rem);
+    margin-top: clamp(1.25rem, 2vw, 1.7rem);
+    padding-top: clamp(1rem, 1.8vw, 1.35rem);
     border-top: 1px solid rgba(5, 105, 151, 0.18);
   }
 
   .scai-hero-context p {
     margin: 0;
     color: #294b5c !important;
-    font-size: 0.98rem;
-    line-height: 1.7;
-  }
-
-  .scai-hero-context .scai-lead {
-    color: var(--scai-ink) !important;
-    font-size: 1.05rem;
+    font-size: 0.88rem;
+    line-height: 1.62;
   }
 
   .scai-factbox {
     position: relative;
     overflow: hidden;
-    padding: clamp(1.35rem, 2.5vw, 1.8rem);
+    padding: clamp(1.25rem, 2vw, 1.55rem);
     border: 1px solid rgba(5, 105, 151, 0.14);
     border-radius: 1rem;
     background: #fff;
@@ -188,7 +180,7 @@ permalink: /scai-symposium/
   }
 
   .scai-factbox h3 {
-    margin: 0 0 1.25rem;
+    margin: 0 0 1rem;
     color: var(--scai-navy);
     font-size: 1.05rem;
     letter-spacing: 0.07em;
@@ -200,7 +192,7 @@ permalink: /scai-symposium/
   }
 
   .scai-factbox dt {
-    margin-top: 1rem;
+    margin-top: 0.82rem;
     color: var(--scai-green);
     font-size: 0.74rem;
     font-weight: 750;
@@ -211,9 +203,9 @@ permalink: /scai-symposium/
   .scai-factbox dd {
     margin: 0.18rem 0 0;
     color: #243b4a;
-    font-size: 0.94rem;
+    font-size: 0.9rem;
     font-weight: 620;
-    line-height: 1.48;
+    line-height: 1.42;
   }
 
   .scai-section {
@@ -441,7 +433,6 @@ permalink: /scai-symposium/
       max-width: none;
     }
 
-    .scai-hero-context,
     .scai-codec,
     .scai-section-header,
     .scai-callout {
@@ -489,8 +480,7 @@ permalink: /scai-symposium/
         </div>
       </div>
       <div class="scai-hero-context">
-        <p class="scai-lead">Frontier AI infrastructure is becoming a coupled cyber-physical system. Model behavior, compute platforms, and the electric grid can no longer be optimized independently. Training schedules, inference placement, batching, routing, cooling, and service tiers all shape power demand; in turn, capacity, reliability, cost, and grid conditions increasingly determine where and how AI workloads can run.</p>
-        <p>The symposium will convene researchers, infrastructure builders, energy experts, public-interest partners, UMass campus leadership, and state officials to examine how AI systems can adapt safely to compute and energy constraints while protecting the latency, availability, progress, and quality guarantees that make AI services useful.</p>
+        <p>Frontier AI infrastructure is becoming a coupled cyber-physical system in which model behavior, compute platforms, and the electric grid can no longer be optimized independently. The symposium will convene researchers, infrastructure builders, energy experts, public-interest partners, UMass campus leadership, and state officials to examine how training, inference, placement, cooling, and service design can adapt safely to power, capacity, reliability, and grid constraints while preserving the latency, availability, progress, and quality guarantees that make AI services useful.</p>
       </div>
     </section>
     <aside class="scai-factbox" aria-label="Event details">
