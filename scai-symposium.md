@@ -85,19 +85,24 @@ permalink: /scai-symposium/
     width: 100%;
     max-width: 460px;
     aspect-ratio: 1.92 / 1;
-    overflow: hidden;
+  }
+
+  .scai-logo-card::before {
+    content: "";
+    position: absolute;
+    inset: 14% 1%;
+    border-radius: 50%;
+    background: linear-gradient(105deg, rgba(103, 180, 44, 0.2), rgba(0, 143, 134, 0.18) 48%, rgba(5, 105, 151, 0.18));
+    filter: blur(2rem);
   }
 
   .scai-logo-card img {
-    position: absolute;
-    top: -11%;
-    left: -12%;
+    position: relative;
     display: block;
-    width: 123%;
-    max-width: none;
+    width: 100%;
+    max-width: 100%;
     height: auto;
-    mix-blend-mode: multiply;
-    filter: drop-shadow(0 0.7rem 0.7rem rgba(7, 54, 102, 0.08));
+    filter: drop-shadow(0 0.8rem 0.8rem rgba(7, 54, 102, 0.1));
   }
 
   .scai-eyebrow {
@@ -448,7 +453,7 @@ permalink: /scai-symposium/
         </div>
       </div>
       <div class="scai-logo-card">
-        <img src="{{ site.base }}/img/scai-logo.png" alt="SCAI Sustainable Compute and AI logo">
+        <img src="{{ site.base }}/img/scai-logo-banner.png" alt="SCAI Sustainable Compute and AI logo">
       </div>
     </div>
   </section>
