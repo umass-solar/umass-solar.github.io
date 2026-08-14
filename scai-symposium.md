@@ -481,7 +481,7 @@ permalink: /scai-symposium/
             <span class="scai-hero-line">AI infrastructure for a</span>
             <span class="scai-hero-line">resource-constrained world</span>
           </h2>
-          <p class="scai-hero-copy">A UMass-led forum exploring flexibility as a key lever for building sustainable AI infrastructure, enabling AI systems to operate as good citizens and coordinate responsibly with energy, computing, and other public infrastructure.</p>
+          <p class="scai-hero-copy">A UMass-led forum imagining AI infrastructure as a flexible and responsible participant in the broader public-infrastructure ecosystem, designed to respect resource constraints and serve the public good.</p>
         </div>
         <div class="scai-logo-card">
           <img src="{{ site.base }}/img/scai-logo-banner.png" alt="SCAI Sustainable Compute and AI logo">
