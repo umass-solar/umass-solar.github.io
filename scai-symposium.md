@@ -472,7 +472,7 @@ permalink: /scai-symposium/
       <div class="scai-hero-inner">
         <div>
           <p class="scai-eyebrow">SCAI Research Symposium</p>
-          <h2 id="scai-hero-title">Building AI infrastructure for a power-constrained world</h2>
+          <h2 id="scai-hero-title">Building flexible, sustainable AI infrastructure for a resource-constrained world</h2>
           <p class="scai-hero-copy">A UMass-led forum at the intersection of AI systems, computing infrastructure, and energy.</p>
         </div>
         <div class="scai-logo-card">
