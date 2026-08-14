@@ -129,9 +129,13 @@ permalink: /scai-symposium/
     max-width: 770px;
     margin: 0 0 0.75rem;
     color: var(--scai-navy);
-    font-size: clamp(1.9rem, 3.8vw, 3.15rem);
+    font-size: clamp(1.75rem, 2.65vw, 2.2rem);
     line-height: 1.02;
     letter-spacing: -0.038em;
+  }
+
+  .scai-hero-line {
+    display: block;
   }
 
   .scai-hero-copy {
@@ -472,8 +476,12 @@ permalink: /scai-symposium/
       <div class="scai-hero-inner">
         <div>
           <p class="scai-eyebrow">SCAI Research Symposium</p>
-          <h2 id="scai-hero-title">Building flexible, sustainable AI infrastructure for a resource-constrained world</h2>
-          <p class="scai-hero-copy">A UMass-led forum at the intersection of AI systems, computing infrastructure, and energy.</p>
+          <h2 id="scai-hero-title">
+            <span class="scai-hero-line">Building sustainable</span>
+            <span class="scai-hero-line">AI infrastructure for a</span>
+            <span class="scai-hero-line">resource-constrained world</span>
+          </h2>
+          <p class="scai-hero-copy">A UMass-led forum exploring flexibility as a key lever for building sustainable AI infrastructure, enabling AI systems to operate as good citizens and coordinate responsibly with energy, computing, and other public infrastructure.</p>
         </div>
         <div class="scai-logo-card">
           <img src="{{ site.base }}/img/scai-logo-banner.png" alt="SCAI Sustainable Compute and AI logo">
