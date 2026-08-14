@@ -32,11 +32,18 @@ permalink: /scai-symposium/
     color: inherit;
   }
 
+  .scai-opening {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(235px, 1fr);
+    gap: clamp(1rem, 2vw, 1.5rem);
+    align-items: stretch;
+    margin: 0 0 3.25rem;
+  }
+
   .scai-hero {
     position: relative;
     overflow: hidden;
-    margin: 0 0 2.5rem;
-    padding: clamp(2.25rem, 5.5vw, 4.5rem);
+    padding: clamp(2.25rem, 4vw, 3.65rem);
     border: 1px solid rgba(5, 105, 151, 0.13);
     border-radius: 1rem;
     background:
@@ -74,8 +81,8 @@ permalink: /scai-symposium/
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: minmax(0, 1.12fr) minmax(300px, 0.88fr);
-    gap: clamp(1.75rem, 4vw, 3.75rem);
+    grid-template-columns: minmax(0, 1.15fr) minmax(245px, 0.85fr);
+    gap: clamp(1.5rem, 3vw, 2.75rem);
     align-items: center;
   }
 
@@ -83,7 +90,7 @@ permalink: /scai-symposium/
     position: relative;
     justify-self: end;
     width: 100%;
-    max-width: 460px;
+    max-width: 390px;
     aspect-ratio: 1.92 / 1;
   }
 
@@ -122,7 +129,7 @@ permalink: /scai-symposium/
     max-width: 770px;
     margin: 0 0 1rem;
     color: var(--scai-navy);
-    font-size: clamp(2rem, 5.8vw, 4.25rem);
+    font-size: clamp(2rem, 4.6vw, 3.7rem);
     line-height: 0.98;
     letter-spacing: -0.045em;
   }
@@ -137,49 +144,54 @@ permalink: /scai-symposium/
     line-height: 1.65;
   }
 
-  .scai-meta {
+  .scai-hero-context {
     position: relative;
     z-index: 1;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.65rem;
-    margin-top: 1.5rem;
-  }
-
-  .scai-meta span {
-    padding: 0.48rem 0.8rem;
-    border: 1px solid rgba(5, 105, 151, 0.2);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.68);
-    color: var(--scai-navy) !important;
-    font-size: 0.88rem;
-    font-weight: 600;
-  }
-
-  .scai-intro {
     display: grid;
-    grid-template-columns: minmax(0, 1.65fr) minmax(220px, 0.75fr);
-    gap: clamp(1.5rem, 4vw, 3.5rem);
-    align-items: start;
-    margin-bottom: 3rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1.25rem, 3vw, 2.25rem);
+    margin-top: clamp(1.75rem, 3vw, 2.5rem);
+    padding-top: clamp(1.4rem, 2.5vw, 2rem);
+    border-top: 1px solid rgba(5, 105, 151, 0.18);
   }
 
-  .scai-lead {
-    font-size: 1.16rem;
-    line-height: 1.75;
+  .scai-hero-context p {
+    margin: 0;
+    color: #294b5c !important;
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .scai-hero-context .scai-lead {
+    color: var(--scai-ink) !important;
+    font-size: 1.05rem;
   }
 
   .scai-factbox {
-    padding: 1.25rem 1.35rem;
-    border-top: 4px solid var(--scai-maroon);
-    border-radius: 0 0 0.65rem 0.65rem;
-    background: var(--scai-cream);
+    position: relative;
+    overflow: hidden;
+    padding: clamp(1.35rem, 2.5vw, 1.8rem);
+    border: 1px solid rgba(5, 105, 151, 0.14);
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 1rem 2.8rem rgba(7, 54, 102, 0.09);
+  }
+
+  .scai-factbox::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.42rem;
+    background: linear-gradient(90deg, var(--scai-lime), var(--scai-teal) 52%, var(--scai-navy));
   }
 
   .scai-factbox h3 {
-    margin-top: 0;
-    font-size: 1rem;
-    letter-spacing: 0.04em;
+    margin: 0 0 1.25rem;
+    color: var(--scai-navy);
+    font-size: 1.05rem;
+    letter-spacing: 0.07em;
     text-transform: uppercase;
   }
 
@@ -188,16 +200,20 @@ permalink: /scai-symposium/
   }
 
   .scai-factbox dt {
-    margin-top: 0.85rem;
-    color: var(--scai-muted);
+    margin-top: 1rem;
+    color: var(--scai-green);
     font-size: 0.74rem;
+    font-weight: 750;
     letter-spacing: 0.09em;
     text-transform: uppercase;
   }
 
   .scai-factbox dd {
-    margin: 0.15rem 0 0;
-    font-weight: 650;
+    margin: 0.18rem 0 0;
+    color: #243b4a;
+    font-size: 0.94rem;
+    font-weight: 620;
+    line-height: 1.48;
   }
 
   .scai-section {
@@ -397,6 +413,23 @@ permalink: /scai-symposium/
     white-space: nowrap;
   }
 
+  @media (max-width: 980px) {
+    .scai-opening {
+      grid-template-columns: 1fr;
+    }
+
+    .scai-factbox dl {
+      display: grid;
+      grid-template-columns: minmax(90px, 0.28fr) minmax(0, 1fr);
+      column-gap: 1.25rem;
+    }
+
+    .scai-factbox dt,
+    .scai-factbox dd {
+      margin-top: 0.8rem;
+    }
+  }
+
   @media (max-width: 800px) {
     .scai-hero-inner {
       grid-template-columns: 1fr;
@@ -408,7 +441,7 @@ permalink: /scai-symposium/
       max-width: none;
     }
 
-    .scai-intro,
+    .scai-hero-context,
     .scai-codec,
     .scai-section-header,
     .scai-callout {
@@ -430,6 +463,10 @@ permalink: /scai-symposium/
       border-radius: 0.55rem;
     }
 
+    .scai-factbox dl {
+      display: block;
+    }
+
     .scai-layers,
     .scai-speakers {
       grid-template-columns: 1fr;
@@ -439,35 +476,28 @@ permalink: /scai-symposium/
 </style>
 
 <div class="scai-page">
-  <section class="scai-hero" aria-labelledby="scai-hero-title">
-    <div class="scai-hero-inner">
-      <div>
-        <p class="scai-eyebrow">Sustainable Compute &amp; AI</p>
-        <h2 id="scai-hero-title">Building AI infrastructure for a power-constrained world</h2>
-        <p class="scai-hero-copy">A research symposium bringing together leaders from computing, AI systems, energy, and industry to shape the next generation of scalable, reliable, and sustainable AI infrastructure.</p>
-        <div class="scai-meta" aria-label="Event summary">
-          <span>September 17-18, 2026</span>
-          <span>UMass Amherst</span>
-          <span>Invitation only</span>
-          <span>Building on NSF CoDec</span>
+  <div class="scai-opening">
+    <section class="scai-hero" aria-labelledby="scai-hero-title">
+      <div class="scai-hero-inner">
+        <div>
+          <p class="scai-eyebrow">SCAI Research Symposium</p>
+          <h2 id="scai-hero-title">Building AI infrastructure for a power-constrained world</h2>
+          <p class="scai-hero-copy">A UMass-led forum at the intersection of AI systems, computing infrastructure, and energy.</p>
+        </div>
+        <div class="scai-logo-card">
+          <img src="{{ site.base }}/img/scai-logo-banner.png" alt="SCAI Sustainable Compute and AI logo">
         </div>
       </div>
-      <div class="scai-logo-card">
-        <img src="{{ site.base }}/img/scai-logo-banner.png" alt="SCAI Sustainable Compute and AI logo">
+      <div class="scai-hero-context">
+        <p class="scai-lead">Frontier AI infrastructure is becoming a coupled cyber-physical system. Model behavior, compute platforms, and the electric grid can no longer be optimized independently. Training schedules, inference placement, batching, routing, cooling, and service tiers all shape power demand; in turn, capacity, reliability, cost, and grid conditions increasingly determine where and how AI workloads can run.</p>
+        <p>The symposium will convene researchers, infrastructure builders, energy experts, public-interest partners, UMass campus leadership, and state officials to examine how AI systems can adapt safely to compute and energy constraints while protecting the latency, availability, progress, and quality guarantees that make AI services useful.</p>
       </div>
-    </div>
-  </section>
-
-  <section class="scai-intro" aria-label="Symposium overview">
-    <div>
-      <p class="scai-lead">Frontier AI infrastructure is becoming a coupled cyber-physical system. Model behavior, compute platforms, and the electric grid can no longer be optimized independently. Training schedules, inference placement, batching, routing, cooling, and service tiers all shape power demand; in turn, capacity, reliability, cost, and grid conditions increasingly determine where and how AI workloads can run.</p>
-      <p>The <strong>SCAI Research Symposium</strong> will convene researchers, infrastructure builders, energy experts, public-interest partners, UMass campus leadership, and state officials around a shared question: how can AI systems adapt safely to compute and energy constraints while continuing to protect the latency, availability, progress, and quality guarantees that make AI services useful?</p>
-    </div>
+    </section>
     <aside class="scai-factbox" aria-label="Event details">
       <h3>Event details</h3>
       <dl>
         <dt>When</dt>
-        <dd>September 17-18, 2026</dd>
+        <dd>September 17&ndash;18, 2026</dd>
         <dt>Where</dt>
         <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=Computer+Science+Laboratories%2C+140+Governors+Dr%2C+Amherst%2C+MA+01003">Computer Science Laboratories<br>140 Governors Dr<br>Amherst, MA 01003<br>United States</a></dd>
         <dt>Format</dt>
@@ -478,7 +508,7 @@ permalink: /scai-symposium/
         <dd>Available soon</dd>
       </dl>
     </aside>
-  </section>
+  </div>
 
   <section class="scai-codec" aria-labelledby="codec-heading">
     <div>
