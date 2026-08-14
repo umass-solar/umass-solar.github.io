@@ -251,19 +251,6 @@ permalink: /scai-symposium/
     line-height: 1.6;
   }
 
-  .scai-outcomes {
-    margin: 1.25rem 0 0;
-    padding-left: 1.2rem;
-    columns: 2;
-    column-gap: 3rem;
-  }
-
-  .scai-outcomes li {
-    margin-bottom: 0.7rem;
-    break-inside: avoid;
-    line-height: 1.55;
-  }
-
   .scai-speakers {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -384,9 +371,6 @@ permalink: /scai-symposium/
       grid-template-columns: 1fr;
     }
 
-    .scai-outcomes {
-      columns: 1;
-    }
   }
 </style>
 
@@ -396,7 +380,7 @@ permalink: /scai-symposium/
     <h2 id="scai-hero-title">Building AI infrastructure for a power-constrained world</h2>
     <p class="scai-hero-copy">A research symposium bringing together leaders from computing, AI systems, energy, and industry to shape the next generation of scalable, reliable, and sustainable AI infrastructure.</p>
     <div class="scai-meta" aria-label="Event summary">
-      <span>Fall 2026</span>
+      <span>September 17-18, 2026</span>
       <span>UMass Amherst</span>
       <span>Invitation only</span>
       <span>Building on NSF CoDec</span>
@@ -412,7 +396,7 @@ permalink: /scai-symposium/
       <h3>Event details</h3>
       <dl>
         <dt>When</dt>
-        <dd>Fall 2026; dates forthcoming</dd>
+        <dd>September 17-18, 2026</dd>
         <dt>Where</dt>
         <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=Computer+Science+Laboratories%2C+140+Governors+Dr%2C+Amherst%2C+MA+01003">Computer Science Laboratories<br>140 Governors Dr<br>Amherst, MA 01003<br>United States</a></dd>
         <dt>Format</dt>
@@ -455,21 +439,6 @@ permalink: /scai-symposium/
         <p>Power availability, demand response, cost, carbon, curtailment and recovery events, siting constraints, and grid risk.</p>
       </article>
     </div>
-  </section>
-
-  <section class="scai-section" aria-labelledby="questions-heading">
-    <div class="scai-section-header">
-      <h2 id="questions-heading">Questions we will explore</h2>
-      <p>The symposium is designed to surface precompetitive problems, useful interfaces, and measurable research targets across the AI compute-energy stack.</p>
-    </div>
-    <ul class="scai-outcomes">
-      <li>How should AI platforms expose and consume power, reliability, and capacity signals?</li>
-      <li>Which workload actions can create flexibility without compromising service guarantees?</li>
-      <li>How should training, serving, placement, routing, and cooling coordinate across timescales?</li>
-      <li>What contracts and independent verification methods can make flexibility measurable and trustworthy?</li>
-      <li>Which traces, benchmarks, and testbeds are needed to evaluate realistic coupled stress?</li>
-      <li>How can academia, industry, utilities, and government build a shared research and workforce agenda?</li>
-    </ul>
   </section>
 
   <section class="scai-section" aria-labelledby="speakers-heading">
@@ -515,12 +484,12 @@ permalink: /scai-symposium/
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/ayse-coskun.jpg" alt="Ayse K. Coskun" loading="lazy">
         <div class="scai-speaker-body">
           <h3><a href="https://www.bu.edu/peaclab/people/faculty/">Ayse K. Coskun</a></h3>
-          <p class="scai-speaker-role">Professor of Electrical and Computer Engineering and Director of CISE, Boston University</p>
+          <p class="scai-speaker-role">Professor of Electrical and Computer Engineering and Director of CISE, Boston University; Chief Scientist, Emerald AI</p>
         </div>
       </article>
 
       <article class="scai-speaker">
-        <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/jeremy-rice-placeholder.svg" alt="Jeremy Rice profile placeholder" loading="lazy">
+        <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/jeremy-rice.jpeg" alt="Jeremy Rice" loading="lazy">
         <div class="scai-speaker-body">
           <h3><a href="https://www.linkedin.com/in/jeremy-rice-9a015b12/">Jeremy Rice</a></h3>
           <p class="scai-speaker-role">Mechanical Systems Lead, Verrus</p>
@@ -539,7 +508,7 @@ permalink: /scai-symposium/
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/ramesh-sitaraman.jpg" alt="Ramesh Sitaraman" loading="lazy">
         <div class="scai-speaker-body">
           <h3><a href="https://www.cics.umass.edu/events/distinguished-faculty-lecturer-ramesh-sitaraman">Ramesh Sitaraman</a></h3>
-          <p class="scai-speaker-role">Distinguished Professor and Associate Dean, UMass Amherst</p>
+          <p class="scai-speaker-role">Distinguished Professor, UMass Amherst; Chief Consulting Scientist, Akamai Technologies</p>
         </div>
       </article>
 
@@ -586,7 +555,7 @@ Speaker image sources:
 - Karin Strauss: https://www.microsoft.com/en-us/research/people/kstrauss/
 - Fabio Grimaldi: https://www.linkedin.com/in/fabio-grimaldi-530796ba/
 - Ayse K. Coskun: https://www.bu.edu/peaclab/people/faculty/
-- Jeremy Rice: LinkedIn default profile image; replace when a portrait becomes available.
+- Jeremy Rice: portrait supplied by the symposium organizer.
 - Shaolei Ren: https://shaoleiren.github.io/
 - Ramesh Sitaraman: https://www.cics.umass.edu/events/distinguished-faculty-lecturer-ramesh-sitaraman
 - Mosharaf Chowdhury: https://cse.engin.umich.edu/stories/mosharaf-chowdhury-receives-david-e-liddle-research-excellence-award
