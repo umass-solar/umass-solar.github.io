@@ -51,6 +51,32 @@ permalink: /scai-symposium/
     border-radius: 50%;
   }
 
+  .scai-hero-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(230px, 0.65fr);
+    gap: clamp(1.5rem, 4vw, 3.25rem);
+    align-items: center;
+  }
+
+  .scai-logo-card {
+    justify-self: end;
+    width: 100%;
+    max-width: 330px;
+    padding: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.58);
+    border-radius: 0.8rem;
+    background: #fff;
+    box-shadow: 0 0.8rem 2rem rgba(42, 18, 17, 0.2);
+  }
+
+  .scai-logo-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
   .scai-eyebrow {
     position: relative;
     z-index: 1;
@@ -344,6 +370,15 @@ permalink: /scai-symposium/
   }
 
   @media (max-width: 800px) {
+    .scai-hero-inner {
+      grid-template-columns: 1fr;
+    }
+
+    .scai-logo-card {
+      justify-self: start;
+      max-width: 290px;
+    }
+
     .scai-intro,
     .scai-codec,
     .scai-section-header,
@@ -376,14 +411,21 @@ permalink: /scai-symposium/
 
 <div class="scai-page">
   <section class="scai-hero" aria-labelledby="scai-hero-title">
-    <p class="scai-eyebrow">Sustainable Compute &amp; AI</p>
-    <h2 id="scai-hero-title">Building AI infrastructure for a power-constrained world</h2>
-    <p class="scai-hero-copy">A research symposium bringing together leaders from computing, AI systems, energy, and industry to shape the next generation of scalable, reliable, and sustainable AI infrastructure.</p>
-    <div class="scai-meta" aria-label="Event summary">
-      <span>September 17-18, 2026</span>
-      <span>UMass Amherst</span>
-      <span>Invitation only</span>
-      <span>Building on NSF CoDec</span>
+    <div class="scai-hero-inner">
+      <div>
+        <p class="scai-eyebrow">Sustainable Compute &amp; AI</p>
+        <h2 id="scai-hero-title">Building AI infrastructure for a power-constrained world</h2>
+        <p class="scai-hero-copy">A research symposium bringing together leaders from computing, AI systems, energy, and industry to shape the next generation of scalable, reliable, and sustainable AI infrastructure.</p>
+        <div class="scai-meta" aria-label="Event summary">
+          <span>September 17-18, 2026</span>
+          <span>UMass Amherst</span>
+          <span>Invitation only</span>
+          <span>Building on NSF CoDec</span>
+        </div>
+      </div>
+      <div class="scai-logo-card">
+        <img src="{{ site.base }}/img/scai-logo.png" alt="SCAI Sustainable Compute and AI logo">
+      </div>
     </div>
   </section>
 
