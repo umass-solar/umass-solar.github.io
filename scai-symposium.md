@@ -896,7 +896,7 @@ permalink: /scai-symposium/
             <span class="scai-hero-line">AI infrastructure for a</span>
             <span class="scai-hero-line">resource-constrained world</span>
           </h2>
-          <p class="scai-hero-copy">A symposium imagining AI infrastructure as a flexible and responsible participant in the broader public-infrastructure ecosystem, designed to respect resource constraints and serve the public good.</p>
+          <p class="scai-hero-copy">A symposium imagining AI infrastructure as a flexible and responsible participant in the broader public-infrastructure ecosystem, designed to respect the resource constraints of existing infrastructure and serve the public good.</p>
           <div class="scai-hero-actions">
             <a class="scai-call-link" href="#call-for-posters">Call for posters <span>Deadline: August 28, 2026</span></a>
             <a class="scai-call-link" href="#call-for-lightning-talks">Call for lightning talks <span>Deadline: August 28, 2026</span></a>
@@ -918,7 +918,7 @@ permalink: /scai-symposium/
         <dt>Where</dt>
         <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=Computer+Science+Laboratories%2C+140+Governors+Dr%2C+Amherst%2C+MA+01003">Computer Science Laboratories<br>140 Governors Dr<br>Amherst, MA 01003<br>United States</a></dd>
         <dt>Format</dt>
-        <dd>Invitation-only talks, panels, and working sessions</dd>
+        <dd>Invitation-only talks, panels, and poster sessions</dd>
         <dt>Audience</dt>
         <dd>Academic, industry, government, utility, and campus leadership communities</dd>
         <dt>Agenda</dt>
