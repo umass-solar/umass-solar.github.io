@@ -381,15 +381,6 @@ permalink: /scai-symposium/
     line-height: 1.6;
   }
 
-  .scai-layer-audience {
-    margin: 0 0 0.4rem !important;
-    color: var(--layer-color) !important;
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
   .scai-layer ul {
     margin: 0.9rem 0 0;
     padding-left: 1.05rem;
@@ -944,8 +935,7 @@ permalink: /scai-symposium/
     <div class="scai-layers">
       <article class="scai-layer">
         <span class="scai-layer-number" aria-hidden="true">01</span>
-        <p class="scai-layer-audience">AI models and workloads</p>
-        <h3>AI Models and Workloads</h3>
+        <h3>AI and Workloads</h3>
         <p>How models and workloads can expose and use flexibility while preserving useful service and research outcomes.</p>
         <ul>
           <li>Flexible training and inference through checkpointing, pause and resume, batching, model selection, and precision scaling</li>
@@ -956,8 +946,7 @@ permalink: /scai-symposium/
       </article>
       <article class="scai-layer">
         <span class="scai-layer-number" aria-hidden="true">02</span>
-        <p class="scai-layer-audience">Computer systems research</p>
-        <h3>Adaptive AI Systems and Computing Infrastructure</h3>
+        <h3>Computing Systems</h3>
         <p>How computing platforms can convert workload flexibility and changing resource conditions into reliable runtime action.</p>
         <ul>
           <li>Scheduling, placement, provisioning, and admission control across accelerators, clusters, clouds, and edge platforms</li>
@@ -968,8 +957,7 @@ permalink: /scai-symposium/
       </article>
       <article class="scai-layer">
         <span class="scai-layer-number" aria-hidden="true">03</span>
-        <p class="scai-layer-audience">Power, control, and public infrastructure</p>
-        <h3>AI Datacenters, Power Systems, and Public Infrastructure</h3>
+        <h3>Energy and Infrastructure</h3>
         <p>How large, dynamic AI loads interact with electric grids and the wider infrastructure systems that communities depend on.</p>
         <ul>
           <li>AI load modeling and forecasting, including effects on transmission, distribution, power quality, and stability</li>
