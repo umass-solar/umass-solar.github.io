@@ -4,6 +4,8 @@ title: "SCAI Research Symposium"
 permalink: /scai-symposium/
 ---
 
+<!-- SCAI symposium page reviewed August 17, 2026. -->
+
 <style>
   .scai-page {
     --scai-maroon: #881c1c;
