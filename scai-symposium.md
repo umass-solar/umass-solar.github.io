@@ -1098,8 +1098,8 @@ permalink: /scai-symposium/
         <h2 id="posters-heading">Call for Posters</h2>
       </div>
       <div class="scai-call-intro">
-        <p>The SCAI Research Symposium invites poster submissions on emerging research at the intersection of artificial intelligence, computing systems, sustainability, and public infrastructure.</p>
-        <p>We welcome recently published or accepted work, research in progress, preliminary findings, new research directions, empirical studies, systems and tools, datasets, testbeds, demonstrations, and interdisciplinary work. The poster session is intended to foster discussion across academia, industry, national laboratories, utilities, government, and public-interest organizations.</p>
+        <p>We invite poster submissions spanning AI, computing systems, sustainability, and public infrastructure.</p>
+        <p>Published or accepted work, work in progress, new research directions, systems, datasets, testbeds, demonstrations, and interdisciplinary research are welcome. The session is designed to foster exchange across research and practitioner communities.</p>
       </div>
     </div>
 
