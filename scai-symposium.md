@@ -462,8 +462,8 @@ permalink: /scai-symposium/
 
   .scai-speakers {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.15rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.85rem;
   }
 
   .scai-speaker {
@@ -484,12 +484,12 @@ permalink: /scai-symposium/
   }
 
   .scai-speaker-body {
-    padding: 1rem 1.1rem 1.15rem;
+    padding: 0.78rem 0.85rem 0.9rem;
   }
 
   .scai-speaker h3 {
-    margin: 0 0 0.3rem;
-    font-size: 1.17rem;
+    margin: 0 0 0.22rem;
+    font-size: 1.02rem;
     line-height: 1.25;
   }
 
@@ -507,8 +507,8 @@ permalink: /scai-symposium/
   .scai-speaker-role {
     margin: 0;
     color: var(--scai-muted) !important;
-    font-size: 0.92rem;
-    line-height: 1.48;
+    font-size: 0.82rem;
+    line-height: 1.42;
   }
 
   .scai-note {
@@ -621,7 +621,7 @@ permalink: /scai-symposium/
 
   .scai-lightning-details {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
     margin-top: 1.2rem;
   }
@@ -643,10 +643,6 @@ permalink: /scai-symposium/
     --detail-color: var(--scai-teal);
   }
 
-  .scai-lightning-detail:nth-child(3) {
-    --detail-color: var(--scai-blue);
-  }
-
   .scai-lightning-detail h3 {
     margin: 0 0 0.65rem;
     color: var(--scai-navy);
@@ -659,6 +655,16 @@ permalink: /scai-symposium/
     color: var(--scai-muted) !important;
     font-size: 0.9rem;
     line-height: 1.55;
+  }
+
+  .scai-lightning-detail p + p {
+    margin-top: 0.7rem;
+  }
+
+  .scai-lightning-detail .scai-submission-note {
+    margin-top: 0.8rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(29, 37, 44, 0.1);
   }
 
   .scai-lightning-detail ul,
@@ -676,16 +682,6 @@ permalink: /scai-symposium/
 
   .scai-lightning-detail li:last-child {
     margin-bottom: 0;
-  }
-
-  .scai-five-minute {
-    display: block;
-    margin-bottom: 0.7rem;
-    color: var(--scai-teal) !important;
-    font-size: clamp(1.9rem, 4vw, 2.7rem);
-    font-weight: 850;
-    letter-spacing: -0.05em;
-    line-height: 0.95;
   }
 
   .scai-submission-grid {
@@ -903,7 +899,7 @@ permalink: /scai-symposium/
           <p class="scai-hero-copy">A UMass-led forum imagining AI infrastructure as a flexible and responsible participant in the broader public-infrastructure ecosystem, designed to respect resource constraints and serve the public good.</p>
           <div class="scai-hero-actions">
             <a class="scai-call-link" href="#call-for-posters">Call for posters <span>Deadline: August 28, 2026</span></a>
-            <a class="scai-call-link" href="#call-for-lightning-talks">Call for lightning talks <span>One idea in 5 minutes</span></a>
+            <a class="scai-call-link" href="#call-for-lightning-talks">Call for lightning talks <span>Deadline: August 28, 2026</span></a>
           </div>
         </div>
         <div class="scai-logo-card">
@@ -1138,42 +1134,36 @@ permalink: /scai-symposium/
   <section class="scai-participation-call scai-lightning-call" id="call-for-lightning-talks" aria-labelledby="lightning-heading">
     <div class="scai-call-header">
       <div>
-        <p class="scai-call-kicker">Bring one idea into the conversation</p>
+        <p class="scai-call-kicker">Contribute to the conversation</p>
         <h2 id="lightning-heading">Call for Lightning Talks</h2>
       </div>
       <div class="scai-call-intro">
-        <p class="scai-lightning-tagline">One idea. Five minutes.</p>
-        <p>The SCAI Research Symposium invites submissions for 5-minute lightning talks highlighting exciting ideas, emerging research directions, recent results, and important challenges.</p>
-        <p>The session is designed to give researchers a focused way to introduce work or ideas to a broad, interdisciplinary community and spark conversations that continue throughout the symposium.</p>
+        <p class="scai-lightning-tagline">New results, open questions, and emerging directions.</p>
+        <p>The SCAI Research Symposium invites submissions for focused, 5-minute talks that introduce research or important challenges to an interdisciplinary community and spark further conversation.</p>
       </div>
     </div>
 
     <div class="scai-scope-reference">
-      <p><strong>Shared scope.</strong> Lightning talks should connect to the coupled research agenda and may engage one layer or bridge several. We especially welcome talks that help one research community see a consequential question, constraint, capability, or opportunity from another layer.</p>
+      <p><strong>Shared scope.</strong> Talks may engage one layer of the coupled research agenda or connect several. Cross-layer questions, constraints, capabilities, and opportunities are especially welcome.</p>
       <a href="#research-agenda">Review the research agenda</a>
     </div>
 
     <div class="scai-lightning-details">
       <article class="scai-lightning-detail">
-        <h3>Who we especially encourage</h3>
+        <h3>Who should submit</h3>
         <p>Senior graduate students and postdoctoral researchers on the job market, early-career faculty, and mid-career faculty working across AI, computing systems, power systems and control, or other public-infrastructure domains.</p>
+        <p>Published, accepted, ongoing, and preliminary work are all welcome; no paper is required.</p>
       </article>
 
       <article class="scai-lightning-detail">
-        <h3>What to propose</h3>
+        <h3>What works well</h3>
         <ul>
           <li>A recent or ongoing result</li>
-          <li>An emerging research direction or agenda</li>
-          <li>A provocative question or open problem</li>
-          <li>A system, dataset, testbed, measurement effort, or deployment experience</li>
-          <li>A technical or societal challenge that deserves greater attention</li>
+          <li>An emerging direction, open problem, or provocative question</li>
+          <li>A system, dataset, testbed, measurement effort, or deployment lesson</li>
+          <li>A cross-layer technical or societal challenge</li>
         </ul>
-      </article>
-
-      <article class="scai-lightning-detail">
-        <span class="scai-five-minute">5 min</span>
-        <h3>A deliberately focused format</h3>
-        <p>Do not compress a conventional conference presentation. Leave the audience with one memorable idea, result, question, or opportunity. Work may be published, accepted, ongoing, or preliminary; no paper is required.</p>
+        <p class="scai-submission-note">Keep the presentation focused rather than compressing a conventional conference talk.</p>
       </article>
     </div>
 
@@ -1181,19 +1171,18 @@ permalink: /scai-symposium/
       <div class="scai-submission-format">
         <h3>Submission format</h3>
         <ul>
-          <li>Talk title</li>
-          <li>Speaker name and affiliation</li>
+          <li>Talk title, speaker name, and affiliation</li>
           <li>A brief description of the proposed talk, up to 150 words</li>
           <li>The most relevant layer or layers of the coupled research agenda</li>
-          <li>A one-sentence answer to: <strong>What is the one idea you want the audience to take away from your five minutes?</strong></li>
+          <li>A one-sentence answer to: <strong>What should the audience remember or discuss after your talk?</strong></li>
         </ul>
-        <p class="scai-submission-note">The lightning-talk session will be non-archival, and no paper submission is required. Participation in the SCAI Research Symposium is by invitation.</p>
+        <p class="scai-submission-note">The session is non-archival. Participation in the SCAI Research Symposium is by invitation.</p>
       </div>
 
       <aside class="scai-dates" aria-label="Lightning-talk submission dates">
         <h3>Important dates</h3>
-        <p class="scai-date-item"><span>Submission deadline</span><strong>To be announced</strong></p>
-        <p class="scai-date-item"><span>Notification</span><strong>To be announced</strong></p>
+        <p class="scai-date-item"><span>Submission deadline</span><strong>August 28, 2026</strong></p>
+        <p class="scai-date-item"><span>Acceptance notification</span><strong>September 1, 2026</strong></p>
         <p class="scai-date-item"><span>Symposium</span><strong>September 17&ndash;18, 2026</strong></p>
         <span class="scai-submission-pending">Submission link coming soon</span>
       </aside>
