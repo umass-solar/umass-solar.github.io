@@ -941,12 +941,12 @@ permalink: /scai-symposium/
         <p class="scai-eyebrow">The shared intellectual framework</p>
         <h2 id="agenda-heading">One research agenda, three coupled layers</h2>
       </div>
-      <p>SCAI studies sustainable AI infrastructure as a coordinated system. Models and workloads expose flexibility; computing systems translate it into safe operational decisions; power systems and other public infrastructure define the physical, economic, and societal conditions in which those decisions must work. This agenda is the common scope for the symposium, the poster call, and the lightning-talk call.</p>
+      <p>SCAI studies sustainable AI infrastructure as a coordinated system. Models and workloads expose flexibility; computing systems translate it into safe operational decisions; power systems and other public infrastructure define the physical, economic, and societal conditions in which those decisions must work.</p>
     </div>
     <div class="scai-layers">
       <article class="scai-layer">
         <span class="scai-layer-number" aria-hidden="true">01</span>
-        <p class="scai-layer-audience">AI and machine-learning research</p>
+        <p class="scai-layer-audience">AI models and workloads</p>
         <h3>AI Models and Workloads</h3>
         <p>How models and workloads can expose and use flexibility while preserving useful service and research outcomes.</p>
         <ul>
