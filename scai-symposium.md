@@ -187,21 +187,6 @@ permalink: /scai-symposium/
     text-decoration: none;
   }
 
-  .scai-hero-context {
-    position: relative;
-    z-index: 1;
-    margin-top: clamp(1.25rem, 2vw, 1.7rem);
-    padding-top: clamp(1rem, 1.8vw, 1.35rem);
-    border-top: 1px solid rgba(5, 105, 151, 0.18);
-  }
-
-  .scai-hero-context p {
-    margin: 0;
-    color: #294b5c !important;
-    font-size: 0.88rem;
-    line-height: 1.62;
-  }
-
   .scai-factbox {
     position: relative;
     overflow: hidden;
@@ -920,9 +905,6 @@ permalink: /scai-symposium/
           <img src="{{ site.base }}/img/scai-logo-banner.png" alt="SCAI Sustainable Compute and AI logo">
         </div>
       </div>
-      <div class="scai-hero-context">
-        <p>Frontier AI infrastructure is becoming a coupled cyber-physical system in which model behavior, compute platforms, and the electric grid can no longer be optimized independently. The symposium will convene researchers, infrastructure builders, energy experts, public-interest partners, UMass campus leadership, and state officials to examine how training, inference, placement, cooling, and service design can adapt safely to power, capacity, reliability, and grid constraints while preserving the latency, availability, progress, and quality guarantees that make AI services useful.</p>
-      </div>
     </section>
     <aside class="scai-factbox" aria-label="Event details">
       <h3>Event details</h3>
@@ -955,7 +937,7 @@ permalink: /scai-symposium/
         <p class="scai-eyebrow">The shared intellectual framework</p>
         <h2 id="agenda-heading">One research agenda, three coupled layers</h2>
       </div>
-      <p>SCAI studies sustainable AI infrastructure as a coordinated system. Models and workloads expose flexibility; computing systems translate it into safe operational decisions; power systems and other public infrastructure define the physical, economic, and societal conditions in which those decisions must work.</p>
+      <p>Frontier AI infrastructure is becoming a coupled cyber-physical system in which models, computing platforms, power systems, and public infrastructure can no longer be designed or operated independently. Models and workloads expose flexibility; computing systems translate it into safe operational decisions; and power systems and other public infrastructure define the physical, economic, and societal conditions within which training, inference, placement, cooling, and service design must adapt while preserving application-level guarantees.</p>
     </div>
     <div class="scai-layers">
       <article class="scai-layer">
@@ -997,7 +979,7 @@ permalink: /scai-symposium/
     </div>
     <div class="scai-agenda-coupling">
       <strong>Coupling is the research problem.</strong>
-      <p>The agenda runs in both directions: infrastructure constraints must inform model and systems design, while workload capabilities and service objectives must inform datacenter, grid, and public-infrastructure planning and control. Work may go deeply into one layer, but should make its relationship to the coupled system legible.</p>
+      <p>The agenda runs in both directions: infrastructure constraints must inform model and systems design, while workload capabilities and service objectives must inform datacenter, grid, and public-infrastructure planning and control.</p>
     </div>
     <div class="scai-community-row" aria-label="Research communities convened by the agenda">
       <span>AI and machine learning</span>
@@ -1140,7 +1122,7 @@ permalink: /scai-symposium/
         <p class="scai-date-item"><span>Submission deadline</span><strong>August 28, 2026</strong></p>
         <p class="scai-date-item"><span>Acceptance notification</span><strong>September 1, 2026</strong></p>
         <p class="scai-date-item"><span>Symposium</span><strong>September 17&ndash;18, 2026</strong></p>
-        <a class="scai-submission-link" href="https://forms.gle/Ayhcj3Z9JGedDrcY9">Submit a poster</a>
+        <a class="scai-submission-link" href="https://forms.gle/Ayhcj3Z9JGedDrcY9" target="_blank" rel="noopener noreferrer">Submit a poster</a>
       </aside>
     </div>
   </section>
@@ -1198,7 +1180,7 @@ permalink: /scai-symposium/
         <p class="scai-date-item"><span>Submission deadline</span><strong>August 28, 2026</strong></p>
         <p class="scai-date-item"><span>Acceptance notification</span><strong>September 1, 2026</strong></p>
         <p class="scai-date-item"><span>Symposium</span><strong>September 17&ndash;18, 2026</strong></p>
-        <a class="scai-submission-link" href="https://forms.gle/YaBgLckyGhicvvGp8">Submit a lightning talk</a>
+        <a class="scai-submission-link" href="https://forms.gle/YaBgLckyGhicvvGp8" target="_blank" rel="noopener noreferrer">Submit a lightning talk</a>
       </aside>
     </div>
   </section>
