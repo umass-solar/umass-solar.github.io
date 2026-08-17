@@ -746,7 +746,8 @@ permalink: /scai-symposium/
     font-size: 0.96rem;
   }
 
-  .scai-submission-pending {
+  .scai-submission-pending,
+  .scai-submission-link {
     display: block;
     margin-top: 0.85rem;
     padding: 0.65rem 0.8rem;
@@ -756,6 +757,19 @@ permalink: /scai-symposium/
     font-size: 0.8rem;
     font-weight: 700;
     text-align: center;
+  }
+
+  .scai-submission-link {
+    background: #fff;
+    color: var(--scai-navy) !important;
+    text-decoration: none;
+  }
+
+  .scai-submission-link:hover,
+  .scai-submission-link:focus {
+    background: #dbeef5;
+    color: var(--scai-navy) !important;
+    text-decoration: none;
   }
 
   .scai-callout {
@@ -1126,7 +1140,7 @@ permalink: /scai-symposium/
         <p class="scai-date-item"><span>Submission deadline</span><strong>August 28, 2026</strong></p>
         <p class="scai-date-item"><span>Acceptance notification</span><strong>September 1, 2026</strong></p>
         <p class="scai-date-item"><span>Symposium</span><strong>September 17&ndash;18, 2026</strong></p>
-        <span class="scai-submission-pending">Submission link coming soon</span>
+        <a class="scai-submission-link" href="https://forms.gle/Ayhcj3Z9JGedDrcY9">Submit a poster</a>
       </aside>
     </div>
   </section>
@@ -1184,7 +1198,7 @@ permalink: /scai-symposium/
         <p class="scai-date-item"><span>Submission deadline</span><strong>August 28, 2026</strong></p>
         <p class="scai-date-item"><span>Acceptance notification</span><strong>September 1, 2026</strong></p>
         <p class="scai-date-item"><span>Symposium</span><strong>September 17&ndash;18, 2026</strong></p>
-        <span class="scai-submission-pending">Submission link coming soon</span>
+        <a class="scai-submission-link" href="https://forms.gle/YaBgLckyGhicvvGp8">Submit a lightning talk</a>
       </aside>
     </div>
   </section>
