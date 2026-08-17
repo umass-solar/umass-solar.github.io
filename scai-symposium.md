@@ -157,7 +157,7 @@ permalink: /scai-symposium/
     margin-top: 1rem;
   }
 
-  .scai-poster-link {
+  .scai-call-link {
     display: inline-flex;
     align-items: center;
     gap: 0.65rem;
@@ -172,7 +172,7 @@ permalink: /scai-symposium/
     box-shadow: 0 0.45rem 1rem rgba(7, 54, 102, 0.16);
   }
 
-  .scai-poster-link span {
+  .scai-call-link span {
     padding-left: 0.65rem;
     border-left: 1px solid rgba(255, 255, 255, 0.38);
     color: #dbeef5 !important;
@@ -180,8 +180,8 @@ permalink: /scai-symposium/
     font-weight: 650;
   }
 
-  .scai-poster-link:hover,
-  .scai-poster-link:focus {
+  .scai-call-link:hover,
+  .scai-call-link:focus {
     background: var(--scai-green);
     color: #fff;
     text-decoration: none;
@@ -255,6 +255,21 @@ permalink: /scai-symposium/
     margin: 3.5rem 0;
   }
 
+  .scai-agenda {
+    scroll-margin-top: 1.5rem;
+    padding: clamp(1.5rem, 3.5vw, 2.75rem);
+    border: 1px solid rgba(5, 105, 151, 0.16);
+    border-radius: 1rem;
+    background:
+      radial-gradient(circle at 100% 0%, rgba(5, 105, 151, 0.1), transparent 29%),
+      linear-gradient(145deg, #fcfdf9 0%, #f3f8f5 50%, #f1f8fb 100%);
+    box-shadow: 0 1rem 2.5rem rgba(7, 54, 102, 0.08);
+  }
+
+  .scai-section-header .scai-eyebrow {
+    margin-bottom: 0.5rem;
+  }
+
   .scai-codec {
     display: grid;
     grid-template-columns: minmax(0, 1.25fr) minmax(220px, 0.75fr);
@@ -325,11 +340,33 @@ permalink: /scai-symposium/
   }
 
   .scai-layer {
+    position: relative;
+    overflow: hidden;
     min-height: 100%;
     padding: 1.4rem;
     border: 1px solid var(--scai-line);
     border-radius: 0.7rem;
     background: #fff;
+  }
+
+  .scai-layer::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 0.34rem;
+    background: var(--scai-maroon);
+  }
+
+  .scai-layer:nth-child(1) {
+    --layer-color: var(--scai-lime);
+  }
+
+  .scai-layer:nth-child(2) {
+    --layer-color: var(--scai-teal);
+  }
+
+  .scai-layer:nth-child(3) {
+    --layer-color: var(--scai-blue);
   }
 
   .scai-layer-number {
@@ -339,7 +376,7 @@ permalink: /scai-symposium/
     place-items: center;
     margin-bottom: 0.85rem;
     border-radius: 50%;
-    background: var(--scai-maroon);
+    background: var(--layer-color);
     color: #fff !important;
     font-size: 0.8rem;
     font-weight: 700;
@@ -347,13 +384,80 @@ permalink: /scai-symposium/
 
   .scai-layer h3 {
     margin: 0 0 0.55rem;
+    color: var(--scai-navy);
     font-size: 1.12rem;
   }
 
-  .scai-layer p {
+  .scai-layer > p {
     margin: 0;
     color: var(--scai-muted);
     line-height: 1.6;
+  }
+
+  .scai-layer-audience {
+    margin: 0 0 0.4rem !important;
+    color: var(--layer-color) !important;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .scai-layer ul {
+    margin: 0.9rem 0 0;
+    padding-left: 1.05rem;
+  }
+
+  .scai-layer li {
+    margin-bottom: 0.5rem;
+    color: #3f4e57 !important;
+    font-size: 0.86rem;
+    line-height: 1.47;
+  }
+
+  .scai-layer li:last-child {
+    margin-bottom: 0;
+  }
+
+  .scai-agenda-coupling {
+    display: grid;
+    grid-template-columns: minmax(190px, 0.48fr) minmax(0, 1.52fr);
+    gap: clamp(1rem, 3vw, 2rem);
+    align-items: center;
+    margin-top: 1rem;
+    padding: 1.1rem 1.25rem;
+    border-left: 5px solid var(--scai-teal);
+    border-radius: 0 0.7rem 0.7rem 0;
+    background: linear-gradient(105deg, #eef7f3, #edf6fa);
+  }
+
+  .scai-agenda-coupling strong {
+    color: var(--scai-navy) !important;
+    font-size: 1.02rem;
+  }
+
+  .scai-agenda-coupling p {
+    margin: 0;
+    color: #3c505c !important;
+    font-size: 0.91rem;
+    line-height: 1.58;
+  }
+
+  .scai-community-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-top: 1rem;
+  }
+
+  .scai-community-row span {
+    padding: 0.45rem 0.7rem;
+    border: 1px solid rgba(5, 105, 151, 0.18);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--scai-navy) !important;
+    font-size: 0.78rem;
+    font-weight: 700;
   }
 
   .scai-speakers {
@@ -413,7 +517,7 @@ permalink: /scai-symposium/
     font-size: 0.82rem;
   }
 
-  .scai-poster-call {
+  .scai-participation-call {
     scroll-margin-top: 1.5rem;
     margin: 4rem 0 3.5rem;
     padding: clamp(1.5rem, 3.5vw, 2.75rem);
@@ -425,7 +529,14 @@ permalink: /scai-symposium/
     box-shadow: 0 1rem 2.5rem rgba(7, 54, 102, 0.08);
   }
 
-  .scai-poster-header {
+  .scai-lightning-call {
+    margin-top: 3.5rem;
+    background:
+      radial-gradient(circle at 0% 0%, rgba(103, 180, 44, 0.12), transparent 29%),
+      linear-gradient(145deg, #fbfcf8 0%, #f2f8f4 48%, #eef7fa 100%);
+  }
+
+  .scai-call-header {
     display: grid;
     grid-template-columns: minmax(190px, 0.55fr) minmax(0, 1.45fr);
     gap: clamp(1.25rem, 4vw, 3.5rem);
@@ -435,7 +546,7 @@ permalink: /scai-symposium/
     border-bottom: 1px solid rgba(5, 105, 151, 0.18);
   }
 
-  .scai-poster-kicker {
+  .scai-call-kicker {
     margin: 0 0 0.4rem;
     color: var(--scai-green) !important;
     font-size: 0.74rem;
@@ -444,107 +555,137 @@ permalink: /scai-symposium/
     text-transform: uppercase;
   }
 
-  .scai-poster-header h2 {
+  .scai-call-header h2 {
     margin: 0;
     color: var(--scai-navy);
     font-size: clamp(1.75rem, 3vw, 2.4rem);
     letter-spacing: -0.03em;
   }
 
-  .scai-poster-intro p {
+  .scai-call-intro p {
     margin: 0 0 0.7rem;
     color: #3c505c !important;
     line-height: 1.62;
   }
 
-  .scai-poster-intro p:last-child {
+  .scai-call-intro p:last-child {
     margin-bottom: 0;
   }
 
-  .scai-poster-themes {
+  .scai-lightning-tagline {
+    color: var(--scai-navy) !important;
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  .scai-scope-reference {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1.25rem;
+    align-items: center;
+    margin: 1rem 0 0;
+    padding: 1rem 1.1rem;
+    border-left: 4px solid var(--scai-teal);
+    background: rgba(255, 255, 255, 0.78);
+  }
+
+  .scai-scope-reference p {
+    margin: 0;
+    color: #3c505c !important;
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .scai-scope-reference strong {
+    color: var(--scai-navy) !important;
+  }
+
+  .scai-scope-reference a {
+    display: inline-block;
+    padding: 0.58rem 0.8rem;
+    border: 1px solid var(--scai-green);
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 750;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .scai-scope-reference a:hover,
+  .scai-scope-reference a:focus {
+    background: var(--scai-green);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .scai-lightning-details {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
+    margin-top: 1.2rem;
   }
 
-  .scai-poster-theme {
-    position: relative;
-    overflow: hidden;
-    padding: 1.3rem;
+  .scai-lightning-detail {
+    min-width: 0;
+    padding: 1.2rem;
     border: 1px solid rgba(29, 37, 44, 0.12);
+    border-top: 0.3rem solid var(--detail-color);
     border-radius: 0.75rem;
     background: rgba(255, 255, 255, 0.92);
   }
 
-  .scai-poster-theme::before {
-    content: "";
-    position: absolute;
-    inset: 0 0 auto;
-    height: 0.3rem;
-    background: var(--theme-color);
+  .scai-lightning-detail:nth-child(1) {
+    --detail-color: var(--scai-lime);
   }
 
-  .scai-poster-theme:nth-child(1) {
-    --theme-color: var(--scai-lime);
+  .scai-lightning-detail:nth-child(2) {
+    --detail-color: var(--scai-teal);
   }
 
-  .scai-poster-theme:nth-child(2) {
-    --theme-color: var(--scai-teal);
+  .scai-lightning-detail:nth-child(3) {
+    --detail-color: var(--scai-blue);
   }
 
-  .scai-poster-theme:nth-child(3) {
-    --theme-color: var(--scai-blue);
-  }
-
-  .scai-theme-number {
-    display: block;
-    margin: 0.2rem 0 0.55rem;
-    color: var(--theme-color) !important;
-    font-size: 0.74rem;
-    font-weight: 800;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-
-  .scai-poster-theme h3 {
+  .scai-lightning-detail h3 {
     margin: 0 0 0.65rem;
     color: var(--scai-navy);
-    font-size: 1.08rem;
+    font-size: 1.05rem;
     line-height: 1.3;
   }
 
-  .scai-poster-theme > p {
-    margin: 0 0 0.85rem;
+  .scai-lightning-detail p {
+    margin: 0;
     color: var(--scai-muted) !important;
     font-size: 0.9rem;
-    line-height: 1.52;
+    line-height: 1.55;
   }
 
-  .scai-poster-theme ul,
+  .scai-lightning-detail ul,
   .scai-submission-format ul {
     margin: 0;
     padding-left: 1.05rem;
   }
 
-  .scai-poster-theme li {
-    margin-bottom: 0.55rem;
+  .scai-lightning-detail li {
+    margin-bottom: 0.45rem;
     color: #3f4e57 !important;
     font-size: 0.86rem;
     line-height: 1.47;
   }
 
-  .scai-poster-theme li:last-child {
+  .scai-lightning-detail li:last-child {
     margin-bottom: 0;
   }
 
-  .scai-cross-theme {
-    margin: 1rem 0 0;
-    padding: 0.9rem 1rem;
-    border-left: 4px solid var(--scai-teal);
-    background: rgba(255, 255, 255, 0.7);
-    color: #3c505c !important;
-    font-size: 0.9rem;
-    line-height: 1.55;
+  .scai-five-minute {
+    display: block;
+    margin-bottom: 0.7rem;
+    color: var(--scai-teal) !important;
+    font-size: clamp(1.9rem, 4vw, 2.7rem);
+    font-weight: 850;
+    letter-spacing: -0.05em;
+    line-height: 0.95;
   }
 
   .scai-submission-grid {
@@ -686,8 +827,10 @@ permalink: /scai-symposium/
 
     .scai-codec,
     .scai-section-header,
-    .scai-poster-header,
+    .scai-call-header,
+    .scai-scope-reference,
     .scai-submission-grid,
+    .scai-agenda-coupling,
     .scai-callout {
       grid-template-columns: 1fr;
     }
@@ -697,13 +840,20 @@ permalink: /scai-symposium/
     }
 
     .scai-layers,
-    .scai-speakers,
-    .scai-poster-themes {
+    .scai-speakers {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .scai-poster-theme:last-child {
+    .scai-layer:last-child {
       grid-column: 1 / -1;
+    }
+
+    .scai-lightning-details {
+      grid-template-columns: 1fr;
+    }
+
+    .scai-scope-reference a {
+      justify-self: start;
     }
   }
 
@@ -717,22 +867,21 @@ permalink: /scai-symposium/
     }
 
     .scai-layers,
-    .scai-speakers,
-    .scai-poster-themes {
+    .scai-speakers {
       grid-template-columns: 1fr;
     }
 
-    .scai-poster-theme:last-child {
+    .scai-layer:last-child {
       grid-column: auto;
     }
 
-    .scai-poster-link {
+    .scai-call-link {
       align-items: flex-start;
       flex-direction: column;
       border-radius: 0.65rem;
     }
 
-    .scai-poster-link span {
+    .scai-call-link span {
       padding: 0;
       border-left: 0;
     }
@@ -753,7 +902,8 @@ permalink: /scai-symposium/
           </h2>
           <p class="scai-hero-copy">A UMass-led forum imagining AI infrastructure as a flexible and responsible participant in the broader public-infrastructure ecosystem, designed to respect resource constraints and serve the public good.</p>
           <div class="scai-hero-actions">
-            <a class="scai-poster-link" href="#call-for-posters">Call for posters <span>Deadline: August 28, 2026</span></a>
+            <a class="scai-call-link" href="#call-for-posters">Call for posters <span>Deadline: August 28, 2026</span></a>
+            <a class="scai-call-link" href="#call-for-lightning-talks">Call for lightning talks <span>One idea in 5 minutes</span></a>
           </div>
         </div>
         <div class="scai-logo-card">
@@ -789,27 +939,61 @@ permalink: /scai-symposium/
     <a class="scai-codec-link" href="https://codecexp.us/">Visit NSF CoDec</a>
   </section>
 
-  <section class="scai-section" aria-labelledby="agenda-heading">
+  <section class="scai-section scai-agenda" id="research-agenda" aria-labelledby="agenda-heading">
     <div class="scai-section-header">
-      <h2 id="agenda-heading">A coupled research agenda</h2>
-      <p>SCAI is a UMass-led, compute-first initiative focused on service-guarantee-preserving infrastructure control: coordinating AI workloads, computing systems, and energy constraints as one integrated stack.</p>
+      <div>
+        <p class="scai-eyebrow">The shared intellectual framework</p>
+        <h2 id="agenda-heading">One research agenda, three coupled layers</h2>
+      </div>
+      <p>SCAI studies sustainable AI infrastructure as a coordinated system. Models and workloads expose flexibility; computing systems translate it into safe operational decisions; power systems and other public infrastructure define the physical, economic, and societal conditions in which those decisions must work. This agenda is the common scope for the symposium, the poster call, and the lightning-talk call.</p>
     </div>
     <div class="scai-layers">
       <article class="scai-layer">
         <span class="scai-layer-number" aria-hidden="true">01</span>
-        <h3>AI workloads</h3>
-        <p>Training cadence, checkpointing, inference tiers, latency, availability, quality, and progress objectives.</p>
+        <p class="scai-layer-audience">AI and machine-learning research</p>
+        <h3>AI Models and Workloads</h3>
+        <p>How models and workloads can expose and use flexibility while preserving useful service and research outcomes.</p>
+        <ul>
+          <li>Flexible training and inference through checkpointing, pause and resume, batching, model selection, and precision scaling</li>
+          <li>Trade-offs among accuracy, latency, throughput, availability, progress, cost, and resource consumption</li>
+          <li>Efficient model techniques, including compression, sparsity, quantization, and workload-aware optimization</li>
+          <li>Measurement and lifecycle analysis of energy, carbon, water, and material footprints</li>
+        </ul>
       </article>
       <article class="scai-layer">
         <span class="scai-layer-number" aria-hidden="true">02</span>
-        <h3>Compute infrastructure</h3>
-        <p>Accelerators, interconnects, placement, memory and storage bottlenecks, queues, utilization, cooling, and reliability headroom.</p>
+        <p class="scai-layer-audience">Computer systems research</p>
+        <h3>Adaptive AI Systems and Computing Infrastructure</h3>
+        <p>How computing platforms can convert workload flexibility and changing resource conditions into reliable runtime action.</p>
+        <ul>
+          <li>Scheduling, placement, provisioning, and admission control across accelerators, clusters, clouds, and edge platforms</li>
+          <li>Coordination across heterogeneous and geographically distributed computing resources</li>
+          <li>Telemetry, forecasting, and feedback control across compute, network, storage, cooling, thermal, and power conditions</li>
+          <li>Reliability, recovery, and controlled degradation that preserve application-level service objectives</li>
+        </ul>
       </article>
       <article class="scai-layer">
         <span class="scai-layer-number" aria-hidden="true">03</span>
-        <h3>Energy context</h3>
-        <p>Power availability, demand response, cost, carbon, curtailment and recovery events, siting constraints, and grid risk.</p>
+        <p class="scai-layer-audience">Power, control, and public infrastructure</p>
+        <h3>AI Datacenters, Power Systems, and Public Infrastructure</h3>
+        <p>How large, dynamic AI loads interact with electric grids and the wider infrastructure systems that communities depend on.</p>
+        <ul>
+          <li>AI load modeling and forecasting, including effects on transmission, distribution, power quality, and stability</li>
+          <li>Datacenter siting and interconnection, resource adequacy, capacity expansion, and coordinated infrastructure planning</li>
+          <li>Grid-responsive control, demand response, ramp management, curtailment and recovery, ancillary services, and on-site resources</li>
+          <li>Markets, tariffs, reliability, affordability, water, land, governance, and impacts on the public good</li>
+        </ul>
       </article>
+    </div>
+    <div class="scai-agenda-coupling">
+      <strong>Coupling is the research problem.</strong>
+      <p>The agenda runs in both directions: infrastructure constraints must inform model and systems design, while workload capabilities and service objectives must inform datacenter, grid, and public-infrastructure planning and control. Work may go deeply into one layer, but should make its relationship to the coupled system legible.</p>
+    </div>
+    <div class="scai-community-row" aria-label="Research communities convened by the agenda">
+      <span>AI and machine learning</span>
+      <span>Computer and distributed systems</span>
+      <span>Power systems and control</span>
+      <span>Public infrastructure, planning, and policy</span>
     </div>
   </section>
 
@@ -911,58 +1095,22 @@ permalink: /scai-symposium/
     <p class="scai-note">Speaker participation is subject to confirmation. The symposium agenda will be available soon.</p>
   </section>
 
-  <section class="scai-poster-call" id="call-for-posters" aria-labelledby="posters-heading">
-    <div class="scai-poster-header">
+  <section class="scai-participation-call scai-poster-call" id="call-for-posters" aria-labelledby="posters-heading">
+    <div class="scai-call-header">
       <div>
-        <p class="scai-poster-kicker">Participate in the symposium</p>
+        <p class="scai-call-kicker">Participate in the symposium</p>
         <h2 id="posters-heading">Call for Posters</h2>
       </div>
-      <div class="scai-poster-intro">
+      <div class="scai-call-intro">
         <p>The SCAI Research Symposium invites poster submissions on emerging research at the intersection of artificial intelligence, computing systems, sustainability, and public infrastructure.</p>
         <p>We welcome recently published or accepted work, research in progress, preliminary findings, new research directions, empirical studies, systems and tools, datasets, testbeds, demonstrations, and interdisciplinary work. The poster session is intended to foster discussion across academia, industry, national laboratories, utilities, government, and public-interest organizations.</p>
-        <p>Submissions may address one or more of the following themes. The examples are illustrative rather than exhaustive.</p>
       </div>
     </div>
 
-    <div class="scai-poster-themes">
-      <article class="scai-poster-theme">
-        <span class="scai-theme-number">Theme 01</span>
-        <h3>AI Models and Workloads: Flexibility, Trade-offs, and Environmental Footprints</h3>
-        <p>How AI models and workloads can use resources more flexibly while balancing performance, service quality, and environmental impact.</p>
-        <ul>
-          <li>Flexible training and inference through checkpointing, pause and resume, batching, model selection, and precision scaling</li>
-          <li>Trade-offs among accuracy, latency, throughput, availability, cost, and resource consumption</li>
-          <li>Resource-efficient models and algorithms, including compression, sparsity, quantization, and workload-aware optimization</li>
-          <li>Measurement and lifecycle analysis of the energy, carbon, water, and material footprints of AI models and services</li>
-        </ul>
-      </article>
-
-      <article class="scai-poster-theme">
-        <span class="scai-theme-number">Theme 02</span>
-        <h3>Adaptive AI Systems and Computing Infrastructure</h3>
-        <p>Computing systems that respond safely and efficiently to changing operating conditions and resource availability.</p>
-        <ul>
-          <li>Adaptive scheduling, placement, provisioning, and admission control across accelerators, clusters, clouds, and edge platforms</li>
-          <li>Coordination of workloads across heterogeneous or geographically distributed computing resources</li>
-          <li>Telemetry, forecasting, and runtime control under changing compute, network, storage, cooling, or thermal conditions</li>
-          <li>Reliability, recovery, controlled degradation, and adaptation that preserve application-level service guarantees</li>
-        </ul>
-      </article>
-
-      <article class="scai-poster-theme">
-        <span class="scai-theme-number">Theme 03</span>
-        <h3>AI Datacenters, Power Systems, and Public Infrastructure</h3>
-        <p>AI datacenters as large, dynamic, and potentially controllable loads coupled with power systems and other public infrastructure.</p>
-        <ul>
-          <li>Modeling and forecasting AI datacenter loads and their effects on transmission, distribution, power quality, and system stability</li>
-          <li>Datacenter siting and interconnection, resource adequacy, capacity expansion, and coordinated infrastructure planning</li>
-          <li>Grid-responsive operation, including demand response, ramp management, curtailment and recovery, ancillary services, and behind-the-meter resources</li>
-          <li>Electricity markets, tariffs, flexibility contracts, reliability standards, and governance that address affordability, environmental constraints, water use, and the public good</li>
-        </ul>
-      </article>
+    <div class="scai-scope-reference">
+      <p><strong>Shared scope.</strong> Poster submissions may focus deeply on any one layer of the coupled research agenda or connect multiple layers. Cross-layer work that makes the relationship between AI, computing systems, and power or public infrastructure explicit is particularly encouraged.</p>
+      <a href="#research-agenda">Review the research agenda</a>
     </div>
-
-    <p class="scai-cross-theme"><strong>Cross-theme work is particularly encouraged,</strong> including research that connects workload flexibility with system adaptation or public-infrastructure coordination.</p>
 
     <div class="scai-submission-grid">
       <div class="scai-submission-format">
@@ -970,7 +1118,7 @@ permalink: /scai-symposium/
         <ul>
           <li>A title, author list, affiliations, and contact information</li>
           <li>A brief abstract of up to 500 words describing the problem, motivation, approach, contribution, and current status of the work</li>
-          <li>The most relevant symposium theme or themes</li>
+          <li>The most relevant layer or layers of the coupled research agenda</li>
           <li>For recently published or accepted work, the full citation and a link to the publication</li>
           <li>For work in progress, a brief description of preliminary findings, anticipated contributions, or questions on which feedback would be valuable</li>
         </ul>
@@ -981,6 +1129,71 @@ permalink: /scai-symposium/
         <h3>Important dates</h3>
         <p class="scai-date-item"><span>Submission deadline</span><strong>August 28, 2026</strong></p>
         <p class="scai-date-item"><span>Acceptance notification</span><strong>September 1, 2026</strong></p>
+        <p class="scai-date-item"><span>Symposium</span><strong>September 17&ndash;18, 2026</strong></p>
+        <span class="scai-submission-pending">Submission link coming soon</span>
+      </aside>
+    </div>
+  </section>
+
+  <section class="scai-participation-call scai-lightning-call" id="call-for-lightning-talks" aria-labelledby="lightning-heading">
+    <div class="scai-call-header">
+      <div>
+        <p class="scai-call-kicker">Bring one idea into the conversation</p>
+        <h2 id="lightning-heading">Call for Lightning Talks</h2>
+      </div>
+      <div class="scai-call-intro">
+        <p class="scai-lightning-tagline">One idea. Five minutes.</p>
+        <p>The SCAI Research Symposium invites submissions for 5-minute lightning talks highlighting exciting ideas, emerging research directions, recent results, and important challenges.</p>
+        <p>The session is designed to give researchers a focused way to introduce work or ideas to a broad, interdisciplinary community and spark conversations that continue throughout the symposium.</p>
+      </div>
+    </div>
+
+    <div class="scai-scope-reference">
+      <p><strong>Shared scope.</strong> Lightning talks should connect to the coupled research agenda and may engage one layer or bridge several. We especially welcome talks that help one research community see a consequential question, constraint, capability, or opportunity from another layer.</p>
+      <a href="#research-agenda">Review the research agenda</a>
+    </div>
+
+    <div class="scai-lightning-details">
+      <article class="scai-lightning-detail">
+        <h3>Who we especially encourage</h3>
+        <p>Senior graduate students and postdoctoral researchers on the job market, early-career faculty, and mid-career faculty working across AI, computing systems, power systems and control, or other public-infrastructure domains.</p>
+      </article>
+
+      <article class="scai-lightning-detail">
+        <h3>What to propose</h3>
+        <ul>
+          <li>A recent or ongoing result</li>
+          <li>An emerging research direction or agenda</li>
+          <li>A provocative question or open problem</li>
+          <li>A system, dataset, testbed, measurement effort, or deployment experience</li>
+          <li>A technical or societal challenge that deserves greater attention</li>
+        </ul>
+      </article>
+
+      <article class="scai-lightning-detail">
+        <span class="scai-five-minute">5 min</span>
+        <h3>A deliberately focused format</h3>
+        <p>Do not compress a conventional conference presentation. Leave the audience with one memorable idea, result, question, or opportunity. Work may be published, accepted, ongoing, or preliminary; no paper is required.</p>
+      </article>
+    </div>
+
+    <div class="scai-submission-grid">
+      <div class="scai-submission-format">
+        <h3>Submission format</h3>
+        <ul>
+          <li>Talk title</li>
+          <li>Speaker name and affiliation</li>
+          <li>A brief description of the proposed talk, up to 150 words</li>
+          <li>The most relevant layer or layers of the coupled research agenda</li>
+          <li>A one-sentence answer to: <strong>What is the one idea you want the audience to take away from your five minutes?</strong></li>
+        </ul>
+        <p class="scai-submission-note">The lightning-talk session will be non-archival, and no paper submission is required. Participation in the SCAI Research Symposium is by invitation.</p>
+      </div>
+
+      <aside class="scai-dates" aria-label="Lightning-talk submission dates">
+        <h3>Important dates</h3>
+        <p class="scai-date-item"><span>Submission deadline</span><strong>To be announced</strong></p>
+        <p class="scai-date-item"><span>Notification</span><strong>To be announced</strong></p>
         <p class="scai-date-item"><span>Symposium</span><strong>September 17&ndash;18, 2026</strong></p>
         <span class="scai-submission-pending">Submission link coming soon</span>
       </aside>
