@@ -896,7 +896,7 @@ permalink: /scai-symposium/
             <span class="scai-hero-line">AI infrastructure for a</span>
             <span class="scai-hero-line">resource-constrained world</span>
           </h2>
-          <p class="scai-hero-copy">A UMass-led forum imagining AI infrastructure as a flexible and responsible participant in the broader public-infrastructure ecosystem, designed to respect resource constraints and serve the public good.</p>
+          <p class="scai-hero-copy">A symposium imagining AI infrastructure as a flexible and responsible participant in the broader public-infrastructure ecosystem, designed to respect resource constraints and serve the public good.</p>
           <div class="scai-hero-actions">
             <a class="scai-call-link" href="#call-for-posters">Call for posters <span>Deadline: August 28, 2026</span></a>
             <a class="scai-call-link" href="#call-for-lightning-talks">Call for lightning talks <span>Deadline: August 28, 2026</span></a>
