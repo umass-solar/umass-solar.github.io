@@ -1110,7 +1110,8 @@ permalink: /scai-symposium/
       <aside class="scai-dates" aria-label="Poster submission dates">
         <h3>Important dates</h3>
         <p class="scai-date-item"><span>Submission deadline</span><strong>August 28, 2026</strong></p>
-        <p class="scai-date-item"><span>Acceptance notification</span><strong>September 1, 2026</strong></p>
+        <p class="scai-date-item"><span>Acceptance notification</span><strong>August 31, 2026</strong></p>
+        <p class="scai-date-item"><span>Registration deadline</span><strong>September 2, 2026</strong></p>
         <p class="scai-date-item"><span>Symposium</span><strong>September 17&ndash;18, 2026</strong></p>
         <a class="scai-submission-link" href="https://forms.gle/Ayhcj3Z9JGedDrcY9" target="_blank" rel="noopener noreferrer">Submit a poster</a>
       </aside>
@@ -1168,7 +1169,8 @@ permalink: /scai-symposium/
       <aside class="scai-dates" aria-label="Lightning-talk submission dates">
         <h3>Important dates</h3>
         <p class="scai-date-item"><span>Submission deadline</span><strong>August 28, 2026</strong></p>
-        <p class="scai-date-item"><span>Acceptance notification</span><strong>September 1, 2026</strong></p>
+        <p class="scai-date-item"><span>Acceptance notification</span><strong>August 31, 2026</strong></p>
+        <p class="scai-date-item"><span>Registration deadline</span><strong>September 2, 2026</strong></p>
         <p class="scai-date-item"><span>Symposium</span><strong>September 17&ndash;18, 2026</strong></p>
         <a class="scai-submission-link" href="https://forms.gle/YaBgLckyGhicvvGp8" target="_blank" rel="noopener noreferrer">Submit a lightning talk</a>
       </aside>
