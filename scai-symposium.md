@@ -924,61 +924,6 @@ permalink: /scai-symposium/
     <a class="scai-codec-link" href="https://codecexp.us/">Visit NSF CoDec</a>
   </section>
 
-  <section class="scai-section scai-agenda" id="research-agenda" aria-labelledby="agenda-heading">
-    <div class="scai-section-header">
-      <div>
-        <p class="scai-eyebrow">The shared intellectual framework</p>
-        <h2 id="agenda-heading">One research agenda, three coupled layers</h2>
-      </div>
-      <p>Frontier AI infrastructure is becoming a coupled cyber-physical system in which models, computing platforms, power systems, and public infrastructure can no longer be designed or operated independently. Models and workloads expose flexibility; computing systems translate it into safe operational decisions; and power systems and other public infrastructure define the physical, economic, and societal conditions within which training, inference, placement, cooling, and service design must adapt while preserving application-level guarantees.</p>
-    </div>
-    <div class="scai-layers">
-      <article class="scai-layer">
-        <span class="scai-layer-number" aria-hidden="true">01</span>
-        <h3>AI and Workloads</h3>
-        <p>How models and workloads can expose and use flexibility while preserving useful service and research outcomes.</p>
-        <ul>
-          <li>Flexible training and inference through checkpointing, pause and resume, batching, model selection, and precision scaling</li>
-          <li>Trade-offs among accuracy, latency, throughput, availability, progress, cost, and resource consumption</li>
-          <li>Efficient model techniques, including compression, sparsity, quantization, and workload-aware optimization</li>
-          <li>Measurement and lifecycle analysis of energy, carbon, water, and material footprints</li>
-        </ul>
-      </article>
-      <article class="scai-layer">
-        <span class="scai-layer-number" aria-hidden="true">02</span>
-        <h3>Computing Systems</h3>
-        <p>How computing platforms can convert workload flexibility and changing resource conditions into reliable runtime action.</p>
-        <ul>
-          <li>Scheduling, placement, provisioning, and admission control across accelerators, clusters, clouds, and edge platforms</li>
-          <li>Coordination across heterogeneous and geographically distributed computing resources</li>
-          <li>Telemetry, forecasting, and feedback control across compute, network, storage, cooling, thermal, and power conditions</li>
-          <li>Reliability, recovery, and controlled degradation that preserve application-level service objectives</li>
-        </ul>
-      </article>
-      <article class="scai-layer">
-        <span class="scai-layer-number" aria-hidden="true">03</span>
-        <h3>Energy and Infrastructure</h3>
-        <p>How large, dynamic AI loads interact with electric grids and the wider infrastructure systems that communities depend on.</p>
-        <ul>
-          <li>AI load modeling and forecasting, including effects on transmission, distribution, power quality, and stability</li>
-          <li>Datacenter siting and interconnection, resource adequacy, capacity expansion, and coordinated infrastructure planning</li>
-          <li>Grid-responsive control, demand response, ramp management, curtailment and recovery, ancillary services, and on-site resources</li>
-          <li>Markets, tariffs, reliability, affordability, water, land, governance, and impacts on the public good</li>
-        </ul>
-      </article>
-    </div>
-    <div class="scai-agenda-coupling">
-      <strong>Coupling is the research problem.</strong>
-      <p>The agenda runs in both directions: infrastructure constraints must inform model and systems design, while workload capabilities and service objectives must inform datacenter, grid, and public-infrastructure planning and control.</p>
-    </div>
-    <div class="scai-community-row" aria-label="Research communities convened by the agenda">
-      <span>AI and machine learning</span>
-      <span>Computer and distributed systems</span>
-      <span>Power systems and control</span>
-      <span>Public infrastructure, planning, and policy</span>
-    </div>
-  </section>
-
   <section class="scai-section" aria-labelledby="speakers-heading">
     <div class="scai-section-header">
       <h2 id="speakers-heading">Invited speakers</h2>
@@ -1075,6 +1020,61 @@ permalink: /scai-symposium/
       </article>
     </div>
     <p class="scai-note">Speaker participation is subject to confirmation. The symposium agenda will be available soon.</p>
+  </section>
+
+  <section class="scai-section scai-agenda" id="research-agenda" aria-labelledby="agenda-heading">
+    <div class="scai-section-header">
+      <div>
+        <p class="scai-eyebrow">The shared intellectual framework</p>
+        <h2 id="agenda-heading">One research agenda, three coupled layers</h2>
+      </div>
+      <p>Frontier AI infrastructure is becoming a coupled cyber-physical system in which models, computing platforms, power systems, and public infrastructure can no longer be designed or operated independently. Models and workloads expose flexibility, and computing systems translate it into safe operational decisions. Power systems and public infrastructure set the physical, economic, and societal constraints that AI infrastructure must respect.</p>
+    </div>
+    <div class="scai-layers">
+      <article class="scai-layer">
+        <span class="scai-layer-number" aria-hidden="true">01</span>
+        <h3>AI and Workloads</h3>
+        <p>How models and workloads can expose and use flexibility while preserving useful service and research outcomes.</p>
+        <ul>
+          <li>Flexible training and inference through checkpointing, pause and resume, batching, model selection, and precision scaling</li>
+          <li>Trade-offs among accuracy, latency, throughput, availability, progress, cost, and resource consumption</li>
+          <li>Efficient model techniques, including compression, sparsity, quantization, and workload-aware optimization</li>
+          <li>Measurement and lifecycle analysis of energy, carbon, water, and material footprints</li>
+        </ul>
+      </article>
+      <article class="scai-layer">
+        <span class="scai-layer-number" aria-hidden="true">02</span>
+        <h3>Computing Systems</h3>
+        <p>How computing platforms can convert workload flexibility and changing resource conditions into reliable runtime action.</p>
+        <ul>
+          <li>Scheduling, placement, provisioning, and admission control across accelerators, clusters, clouds, and edge platforms</li>
+          <li>Coordination across heterogeneous and geographically distributed computing resources</li>
+          <li>Telemetry, forecasting, and feedback control across compute, network, storage, cooling, thermal, and power conditions</li>
+          <li>Reliability, recovery, and controlled degradation that preserve application-level service objectives</li>
+        </ul>
+      </article>
+      <article class="scai-layer">
+        <span class="scai-layer-number" aria-hidden="true">03</span>
+        <h3>Energy and Infrastructure</h3>
+        <p>How large, dynamic AI loads interact with electric grids and the wider infrastructure systems that communities depend on.</p>
+        <ul>
+          <li>AI load modeling and forecasting, including effects on transmission, distribution, power quality, and stability</li>
+          <li>Datacenter siting and interconnection, resource adequacy, capacity expansion, and coordinated infrastructure planning</li>
+          <li>Grid-responsive control, demand response, ramp management, curtailment and recovery, ancillary services, and on-site resources</li>
+          <li>Markets, tariffs, reliability, affordability, water, land, governance, and impacts on the public good</li>
+        </ul>
+      </article>
+    </div>
+    <div class="scai-agenda-coupling">
+      <strong>Coupling is the research problem.</strong>
+      <p>The agenda runs in both directions: infrastructure constraints must inform model and systems design, while workload capabilities and service objectives must inform datacenter, grid, and public-infrastructure planning and control.</p>
+    </div>
+    <div class="scai-community-row" aria-label="Research communities convened by the agenda">
+      <span>AI and machine learning</span>
+      <span>Computer and distributed systems</span>
+      <span>Power systems and control</span>
+      <span>Public infrastructure, planning, and policy</span>
+    </div>
   </section>
 
   <section class="scai-participation-call scai-poster-call" id="call-for-posters" aria-labelledby="posters-heading">
