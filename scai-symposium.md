@@ -1028,7 +1028,7 @@ permalink: /scai-symposium/
         <p class="scai-eyebrow">The shared intellectual framework</p>
         <h2 id="agenda-heading">One research agenda, three coupled layers</h2>
       </div>
-      <p>Frontier AI infrastructure is becoming a coupled cyber-physical system in which models, computing platforms, power systems, and public infrastructure can no longer be designed or operated independently. Models and workloads expose flexibility, and computing systems translate it into safe operational decisions. Power systems and public infrastructure set the physical, economic, and societal constraints that AI infrastructure must respect.</p>
+      <p>We envision AI infrastructure as a coupled cyber-physical system spanning three interdependent layers. In this vision, models and workloads expose flexibility, computing systems translate that flexibility into reliable operational decisions, and energy systems and public infrastructure shape the physical, economic, and societal conditions under which those decisions are made. This vision motivates a shared research agenda across three coupled layers: AI and workloads, computing systems, and energy and infrastructure.</p>
     </div>
     <div class="scai-layers">
       <article class="scai-layer">
