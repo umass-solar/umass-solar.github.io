@@ -1018,6 +1018,14 @@ permalink: /scai-symposium/
           <p class="scai-speaker-role">Executive Director, Massachusetts Green High Performance Computing Center</p>
         </div>
       </article>
+
+      <article class="scai-speaker">
+        <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/deepak-rajagopal.webp" alt="Deepak Rajagopal" loading="lazy">
+        <div class="scai-speaker-body">
+          <h3><a href="https://www.ioes.ucla.edu/person/deepak-rajagopal/">Deepak Rajagopal</a></h3>
+          <p class="scai-speaker-role">Professor and Co-Chair, Environmental Science and Engineering (D.Env.) Program, UCLA Institute of the Environment and Sustainability</p>
+        </div>
+      </article>
     </div>
     <p class="scai-note">Speaker participation is subject to confirmation. The symposium agenda will be available soon.</p>
   </section>
@@ -1199,4 +1207,5 @@ Speaker image sources:
 - Mosharaf Chowdhury: https://cse.engin.umich.edu/stories/mosharaf-chowdhury-receives-david-e-liddle-research-excellence-award
 - Minlan Yu: https://minlanyu.seas.harvard.edu/
 - John Goodhue: https://mghpcc.org/executive-director/
+- Deepak Rajagopal: https://www.ioes.ucla.edu/person/deepak-rajagopal/
 -->
