@@ -910,6 +910,8 @@ permalink: /scai-symposium/
         <dd>Invitation-only talks, panels, and poster sessions</dd>
         <dt>Audience</dt>
         <dd>Academic, industry, government, utility, and campus leadership communities</dd>
+        <dt>Organizer</dt>
+        <dd><a href="https://groups.cs.umass.edu/hajiesmaili/">Mohammad Hajiesmaili</a></dd>
         <dt>Agenda</dt>
         <dd>Available soon</dd>
       </dl>
