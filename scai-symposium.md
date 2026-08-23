@@ -42,7 +42,12 @@ permalink: /scai-symposium/
     margin: 0 0 2.75rem;
   }
 
+  .scai-opening > * {
+    height: 100%;
+  }
+
   .scai-hero {
+    display: flex;
     position: relative;
     overflow: hidden;
     padding: clamp(1.85rem, 3vw, 2.8rem);
@@ -85,6 +90,8 @@ permalink: /scai-symposium/
     display: grid;
     grid-template-columns: minmax(0, 1.35fr) minmax(220px, 0.65fr);
     gap: clamp(1rem, 2.2vw, 2rem);
+    width: 100%;
+    min-height: 100%;
     align-items: center;
   }
 
