@@ -950,34 +950,10 @@ permalink: /scai-symposium/
 
     <div class="scai-speakers">
       <article class="scai-speaker">
-        <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/adam-wierman.png" alt="Adam Wierman" loading="lazy">
+        <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/mosharaf-chowdhury.jpg" alt="Mosharaf Chowdhury" loading="lazy">
         <div class="scai-speaker-body">
-          <h3><a href="https://heritageproject.caltech.edu/interviews/adam-wierman">Adam Wierman</a></h3>
-          <p class="scai-speaker-role">Professor of Computing and Mathematical Sciences, Caltech</p>
-        </div>
-      </article>
-
-      <article class="scai-speaker">
-        <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/prashant-shenoy.jpg" alt="Prashant Shenoy" loading="lazy">
-        <div class="scai-speaker-body">
-          <h3><a href="https://people.cs.umass.edu/~shenoy/">Prashant Shenoy</a></h3>
-          <p class="scai-speaker-role">Distinguished Professor and Director of the NSF CoDec Expedition, UMass Amherst</p>
-        </div>
-      </article>
-
-      <article class="scai-speaker">
-        <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/karin-strauss.jpg" alt="Karin Strauss" loading="lazy">
-        <div class="scai-speaker-body">
-          <h3><a href="https://www.microsoft.com/en-us/research/people/kstrauss/">Karin Strauss</a></h3>
-          <p class="scai-speaker-role">Senior Principal Research Manager, Microsoft Research</p>
-        </div>
-      </article>
-
-      <article class="scai-speaker">
-        <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/fabio-grimaldi.jpg" alt="Fabio Grimaldi" loading="lazy">
-        <div class="scai-speaker-body">
-          <h3><a href="https://www.linkedin.com/in/fabio-grimaldi-530796ba/">Fabio Grimaldi</a></h3>
-          <p class="scai-speaker-role">Cloud technology and sustainability, Amazon Web Services</p>
+          <h3><a href="https://cse.engin.umich.edu/stories/mosharaf-chowdhury-receives-david-e-liddle-research-excellence-award">Mosharaf Chowdhury</a></h3>
+          <p class="scai-speaker-role">Associate Professor of Computer Science and Engineering, University of Michigan</p>
         </div>
       </article>
 
@@ -990,10 +966,26 @@ permalink: /scai-symposium/
       </article>
 
       <article class="scai-speaker">
-        <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/jeremy-rice.jpeg" alt="Jeremy Rice" loading="lazy">
+        <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/john-goodhue.jpg" alt="John Goodhue" loading="lazy">
         <div class="scai-speaker-body">
-          <h3><a href="https://www.linkedin.com/in/jeremy-rice-9a015b12/">Jeremy Rice</a></h3>
-          <p class="scai-speaker-role">Mechanical Systems Lead, Verrus</p>
+          <h3><a href="https://mghpcc.org/executive-director/">John Goodhue</a></h3>
+          <p class="scai-speaker-role">Executive Director, Massachusetts Green High Performance Computing Center</p>
+        </div>
+      </article>
+
+      <article class="scai-speaker">
+        <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/fabio-grimaldi.jpg" alt="Fabio Grimaldi" loading="lazy">
+        <div class="scai-speaker-body">
+          <h3><a href="https://www.linkedin.com/in/fabio-grimaldi-530796ba/">Fabio Grimaldi</a></h3>
+          <p class="scai-speaker-role">Cloud technology and sustainability, Amazon Web Services</p>
+        </div>
+      </article>
+
+      <article class="scai-speaker">
+        <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/deepak-rajagopal.webp" alt="Deepak Rajagopal" loading="lazy">
+        <div class="scai-speaker-body">
+          <h3><a href="https://www.ioes.ucla.edu/person/deepak-rajagopal/">Deepak Rajagopal</a></h3>
+          <p class="scai-speaker-role">Professor and Co-Chair, Environmental Science and Engineering (D.Env.) Program, UCLA Institute of the Environment and Sustainability</p>
         </div>
       </article>
 
@@ -1006,6 +998,22 @@ permalink: /scai-symposium/
       </article>
 
       <article class="scai-speaker">
+        <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/jeremy-rice.jpeg" alt="Jeremy Rice" loading="lazy">
+        <div class="scai-speaker-body">
+          <h3><a href="https://www.linkedin.com/in/jeremy-rice-9a015b12/">Jeremy Rice</a></h3>
+          <p class="scai-speaker-role">Mechanical Systems Lead, Verrus</p>
+        </div>
+      </article>
+
+      <article class="scai-speaker">
+        <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/prashant-shenoy.jpg" alt="Prashant Shenoy" loading="lazy">
+        <div class="scai-speaker-body">
+          <h3><a href="https://people.cs.umass.edu/~shenoy/">Prashant Shenoy</a></h3>
+          <p class="scai-speaker-role">Distinguished Professor and Director of the NSF CoDec Expedition, UMass Amherst</p>
+        </div>
+      </article>
+
+      <article class="scai-speaker">
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/ramesh-sitaraman.jpg" alt="Ramesh Sitaraman" loading="lazy">
         <div class="scai-speaker-body">
           <h3><a href="https://www.cics.umass.edu/events/distinguished-faculty-lecturer-ramesh-sitaraman">Ramesh Sitaraman</a></h3>
@@ -1014,10 +1022,18 @@ permalink: /scai-symposium/
       </article>
 
       <article class="scai-speaker">
-        <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/mosharaf-chowdhury.jpg" alt="Mosharaf Chowdhury" loading="lazy">
+        <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/karin-strauss.jpg" alt="Karin Strauss" loading="lazy">
         <div class="scai-speaker-body">
-          <h3><a href="https://cse.engin.umich.edu/stories/mosharaf-chowdhury-receives-david-e-liddle-research-excellence-award">Mosharaf Chowdhury</a></h3>
-          <p class="scai-speaker-role">Associate Professor of Computer Science and Engineering, University of Michigan</p>
+          <h3><a href="https://www.microsoft.com/en-us/research/people/kstrauss/">Karin Strauss</a></h3>
+          <p class="scai-speaker-role">Senior Principal Research Manager, Microsoft Research</p>
+        </div>
+      </article>
+
+      <article class="scai-speaker">
+        <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/adam-wierman.png" alt="Adam Wierman" loading="lazy">
+        <div class="scai-speaker-body">
+          <h3><a href="https://heritageproject.caltech.edu/interviews/adam-wierman">Adam Wierman</a></h3>
+          <p class="scai-speaker-role">Professor of Computing and Mathematical Sciences, Caltech</p>
         </div>
       </article>
 
@@ -1026,22 +1042,6 @@ permalink: /scai-symposium/
         <div class="scai-speaker-body">
           <h3><a href="https://minlanyu.seas.harvard.edu/">Minlan Yu</a></h3>
           <p class="scai-speaker-role">Gordon McKay Professor of Computer Science, Harvard University</p>
-        </div>
-      </article>
-
-      <article class="scai-speaker">
-        <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/john-goodhue.jpg" alt="John Goodhue" loading="lazy">
-        <div class="scai-speaker-body">
-          <h3><a href="https://mghpcc.org/executive-director/">John Goodhue</a></h3>
-          <p class="scai-speaker-role">Executive Director, Massachusetts Green High Performance Computing Center</p>
-        </div>
-      </article>
-
-      <article class="scai-speaker">
-        <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/deepak-rajagopal.webp" alt="Deepak Rajagopal" loading="lazy">
-        <div class="scai-speaker-body">
-          <h3><a href="https://www.ioes.ucla.edu/person/deepak-rajagopal/">Deepak Rajagopal</a></h3>
-          <p class="scai-speaker-role">Professor and Co-Chair, Environmental Science and Engineering (D.Env.) Program, UCLA Institute of the Environment and Sustainability</p>
         </div>
       </article>
     </div>
