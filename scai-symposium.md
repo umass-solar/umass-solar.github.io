@@ -174,6 +174,14 @@ permalink: /scai-symposium/
     box-shadow: 0 0.45rem 1rem rgba(7, 54, 102, 0.16);
   }
 
+  .scai-hero-status {
+    margin-top: 0.65rem;
+  }
+
+  .scai-call-link-static {
+    cursor: default;
+  }
+
   .scai-call-link span {
     padding-left: 0.65rem;
     border-left: 1px solid rgba(255, 255, 255, 0.38);
@@ -893,6 +901,9 @@ permalink: /scai-symposium/
             <a class="scai-call-link" href="#call-for-posters">Call for posters <span>Deadline: August 28, 2026</span></a>
             <a class="scai-call-link" href="#call-for-lightning-talks">Call for lightning talks <span>Deadline: August 28, 2026</span></a>
           </div>
+          <div class="scai-hero-actions scai-hero-status">
+            <span class="scai-call-link scai-call-link-static">Agenda <span>Available soon</span></span>
+          </div>
         </div>
         <div class="scai-logo-card">
           <img src="{{ site.base }}/img/scai-logo-banner.png" alt="SCAI Sustainable Compute and AI logo">
@@ -912,8 +923,6 @@ permalink: /scai-symposium/
         <dd>Academic, industry, government, utility, and campus leadership communities</dd>
         <dt>Organizer</dt>
         <dd><a href="https://groups.cs.umass.edu/hajiesmaili/">Mohammad Hajiesmaili</a></dd>
-        <dt>Agenda</dt>
-        <dd>Available soon</dd>
       </dl>
     </aside>
   </div>
