@@ -318,6 +318,10 @@ permalink: /scai-symposium/
     border-bottom: 1px solid var(--scai-line);
   }
 
+  .scai-section-header-single {
+    grid-template-columns: 1fr;
+  }
+
   .scai-section-header h2 {
     margin: 0;
     font-size: clamp(1.55rem, 3vw, 2.25rem);
@@ -602,6 +606,46 @@ permalink: /scai-symposium/
     gap: 1.25rem;
   }
 
+  .scai-agenda-view {
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.4rem;
+    margin: -0.25rem 0 1rem;
+  }
+
+  .scai-agenda-view.is-ready {
+    display: flex;
+  }
+
+  .scai-agenda-view > span {
+    margin-right: 0.25rem;
+    color: var(--scai-muted) !important;
+    font-size: 0.76rem;
+    font-weight: 750;
+  }
+
+  .scai-agenda-view button {
+    padding: 0.42rem 0.72rem;
+    border: 1px solid rgba(5, 105, 151, 0.28);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--scai-navy);
+    font: inherit;
+    font-size: 0.74rem;
+    font-weight: 750;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .scai-agenda-view button:hover,
+  .scai-agenda-view button:focus-visible,
+  .scai-agenda-view button.is-active {
+    border-color: var(--scai-green);
+    background: var(--scai-green);
+    color: #fff;
+  }
+
   .scai-program-day {
     overflow: hidden;
     border: 1px solid rgba(29, 37, 44, 0.13);
@@ -619,7 +663,7 @@ permalink: /scai-symposium/
 
   .scai-program-row {
     display: grid;
-    grid-template-columns: 8.25rem minmax(0, 1fr);
+    grid-template-columns: 9rem minmax(0, 1fr);
     gap: 1rem;
     padding: 0.9rem 1.1rem;
     border-top: 1px solid rgba(29, 37, 44, 0.1);
@@ -648,6 +692,63 @@ permalink: /scai-symposium/
     color: var(--scai-muted) !important;
     font-size: 0.82rem;
     line-height: 1.5;
+  }
+
+  .scai-session-details {
+    margin-top: 0.5rem;
+    border-top: 1px solid rgba(5, 105, 151, 0.14);
+  }
+
+  .scai-session-details summary {
+    width: fit-content;
+    padding-top: 0.45rem;
+    color: var(--scai-green);
+    font-size: 0.75rem;
+    font-weight: 750;
+    cursor: pointer;
+  }
+
+  .scai-session-details[open] summary {
+    margin-bottom: 0.55rem;
+  }
+
+  .scai-session-details-panel {
+    display: grid;
+    gap: 0.55rem;
+    padding: 0.7rem;
+    border-radius: 0.55rem;
+    background: rgba(241, 248, 246, 0.88);
+  }
+
+  .scai-session-person {
+    padding-left: 0.7rem;
+    border-left: 2px solid rgba(5, 105, 151, 0.3);
+  }
+
+  .scai-session-person strong,
+  .scai-session-person span,
+  .scai-session-person em {
+    display: block;
+  }
+
+  .scai-session-person strong {
+    font-size: 0.82rem;
+  }
+
+  .scai-session-person span {
+    margin-top: 0.08rem;
+    color: var(--scai-muted) !important;
+    font-size: 0.76rem;
+    line-height: 1.42;
+  }
+
+  .scai-session-person em {
+    margin-top: 0.25rem;
+    color: #243b4a !important;
+    font-size: 0.76rem;
+    font-style: normal;
+    font-weight: 650;
+    line-height: 1.42;
   }
 
   .scai-back-to-top {
@@ -1039,6 +1140,10 @@ permalink: /scai-symposium/
       gap: 0.25rem;
     }
 
+    .scai-agenda-view {
+      justify-content: flex-start;
+    }
+
     .scai-scope-reference a {
       justify-self: start;
     }
@@ -1128,9 +1233,8 @@ permalink: /scai-symposium/
   </section>
 
   <section class="scai-section" aria-labelledby="speakers-heading">
-    <div class="scai-section-header">
+    <div class="scai-section-header scai-section-header-single">
       <h2 id="speakers-heading">Invited speakers/panelists</h2>
-      <p>Perspectives across energy-efficient AI and data systems, grid-responsive data centers, power systems, lifecycle environmental impacts, infrastructure planning, energy economics, and community resilience.</p>
     </div>
 
     <div class="scai-speakers">
@@ -1393,63 +1497,159 @@ permalink: /scai-symposium/
       <p>Two days of invited talks, panels, research highlights, poster presentations, and structured conversation across AI systems, data-center infrastructure, power systems, environmental impacts, and public priorities. Times, session titles, and participation may change as the program is finalized.</p>
     </div>
 
+    <div class="scai-agenda-view" aria-label="Agenda detail level">
+      <span>Agenda view</span>
+      <button type="button" class="is-active" data-agenda-view="compact" aria-pressed="true">Compact</button>
+      <button type="button" data-agenda-view="expanded" aria-pressed="false">Expanded</button>
+    </div>
+
     <div class="scai-program-days">
       <section class="scai-program-day" aria-labelledby="day-one-heading">
         <h3 id="day-one-heading">Day 1 &mdash; Thursday, September 17</h3>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-17T08:30">8:30&ndash;9:00 a.m.</time>
+          <time class="scai-program-time" datetime="2026-09-17T08:30">8:30&ndash;9:00 am</time>
           <div class="scai-program-session"><strong>Registration, breakfast, and informal networking</strong></div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-17T09:00">9:00&ndash;9:10 a.m.</time>
-          <div class="scai-program-session"><strong>Welcome remarks</strong><p>Mike Malone, Laura Vandenberg, and Sanjay Raman &middot; Chair: Mohammad Hajiesmaili</p></div>
+          <time class="scai-program-time" datetime="2026-09-17T09:00">9:00&ndash;9:20 am</time>
+          <div class="scai-program-session">
+            <strong>Welcome remarks</strong>
+            <p>Mike Malone, Laura Vandenberg, and Sanjay Raman &middot; Chair: Mohammad Hajiesmaili</p>
+            <details class="scai-session-details">
+              <summary>Full session details</summary>
+              <div class="scai-session-details-panel">
+                <div class="scai-session-person"><strong>Mike Malone</strong><span>Vice Chancellor for Research and Engagement, UMass Amherst</span><em>Welcome remarks</em></div>
+                <div class="scai-session-person"><strong>Laura Vandenberg</strong><span>Associate Vice Chancellor and Vice Provost for Research and Engagement; Professor of Environmental Health Sciences, UMass Amherst</span><em>Welcome remarks</em></div>
+                <div class="scai-session-person"><strong>Sanjay Raman</strong><span>Daniel J. Riccio Jr. Dean of Engineering; Professor of Electrical and Computer Engineering, UMass Amherst</span><em>Welcome remarks</em></div>
+                <div class="scai-session-person"><strong>Mohammad Hajiesmaili</strong><span>Associate Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Session chair</em></div>
+              </div>
+            </details>
+          </div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-17T09:20">9:20&ndash;10:30 a.m.</time>
-          <div class="scai-program-session"><strong>Expeditions Keynotes</strong><p>Adam Wierman and Prashant Shenoy</p></div>
+          <time class="scai-program-time" datetime="2026-09-17T09:20">9:20&ndash;10:30 am</time>
+          <div class="scai-program-session">
+            <strong>Expeditions Keynotes</strong>
+            <p>Adam Wierman and Prashant Shenoy</p>
+            <details class="scai-session-details">
+              <summary>Full session details</summary>
+              <div class="scai-session-details-panel">
+                <div class="scai-session-person"><strong>Adam Wierman</strong><span>Carl F Braun Professor of Computing and Mathematical Sciences, Caltech</span><em>Talk: TBD</em></div>
+                <div class="scai-session-person"><strong>Prashant Shenoy</strong><span>Distinguished Professor of Computer Science and Director of the NSF CoDec Expedition, UMass Amherst</span><em>Talk: Data Centers, AI Workloads, and Efficiency: A Systems Perspective</em></div>
+              </div>
+            </details>
+          </div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-17T10:30">10:30&ndash;10:45 a.m.</time>
+          <time class="scai-program-time" datetime="2026-09-17T10:30">10:30&ndash;10:45 am</time>
           <div class="scai-program-session"><strong>Break</strong></div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-17T10:45">10:45 a.m.&ndash;12:00 p.m.</time>
-          <div class="scai-program-session"><strong>Industry Session I</strong><p>Karin Strauss and Fabio Grimaldi</p></div>
+          <time class="scai-program-time" datetime="2026-09-17T10:45">10:45 am&ndash;12:00 pm</time>
+          <div class="scai-program-session">
+            <strong>Industry Session I</strong>
+            <p>Karin Strauss and Fabio Grimaldi</p>
+            <details class="scai-session-details">
+              <summary>Full session details</summary>
+              <div class="scai-session-details-panel">
+                <div class="scai-session-person"><strong>Karin Strauss</strong><span>Innovation Strategist and Senior Principal Research Manager, Microsoft Research</span><em>Talk: AI Needs a Dose of Its Own Cure to Cut the Carbon. Let&rsquo;s Do It!</em></div>
+                <div class="scai-session-person"><strong>Fabio Grimaldi</strong><span>Senior Sustainability Scientist, Amazon Web Services</span><em>Talk: The Sustainability Stack for AI at Scale: An Industry Perspective</em></div>
+              </div>
+            </details>
+          </div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-17T12:00">12:00&ndash;1:00 p.m.</time>
+          <time class="scai-program-time" datetime="2026-09-17T12:00">12:00&ndash;1:00 pm</time>
           <div class="scai-program-session"><strong>Lunch</strong></div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-17T13:00">1:00&ndash;1:10 p.m.</time>
-          <div class="scai-program-session"><strong>Afternoon welcome remarks</strong><p>Caitlyn Butler and Brian Levine</p></div>
+          <time class="scai-program-time" datetime="2026-09-17T13:00">1:00&ndash;1:10 pm</time>
+          <div class="scai-program-session">
+            <strong>Afternoon welcome remarks</strong>
+            <p>Caitlyn Butler and Brian Levine</p>
+            <details class="scai-session-details">
+              <summary>Full session details</summary>
+              <div class="scai-session-details-panel">
+                <div class="scai-session-person"><strong>Caitlyn Butler</strong><span>Associate Dean for Research and Graduate Affairs, Riccio College of Engineering; Professor of Civil and Environmental Engineering, UMass Amherst</span><em>Welcome remarks</em></div>
+                <div class="scai-session-person"><strong>Brian Levine</strong><span>Associate Dean of IT and Facilities; Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Welcome remarks</em></div>
+              </div>
+            </details>
+          </div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-17T13:10">1:10&ndash;2:00 p.m.</time>
-          <div class="scai-program-session"><strong>Panel I: What Should Academia Solve for the Future of AI Infrastructure?</strong><p>Karin Strauss, Fabio Grimaldi, Adam Wierman, and Prashant Shenoy &middot; Moderator: Laura Haas</p></div>
+          <time class="scai-program-time" datetime="2026-09-17T13:10">1:10&ndash;2:00 pm</time>
+          <div class="scai-program-session">
+            <strong>Panel I: What Should Academia Solve for the Future of AI Infrastructure?</strong>
+            <p>Karin Strauss, Fabio Grimaldi, Adam Wierman, and Prashant Shenoy &middot; Moderator: Laura Haas</p>
+            <details class="scai-session-details">
+              <summary>Full session details</summary>
+              <div class="scai-session-details-panel">
+                <div class="scai-session-person"><strong>Karin Strauss</strong><span>Innovation Strategist and Senior Principal Research Manager, Microsoft Research</span><em>Panelist</em></div>
+                <div class="scai-session-person"><strong>Fabio Grimaldi</strong><span>Senior Sustainability Scientist, Amazon Web Services</span><em>Panelist</em></div>
+                <div class="scai-session-person"><strong>Adam Wierman</strong><span>Carl F Braun Professor of Computing and Mathematical Sciences, Caltech</span><em>Panelist</em></div>
+                <div class="scai-session-person"><strong>Prashant Shenoy</strong><span>Distinguished Professor of Computer Science and Director of the NSF CoDec Expedition, UMass Amherst</span><em>Panelist</em></div>
+                <div class="scai-session-person"><strong>Laura Haas</strong><span>Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Moderator</em></div>
+              </div>
+            </details>
+          </div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-17T14:00">2:00&ndash;3:00 p.m.</time>
-          <div class="scai-program-session"><strong>Faculty and emerging-researcher highlights</strong><p>Faculty talks: Juncheng Yang, Yuanrui Sang, and Nico Christianson &middot; Job-market talks: Adam Lechowicz, Can Hankendi, Walid Hanafy, Qingsong Liu, and Chris Yeh</p></div>
+          <time class="scai-program-time" datetime="2026-09-17T14:00">2:00&ndash;3:00 pm</time>
+          <div class="scai-program-session">
+            <strong>Faculty and emerging-researcher highlights</strong>
+            <p>Faculty talks: Juncheng Yang, Yuanrui Sang, and Nicolas Christianson &middot; Job-market talks: Speakers TBD</p>
+            <details class="scai-session-details">
+              <summary>Full session details</summary>
+              <div class="scai-session-details-panel">
+                <div class="scai-session-person"><strong>Juncheng Yang</strong><span>Assistant Professor of Computer Science, Harvard University</span><em>Talk: Rethinking Storage for Sustainable AI: From Models to Generated Data</em></div>
+                <div class="scai-session-person"><strong>Yuanrui Sang</strong><span>Assistant Professor of Electrical and Computer Engineering, UMass Amherst</span><em>Talk: TBD</em></div>
+                <div class="scai-session-person"><strong>Nicolas Christianson</strong><span>Assistant Professor of Computer Science, Johns Hopkins University</span><em>Talk: TBD</em></div>
+                <div class="scai-session-person"><strong>Job-market talks</strong><span>Speakers and affiliations TBD</span><em>Talks: TBD</em></div>
+              </div>
+            </details>
+          </div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-17T15:00">3:00&ndash;3:15 p.m.</time>
+          <time class="scai-program-time" datetime="2026-09-17T15:00">3:00&ndash;3:15 pm</time>
           <div class="scai-program-session"><strong>Break and refreshments</strong></div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-17T15:15">3:15&ndash;4:00 p.m.</time>
-          <div class="scai-program-session"><strong>Technical Session I: Responsible AI Infrastructure</strong><p>Shaolei Ren and Deepak Rajagopal</p></div>
+          <time class="scai-program-time" datetime="2026-09-17T15:15">3:15&ndash;4:00 pm</time>
+          <div class="scai-program-session">
+            <strong>Technical Session I: Responsible AI Infrastructure</strong>
+            <p>Shaolei Ren and Deepak Rajagopal</p>
+            <details class="scai-session-details">
+              <summary>Full session details</summary>
+              <div class="scai-session-details-panel">
+                <div class="scai-session-person"><strong>Shaolei Ren</strong><span>Professor of Electrical and Computer Engineering, University of California, Riverside</span><em>Talk: Powering AI in a Thirsty World</em></div>
+                <div class="scai-session-person"><strong>Deepak Rajagopal</strong><span>Professor and Co-Chair, Environmental Science and Engineering Program, UCLA Institute of the Environment and Sustainability</span><em>Talk: The Challenges of Measuring AI&rsquo;s Environmental Footprint: An Industrial Ecology Perspective</em></div>
+              </div>
+            </details>
+          </div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-17T16:00">4:00&ndash;5:00 p.m.</time>
-          <div class="scai-program-session"><strong>Panel II: Can AI Infrastructure Scale Responsibly? Impacts on the Grid, Water, and Communities</strong><p>Le Xie, Shaolei Ren, Deepak Rajagopal, and Erin Baker &middot; Moderator: Golbon Zakeri</p></div>
+          <time class="scai-program-time" datetime="2026-09-17T16:00">4:00&ndash;5:00 pm</time>
+          <div class="scai-program-session">
+            <strong>Panel II: Can AI Infrastructure Scale Responsibly? Impacts on the Grid, Water, and Communities</strong>
+            <p>Le Xie, Shaolei Ren, Deepak Rajagopal, and Erin Baker &middot; Moderator: Golbon Zakeri</p>
+            <details class="scai-session-details">
+              <summary>Full session details</summary>
+              <div class="scai-session-details-panel">
+                <div class="scai-session-person"><strong>Le Xie</strong><span>Gordon McKay Professor of Electrical Engineering and Faculty Director of the Power and AI Initiative, Harvard University</span><em>Panelist</em></div>
+                <div class="scai-session-person"><strong>Shaolei Ren</strong><span>Professor of Electrical and Computer Engineering, University of California, Riverside</span><em>Panelist</em></div>
+                <div class="scai-session-person"><strong>Deepak Rajagopal</strong><span>Professor and Co-Chair, Environmental Science and Engineering Program, UCLA Institute of the Environment and Sustainability</span><em>Panelist</em></div>
+                <div class="scai-session-person"><strong>Erin Baker</strong><span>Distinguished Professor of Mechanical and Industrial Engineering and Faculty Director of the Energy Transition Institute, UMass Amherst</span><em>Panelist</em></div>
+                <div class="scai-session-person"><strong>Golbon Zakeri</strong><span>Professor of Mechanical and Industrial Engineering, UMass Amherst</span><em>Moderator</em></div>
+              </div>
+            </details>
+          </div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-17T16:45">4:45&ndash;6:00 p.m.</time>
+          <time class="scai-program-time" datetime="2026-09-17T16:45">4:45&ndash;6:00 pm</time>
           <div class="scai-program-session"><strong>Poster session</strong></div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-17T18:00">6:00&ndash;7:30 p.m.</time>
+          <time class="scai-program-time" datetime="2026-09-17T18:00">6:00&ndash;7:30 pm</time>
           <div class="scai-program-session"><strong>Dinner and networking</strong></div>
         </div>
       </section>
@@ -1457,40 +1657,93 @@ permalink: /scai-symposium/
       <section class="scai-program-day" aria-labelledby="day-two-heading">
         <h3 id="day-two-heading">Day 2 &mdash; Friday, September 18</h3>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-18T08:30">8:30&ndash;9:00 a.m.</time>
+          <time class="scai-program-time" datetime="2026-09-18T08:30">8:30&ndash;9:00 am</time>
           <div class="scai-program-session"><strong>Light breakfast and arrival</strong></div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-18T09:00">9:00&ndash;9:10 a.m.</time>
-          <div class="scai-program-session"><strong>Welcome remarks</strong><p>James Allan</p></div>
+          <time class="scai-program-time" datetime="2026-09-18T09:00">9:00&ndash;9:10 am</time>
+          <div class="scai-program-session">
+            <strong>Welcome remarks</strong>
+            <p>James Allan</p>
+            <details class="scai-session-details">
+              <summary>Full session details</summary>
+              <div class="scai-session-details-panel">
+                <div class="scai-session-person"><strong>James Allan</strong><span>Associate Dean of Research and Engagement; Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Welcome remarks</em></div>
+              </div>
+            </details>
+          </div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-18T09:10">9:10&ndash;10:40 a.m.</time>
-          <div class="scai-program-session"><strong>Industry Session II: Flexible Data Centers</strong><p>Ayse K. Coskun, Jeremy Rice, and John Goodhue</p></div>
+          <time class="scai-program-time" datetime="2026-09-18T09:10">9:10&ndash;10:40 am</time>
+          <div class="scai-program-session">
+            <strong>Industry Session II: Flexible Data Centers</strong>
+            <p>Ayse K. Coskun, Jeremy Rice, and John Goodhue</p>
+            <details class="scai-session-details">
+              <summary>Full session details</summary>
+              <div class="scai-session-details-panel">
+                <div class="scai-session-person"><strong>Ayse K. Coskun</strong><span>Professor of Electrical and Computer Engineering and Systems Engineering; Director of the Center for Information and Systems Engineering, Boston University; Chief Scientist, Emerald AI</span><em>Talk: AI Data Centers as Flexible Grid Assets</em></div>
+                <div class="scai-session-person"><strong>Jeremy Rice</strong><span>Mechanical Systems Lead, Verrus</span><em>Talk: Direct and Indirect Energy Resources Enabling the Data Center as a Grid Asset</em></div>
+                <div class="scai-session-person"><strong>John Goodhue</strong><span>Executive Director, Massachusetts Green High Performance Computing Center</span><em>Talk: TBD</em></div>
+              </div>
+            </details>
+          </div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-18T10:40">10:40&ndash;10:50 a.m.</time>
+          <time class="scai-program-time" datetime="2026-09-18T10:40">10:40&ndash;10:50 am</time>
           <div class="scai-program-session"><strong>Break</strong></div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-18T10:50">10:50 a.m.&ndash;12:00 p.m.</time>
-          <div class="scai-program-session"><strong>Technical Session II: Frontiers of AI Systems and Networking</strong><p>Mosharaf Chowdhury and Minlan Yu</p></div>
+          <time class="scai-program-time" datetime="2026-09-18T10:50">10:50 am&ndash;12:00 pm</time>
+          <div class="scai-program-session">
+            <strong>Technical Session II: Frontiers of AI Systems and Networking</strong>
+            <p>Mosharaf Chowdhury and Minlan Yu</p>
+            <details class="scai-session-details">
+              <summary>Full session details</summary>
+              <div class="scai-session-details-panel">
+                <div class="scai-session-person"><strong>Mosharaf Chowdhury</strong><span>Associate Professor of Computer Science and Engineering, University of Michigan</span><em>Talk: Toward Energy-Optimal AI</em></div>
+                <div class="scai-session-person"><strong>Minlan Yu</strong><span>Gordon McKay Professor of Computer Science, Harvard University</span><em>Talk: Resilient AI Infrastructure: From the GPU to the Grid</em></div>
+              </div>
+            </details>
+          </div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-18T12:00">12:00&ndash;1:00 p.m.</time>
+          <time class="scai-program-time" datetime="2026-09-18T12:00">12:00&ndash;1:00 pm</time>
           <div class="scai-program-session"><strong>Lunch and structured networking</strong></div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-18T13:00">1:00&ndash;2:00 p.m.</time>
-          <div class="scai-program-session"><strong>Panel III: How Flexible Can AI Infrastructure Really Be?</strong><p>Ayse K. Coskun, Jeremy Rice, Mosharaf Chowdhury, and Minlan Yu &middot; Moderator: David Irwin</p></div>
+          <time class="scai-program-time" datetime="2026-09-18T13:00">1:00&ndash;2:00 pm</time>
+          <div class="scai-program-session">
+            <strong>Panel III: How Flexible Can AI Infrastructure Really Be?</strong>
+            <p>Ayse K. Coskun, Jeremy Rice, Mosharaf Chowdhury, and Minlan Yu &middot; Moderator: David Irwin</p>
+            <details class="scai-session-details">
+              <summary>Full session details</summary>
+              <div class="scai-session-details-panel">
+                <div class="scai-session-person"><strong>Ayse K. Coskun</strong><span>Professor of Electrical and Computer Engineering and Systems Engineering; Director of the Center for Information and Systems Engineering, Boston University; Chief Scientist, Emerald AI</span><em>Panelist</em></div>
+                <div class="scai-session-person"><strong>Jeremy Rice</strong><span>Mechanical Systems Lead, Verrus</span><em>Panelist</em></div>
+                <div class="scai-session-person"><strong>Mosharaf Chowdhury</strong><span>Associate Professor of Computer Science and Engineering, University of Michigan</span><em>Panelist</em></div>
+                <div class="scai-session-person"><strong>Minlan Yu</strong><span>Gordon McKay Professor of Computer Science, Harvard University</span><em>Panelist</em></div>
+                <div class="scai-session-person"><strong>David Irwin</strong><span>Professor and Associate Department Head of Electrical and Computer Engineering; Adjunct Professor of Computer Science, UMass Amherst</span><em>Moderator</em></div>
+              </div>
+            </details>
+          </div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-18T14:00">2:00&ndash;3:00 p.m.</time>
-          <div class="scai-program-session"><strong>Additional speakers</strong><p>To be announced</p></div>
+          <time class="scai-program-time" datetime="2026-09-18T14:00">2:00&ndash;3:00 pm</time>
+          <div class="scai-program-session"><strong>Additional speakers</strong><p>Speakers TBD &middot; Talks TBD</p></div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-18T15:00">3:00&ndash;3:15 p.m.</time>
-          <div class="scai-program-session"><strong>Closing remarks</strong><p>Prashant Shenoy and David Irwin</p></div>
+          <time class="scai-program-time" datetime="2026-09-18T15:00">3:00&ndash;3:15 pm</time>
+          <div class="scai-program-session">
+            <strong>Closing remarks</strong>
+            <p>Prashant Shenoy and David Irwin</p>
+            <details class="scai-session-details">
+              <summary>Full session details</summary>
+              <div class="scai-session-details-panel">
+                <div class="scai-session-person"><strong>Prashant Shenoy</strong><span>Distinguished Professor of Computer Science and Director of the NSF CoDec Expedition, UMass Amherst</span><em>Closing remarks</em></div>
+                <div class="scai-session-person"><strong>David Irwin</strong><span>Professor and Associate Department Head of Electrical and Computer Engineering; Adjunct Professor of Computer Science, UMass Amherst</span><em>Closing remarks</em></div>
+              </div>
+            </details>
+          </div>
         </div>
       </section>
     </div>
@@ -1608,6 +1861,31 @@ permalink: /scai-symposium/
     <a class="scai-back-to-top" href="#page-top">Back to top</a>
   </section>
 </div>
+
+<script>
+  (function () {
+    var agenda = document.getElementById("draft-agenda");
+    if (!agenda) return;
+
+    var controls = agenda.querySelector(".scai-agenda-view");
+    var buttons = agenda.querySelectorAll("[data-agenda-view]");
+    var details = agenda.querySelectorAll(".scai-session-details");
+    if (!controls || !buttons.length || !details.length) return;
+
+    controls.classList.add("is-ready");
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        var expanded = button.getAttribute("data-agenda-view") === "expanded";
+        details.forEach(function (item) { item.open = expanded; });
+        buttons.forEach(function (item) {
+          var active = item === button;
+          item.classList.toggle("is-active", active);
+          item.setAttribute("aria-pressed", active ? "true" : "false");
+        });
+      });
+    });
+  }());
+</script>
 
 <!--
 Speaker image sources:
