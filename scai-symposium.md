@@ -1597,13 +1597,12 @@ permalink: /scai-symposium/
           <time class="scai-program-time" datetime="2026-09-17T14:00">2:00&ndash;3:00 pm</time>
           <div class="scai-program-session">
             <strong>Faculty and emerging-researcher highlights</strong>
-            <p>Faculty talks: Juncheng Yang, Yuanrui Sang, and Nicolas Christianson &middot; Job-market talks: Speakers TBD</p>
+            <p>Faculty talks: Juncheng Yang and Yuanrui Sang &middot; Job-market talks: Speakers TBD</p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
                 <div class="scai-session-person"><strong>Juncheng Yang</strong><span>Assistant Professor of Computer Science, Harvard University</span><em>Talk: Rethinking Storage for Sustainable AI: From Models to Generated Data</em></div>
                 <div class="scai-session-person"><strong>Yuanrui Sang</strong><span>Assistant Professor of Electrical and Computer Engineering, UMass Amherst</span><em>Talk: TBD</em></div>
-                <div class="scai-session-person"><strong>Nicolas Christianson</strong><span>Assistant Professor of Computer Science, Johns Hopkins University</span><em>Talk: TBD</em></div>
                 <div class="scai-session-person"><strong>Job-market talks</strong><span>Speakers and affiliations TBD</span><em>Talks: TBD</em></div>
               </div>
             </details>
