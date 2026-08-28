@@ -1571,7 +1571,7 @@ permalink: /scai-symposium/
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
                 <div class="scai-session-person"><strong>Caitlyn Butler</strong><span>Associate Dean for Research and Graduate Affairs, Riccio College of Engineering; Professor of Civil and Environmental Engineering, UMass Amherst</span><em>Welcome remarks</em></div>
-                <div class="scai-session-person"><strong>Brian Levine</strong><span>Associate Dean of IT and Facilities; Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Welcome remarks</em></div>
+                <div class="scai-session-person"><strong>Brian Levine</strong><span>Associate Dean of Research &amp; Engagement; Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Welcome remarks</em></div>
               </div>
             </details>
           </div>
@@ -1667,7 +1667,7 @@ permalink: /scai-symposium/
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
-                <div class="scai-session-person"><strong>James Allan</strong><span>Associate Dean of Research and Engagement; Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Welcome remarks</em></div>
+                <div class="scai-session-person"><strong>James Allan</strong><span>Senior Associate Dean of Operations; Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Welcome remarks</em></div>
               </div>
             </details>
           </div>
