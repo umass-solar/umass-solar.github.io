@@ -504,10 +504,21 @@ permalink: /scai-symposium/
     line-height: 1.42;
   }
 
-  .scai-talk {
+  .scai-speaker-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, max-content));
+    gap: 0.45rem;
     margin-top: 0.75rem;
     padding-top: 0.7rem;
     border-top: 1px solid rgba(29, 37, 44, 0.1);
+  }
+
+  .scai-talk {
+    min-width: 0;
+  }
+
+  .scai-speaker-details .scai-talk[open] {
+    grid-column: 1 / -1;
   }
 
   .scai-talk summary {
@@ -564,6 +575,10 @@ permalink: /scai-symposium/
     color: #3f4e57 !important;
     font-size: 0.78rem;
     line-height: 1.52;
+  }
+
+  .scai-talk-panel a {
+    overflow-wrap: anywhere;
   }
 
   .scai-talk-panel p + p {
@@ -1232,7 +1247,7 @@ permalink: /scai-symposium/
     <a class="scai-back-to-top" href="#page-top">Back to top</a>
   </section>
 
-  <section class="scai-section" aria-labelledby="speakers-heading">
+  <section class="scai-section" id="speakers" aria-labelledby="speakers-heading">
     <div class="scai-section-header scai-section-header-single">
       <h2 id="speakers-heading">Invited speakers/panelists</h2>
     </div>
@@ -1251,13 +1266,22 @@ permalink: /scai-symposium/
         <div class="scai-speaker-body">
           <h3><a href="https://eecs.engin.umich.edu/people/chowdhury-mosharaf/">Mosharaf Chowdhury</a></h3>
           <p class="scai-speaker-role">Associate Professor of Computer Science and Engineering, University of Michigan</p>
-          <details class="scai-talk">
-            <summary>View talk</summary>
-            <div class="scai-talk-panel">
-              <h4>Toward Energy-Optimal AI</h4>
-              <p>Generative AI adoption and its energy consumption are skyrocketing. Training a single frontier model can consume tens of GWh, while inference is rapidly outpacing training in aggregate energy demand. This talk introduces the ML.ENERGY Initiative and its work to measure where AI energy goes, optimize energy use without slowing training, and expose the tradeoffs between energy and performance. The tools and systems are open-sourced through the Zeus project.</p>
-            </div>
-          </details>
+          <div class="scai-speaker-details">
+            <details class="scai-talk">
+              <summary>View talk</summary>
+              <div class="scai-talk-panel">
+                <h4>Toward Energy-Optimal AI</h4>
+                <p>Generative AI adoption and its energy consumption are skyrocketing. Training a single frontier model can consume tens of GWh, and inference is rapidly outpacing training in aggregate energy demand. This surge is inflating operational costs, and power delivery is now the gating factor for bringing new GPU capacity online.</p>
+                <p>In this talk, I will introduce the ML.ENERGY Initiative, our effort to understand and curtail AI's runaway energy demands on three fronts. First, understanding where energy goes: I will present tools to precisely measure AI energy consumption and findings from benchmarking open-weight models across hardware and serving configurations via the ML.ENERGY Leaderboard. Second, optimizing energy use: I will describe how identifying computations on and off the critical path in distributed training enables precise GPU frequency control, saving energy on non-critical work without slowing down training. Third, exposing tradeoffs: I will present how co-optimizing static and dynamic energy through better kernel scheduling reveals the Pareto frontier between energy and performance, enabling practitioners to make informed deployment decisions under diverse constraints. All tools and systems are open-sourced through the Zeus project. I will conclude with open problems in building energy-optimal AI systems.</p>
+              </div>
+            </details>
+            <details class="scai-talk">
+              <summary>Biography</summary>
+              <div class="scai-talk-panel">
+                <p>Mosharaf Chowdhury is an Associate Professor of Computer Science and Engineering at the University of Michigan, Ann Arbor, where he leads the SymbioticLab. His research focuses on making AI/ML workloads more efficient, with a particular emphasis on reducing their energy consumption through the ML Energy Initiative. Major open-source projects from his team include Infiniswap, the first scalable memory disaggregation solution; FedScale, a planetary-scale AI/ML platform; TPP, a tiered memory manager integrated into the Linux kernel (v5.18+); and Zeus, the first energy-optimal generative AI stack. Previously, Mosharaf invented the concept of coflows and was one of the original creators of Apache Spark. He has received numerous individual honors, including fellowships and paper awards from NSDI, OSDI, ATC, and MICRO.</p>
+              </div>
+            </details>
+          </div>
         </div>
       </article>
 
@@ -1266,13 +1290,22 @@ permalink: /scai-symposium/
         <div class="scai-speaker-body">
           <h3><a href="https://www.bu.edu/peaclab/people/faculty/">Ayse K. Coskun</a></h3>
           <p class="scai-speaker-role">Professor of Electrical and Computer Engineering and Systems Engineering and Director of CISE, Boston University; Chief Scientist, Emerald AI</p>
-          <details class="scai-talk">
-            <summary>View talk</summary>
-            <div class="scai-talk-panel">
-              <h4>AI Data Centers as Flexible Grid Assets</h4>
-              <p>This talk explores how the rapid growth of AI is transforming data centers into major power consumers—and how, with the right technologies, they can become valuable grid resources. It discusses approaches to making AI workloads power-flexible and enabling data centers to dynamically adjust consumption in response to grid conditions while meeting performance constraints, drawing on real-world deployments.</p>
-            </div>
-          </details>
+          <div class="scai-speaker-details">
+            <details class="scai-talk">
+              <summary>View talk</summary>
+              <div class="scai-talk-panel">
+                <h4>AI Data Centers as Flexible Grid Assets</h4>
+                <p>This talk explores how the rapid growth of AI is transforming data centers into major power consumers—and how, with the right technologies, data centers can become valuable grid resources instead. The talk will discuss emerging approaches to making AI workloads "power-flexible" and enabling data centers to dynamically adjust consumption in response to grid conditions while meeting performance constraints. Drawing from real-world deployments, the talk highlights how grid-interactive data centers can accelerate interconnection and support a more resilient and affordable power grid.</p>
+              </div>
+            </details>
+            <details class="scai-talk">
+              <summary>Biography</summary>
+              <div class="scai-talk-panel">
+                <p>Professor Ayse Coskun is the Chief Scientist at Emerald AI, a startup focused on enabling power flexibility in data centers. She is also a full professor in the Electrical and Computer Engineering Department at Boston University, where she leads the Center for Information and Systems Engineering and serves as Associate Dean for Research at the College of Engineering (currently on leave from BU).</p>
+                <p>Prof. Coskun is widely recognized as a leading academic authority on orchestrating data center power demand in response to power grid needs. Her broader research applies AI and machine learning to optimize cloud and high-performance computing systems. She has received many honors for her contributions, including the Ernest Kuh Award for energy-efficient system-level design and an IBM Faculty Award for applying AI-based methods in DevSecOps. Earlier in her career, Prof. Coskun worked in industry at Sun Microsystems (now Oracle). She recently served as Deputy Editor-in-Chief of IEEE Transactions on Computer-Aided Design and holds a PhD in Computer Science and Engineering from the University of California, San Diego.</p>
+              </div>
+            </details>
+          </div>
         </div>
       </article>
 
@@ -1281,6 +1314,21 @@ permalink: /scai-symposium/
         <div class="scai-speaker-body">
           <h3><a href="https://mghpcc.org/executive-director/">John Goodhue</a></h3>
           <p class="scai-speaker-role">Executive Director, Massachusetts Green High Performance Computing Center</p>
+          <div class="scai-speaker-details">
+            <details class="scai-talk">
+              <summary>View talk</summary>
+              <div class="scai-talk-panel">
+                <h4>Massachusetts Green High Performance Computing Center</h4>
+                <p>A talk introducing MGHPCC facilities, capabilities, and opportunities for research collaboration </p>
+              </div>
+            </details>
+            <details class="scai-talk">
+              <summary>Biography</summary>
+              <div class="scai-talk-panel">
+                <p><a href="https://mghpcc.org/executive-director/">https://mghpcc.org/executive-director/</a></p>
+              </div>
+            </details>
+          </div>
         </div>
       </article>
 
@@ -1289,13 +1337,22 @@ permalink: /scai-symposium/
         <div class="scai-speaker-body">
           <h3><a href="https://www.linkedin.com/in/fabio-grimaldi-530796ba/">Fabio Grimaldi</a></h3>
           <p class="scai-speaker-role">Senior Sustainability Scientist, Amazon Web Services</p>
-          <details class="scai-talk">
-            <summary>View talk</summary>
-            <div class="scai-talk-panel">
-              <h4>The Sustainability Stack for AI at Scale: An Industry Perspective</h4>
-              <p>AI infrastructure offers a major opportunity to align large-scale computing with sustainability goals, but doing so requires scientific rigor, operational integration, and cross-industry collaboration. This talk describes AWS's approach across measurement, hardware and operational decarbonization, customer engagement, lifecycle assessment, research, and standardization.</p>
-            </div>
-          </details>
+          <div class="scai-speaker-details">
+            <details class="scai-talk">
+              <summary>View talk</summary>
+              <div class="scai-talk-panel">
+                <h4>The Sustainability Stack for AI at Scale: An Industry Perspective</h4>
+                <p>AI infrastructure presents one of the single biggest opportunities of our time to align large-scale computing with sustainability goals — but realizing that opportunity requires scientific rigor, operational integration, and cross-industry collaboration that match the complexity of the underlying systems. From embodied carbon in accelerator chips to operational energy across globally distributed fleets, quantifying and reducing the environmental footprint of AI compute demands work across materials science, systems engineering, power systems, and policy.
+This talk describes how AWS approaches this challenge across interconnected layers. Measurement: building lifecycle assessment methodologies for AI hardware and operations, addressing data availability gaps, and working with service teams to quantify emissions from training and inference at the most granular level. Decarbonization of hardware and operations: making carbon metrics visible to service teams, integrating with financial and planning systems, co-owning reduction goals with infrastructure owners, and embedding sustainability into early-stage hardware and service design. Customer engagement: providing emissions reporting through public-facing tools and supporting responsible use of cloud and AI services. Cross-industry research and standardization: publishing methodology openly, contributing to Product Category Rule development, providing technical input to public policy teams on regulatory frameworks, and collaborating with partners across the full value chain — from manufacturers to academia to initiatives like SCAI — to advance the science of sustainable computing.</p>
+              </div>
+            </details>
+            <details class="scai-talk">
+              <summary>Biography</summary>
+              <div class="scai-talk-panel">
+                <p>Fabio Grimaldi is a Senior Sustainability Scientist at AWS, where he leads the development of methodologies and large-scale models to track and improve the sustainability performance of AWS cloud services. He drives the adoption of sustainability metrics across AWS services, translating data into actionable insights that help AWS and its customers meet their sustainability goals. Fabio joined Amazon in 2022. He holds a PhD in Chemical Engineering from the University College London.</p>
+              </div>
+            </details>
+          </div>
         </div>
       </article>
 
@@ -1304,13 +1361,23 @@ permalink: /scai-symposium/
         <div class="scai-speaker-body">
           <h3><a href="https://www.ioes.ucla.edu/person/deepak-rajagopal/">Deepak Rajagopal</a></h3>
           <p class="scai-speaker-role">Professor and Co-Chair, Environmental Science and Engineering (D.Env.) Program, UCLA Institute of the Environment and Sustainability</p>
-          <details class="scai-talk">
-            <summary>View talk</summary>
-            <div class="scai-talk-panel">
-              <h4>The Challenges of Measuring AI's Environmental Footprint: An Industrial Ecology Perspective</h4>
-              <p>We can increasingly measure what AI systems consume directly, but determining their lifecycle environmental impacts remains difficult. This talk uses industrial ecology, lifecycle assessment, and energy economics to examine operational and embodied impacts, system boundaries, uncertainty, rebound effects, supply-chain data gaps, and emerging disclosure requirements.</p>
-            </div>
-          </details>
+          <div class="scai-speaker-details">
+            <details class="scai-talk">
+              <summary>View talk</summary>
+              <div class="scai-talk-panel">
+                <h4>The Challenges of Measuring AI's Environmental Footprint: An Industrial Ecology Perspective</h4>
+                <p>We can increasingly measure what AI systems consume directly, but it remains difficult to determine their lifecycle environmental impacts. For instance, operational energy and water use can often be measured with relatively direct activity data and established emissions factors. Yet for major AI infrastructure providers, much of the reported greenhouse-gas footprint appears to lie upstream—in semiconductor fabrication, server manufacturing, construction, and other capital goods or downstream (end-of-life treatment) —where data and estimates tend to be incomplete and uncertain. Beyond the own lifecycle of AI systems, their may arise major impacts, both positive and negative, on the broader economy and society that tended to be even harder to isolate and quantify, The result is a measurement asymmetry: some of the impacts that are easiest to quantify might not necessarily be the largest and most uncertain.</p>
+                <p>Industrial ecology, life-cycle assessment, and energy economics provide mature conceptual frameworks for addressing such issues. They distinguish attributional from consequential effects, embodied from operational impacts, and direct from indirect and economy-wide rebound. They also provide a disciplined way to ask a question often neglected in AI sustainability debates: how far should the system boundary expand before additional precision ceases to justify its cost?</p>
+                <p>From a public policy standpoint, California’s SB 253 is a first-of-a-kind policy going into effect in 2027 which requires large firms doing business in California to disclose Scope 1, 2, and eventually Scope 3 GHG emissions under standardized rules and phased third-party assurance. Such regulations necessitate consistency, transparency, and accountability in measuring and reporting lifecycle emissions of AI. But disclosure alone will not eliminate uncertainty where underlying supply-chain data remain modeled or incomplete. The central challenge, therefore, is not simply more measurement but distinguish what is directly observed from what is estimated, make uncertainty explicit, and design reporting systems that improve decision-relevant accuracy without creating a false impression of precision.</p>
+              </div>
+            </details>
+            <details class="scai-talk">
+              <summary>Biography</summary>
+              <div class="scai-talk-panel">
+                <p>Deepak Rajagopal is a Professor in the UCLA Institute of the Environment and Sustainability and Dept. of Urban Planning in the UCLA Luskin School of Public Affairs. His fields of research include Industrial Ecology and Life cycle assessment, applied economic analysis of energy and environmental policies. He is also a faculty Scientist in the Energy Analysis Division at the Lawrence Berkeley National Laboratory. He has a Ph.D. in Energy and Resources from UC Berkeley, MS degrees in Ag. and Resource Economics (UC Berkeley), and Mechanical Engineering (U. of Maryland, College Park) and B.Tech. in Mechanical Engineering (Indian Institute. of Technology, Madras). He has been a post-doctoral researcher at the Energy Biosciences Institute, UC Berkeley and also worked as a Structural Engineer at United Technologies Research Center, E.Hartford, Connecticut. </p>
+              </div>
+            </details>
+          </div>
         </div>
       </article>
 
@@ -1319,13 +1386,22 @@ permalink: /scai-symposium/
         <div class="scai-speaker-body">
           <h3><a href="https://shaoleiren.github.io/">Shaolei Ren</a></h3>
           <p class="scai-speaker-role">Professor of Electrical and Computer Engineering, University of California, Riverside</p>
-          <details class="scai-talk">
-            <summary>View talk</summary>
-            <div class="scai-talk-panel">
-              <h4>Powering AI in a Thirsty World</h4>
-              <p>The rapid growth of AI is driving gigawatt-scale data centers and increasing demands on power grids and water infrastructure. This talk explores water-aware computing and cooling, coordination with power systems, and approaches for managing resource tradeoffs while strengthening infrastructure resilience and reducing impacts on surrounding communities.</p>
-            </div>
-          </details>
+          <div class="scai-speaker-details">
+            <details class="scai-talk">
+              <summary>View talk</summary>
+              <div class="scai-talk-panel">
+                <h4>Powering AI in a Thirsty World</h4>
+                <p>The rapid growth of artificial intelligence (AI) is driving the construction of gigawatt-scale data centers, placing increasing demands on both power grids and water infrastructure. Yet power and water are tightly coupled: water-intensive cooling can compete for local water resources and create risks to data center resilience, while waterless cooling can increase electricity demand and further stress the local grid. This tradeoff is particularly significant on the hottest days of the year, when both power and water systems are under stress. Despite these interdependencies, power and water are often planned and managed separately, overlooking important opportunities for coordination.</p>
+                <p>This talk explores how responsible AI infrastructure design and operations can address coupled power-water challenges. I will discuss water-aware computing and cooling, coordination with power systems, and approaches for managing resource tradeoffs while strengthening infrastructure resilience and reducing impacts on surrounding communities.</p>
+              </div>
+            </details>
+            <details class="scai-talk">
+              <summary>Biography</summary>
+              <div class="scai-talk-panel">
+                <p>Shaolei Ren is a Professor of Electrical and Computer Engineering at the University of California, Riverside. His research broadly focuses on developing modeling frameworks, algorithms, and empirical methodologies to address challenges at the intersection of AI, computing systems, and communities. He is a recipient of the U.S. National Science Foundation CAREER Award (2015) and several paper awards, including at ACM e-Energy (2024, 2016) and IEEE ICC (2016). He received his Ph.D. degree from the University of California, Los Angeles.</p>
+              </div>
+            </details>
+          </div>
         </div>
       </article>
 
@@ -1334,13 +1410,23 @@ permalink: /scai-symposium/
         <div class="scai-speaker-body">
           <h3><a href="https://www.linkedin.com/in/jeremy-rice-9a015b12/">Jeremy Rice</a></h3>
           <p class="scai-speaker-role">Mechanical Systems Lead, Verrus</p>
-          <details class="scai-talk">
-            <summary>View talk</summary>
-            <div class="scai-talk-panel">
-              <h4>Direct and Indirect Energy Resources Enabling the Data Center as a Grid Asset</h4>
-              <p>This talk examines the operational flexibility of data centers through direct energy resources such as battery storage and dynamic IT loads, and indirect resources such as water use and flexible temperature interfaces. It considers how these variables can be coordinated so data centers support the grid while maintaining workload availability.</p>
-            </div>
-          </details>
+          <div class="scai-speaker-details">
+            <details class="scai-talk">
+              <summary>View talk</summary>
+              <div class="scai-talk-panel">
+                <h4>Direct and Indirect Energy Resources Enabling the Data Center as a Grid Asset</h4>
+                <p>As data centers become increasingly integrated into the modern power grid, the demand for operational flexibility has never been greater. This talk explores the multi-faceted power and energy impacts of a flexible data center, specifically focusing on the complex interactions between direct energy resources, such as battery energy storage systems (BESS) and dynamic IT loads and indirect energy resources, such as water usage and flexible temperature interfaces. By examining these variables in concert, we can better understand how data centers can become grid assets, while maintaining the required availability of the IT workloads and constraining the use of the indirect energy resources.</p>
+              </div>
+            </details>
+            <details class="scai-talk">
+              <summary>Biography</summary>
+              <div class="scai-talk-panel">
+                <p>Jeremy Rice, Ph.D., is a seasoned engineering leader with over two decades of experience spanning the "chip to chiller" stack. Currently, he serves as the Mechanical Systems Lead at Verrus LLC.</p>
+                <p>Prior to Verrus, Jeremy held a significant tenure at Google within their data center organization, where he focused on asset utilization, system simplification, and acted as a technical liaison between the IT and data center teams. He also brings extensive experience in IT-side hardware, having advanced the state of the art in both air and liquid cooling technologies.</p>
+                <p>Jeremy holds a Bachelor of Science and a Ph.D. in Mechanical Engineering from the University of Connecticut.</p>
+              </div>
+            </details>
+          </div>
         </div>
       </article>
 
@@ -1357,13 +1443,22 @@ permalink: /scai-symposium/
         <div class="scai-speaker-body">
           <h3><a href="https://people.cs.umass.edu/~shenoy/">Prashant Shenoy</a></h3>
           <p class="scai-speaker-role">Distinguished Professor of Computer Science and Director of the NSF CoDec Expedition, UMass Amherst</p>
-          <details class="scai-talk">
-            <summary>View talk</summary>
-            <div class="scai-talk-panel">
-              <h4>Data Centers, AI Workloads, and Efficiency: A Systems Perspective</h4>
-              <p>This talk offers a systems perspective on improving the efficiency and sustainability of cloud platforms as AI demand grows. It examines workload shifting across time and location, grid demand, energy availability, electricity prices, and the performance, efficiency, and cost tradeoffs involved in making computing systems grid-friendly.</p>
-            </div>
-          </details>
+          <div class="scai-speaker-details">
+            <details class="scai-talk">
+              <summary>View talk</summary>
+              <div class="scai-talk-panel">
+                <h4>Data Centers, AI Workloads, and Efficiency: A Systems Perspective</h4>
+                <p>The exponential growth of cloud computing has been a defining trend of our time, fueled by rapidly growing demands from online and data-intensive  workloads. Despite the end of Denard scaling, the cloud's energy demand grew more slowly than expected over the past decade due to the aggressive implementation of energy-efficiency optimizations. However, the rise of AI workloads, which are often more resource-intensive than traditional cloud workloads, has led to rapid growth in data centers with power-hungry accelerators such as GPUs and TPUs, leading to a resurgence in the cloud's energy consumption and a strain on our electric grids.</p>
+                <p>In this talk, I will provide a systems perspective on the challenges and opportunities in enhancing the efficiency and sustainability of cloud platforms in the face of rising AI demand. I will discuss how resource management techniques such as workload shifting can enhance the efficiency of cloud platforms by exploiting the spatio-temporal variability in grid demand, energy availability, and electricity prices. I will present initial directions in making current computing systems grid-friendly and discuss approaches for navigating performance, efficiency, and cost tradeoffs that arise in their operations. I will end with several open research challenges that the research community needs to tackle to make AI-driven cloud platforms grid-friendly and ensure their continued growth.</p>
+              </div>
+            </details>
+            <details class="scai-talk">
+              <summary>Biography</summary>
+              <div class="scai-talk-panel">
+                <p>Prashant Shenoy is currently a Distinguished Professor  in the College of Information and Computer Sciences at the University of Massachusetts Amherst. He received the B.Tech degree in Computer Science and Engineering from the Indian Institute of Technology, Bombay and the M.S and Ph.D degrees in Computer Science from the University of Texas, Austin. His research interests lie in distributed systems and networking, with a recent emphasis on cloud and sustainable computing. He has been the recipient of several best paper awards at leading conferences, including two ACM Test of Time Awards. He is a fellow of the ACM, IEEE, AAAS, and AAIA.</p>
+              </div>
+            </details>
+          </div>
         </div>
       </article>
 
@@ -1372,13 +1467,21 @@ permalink: /scai-symposium/
         <div class="scai-speaker-body">
           <h3><a href="https://www.microsoft.com/en-us/research/people/kstrauss/">Karin Strauss</a></h3>
           <p class="scai-speaker-role">Innovation Strategist and Senior Principal Research Manager, Microsoft Research</p>
-          <details class="scai-talk">
-            <summary>View talk</summary>
-            <div class="scai-talk-panel">
-              <h4>AI Needs a Dose of Its Own Cure to Cut the Carbon. Let's Do It!</h4>
-              <p>Efficiency makes AI more accessible and valuable, but it can also spur enough additional use that total consumption and emissions continue to rise. This talk connects efficient resource use with expanding low-carbon supplies of electricity and materials, and explores how AI itself can help create a virtuous cycle toward net zero.</p>
-            </div>
-          </details>
+          <div class="scai-speaker-details">
+            <details class="scai-talk">
+              <summary>View talk</summary>
+              <div class="scai-talk-panel">
+                <h4>AI Needs a Dose of Its Own Cure to Cut the Carbon. Let’s Do It!</h4>
+                <p>As we ride the Cambrian explosion of AI, gains in the efficiency of resource use have become ever more important. They make the technology more accessible, enabling more models, features, products, and applications, increasing the value of AI. But as this community has pointed out, efficiency could backfire as a climate strategy: making AI more efficient could spur so much additional use that total consumption and absolute emissions might keep climbing. So if efficiency’s shadow twin, the availability of low carbon supply, is neglected, increasing value may come with rising environmental cost. After celebrating the progress this community has made on using resources efficiently, on carbon-aware computing, and on measuring embodied carbon, I will turn to increasing that low carbon supply of electricity and materials to build on, and I will share some of the work we are doing in this space. AI, so often seen as adding pressure against reaching net zero, can instead be a positive force to achieve it. Together, AI that makes resource use more efficient and AI that expands low carbon supply can drive a virtuous cycle, and this community can, and I will argue should, participate in both.</p>
+              </div>
+            </details>
+            <details class="scai-talk">
+              <summary>Biography</summary>
+              <div class="scai-talk-panel">
+                <p>Karin Strauss is a Senior Principal Research Manager and Innovation Strategist at Microsoft Research and an Affiliate Professor in the Paul G. Allen School of Computer Science &amp; Engineering at the University of Washington. Her work spans computer systems, synthetic biology and environmental sustainability, with research ranging from machine learning hardware and emerging memory technologies to biologically inspired computing. She is best known for pioneering DNA data storage systems, a project that received broad industry and media recognition. More recently, she has focused on making AI and IT infrastructure more sustainable. </p>
+              </div>
+            </details>
+          </div>
         </div>
       </article>
 
@@ -1403,13 +1506,25 @@ permalink: /scai-symposium/
         <div class="scai-speaker-body">
           <h3><a href="https://seas.harvard.edu/person/juncheng-yang">Juncheng Yang</a></h3>
           <p class="scai-speaker-role">Assistant Professor of Computer Science, Harvard University</p>
-          <details class="scai-talk">
-            <summary>View talk</summary>
-            <div class="scai-talk-panel">
-              <h4>Rethinking Storage for Sustainable AI: From Models to Generated Data</h4>
-              <p>Modern AI systems create a growing storage sustainability challenge across model checkpoints, fine-tuned variants, and generated content. This talk presents ZipLLM, TensorDex, and LatentStore, illustrating how storage can be redesigned around the structure, semantics, and regenerability of AI data so computation and storage are jointly optimized.</p>
-            </div>
-          </details>
+          <div class="scai-speaker-details">
+            <details class="scai-talk">
+              <summary>View talk</summary>
+              <div class="scai-talk-panel">
+                <h4>Rethinking Storage for Sustainable AI: From Models to Generated Data</h4>
+                <p>The rapid growth of AI is creating a new storage sustainability challenge. Modern AI systems produce and retain enormous amounts of data—from billions of model checkpoints and fine-tuned variants to an ever-growing volume of AI-generated content. Yet today’s storage systems largely treat these objects as conventional byte streams, ignoring the rich structure and semantics introduced by AI workloads.</p>
+                <p>In this talk, I will present our recent work on rethinking storage systems for AI data. I will first discuss ZipLLM, which exploits relationships among models and combines model-aware compression with deduplication to substantially reduce the footprint of large model repositories. I will then present TensorDex, which pushes this idea further by treating tensors, rather than files or models, as first-class storage objects and exploiting relationships among tensors across an entire model ecosystem. Finally, I will discuss LatentStore, which revisits a more fundamental question for AI-generated data: do we need to store the generated object at all? By storing compact model-native representations and reconstructing data on demand, LatentStore trades increasingly inexpensive computation for reductions in long-term storage.</p>
+                <p>Together, these systems illustrate a broader opportunity: rather than applying traditional storage techniques directly to rapidly growing AI data, we can redesign the storage stack around the structure, semantics, and regenerability of AI workloads. I will conclude with a broader vision for sustainable AI storage, where computation and storage are jointly optimized to reduce the growing resource and environmental footprint of AI. </p>
+              </div>
+            </details>
+            <details class="scai-talk">
+              <summary>Biography</summary>
+              <div class="scai-talk-panel">
+                <p>Juncheng Yang is an Assistant Professor in Harvard John A. Paulson School of Engineering and Applied Sciences. His research interests broadly cover the efficiency, performance, reliability, and sustainability of large-scale data systems and machine learning systems.</p>
+                <p>Juncheng's works have received best paper awards or honorable mention at VLDB'26, VALUETOOLS'24, NSDI'24, NSDI'21, SOSP'21, and SYSTOR'16. Juncheng was a Facebook Fellow, recognized as a Rising Star in machine learning and systems, and a Google Cloud Research Innovator. His dissertation on designing efficient and scalable cache management systems received the CMU SCS Doctoral Dissertation Award and the ACM SIGOPS Dennis M. Ritchie Doctoral Dissertation Award. </p>
+                <p>His works have been widely adopted. For example, S3-FIFO and SIEVE are adopted for production at hundreds of companies with more than 60 open-source libraries and packages in 18 programming languages. Moreover, his group maintains libCacheSim, the most popular cache simulation library, and freeinference, a free LLM inference service. </p>
+              </div>
+            </details>
+          </div>
         </div>
       </article>
 
@@ -1418,13 +1533,21 @@ permalink: /scai-symposium/
         <div class="scai-speaker-body">
           <h3><a href="https://minlanyu.seas.harvard.edu/">Minlan Yu</a></h3>
           <p class="scai-speaker-role">Gordon McKay Professor of Computer Science, Harvard University</p>
-          <details class="scai-talk">
-            <summary>View talk</summary>
-            <div class="scai-talk-panel">
-              <h4>Resilient AI Infrastructure: From the GPU to the Grid</h4>
-              <p>Modern AI infrastructure must operate through changing workloads, GPU and network interruptions, and fluctuating grid power. This talk presents work on scheduling inference with internal LLM signals, TrainMover for resilient large-model training, and the Harvard Power and AI Initiative's effort to coordinate flexible AI workloads with grid planning.</p>
-            </div>
-          </details>
+          <div class="scai-speaker-details">
+            <details class="scai-talk">
+              <summary>View talk</summary>
+              <div class="scai-talk-panel">
+                <h4>Resilient AI Infrastructure: From the GPU to the Grid</h4>
+                <p>Modern AI systems run on massive, costly infrastructure that must operate under three kinds of change: workload changes, as agentic request rates, output lengths, and tool-calling times vary continuously; infrastructure interruptions, as GPU and network failures, preemptions, and maintenance repeatedly halt training at scale; and power changes, as available grid power fluctuates. In this talk, I will present our recent work on resilient AI infrastructure that adapts to all three. For workload changes, we use internal LLM signals to schedule inference requests, from standalone inferences to agentic workflows, cutting latency and improving efficiency. For infrastructure interruptions, we introduce TrainMover, a resilient LLM training runtime which leverages elastic and standby machines to handle interruptions with minimal downtime. For power changes, we started the Harvard Power and AI Initiative to rethink the coordination between the power grid and AI infrastructure—making AI workloads flexible and making grid planning matching such flexibility. </p>
+              </div>
+            </details>
+            <details class="scai-talk">
+              <summary>Biography</summary>
+              <div class="scai-talk-panel">
+                <p>Minlan Yu is a Gordon McKay professor at the Harvard School of Engineering and Applied Science. She’s the assistant director of the SRC/DARPA JUMP 2.0 ACE Center for Evolvable Computing, and the co-director for the Harvard power and AI initiative. She received her B.A. in computer science and mathematics from Peking University and her M.A. and PhD in computer science from Princeton University. She received the ACM-W rising star award, NSF CAREER award, and ACM SIGCOMM doctoral dissertation award. She served as PC co-chair for SIGCOMM, NSDI, HotNets, and several other conferences and workshops.</p>
+              </div>
+            </details>
+          </div>
         </div>
       </article>
     </div>
@@ -1682,7 +1805,7 @@ permalink: /scai-symposium/
               <div class="scai-session-details-panel">
                 <div class="scai-session-person"><strong>Ayse K. Coskun</strong><span>Professor of Electrical and Computer Engineering and Systems Engineering; Director of the Center for Information and Systems Engineering, Boston University; Chief Scientist, Emerald AI</span><em>Talk: AI Data Centers as Flexible Grid Assets</em></div>
                 <div class="scai-session-person"><strong>Jeremy Rice</strong><span>Mechanical Systems Lead, Verrus</span><em>Talk: Direct and Indirect Energy Resources Enabling the Data Center as a Grid Asset</em></div>
-                <div class="scai-session-person"><strong>John Goodhue</strong><span>Executive Director, Massachusetts Green High Performance Computing Center</span><em>Talk: TBD</em></div>
+                <div class="scai-session-person"><strong>John Goodhue</strong><span>Executive Director, Massachusetts Green High Performance Computing Center</span><em>Talk: Massachusetts Green High Performance Computing Center</em></div>
               </div>
             </details>
           </div>
