@@ -455,8 +455,8 @@ permalink: /scai-symposium/
 
   .scai-speakers {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0.85rem;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.75rem;
   }
 
   .scai-speaker {
@@ -1575,6 +1575,24 @@ This talk describes how AWS approaches this challenge across interconnected laye
       </article>
 
       <article class="scai-speaker">
+        <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/laura-haas.jpg" alt="Laura Haas" loading="lazy">
+        <div class="scai-speaker-body">
+          <h3><a href="https://www.cics.umass.edu/about/directory/laura-haas" target="_blank" rel="noopener noreferrer">Laura Haas</a></h3>
+          <div class="scai-speaker-labels"><span class="scai-speaker-label scai-speaker-label-panelist">Panelist</span></div>
+          <p class="scai-speaker-role">Professor, Manning College of Information and Computer Sciences, UMass Amherst</p>
+          <div class="scai-speaker-details scai-speaker-details-single">
+            <details class="scai-talk">
+              <summary>Biography</summary>
+              <div class="scai-talk-panel">
+                <p>Laura Haas is a Professor in the Manning College of Information and Computer Sciences at UMass Amherst. She joined UMass in 2017 after a distinguished career at IBM, where she was an IBM Fellow and held leadership roles including Director of the Accelerated Discovery Lab, Director of Computer Science at the Almaden Research Center, and head of IBM Research’s worldwide exploratory science program.</p>
+                <p>Her foundational contributions to database systems include the Starburst query processor, which became the basis for DB2 LUW; Garlic, an early system for integrating heterogeneous data sources; and Clio, the first semi-automatic tool for heterogeneous schema mapping. As the first permanent dean of Manning CICS, she led substantial growth in the college, expanded faculty and student diversity, oversaw the design and construction of a new academic building, and helped raise more than $100 million from public, industry, and philanthropic sources. Haas is an ACM Fellow, a member of the National Academy of Engineering and IBM Academy of Technology, and a Fellow of the American Academy of Arts and Sciences. She earned her Ph.D. in Computer Science from the University of Texas at Austin and her A.B. in Computer Science from Harvard University.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </article>
+
+      <article class="scai-speaker">
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/deepak-rajagopal.webp" alt="Deepak Rajagopal" loading="lazy">
         <div class="scai-speaker-body">
           <h3><a href="https://www.ioes.ucla.edu/person/deepak-rajagopal/" target="_blank" rel="noopener noreferrer">Deepak Rajagopal</a></h3>
@@ -1701,6 +1719,24 @@ This talk describes how AWS approaches this challenge across interconnected laye
       </article>
 
       <article class="scai-speaker">
+        <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/ramesh-sitaraman.jpg" alt="Ramesh Sitaraman" loading="lazy">
+        <div class="scai-speaker-body">
+          <h3><a href="https://www.cics.umass.edu/about/directory/ramesh-sitaraman" target="_blank" rel="noopener noreferrer">Ramesh Sitaraman</a></h3>
+          <div class="scai-speaker-labels"><span class="scai-speaker-label scai-speaker-label-panelist">Panelist</span></div>
+          <p class="scai-speaker-role">Associate Dean of Educational Programs and Teaching and Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst</p>
+          <div class="scai-speaker-details scai-speaker-details-single">
+            <details class="scai-talk">
+              <summary>Biography</summary>
+              <div class="scai-talk-panel">
+                <p>Ramesh Sitaraman is Associate Dean of Educational Programs and Teaching and a Distinguished Professor in the Manning College of Information and Computer Sciences at UMass Amherst. His research spans Internet-scale distributed systems, including algorithms, architectures, performance, energy efficiency, and user behavior. During his time in industry, he helped create the world’s first major content delivery network and pioneered distributed systems that deliver web content, video, applications, and online services to billions of users.</p>
+                <p>He is the founding director of UMass Amherst’s interdisciplinary Informatics undergraduate program and a Fellow of both ACM and IEEE. His honors include the inaugural ACM SIGCOMM Networking Systems Award for his work on the Akamai CDN, an Excellence in DASH Award for adaptive-bitrate algorithms used in commercial video streaming, the UMass Amherst Distinguished Teaching Award, and NSF Research Initiation and CAREER awards. He earned his Ph.D. in Computer Science from Princeton University and his B.Tech. from the Indian Institute of Technology Madras.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </article>
+
+      <article class="scai-speaker">
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/karin-strauss.jpg" alt="Karin Strauss" loading="lazy">
         <div class="scai-speaker-body">
           <h3><a href="https://www.microsoft.com/en-us/research/people/kstrauss/" target="_blank" rel="noopener noreferrer">Karin Strauss</a></h3>
@@ -1797,6 +1833,24 @@ This talk describes how AWS approaches this challenge across interconnected laye
               <summary>Biography</summary>
               <div class="scai-talk-panel">
                 <p>Minlan Yu is a Gordon McKay professor at the Harvard School of Engineering and Applied Science. She’s the assistant director of the SRC/DARPA JUMP 2.0 ACE Center for Evolvable Computing, and the co-director for the Harvard power and AI initiative. She received her B.A. in computer science and mathematics from Peking University and her M.A. and PhD in computer science from Princeton University. She received the ACM-W rising star award, NSF CAREER award, and ACM SIGCOMM doctoral dissertation award. She served as PC co-chair for SIGCOMM, NSDI, HotNets, and several other conferences and workshops.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </article>
+
+      <article class="scai-speaker">
+        <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/golbon-zakeri.jpg" alt="Golbon Zakeri" loading="lazy">
+        <div class="scai-speaker-body">
+          <h3><a href="https://www.umass.edu/engineering/about/directory/golbon-zakeri" target="_blank" rel="noopener noreferrer">Golbon Zakeri</a></h3>
+          <div class="scai-speaker-labels"><span class="scai-speaker-label scai-speaker-label-panelist">Panelist</span></div>
+          <p class="scai-speaker-role">Professor of Mechanical and Industrial Engineering and Director of the Northeast Power Economics and Analytics Research Lab, UMass Amherst</p>
+          <div class="scai-speaker-details scai-speaker-details-single">
+            <details class="scai-talk">
+              <summary>Biography</summary>
+              <div class="scai-talk-panel">
+                <p>Golbon Zakeri is a Professor of Operations Research in the Department of Mechanical and Industrial Engineering at UMass Amherst and Director of the Northeast Power Economics and Analytics Research Lab. Her research develops analytics, economic models, and optimization methods for decision-making under uncertainty, with particular emphasis on electricity markets and power systems. She uses mathematical modeling to study policies and system designs that support efficient, reliable, resilient, and equitable energy procurement.</p>
+                <p>Before joining UMass Amherst, Zakeri was a faculty member at the University of Auckland, where she directed the Electric Power Optimization Centre, served as Deputy Director of the University of Auckland Energy Centre, and was President of the Operations Research Society of New Zealand from 2013 to 2017. Her prior experience also includes research at Argonne National Laboratory. She serves as an Area Editor for Energy and Environment at <em>Operations Research</em>, an editor of the INFORMS-Springer book series, and an associate editor for <em>Computational Management Science</em>. She earned her Ph.D. in Mathematics and Computer Science from the University of Wisconsin–Madison.</p>
               </div>
             </details>
           </div>
@@ -2422,6 +2476,9 @@ Speaker image sources:
 - Mosharaf Chowdhury: https://cse.engin.umich.edu/stories/mosharaf-chowdhury-receives-david-e-liddle-research-excellence-award
 - Minlan Yu: https://minlanyu.seas.harvard.edu/
 - John Goodhue: https://mghpcc.org/executive-director/
+- Laura Haas: https://www.cics.umass.edu/about/directory/laura-haas
+- Ramesh Sitaraman: https://www.cics.umass.edu/about/directory/ramesh-sitaraman
+- Golbon Zakeri: https://www.umass.edu/engineering/about/directory/golbon-zakeri
 - Deepak Rajagopal: https://www.ioes.ucla.edu/person/deepak-rajagopal/
 - Le Xie: https://xielab.seas.harvard.edu/le-xie/
 - Yuanrui Sang: https://www.umass.edu/engineering/about/directory/assistant-professor
