@@ -1482,7 +1482,7 @@ permalink: /scai-symposium/
           <p class="scai-speaker-role">Associate Professor of Computer Science and Engineering, University of Michigan</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
-              <summary>View talk</summary>
+              <summary>Talk</summary>
               <div class="scai-talk-panel">
                 <h4>Toward Energy-Optimal AI</h4>
                 <p>Generative AI adoption and its energy consumption are skyrocketing. Training a single frontier model can consume tens of GWh, and inference is rapidly outpacing training in aggregate energy demand. This surge is inflating operational costs, and power delivery is now the gating factor for bringing new GPU capacity online.</p>
@@ -1507,7 +1507,7 @@ permalink: /scai-symposium/
           <p class="scai-speaker-role">Professor of Electrical and Computer Engineering and Systems Engineering and Director of CISE, Boston University; Chief Scientist, Emerald AI</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
-              <summary>View talk</summary>
+              <summary>Talk</summary>
               <div class="scai-talk-panel">
                 <h4>AI Data Centers as Flexible Grid Assets</h4>
                 <p>This talk explores how the rapid growth of AI is transforming data centers into major power consumers—and how, with the right technologies, data centers can become valuable grid resources instead. The talk will discuss emerging approaches to making AI workloads "power-flexible" and enabling data centers to dynamically adjust consumption in response to grid conditions while meeting performance constraints. Drawing from real-world deployments, the talk highlights how grid-interactive data centers can accelerate interconnection and support a more resilient and affordable power grid.</p>
@@ -1532,7 +1532,7 @@ permalink: /scai-symposium/
           <p class="scai-speaker-role">Executive Director, Massachusetts Green High Performance Computing Center</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
-              <summary>View talk</summary>
+              <summary>Talk</summary>
               <div class="scai-talk-panel">
                 <h4>Massachusetts Green High Performance Computing Center</h4>
                 <p>A talk introducing MGHPCC facilities, capabilities, and opportunities for research collaboration </p>
@@ -1557,7 +1557,7 @@ permalink: /scai-symposium/
           <p class="scai-speaker-role">Senior Sustainability Scientist, Amazon Web Services</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
-              <summary>View talk</summary>
+              <summary>Talk</summary>
               <div class="scai-talk-panel">
                 <h4>The Sustainability Stack for AI at Scale: An Industry Perspective</h4>
                 <p>AI infrastructure presents one of the single biggest opportunities of our time to align large-scale computing with sustainability goals — but realizing that opportunity requires scientific rigor, operational integration, and cross-industry collaboration that match the complexity of the underlying systems. From embodied carbon in accelerator chips to operational energy across globally distributed fleets, quantifying and reducing the environmental footprint of AI compute demands work across materials science, systems engineering, power systems, and policy.
@@ -1600,7 +1600,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <p class="scai-speaker-role">Professor and Co-Chair, Environmental Science and Engineering (D.Env.) Program, UCLA Institute of the Environment and Sustainability</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
-              <summary>View talk</summary>
+              <summary>Talk</summary>
               <div class="scai-talk-panel">
                 <h4>The Challenges of Measuring AI's Environmental Footprint: An Industrial Ecology Perspective</h4>
                 <p>We can increasingly measure what AI systems consume directly, but it remains difficult to determine their lifecycle environmental impacts. For instance, operational energy and water use can often be measured with relatively direct activity data and established emissions factors. Yet for major AI infrastructure providers, much of the reported greenhouse-gas footprint appears to lie upstream—in semiconductor fabrication, server manufacturing, construction, and other capital goods or downstream (end-of-life treatment) —where data and estimates tend to be incomplete and uncertain. Beyond the own lifecycle of AI systems, their may arise major impacts, both positive and negative, on the broader economy and society that tended to be even harder to isolate and quantify, The result is a measurement asymmetry: some of the impacts that are easiest to quantify might not necessarily be the largest and most uncertain.</p>
@@ -1626,7 +1626,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <p class="scai-speaker-role">Professor of Electrical and Computer Engineering, University of California, Riverside</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
-              <summary>View talk</summary>
+              <summary>Talk</summary>
               <div class="scai-talk-panel">
                 <h4>Powering AI in a Thirsty World</h4>
                 <p>The rapid growth of artificial intelligence (AI) is driving the construction of gigawatt-scale data centers, placing increasing demands on both power grids and water infrastructure. Yet power and water are tightly coupled: water-intensive cooling can compete for local water resources and create risks to data center resilience, while waterless cooling can increase electricity demand and further stress the local grid. This tradeoff is particularly significant on the hottest days of the year, when both power and water systems are under stress. Despite these interdependencies, power and water are often planned and managed separately, overlooking important opportunities for coordination.</p>
@@ -1651,7 +1651,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <p class="scai-speaker-role">Mechanical Systems Lead, Verrus</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
-              <summary>View talk</summary>
+              <summary>Talk</summary>
               <div class="scai-talk-panel">
                 <h4>Direct and Indirect Energy Resources Enabling the Data Center as a Grid Asset</h4>
                 <p>As data centers become increasingly integrated into the modern power grid, the demand for operational flexibility has never been greater. This talk explores the multi-faceted power and energy impacts of a flexible data center, specifically focusing on the complex interactions between direct energy resources, such as battery energy storage systems (BESS) and dynamic IT loads and indirect energy resources, such as water usage and flexible temperature interfaces. By examining these variables in concert, we can better understand how data centers can become grid assets, while maintaining the required availability of the IT workloads and constraining the use of the indirect energy resources.</p>
@@ -1677,7 +1677,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <p class="scai-speaker-role">Assistant Professor of Electrical and Computer Engineering, UMass Amherst</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
-              <summary>View talk</summary>
+              <summary>Talk</summary>
               <div class="scai-talk-panel">
                 <h4>Flexible Data Centers Scheduling: Economic, Environmental, and Transmission Congestion Impacts</h4>
                 <p>Simultaneously considering optimization of operating cost, greenhouse gas, and toxic emissions, this talk discusses a tri-objective, multi-period, power system-constrained framework to schedule flexible data center load. The framework Models data center power consumption as the sum of latency-critical and best-effort loads and considers the temporal flexibility of best-effort workload. The framework was implemented on standard power system test systems with data centers, and pareto fronts were obtained from the solutions. Trade-offs between different objectives are analyzed, and the impacts on electricity prices and system congestions were discussed.</p>
@@ -1701,7 +1701,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <p class="scai-speaker-role">Distinguished Professor of Computer Science and Director of the NSF CoDec Expedition, UMass Amherst</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
-              <summary>View talk</summary>
+              <summary>Talk</summary>
               <div class="scai-talk-panel">
                 <h4>Data Centers, AI Workloads, and Efficiency: A Systems Perspective</h4>
                 <p>The exponential growth of cloud computing has been a defining trend of our time, fueled by rapidly growing demands from online and data-intensive  workloads. Despite the end of Denard scaling, the cloud's energy demand grew more slowly than expected over the past decade due to the aggressive implementation of energy-efficiency optimizations. However, the rise of AI workloads, which are often more resource-intensive than traditional cloud workloads, has led to rapid growth in data centers with power-hungry accelerators such as GPUs and TPUs, leading to a resurgence in the cloud's energy consumption and a strain on our electric grids.</p>
@@ -1744,7 +1744,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <p class="scai-speaker-role">Innovation Strategist and Senior Principal Research Manager, Microsoft Research</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
-              <summary>View talk</summary>
+              <summary>Talk</summary>
               <div class="scai-talk-panel">
                 <h4>AI Needs a Dose of Its Own Cure to Cut the Carbon. Let’s Do It!</h4>
                 <p>As we ride the Cambrian explosion of AI, gains in the efficiency of resource use have become ever more important. They make the technology more accessible, enabling more models, features, products, and applications, increasing the value of AI. But as this community has pointed out, efficiency could backfire as a climate strategy: making AI more efficient could spur so much additional use that total consumption and absolute emissions might keep climbing. So if efficiency’s shadow twin, the availability of low carbon supply, is neglected, increasing value may come with rising environmental cost. After celebrating the progress this community has made on using resources efficiently, on carbon-aware computing, and on measuring embodied carbon, I will turn to increasing that low carbon supply of electricity and materials to build on, and I will share some of the work we are doing in this space. AI, so often seen as adding pressure against reaching net zero, can instead be a positive force to achieve it. Together, AI that makes resource use more efficient and AI that expands low carbon supply can drive a virtuous cycle, and this community can, and I will argue should, participate in both.</p>
@@ -1795,7 +1795,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <p class="scai-speaker-role">Assistant Professor of Computer Science, Harvard University</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
-              <summary>View talk</summary>
+              <summary>Talk</summary>
               <div class="scai-talk-panel">
                 <h4>Rethinking Storage for Sustainable AI: From Models to Generated Data</h4>
                 <p>The rapid growth of AI is creating a new storage sustainability challenge. Modern AI systems produce and retain enormous amounts of data—from billions of model checkpoints and fine-tuned variants to an ever-growing volume of AI-generated content. Yet today’s storage systems largely treat these objects as conventional byte streams, ignoring the rich structure and semantics introduced by AI workloads.</p>
@@ -1823,7 +1823,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <p class="scai-speaker-role">Gordon McKay Professor of Computer Science, Harvard University</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
-              <summary>View talk</summary>
+              <summary>Talk</summary>
               <div class="scai-talk-panel">
                 <h4>Resilient AI Infrastructure: From the GPU to the Grid</h4>
                 <p>Modern AI systems run on massive, costly infrastructure that must operate under three kinds of change: workload changes, as agentic request rates, output lengths, and tool-calling times vary continuously; infrastructure interruptions, as GPU and network failures, preemptions, and maintenance repeatedly halt training at scale; and power changes, as available grid power fluctuates. In this talk, I will present our recent work on resilient AI infrastructure that adapts to all three. For workload changes, we use internal LLM signals to schedule inference requests, from standalone inferences to agentic workflows, cutting latency and improving efficiency. For infrastructure interruptions, we introduce TrainMover, a resilient LLM training runtime which leverages elastic and standby machines to handle interruptions with minimal downtime. For power changes, we started the Harvard Power and AI Initiative to rethink the coordination between the power grid and AI infrastructure—making AI workloads flexible and making grid planning matching such flexibility. </p>
@@ -2400,7 +2400,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
       }
 
       closeReader(false);
-      readerKicker.textContent = summary.textContent.trim() === "View talk" ? "Talk" : "Biography";
+      readerKicker.textContent = summary.textContent.trim() === "Talk" ? "Talk" : "Biography";
       readerName.textContent = name ? name.textContent.trim() : "Speaker details";
       readerRole.textContent = role ? role.textContent.trim() : "";
       readerContent.innerHTML = panel.innerHTML;
