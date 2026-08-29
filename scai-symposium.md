@@ -1523,7 +1523,8 @@ permalink: /scai-symposium/
             <details class="scai-talk">
               <summary>Biography</summary>
               <div class="scai-talk-panel">
-                <p><a href="https://mghpcc.org/executive-director/" target="_blank" rel="noopener noreferrer">https://mghpcc.org/executive-director/</a></p>
+                <p>John Goodhue is Executive Director of the Massachusetts Green High Performance Computing Center, an energy-efficient data center and consortium serving more than 20,000 researchers, students, and educators at Boston University, Harvard University, MIT, Northeastern University, the University of Massachusetts, and other institutions across the Northeast. His work focuses on regional and national collaboration around research-computing infrastructure, broadening access to advanced computing for researchers at small and mid-sized institutions, and developing a diverse next generation of computing professionals.</p>
+                <p>His research-infrastructure leadership includes the Northeast Storage Exchange, Open Storage Network, Northeast Big Data Hub, Eastern Regional Network, and Northeast Cyberteam. He also brings 30 years of industry experience in networking and high-performance computing, including technology leadership, engineering management, and general management roles at Cisco Systems and BBN Technologies, along with work on the management teams of several Boston-area startups. He holds a B.S. in Computer Science and Engineering from MIT.</p>
               </div>
             </details>
           </div>
