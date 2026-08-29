@@ -504,18 +504,33 @@ permalink: /scai-symposium/
     line-height: 1.42;
   }
 
+  .scai-speaker-labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin: 0 0 0.5rem;
+  }
+
   .scai-speaker-label {
-    display: inline-block;
-    margin: 0 0 0.45rem;
+    display: inline-flex;
+    margin: 0;
     padding: 0.28rem 0.48rem;
     border-radius: 999px;
-    background: rgba(5, 105, 151, 0.1);
-    color: var(--scai-blue) !important;
     font-size: 0.68rem;
     font-weight: 800;
     letter-spacing: 0.06em;
     line-height: 1;
     text-transform: uppercase;
+  }
+
+  .scai-speaker-label-speaker {
+    background: rgba(47, 107, 79, 0.11);
+    color: var(--scai-green) !important;
+  }
+
+  .scai-speaker-label-panelist {
+    background: rgba(5, 105, 151, 0.1);
+    color: var(--scai-blue) !important;
   }
 
   .scai-speaker-details {
@@ -1445,7 +1460,7 @@ permalink: /scai-symposium/
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/erin-baker.png" alt="Erin Baker" loading="lazy">
         <div class="scai-speaker-body">
           <h3><a href="https://www.umass.edu/engineering/about/directory/erin-baker" target="_blank" rel="noopener noreferrer">Erin Baker</a></h3>
-          <p class="scai-speaker-label">Panelist</p>
+          <div class="scai-speaker-labels"><span class="scai-speaker-label scai-speaker-label-panelist">Panelist</span></div>
           <p class="scai-speaker-role">Distinguished Professor of Mechanical and Industrial Engineering and Faculty Director of the Energy Transition Institute, UMass Amherst</p>
           <div class="scai-speaker-details scai-speaker-details-single">
             <details class="scai-talk">
@@ -1463,6 +1478,7 @@ permalink: /scai-symposium/
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/mosharaf-chowdhury.jpg" alt="Mosharaf Chowdhury" loading="lazy">
         <div class="scai-speaker-body">
           <h3><a href="https://eecs.engin.umich.edu/people/chowdhury-mosharaf/" target="_blank" rel="noopener noreferrer">Mosharaf Chowdhury</a></h3>
+          <div class="scai-speaker-labels"><span class="scai-speaker-label scai-speaker-label-speaker">Speaker</span><span class="scai-speaker-label scai-speaker-label-panelist">Panelist</span></div>
           <p class="scai-speaker-role">Associate Professor of Computer Science and Engineering, University of Michigan</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
@@ -1487,6 +1503,7 @@ permalink: /scai-symposium/
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/ayse-coskun.jpg" alt="Ayse K. Coskun" loading="lazy">
         <div class="scai-speaker-body">
           <h3><a href="https://www.bu.edu/peaclab/people/faculty/" target="_blank" rel="noopener noreferrer">Ayse K. Coskun</a></h3>
+          <div class="scai-speaker-labels"><span class="scai-speaker-label scai-speaker-label-speaker">Speaker</span><span class="scai-speaker-label scai-speaker-label-panelist">Panelist</span></div>
           <p class="scai-speaker-role">Professor of Electrical and Computer Engineering and Systems Engineering and Director of CISE, Boston University; Chief Scientist, Emerald AI</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
@@ -1511,6 +1528,7 @@ permalink: /scai-symposium/
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/john-goodhue.jpg" alt="John Goodhue" loading="lazy">
         <div class="scai-speaker-body">
           <h3><a href="https://mghpcc.org/executive-director/" target="_blank" rel="noopener noreferrer">John Goodhue</a></h3>
+          <div class="scai-speaker-labels"><span class="scai-speaker-label scai-speaker-label-speaker">Speaker</span></div>
           <p class="scai-speaker-role">Executive Director, Massachusetts Green High Performance Computing Center</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
@@ -1535,6 +1553,7 @@ permalink: /scai-symposium/
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/fabio-grimaldi.jpg" alt="Fabio Grimaldi" loading="lazy">
         <div class="scai-speaker-body">
           <h3><a href="https://www.linkedin.com/in/fabio-grimaldi-530796ba/" target="_blank" rel="noopener noreferrer">Fabio Grimaldi</a></h3>
+          <div class="scai-speaker-labels"><span class="scai-speaker-label scai-speaker-label-speaker">Speaker</span><span class="scai-speaker-label scai-speaker-label-panelist">Panelist</span></div>
           <p class="scai-speaker-role">Senior Sustainability Scientist, Amazon Web Services</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
@@ -1559,6 +1578,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/deepak-rajagopal.webp" alt="Deepak Rajagopal" loading="lazy">
         <div class="scai-speaker-body">
           <h3><a href="https://www.ioes.ucla.edu/person/deepak-rajagopal/" target="_blank" rel="noopener noreferrer">Deepak Rajagopal</a></h3>
+          <div class="scai-speaker-labels"><span class="scai-speaker-label scai-speaker-label-speaker">Speaker</span><span class="scai-speaker-label scai-speaker-label-panelist">Panelist</span></div>
           <p class="scai-speaker-role">Professor and Co-Chair, Environmental Science and Engineering (D.Env.) Program, UCLA Institute of the Environment and Sustainability</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
@@ -1584,6 +1604,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/shaolei-ren.jpg" alt="Shaolei Ren" loading="lazy">
         <div class="scai-speaker-body">
           <h3><a href="https://shaoleiren.github.io/" target="_blank" rel="noopener noreferrer">Shaolei Ren</a></h3>
+          <div class="scai-speaker-labels"><span class="scai-speaker-label scai-speaker-label-speaker">Speaker</span><span class="scai-speaker-label scai-speaker-label-panelist">Panelist</span></div>
           <p class="scai-speaker-role">Professor of Electrical and Computer Engineering, University of California, Riverside</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
@@ -1608,6 +1629,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/jeremy-rice.jpeg" alt="Jeremy Rice" loading="lazy">
         <div class="scai-speaker-body">
           <h3><a href="https://www.linkedin.com/in/jeremy-rice-9a015b12/" target="_blank" rel="noopener noreferrer">Jeremy Rice</a></h3>
+          <div class="scai-speaker-labels"><span class="scai-speaker-label scai-speaker-label-speaker">Speaker</span><span class="scai-speaker-label scai-speaker-label-panelist">Panelist</span></div>
           <p class="scai-speaker-role">Mechanical Systems Lead, Verrus</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
@@ -1633,6 +1655,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/yuanrui-sang.png" alt="Yuanrui Sang" loading="lazy">
         <div class="scai-speaker-body">
           <h3><a href="https://www.umass.edu/engineering/about/directory/assistant-professor" target="_blank" rel="noopener noreferrer">Yuanrui Sang</a></h3>
+          <div class="scai-speaker-labels"><span class="scai-speaker-label scai-speaker-label-speaker">Speaker</span></div>
           <p class="scai-speaker-role">Assistant Professor of Electrical and Computer Engineering, UMass Amherst</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
@@ -1656,6 +1679,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/prashant-shenoy.jpg" alt="Prashant Shenoy" loading="lazy">
         <div class="scai-speaker-body">
           <h3><a href="https://people.cs.umass.edu/~shenoy/" target="_blank" rel="noopener noreferrer">Prashant Shenoy</a></h3>
+          <div class="scai-speaker-labels"><span class="scai-speaker-label scai-speaker-label-speaker">Speaker</span><span class="scai-speaker-label scai-speaker-label-panelist">Panelist</span></div>
           <p class="scai-speaker-role">Distinguished Professor of Computer Science and Director of the NSF CoDec Expedition, UMass Amherst</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
@@ -1680,6 +1704,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/karin-strauss.jpg" alt="Karin Strauss" loading="lazy">
         <div class="scai-speaker-body">
           <h3><a href="https://www.microsoft.com/en-us/research/people/kstrauss/" target="_blank" rel="noopener noreferrer">Karin Strauss</a></h3>
+          <div class="scai-speaker-labels"><span class="scai-speaker-label scai-speaker-label-speaker">Speaker</span><span class="scai-speaker-label scai-speaker-label-panelist">Panelist</span></div>
           <p class="scai-speaker-role">Innovation Strategist and Senior Principal Research Manager, Microsoft Research</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
@@ -1703,6 +1728,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/adam-wierman.png" alt="Adam Wierman" loading="lazy">
         <div class="scai-speaker-body">
           <h3><a href="https://www.cms.caltech.edu/people/adamw" target="_blank" rel="noopener noreferrer">Adam Wierman</a></h3>
+          <div class="scai-speaker-labels"><span class="scai-speaker-label scai-speaker-label-speaker">Speaker</span><span class="scai-speaker-label scai-speaker-label-panelist">Panelist</span></div>
           <p class="scai-speaker-role">Carl F Braun Professor of Computing and Mathematical Sciences, Caltech</p>
         </div>
       </article>
@@ -1711,7 +1737,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/le-xie.jpg" alt="Le Xie" loading="lazy">
         <div class="scai-speaker-body">
           <h3><a href="https://xielab.seas.harvard.edu/le-xie/" target="_blank" rel="noopener noreferrer">Le Xie</a></h3>
-          <p class="scai-speaker-label">Panelist</p>
+          <div class="scai-speaker-labels"><span class="scai-speaker-label scai-speaker-label-panelist">Panelist</span></div>
           <p class="scai-speaker-role">Gordon McKay Professor of Electrical Engineering and Faculty Director of the Power and AI Initiative, Harvard University</p>
           <div class="scai-speaker-details scai-speaker-details-single">
             <details class="scai-talk">
@@ -1729,6 +1755,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/juncheng-yang.jpg" alt="Juncheng Yang" loading="lazy">
         <div class="scai-speaker-body">
           <h3><a href="https://seas.harvard.edu/person/juncheng-yang" target="_blank" rel="noopener noreferrer">Juncheng Yang</a></h3>
+          <div class="scai-speaker-labels"><span class="scai-speaker-label scai-speaker-label-speaker">Speaker</span></div>
           <p class="scai-speaker-role">Assistant Professor of Computer Science, Harvard University</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
@@ -1756,6 +1783,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/minlan-yu.jpg" alt="Minlan Yu" loading="lazy">
         <div class="scai-speaker-body">
           <h3><a href="https://minlanyu.seas.harvard.edu/" target="_blank" rel="noopener noreferrer">Minlan Yu</a></h3>
+          <div class="scai-speaker-labels"><span class="scai-speaker-label scai-speaker-label-speaker">Speaker</span><span class="scai-speaker-label scai-speaker-label-panelist">Panelist</span></div>
           <p class="scai-speaker-role">Gordon McKay Professor of Computer Science, Harvard University</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
