@@ -504,6 +504,20 @@ permalink: /scai-symposium/
     line-height: 1.42;
   }
 
+  .scai-speaker-label {
+    display: inline-block;
+    margin: 0 0 0.45rem;
+    padding: 0.28rem 0.48rem;
+    border-radius: 999px;
+    background: rgba(5, 105, 151, 0.1);
+    color: var(--scai-blue) !important;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
   .scai-speaker-details {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, max-content));
@@ -519,6 +533,10 @@ permalink: /scai-symposium/
 
   .scai-speaker-details .scai-talk[open] {
     grid-column: 1 / -1;
+  }
+
+  .scai-speaker-details-single {
+    grid-template-columns: minmax(0, max-content);
   }
 
   .scai-talk summary {
@@ -755,6 +773,37 @@ permalink: /scai-symposium/
     color: var(--scai-muted) !important;
     font-size: 0.76rem;
     line-height: 1.42;
+  }
+
+  .scai-session-person strong a {
+    color: var(--scai-navy) !important;
+    text-decoration: underline;
+    text-decoration-color: rgba(5, 105, 151, 0.35);
+    text-underline-offset: 0.15em;
+  }
+
+  .scai-session-person strong a:hover,
+  .scai-session-person strong a:focus {
+    color: var(--scai-green) !important;
+    text-decoration-color: currentColor;
+  }
+
+  .scai-session-description {
+    margin: 0.45rem 0 0 !important;
+    color: #3f4e57 !important;
+    font-size: 0.76rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .scai-session-group-label {
+    margin-top: 0.2rem;
+    padding-top: 0.7rem;
+    border-top: 1px solid rgba(5, 105, 151, 0.16);
+    color: var(--scai-green) !important;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
   }
 
   .scai-session-person em {
@@ -1256,15 +1305,25 @@ permalink: /scai-symposium/
       <article class="scai-speaker">
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/erin-baker.png" alt="Erin Baker" loading="lazy">
         <div class="scai-speaker-body">
-          <h3><a href="https://www.umass.edu/engineering/about/directory/erin-baker">Erin Baker</a></h3>
+          <h3><a href="https://www.umass.edu/engineering/about/directory/erin-baker" target="_blank" rel="noopener noreferrer">Erin Baker</a></h3>
+          <p class="scai-speaker-label">Panelist</p>
           <p class="scai-speaker-role">Distinguished Professor of Mechanical and Industrial Engineering and Faculty Director of the Energy Transition Institute, UMass Amherst</p>
+          <div class="scai-speaker-details scai-speaker-details-single">
+            <details class="scai-talk">
+              <summary>Biography</summary>
+              <div class="scai-talk-panel">
+                <p>Erin Baker is a Distinguished Professor of Mechanical and Industrial Engineering at UMass Amherst and Faculty Director of the Energy Transition Institute. Her research applies operations research and economics to decision-making under uncertainty in energy and the environment, with an emphasis on energy justice and publicly funded energy-technology research and development in the face of climate change.</p>
+                <p>Her modeling work addresses energy policy and planning across geographic and temporal scales and uses multiple parallel models to derive robust insights. She also studies the sustainability of electricity grids in New England and developing countries, as well as the environmental costs and benefits of offshore wind energy.</p>
+              </div>
+            </details>
+          </div>
         </div>
       </article>
 
       <article class="scai-speaker">
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/mosharaf-chowdhury.jpg" alt="Mosharaf Chowdhury" loading="lazy">
         <div class="scai-speaker-body">
-          <h3><a href="https://eecs.engin.umich.edu/people/chowdhury-mosharaf/">Mosharaf Chowdhury</a></h3>
+          <h3><a href="https://eecs.engin.umich.edu/people/chowdhury-mosharaf/" target="_blank" rel="noopener noreferrer">Mosharaf Chowdhury</a></h3>
           <p class="scai-speaker-role">Associate Professor of Computer Science and Engineering, University of Michigan</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
@@ -1288,7 +1347,7 @@ permalink: /scai-symposium/
       <article class="scai-speaker">
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/ayse-coskun.jpg" alt="Ayse K. Coskun" loading="lazy">
         <div class="scai-speaker-body">
-          <h3><a href="https://www.bu.edu/peaclab/people/faculty/">Ayse K. Coskun</a></h3>
+          <h3><a href="https://www.bu.edu/peaclab/people/faculty/" target="_blank" rel="noopener noreferrer">Ayse K. Coskun</a></h3>
           <p class="scai-speaker-role">Professor of Electrical and Computer Engineering and Systems Engineering and Director of CISE, Boston University; Chief Scientist, Emerald AI</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
@@ -1312,7 +1371,7 @@ permalink: /scai-symposium/
       <article class="scai-speaker">
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/john-goodhue.jpg" alt="John Goodhue" loading="lazy">
         <div class="scai-speaker-body">
-          <h3><a href="https://mghpcc.org/executive-director/">John Goodhue</a></h3>
+          <h3><a href="https://mghpcc.org/executive-director/" target="_blank" rel="noopener noreferrer">John Goodhue</a></h3>
           <p class="scai-speaker-role">Executive Director, Massachusetts Green High Performance Computing Center</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
@@ -1325,7 +1384,7 @@ permalink: /scai-symposium/
             <details class="scai-talk">
               <summary>Biography</summary>
               <div class="scai-talk-panel">
-                <p><a href="https://mghpcc.org/executive-director/">https://mghpcc.org/executive-director/</a></p>
+                <p><a href="https://mghpcc.org/executive-director/" target="_blank" rel="noopener noreferrer">https://mghpcc.org/executive-director/</a></p>
               </div>
             </details>
           </div>
@@ -1335,7 +1394,7 @@ permalink: /scai-symposium/
       <article class="scai-speaker">
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/fabio-grimaldi.jpg" alt="Fabio Grimaldi" loading="lazy">
         <div class="scai-speaker-body">
-          <h3><a href="https://www.linkedin.com/in/fabio-grimaldi-530796ba/">Fabio Grimaldi</a></h3>
+          <h3><a href="https://www.linkedin.com/in/fabio-grimaldi-530796ba/" target="_blank" rel="noopener noreferrer">Fabio Grimaldi</a></h3>
           <p class="scai-speaker-role">Senior Sustainability Scientist, Amazon Web Services</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
@@ -1359,7 +1418,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
       <article class="scai-speaker">
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/deepak-rajagopal.webp" alt="Deepak Rajagopal" loading="lazy">
         <div class="scai-speaker-body">
-          <h3><a href="https://www.ioes.ucla.edu/person/deepak-rajagopal/">Deepak Rajagopal</a></h3>
+          <h3><a href="https://www.ioes.ucla.edu/person/deepak-rajagopal/" target="_blank" rel="noopener noreferrer">Deepak Rajagopal</a></h3>
           <p class="scai-speaker-role">Professor and Co-Chair, Environmental Science and Engineering (D.Env.) Program, UCLA Institute of the Environment and Sustainability</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
@@ -1384,7 +1443,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
       <article class="scai-speaker">
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/shaolei-ren.jpg" alt="Shaolei Ren" loading="lazy">
         <div class="scai-speaker-body">
-          <h3><a href="https://shaoleiren.github.io/">Shaolei Ren</a></h3>
+          <h3><a href="https://shaoleiren.github.io/" target="_blank" rel="noopener noreferrer">Shaolei Ren</a></h3>
           <p class="scai-speaker-role">Professor of Electrical and Computer Engineering, University of California, Riverside</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
@@ -1408,7 +1467,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
       <article class="scai-speaker">
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/jeremy-rice.jpeg" alt="Jeremy Rice" loading="lazy">
         <div class="scai-speaker-body">
-          <h3><a href="https://www.linkedin.com/in/jeremy-rice-9a015b12/">Jeremy Rice</a></h3>
+          <h3><a href="https://www.linkedin.com/in/jeremy-rice-9a015b12/" target="_blank" rel="noopener noreferrer">Jeremy Rice</a></h3>
           <p class="scai-speaker-role">Mechanical Systems Lead, Verrus</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
@@ -1433,15 +1492,30 @@ This talk describes how AWS approaches this challenge across interconnected laye
       <article class="scai-speaker">
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/yuanrui-sang.png" alt="Yuanrui Sang" loading="lazy">
         <div class="scai-speaker-body">
-          <h3><a href="https://www.umass.edu/engineering/about/directory/assistant-professor">Yuanrui Sang</a></h3>
+          <h3><a href="https://www.umass.edu/engineering/about/directory/assistant-professor" target="_blank" rel="noopener noreferrer">Yuanrui Sang</a></h3>
           <p class="scai-speaker-role">Assistant Professor of Electrical and Computer Engineering, UMass Amherst</p>
+          <div class="scai-speaker-details">
+            <details class="scai-talk">
+              <summary>View talk</summary>
+              <div class="scai-talk-panel">
+                <h4>Flexible Data Centers Scheduling: Economic, Environmental, and Transmission Congestion Impacts</h4>
+                <p>Simultaneously considering optimization of operating cost, greenhouse gas, and toxic emissions, this talk discusses a tri-objective, multi-period, power system-constrained framework to schedule flexible data center load. The framework Models data center power consumption as the sum of latency-critical and best-effort loads and considers the temporal flexibility of best-effort workload. The framework was implemented on standard power system test systems with data centers, and pareto fronts were obtained from the solutions. Trade-offs between different objectives are analyzed, and the impacts on electricity prices and system congestions were discussed.</p>
+              </div>
+            </details>
+            <details class="scai-talk">
+              <summary>Biography</summary>
+              <div class="scai-talk-panel">
+                <p>Yuanrui Sang is an assistant professor in the Department of Electrical and Computer Engineering at the University of Massachusetts Amherst. Before joining UMass in 2024, she was an assistant professor at The University of Texas at El Paso, and she received her Ph.D. in electrical and computer engineering from The University of Utah in 2019. Her research interests include power system operation and planning, grid-enhancing technologies, and the integration of flexible load, such as data centers and electric vehicles, in power systems.</p>
+              </div>
+            </details>
+          </div>
         </div>
       </article>
 
       <article class="scai-speaker">
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/prashant-shenoy.jpg" alt="Prashant Shenoy" loading="lazy">
         <div class="scai-speaker-body">
-          <h3><a href="https://people.cs.umass.edu/~shenoy/">Prashant Shenoy</a></h3>
+          <h3><a href="https://people.cs.umass.edu/~shenoy/" target="_blank" rel="noopener noreferrer">Prashant Shenoy</a></h3>
           <p class="scai-speaker-role">Distinguished Professor of Computer Science and Director of the NSF CoDec Expedition, UMass Amherst</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
@@ -1465,7 +1539,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
       <article class="scai-speaker">
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/karin-strauss.jpg" alt="Karin Strauss" loading="lazy">
         <div class="scai-speaker-body">
-          <h3><a href="https://www.microsoft.com/en-us/research/people/kstrauss/">Karin Strauss</a></h3>
+          <h3><a href="https://www.microsoft.com/en-us/research/people/kstrauss/" target="_blank" rel="noopener noreferrer">Karin Strauss</a></h3>
           <p class="scai-speaker-role">Innovation Strategist and Senior Principal Research Manager, Microsoft Research</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
@@ -1488,7 +1562,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
       <article class="scai-speaker">
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/adam-wierman.png" alt="Adam Wierman" loading="lazy">
         <div class="scai-speaker-body">
-          <h3><a href="https://www.cms.caltech.edu/people/adamw">Adam Wierman</a></h3>
+          <h3><a href="https://www.cms.caltech.edu/people/adamw" target="_blank" rel="noopener noreferrer">Adam Wierman</a></h3>
           <p class="scai-speaker-role">Carl F Braun Professor of Computing and Mathematical Sciences, Caltech</p>
         </div>
       </article>
@@ -1496,15 +1570,25 @@ This talk describes how AWS approaches this challenge across interconnected laye
       <article class="scai-speaker">
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/le-xie.jpg" alt="Le Xie" loading="lazy">
         <div class="scai-speaker-body">
-          <h3><a href="https://xielab.seas.harvard.edu/le-xie/">Le Xie</a></h3>
+          <h3><a href="https://xielab.seas.harvard.edu/le-xie/" target="_blank" rel="noopener noreferrer">Le Xie</a></h3>
+          <p class="scai-speaker-label">Panelist</p>
           <p class="scai-speaker-role">Gordon McKay Professor of Electrical Engineering and Faculty Director of the Power and AI Initiative, Harvard University</p>
+          <div class="scai-speaker-details scai-speaker-details-single">
+            <details class="scai-talk">
+              <summary>Biography</summary>
+              <div class="scai-talk-panel">
+                <p>Le Xie is the Gordon McKay Professor of Electrical Engineering at the Harvard John A. Paulson School of Engineering and Applied Sciences and Faculty Director of the Power and AI Initiative at Harvard SEAS. Before joining Harvard, he served on the faculty of Texas A&amp;M University from 2010 to 2024. He earned his B.E. in Electrical Engineering from Tsinghua University, S.M. in Engineering Sciences from Harvard, and Ph.D. in Electrical and Computer Engineering from Carnegie Mellon University. His industry experience includes work at ISO New England and Edison Mission Energy Marketing and Trading.</p>
+                <p>His research interests include modeling and control in data-rich large-scale systems, the grid integration of clean-energy resources, and electricity markets. He is an IEEE Fellow and IEEE Power &amp; Energy Society Distinguished Lecturer, and is the lead author of <em>Data Science and Applications for Modern Power Systems</em>.</p>
+              </div>
+            </details>
+          </div>
         </div>
       </article>
 
       <article class="scai-speaker">
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/juncheng-yang.jpg" alt="Juncheng Yang" loading="lazy">
         <div class="scai-speaker-body">
-          <h3><a href="https://seas.harvard.edu/person/juncheng-yang">Juncheng Yang</a></h3>
+          <h3><a href="https://seas.harvard.edu/person/juncheng-yang" target="_blank" rel="noopener noreferrer">Juncheng Yang</a></h3>
           <p class="scai-speaker-role">Assistant Professor of Computer Science, Harvard University</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
@@ -1531,7 +1615,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
       <article class="scai-speaker">
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/minlan-yu.jpg" alt="Minlan Yu" loading="lazy">
         <div class="scai-speaker-body">
-          <h3><a href="https://minlanyu.seas.harvard.edu/">Minlan Yu</a></h3>
+          <h3><a href="https://minlanyu.seas.harvard.edu/" target="_blank" rel="noopener noreferrer">Minlan Yu</a></h3>
           <p class="scai-speaker-role">Gordon McKay Professor of Computer Science, Harvard University</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
@@ -1689,11 +1773,10 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <time class="scai-program-time" datetime="2026-09-17T13:00">1:00&ndash;1:10 pm</time>
           <div class="scai-program-session">
             <strong>Afternoon welcome remarks</strong>
-            <p>Caitlyn Butler and Brian Levine</p>
+            <p>Brian Levine</p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
-                <div class="scai-session-person"><strong>Caitlyn Butler</strong><span>Associate Dean for Research and Graduate Affairs, Riccio College of Engineering; Professor of Civil and Environmental Engineering, UMass Amherst</span><em>Welcome remarks</em></div>
                 <div class="scai-session-person"><strong>Brian Levine</strong><span>Associate Dean of Research &amp; Engagement; Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Welcome remarks</em></div>
               </div>
             </details>
@@ -1720,13 +1803,50 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <time class="scai-program-time" datetime="2026-09-17T14:00">2:00&ndash;3:00 pm</time>
           <div class="scai-program-session">
             <strong>Faculty and emerging-researcher highlights</strong>
-            <p>Faculty talks: Juncheng Yang and Yuanrui Sang &middot; Job-market talks: Speakers TBD</p>
+            <p>Faculty talks: Juncheng Yang and Yuanrui Sang &middot; Job-market talks: Walid Abdelrahman Hanafy, Can Hankendi, Adam Lechowicz, Qingsong Liu, Talha Mehboob, and Christopher Yeh</p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
                 <div class="scai-session-person"><strong>Juncheng Yang</strong><span>Assistant Professor of Computer Science, Harvard University</span><em>Talk: Rethinking Storage for Sustainable AI: From Models to Generated Data</em></div>
-                <div class="scai-session-person"><strong>Yuanrui Sang</strong><span>Assistant Professor of Electrical and Computer Engineering, UMass Amherst</span><em>Talk: TBD</em></div>
-                <div class="scai-session-person"><strong>Job-market talks</strong><span>Speakers and affiliations TBD</span><em>Talks: TBD</em></div>
+                <div class="scai-session-person"><strong>Yuanrui Sang</strong><span>Assistant Professor of Electrical and Computer Engineering, UMass Amherst</span><em>Talk: Flexible Data Centers Scheduling: Economic, Environmental, and Transmission Congestion Impacts</em></div>
+                <div class="scai-session-group-label">Job-market talks</div>
+                <div class="scai-session-person">
+                  <strong><a href="https://people.cs.umass.edu/~whanafy/" target="_blank" rel="noopener noreferrer">Walid Abdelrahman Hanafy</a></strong>
+                  <span>UMass Amherst</span>
+                  <em>Talk: Flex: Grid-Responsive Provisioning and Scheduling for Elastic Cloud Clusters</em>
+                  <p class="scai-session-description">The talk will explain the workload and temporal coupling inherent in carbon-aware resource provisioning and scheduling for data centers, and why effective management must account for (i) the cluster’s current and anticipated demand and its elasticity, (ii) exogenous grid signals and their variability, and (iii) the trade-off between delaying work and the potential savings enabled by waiting.</p>
+                  <p class="scai-session-description">To address these challenges, I proposed Flex, a grid-responsive resource manager that jointly provisions cluster capacity and schedules elastic batch jobs. Flex addresses this coupling by computing optimal provisioning and scheduling decisions over recent historical conditions and reusing those decisions at runtime. I show that this approach provides an effective and practical method for grid-responsive management of elastic batch workloads</p>
+                </div>
+                <div class="scai-session-person">
+                  <strong><a href="https://www.hankendi.com" target="_blank" rel="noopener noreferrer">Can Hankendi</a></strong>
+                  <span>Boston University</span>
+                  <em>Talk: PALS: Power-Aware LLM Serving for Grid-Interactive AI</em>
+                  <p class="scai-session-description">Large-scale LLM inference is becoming a significant and increasingly dynamic data-center load, yet today’s serving systems largely treat GPU power as a fixed hardware constraint. This talk presents PALS, a power-aware LLM serving framework that makes GPU power a first-class runtime control knob. At runtime, PALS selects GPU power caps, batch sizes, and tensor-parallel configurations based on profiled power–performance tradeoffs, adapting the serving configuration as the available power budget changes. Implemented within vLLM, PALS shows how inference workloads can respond to changing power constraints while maintaining application-level performance and QoS. I will discuss results across dense and Mixture-of-Experts models and show how application-aware power management can connect LLM serving objectives with data-center and grid-level power requirements. More broadly, PALS illustrates how AI workloads can expose controllable flexibility rather than behaving as fixed electrical loads.</p>
+                </div>
+                <div class="scai-session-person">
+                  <strong><a href="https://adamlechowicz.github.io" target="_blank" rel="noopener noreferrer">Adam Lechowicz</a></strong>
+                  <span>University of Massachusetts Amherst</span>
+                  <em>Talk: Unlocking System Control Benefits of AI using Theoretical Modeling</em>
+                  <p class="scai-session-description">AI and machine learning can improve decision-making in complex systems, but their unreliability remains a major barrier in settings where feasibility and worst-case guarantees matter. This lightning talk presents a perspective on how theoretical modeling can help bridge that gap. Focusing on online decision-making under uncertainty, I describe a “robust algorithm learning” approach: first analytically characterize a certificate set of algorithms that provably satisfy a robustness guarantee, such as a competitive-ratio bound; then use data-driven learning to optimize performance within that "safe" search space. This combines classical theoretical tools for identifying structural guarantees with modern learning methods that adapt algorithms to real problem instances. I illustrate the idea through our SIGMETRICS 2026 work on online smoothed demand management, where the approach is instantiated and evaluated. More broadly, the talk argues that theory can make AI-driven control schemes practical in systems such as data centers and power grids by constraining learning without giving up its performance benefits.</p>
+                </div>
+                <div class="scai-session-person">
+                  <strong><a href="https://qingsong-liu.github.io/" target="_blank" rel="noopener noreferrer">Qingsong Liu</a></strong>
+                  <span>Caltech &amp; UMass Amherst</span>
+                  <em>Talk: Decisions That Reshape the System: Closed-Loop Learning and Resource Allocation for Stateful AI Infrastructure</em>
+                  <p class="scai-session-description">Modern computing systems must learn and allocate resources under uncertainty while meeting operational constraints. Yet their decisions often have persistent effects: configuration changes take time to settle, admitted workloads occupy capacity and shape future feedback, and repeated use can alter resource performance. These effects violate standard assumptions that feedback is immediate, resources are consumed only once, or system dynamics are fixed. My research develops algorithmic foundations with provable guarantees for such stateful online decision-making and translates them into closed-loop control for AI infrastructure. I will highlight three themes—convergence-aware learning, reusable capacity management, and deterioration-aware allocation—and show how they motivate a future agenda in capacity management for heterogeneous AI clusters, multi-timescale LLM serving, and agentic infrastructure.</p>
+                </div>
+                <div class="scai-session-person">
+                  <strong><a href="https://talhamehboob10.github.io" target="_blank" rel="noopener noreferrer">Talha Mehboob</a></strong>
+                  <span>University of Massachusetts Amherst</span>
+                  <em>Talk: Optimizing the Performance and Efficiency of Distributed Model Training under Resource Constraint</em>
+                  <p class="scai-session-description">This talk explores methods for efficiently distributing large-scale machine learning workloads across geographically dispersed, power-constrained data centers. As foundational models exceed single-site capacities, training infrastructure must adapt to dynamic power availability and heterogeneous network conditions. The presentation outlines systems like PowerTrip and PowerScale which utilize dynamic site selection and hierarchical aggregation to balance aggregate computing power against WAN communication overhead. These frameworks improve efficiency by adjusting synchronization frequencies based on runtime network constraints and cluster topologies. Carbon-aware execution architectures, including EcoLearn, mitigate environmental impacts by aligning workload schedules with time-varying grid carbon intensities. By combining computation-communication overlap with adaptive scheduling, these systems significantly reduce training energy and inference carbon footprints while maintaining strict time-to-accuracy objectives.</p>
+                </div>
+                <div class="scai-session-person">
+                  <strong><a href="https://chrisyeh96.github.io" target="_blank" rel="noopener noreferrer">Christopher Yeh</a></strong>
+                  <span>Harvard University</span>
+                  <em>Talk: Online conformal risk control for energy applications</em>
+                  <p class="scai-session-description">Integrating AI into modern energy systems requires ensuring safety, even under distribution shift. Online conformal risk control presents a promising approach to achieve long-run online safety guarantees including under distribution shift, but typically without accounting for decision costs. In this work, we demonstrate that the trade-off between decision costs and long-run risk control is naturally formulated as an instance of constrained online convex optimization (COCO) with long-term constraints: the safety loss defines the per-round constraint, while the decision loss defines the per-round objective. Building upon results from the COCO literature, we derive the first sublinear static regret guarantees for online conformal prediction, including in settings where the safety constraint functions are either convex or monotone. We demonstrate the utility of our approach on battery storage arbitrage settings.</p>
+                </div>
               </div>
             </details>
           </div>
@@ -1786,11 +1906,12 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <time class="scai-program-time" datetime="2026-09-18T09:00">9:00&ndash;9:10 am</time>
           <div class="scai-program-session">
             <strong>Welcome remarks</strong>
-            <p>James Allan</p>
+            <p>James Allan and Caitlyn Butler</p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
                 <div class="scai-session-person"><strong>James Allan</strong><span>Senior Associate Dean of Operations; Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Welcome remarks</em></div>
+                <div class="scai-session-person"><strong>Caitlyn Butler</strong><span>Associate Dean for Research and Graduate Affairs, Riccio College of Engineering; Professor of Civil and Environmental Engineering, UMass Amherst</span><em>Welcome remarks</em></div>
               </div>
             </details>
           </div>
