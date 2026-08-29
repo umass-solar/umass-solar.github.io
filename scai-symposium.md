@@ -1697,7 +1697,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
         <img class="scai-speaker-photo" src="{{ site.base }}/img/scai-speakers/prashant-shenoy.jpg" alt="Prashant Shenoy" loading="lazy">
         <div class="scai-speaker-body">
           <h3><a href="https://people.cs.umass.edu/~shenoy/" target="_blank" rel="noopener noreferrer">Prashant Shenoy</a></h3>
-          <div class="scai-speaker-labels"><span class="scai-speaker-label scai-speaker-label-speaker">Speaker</span><span class="scai-speaker-label scai-speaker-label-panelist">Panelist</span></div>
+          <div class="scai-speaker-labels"><span class="scai-speaker-label scai-speaker-label-speaker">Speaker</span></div>
           <p class="scai-speaker-role">Distinguished Professor of Computer Science and Director of the NSF CoDec Expedition, UMass Amherst</p>
           <div class="scai-speaker-details">
             <details class="scai-talk">
@@ -1723,12 +1723,12 @@ This talk describes how AWS approaches this challenge across interconnected laye
         <div class="scai-speaker-body">
           <h3><a href="https://www.cics.umass.edu/about/directory/ramesh-sitaraman" target="_blank" rel="noopener noreferrer">Ramesh Sitaraman</a></h3>
           <div class="scai-speaker-labels"><span class="scai-speaker-label scai-speaker-label-panelist">Panelist</span></div>
-          <p class="scai-speaker-role">Associate Dean of Educational Programs and Teaching and Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst</p>
+          <p class="scai-speaker-role">Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst; Chief Consulting Scientist, Akamai Technologies</p>
           <div class="scai-speaker-details scai-speaker-details-single">
             <details class="scai-talk">
               <summary>Biography</summary>
               <div class="scai-talk-panel">
-                <p>Ramesh Sitaraman is Associate Dean of Educational Programs and Teaching and a Distinguished Professor in the Manning College of Information and Computer Sciences at UMass Amherst. His research spans Internet-scale distributed systems, including algorithms, architectures, performance, energy efficiency, and user behavior. During his time in industry, he helped create the world’s first major content delivery network and pioneered distributed systems that deliver web content, video, applications, and online services to billions of users.</p>
+                <p>Ramesh Sitaraman is a Distinguished Professor in the Manning College of Information and Computer Sciences at UMass Amherst and Chief Consulting Scientist at Akamai Technologies. His research spans Internet-scale distributed systems, including algorithms, architectures, performance, energy efficiency, and user behavior. During his time in industry, he helped create the world’s first major content delivery network and pioneered distributed systems that deliver web content, video, applications, and online services to billions of users.</p>
                 <p>He is the founding director of UMass Amherst’s interdisciplinary Informatics undergraduate program and a Fellow of both ACM and IEEE. His honors include the inaugural ACM SIGCOMM Networking Systems Award for his work on the Akamai CDN, an Excellence in DASH Award for adaptive-bitrate algorithms used in commercial video streaming, the UMass Amherst Distinguished Teaching Award, and NSF Research Initiation and CAREER awards. He earned his Ph.D. in Computer Science from Princeton University and his B.Tech. from the Indian Institute of Technology Madras.</p>
               </div>
             </details>
@@ -2018,14 +2018,14 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <time class="scai-program-time" datetime="2026-09-17T13:10">1:10&ndash;2:00 pm</time>
           <div class="scai-program-session">
             <strong>Panel I: What Should Academia Solve for the Future of AI Infrastructure?</strong>
-            <p>Karin Strauss, Fabio Grimaldi, Adam Wierman, and Prashant Shenoy &middot; Moderator: Laura Haas</p>
+            <p>Karin Strauss, Fabio Grimaldi, Adam Wierman, and Ramesh Sitaraman &middot; Moderator: Laura Haas</p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
                 <div class="scai-session-person"><strong>Karin Strauss</strong><span>Innovation Strategist and Senior Principal Research Manager, Microsoft Research</span><em>Panelist</em></div>
                 <div class="scai-session-person"><strong>Fabio Grimaldi</strong><span>Senior Sustainability Scientist, Amazon Web Services</span><em>Panelist</em></div>
                 <div class="scai-session-person"><strong>Adam Wierman</strong><span>Carl F Braun Professor of Computing and Mathematical Sciences, Caltech</span><em>Panelist</em></div>
-                <div class="scai-session-person"><strong>Prashant Shenoy</strong><span>Distinguished Professor of Computer Science and Director of the NSF CoDec Expedition, UMass Amherst</span><em>Panelist</em></div>
+                <div class="scai-session-person"><strong>Ramesh Sitaraman</strong><span>Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst; Chief Consulting Scientist, Akamai Technologies</span><em>Panelist</em></div>
                 <div class="scai-session-person"><strong>Laura Haas</strong><span>Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Moderator</em></div>
               </div>
             </details>
