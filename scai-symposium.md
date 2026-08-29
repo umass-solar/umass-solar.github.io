@@ -568,6 +568,16 @@ permalink: /scai-symposium/
     content: "\2212";
   }
 
+  .scai-talk.is-active summary {
+    border-color: var(--scai-green);
+    background: var(--scai-green);
+    color: #fff !important;
+  }
+
+  .scai-talk.is-active summary::after {
+    content: "\2212";
+  }
+
   .scai-talk summary:hover,
   .scai-talk summary:focus {
     background: var(--scai-green);
@@ -601,6 +611,116 @@ permalink: /scai-symposium/
 
   .scai-talk-panel p + p {
     margin-top: 0.65rem;
+  }
+
+  .scai-speakers.is-wide-details .scai-talk-panel {
+    display: none;
+  }
+
+  .scai-speaker.is-reader-active {
+    border-color: rgba(47, 107, 79, 0.62);
+    box-shadow: 0 0 0 2px rgba(47, 107, 79, 0.12), 0 0.65rem 1.5rem rgba(45, 38, 32, 0.1);
+  }
+
+  .scai-speaker-reader {
+    position: relative;
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(180px, 0.7fr) minmax(0, 2.3fr);
+    gap: clamp(1.25rem, 3vw, 2.4rem);
+    margin: 0.15rem 0 0.6rem;
+    padding: clamp(1.25rem, 2.8vw, 2rem);
+    border: 1px solid rgba(47, 107, 79, 0.28);
+    border-radius: 0.85rem;
+    background:
+      radial-gradient(circle at 100% 0%, rgba(5, 105, 151, 0.08), transparent 32%),
+      linear-gradient(145deg, #f8fbf9 0%, #f1f7f3 100%);
+    box-shadow: 0 0.7rem 1.7rem rgba(45, 38, 32, 0.08);
+  }
+
+  .scai-speaker-reader[hidden] {
+    display: none;
+  }
+
+  .scai-speaker-reader-meta {
+    padding-right: clamp(1rem, 2.5vw, 2rem);
+    border-right: 1px solid rgba(47, 107, 79, 0.18);
+  }
+
+  .scai-speaker-reader-kicker {
+    margin: 0 0 0.5rem;
+    color: var(--scai-green) !important;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .scai-speaker-reader h3 {
+    margin: 0 0 0.45rem;
+    padding-right: 1.75rem;
+    color: var(--scai-navy);
+    font-size: clamp(1.35rem, 2vw, 1.75rem);
+    line-height: 1.15;
+  }
+
+  .scai-speaker-reader-role {
+    margin: 0;
+    color: var(--scai-muted) !important;
+    font-size: 0.86rem;
+    line-height: 1.5;
+  }
+
+  .scai-speaker-reader-content {
+    width: 100%;
+    max-width: 82ch;
+    align-self: start;
+  }
+
+  .scai-speaker-reader-content h4 {
+    margin: 0 2.4rem 0.8rem 0;
+    color: var(--scai-navy);
+    font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+    line-height: 1.35;
+  }
+
+  .scai-speaker-reader-content p {
+    margin: 0;
+    color: #344650 !important;
+    font-size: 0.96rem;
+    line-height: 1.68;
+  }
+
+  .scai-speaker-reader-content p + p {
+    margin-top: 0.9rem;
+  }
+
+  .scai-speaker-reader-content a {
+    overflow-wrap: anywhere;
+  }
+
+  .scai-speaker-reader-close {
+    position: absolute;
+    top: 0.85rem;
+    right: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.38rem 0.55rem;
+    border: 1px solid rgba(29, 37, 44, 0.16);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.82);
+    color: var(--scai-muted);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.75rem;
+    font-weight: 750;
+  }
+
+  .scai-speaker-reader-close:hover,
+  .scai-speaker-reader-close:focus {
+    border-color: var(--scai-green);
+    color: var(--scai-green);
   }
 
   .scai-note {
@@ -1211,6 +1331,17 @@ permalink: /scai-symposium/
     .scai-scope-reference a {
       justify-self: start;
     }
+
+    .scai-speaker-reader {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .scai-speaker-reader-meta {
+      padding: 0 2.5rem 0.9rem 0;
+      border-right: 0;
+      border-bottom: 1px solid rgba(47, 107, 79, 0.18);
+    }
   }
 
   @media (max-width: 520px) {
@@ -1240,6 +1371,14 @@ permalink: /scai-symposium/
     .scai-call-link span {
       padding: 0;
       border-left: 0;
+    }
+
+    .scai-speaker-reader {
+      padding: 1.1rem;
+    }
+
+    .scai-speaker-reader-content p {
+      font-size: 0.91rem;
     }
 
   }
@@ -1634,6 +1773,16 @@ This talk describes how AWS approaches this challenge across interconnected laye
           </div>
         </div>
       </article>
+
+      <aside class="scai-speaker-reader" id="scai-speaker-reader" aria-labelledby="scai-speaker-reader-name" aria-live="polite" hidden>
+        <div class="scai-speaker-reader-meta">
+          <p class="scai-speaker-reader-kicker"></p>
+          <h3 id="scai-speaker-reader-name"></h3>
+          <p class="scai-speaker-reader-role"></p>
+        </div>
+        <div class="scai-speaker-reader-content"></div>
+        <button class="scai-speaker-reader-close" type="button" aria-label="Close speaker details">Close <span aria-hidden="true">&times;</span></button>
+      </aside>
     </div>
     <p class="scai-note">Participant and talk information reflects confirmations received to date and will be updated as additional details become available.</p>
     <a class="scai-back-to-top" href="#page-top">Back to top</a>
@@ -2106,6 +2255,106 @@ This talk describes how AWS approaches this challenge across interconnected laye
 </div>
 
 <script>
+  (function () {
+    var grid = document.querySelector(".scai-speakers");
+    if (!grid) return;
+
+    var cards = Array.prototype.slice.call(grid.querySelectorAll(".scai-speaker"));
+    var disclosures = Array.prototype.slice.call(grid.querySelectorAll(".scai-talk"));
+    var reader = grid.querySelector(".scai-speaker-reader");
+    if (!cards.length || !disclosures.length || !reader) return;
+
+    var readerKicker = reader.querySelector(".scai-speaker-reader-kicker");
+    var readerName = reader.querySelector(".scai-speaker-reader h3");
+    var readerRole = reader.querySelector(".scai-speaker-reader-role");
+    var readerContent = reader.querySelector(".scai-speaker-reader-content");
+    var closeButton = reader.querySelector(".scai-speaker-reader-close");
+    var activeDisclosure = null;
+    var activeCard = null;
+    var resizeTimer = null;
+
+    function getColumnCount() {
+      var columns = window.getComputedStyle(grid).gridTemplateColumns;
+      return Math.max(1, columns.split(/\s+/).filter(Boolean).length);
+    }
+
+    function placeReader(card) {
+      var cardIndex = cards.indexOf(card);
+      var rowEnd = Math.min(cards.length, Math.ceil((cardIndex + 1) / getColumnCount()) * getColumnCount());
+      var nextCard = cards[rowEnd];
+      if (nextCard) {
+        grid.insertBefore(reader, nextCard);
+      } else {
+        grid.appendChild(reader);
+      }
+    }
+
+    function closeReader(restoreFocus) {
+      var focusTarget = activeDisclosure ? activeDisclosure.querySelector("summary") : null;
+      disclosures.forEach(function (item) {
+        item.classList.remove("is-active");
+        item.open = false;
+        item.querySelector("summary").setAttribute("aria-expanded", "false");
+      });
+      cards.forEach(function (card) { card.classList.remove("is-reader-active"); });
+      reader.hidden = true;
+      activeDisclosure = null;
+      activeCard = null;
+      if (restoreFocus && focusTarget) focusTarget.focus();
+    }
+
+    function openReader(disclosure) {
+      var card = disclosure.closest(".scai-speaker");
+      var summary = disclosure.querySelector("summary");
+      var panel = disclosure.querySelector(".scai-talk-panel");
+      var name = card.querySelector("h3");
+      var role = card.querySelector(".scai-speaker-role");
+      var isSameDisclosure = disclosure === activeDisclosure && !reader.hidden;
+
+      if (isSameDisclosure) {
+        closeReader(false);
+        return;
+      }
+
+      closeReader(false);
+      readerKicker.textContent = summary.textContent.trim() === "View talk" ? "Talk" : "Biography";
+      readerName.textContent = name ? name.textContent.trim() : "Speaker details";
+      readerRole.textContent = role ? role.textContent.trim() : "";
+      readerContent.innerHTML = panel.innerHTML;
+      placeReader(card);
+      reader.hidden = false;
+      disclosure.classList.add("is-active");
+      summary.setAttribute("aria-expanded", "true");
+      card.classList.add("is-reader-active");
+      activeDisclosure = disclosure;
+      activeCard = card;
+    }
+
+    disclosures.forEach(function (disclosure) {
+      var summary = disclosure.querySelector("summary");
+      disclosure.open = false;
+      summary.setAttribute("aria-controls", "scai-speaker-reader");
+      summary.setAttribute("aria-expanded", "false");
+      summary.addEventListener("click", function (event) {
+        event.preventDefault();
+        openReader(disclosure);
+      });
+    });
+
+    closeButton.addEventListener("click", function () { closeReader(true); });
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && !reader.hidden) closeReader(true);
+    });
+    window.addEventListener("resize", function () {
+      window.clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(function () {
+        if (activeCard && !reader.hidden) placeReader(activeCard);
+      }, 120);
+    });
+
+    grid.classList.add("is-wide-details");
+  }());
+
   (function () {
     var agenda = document.getElementById("draft-agenda");
     if (!agenda) return;
