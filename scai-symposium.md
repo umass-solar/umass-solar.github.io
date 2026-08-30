@@ -1404,7 +1404,7 @@ permalink: /scai-symposium/
     <section class="scai-hero" aria-labelledby="scai-hero-title">
       <div class="scai-hero-inner">
         <div>
-          <p class="scai-eyebrow">SCAI Research Symposium</p>
+          <p class="scai-eyebrow">Sustainable Compute &amp; AI Infrastructure (SCAI) Research Symposium</p>
           <h2 id="scai-hero-title">
             <span class="scai-hero-line">Building sustainable</span>
             <span class="scai-hero-line">AI infrastructure for a</span>
