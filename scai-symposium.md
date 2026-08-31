@@ -271,10 +271,11 @@ permalink: /scai-symposium/
   .scai-codec {
     display: grid;
     grid-template-columns: minmax(0, 1.25fr) minmax(220px, 0.75fr);
-    gap: clamp(1.5rem, 4vw, 3.5rem);
+    column-gap: clamp(1.5rem, 4vw, 3.5rem);
+    row-gap: 0.65rem;
     align-items: center;
     margin: 3.25rem 0;
-    padding: clamp(1.5rem, 4vw, 2.6rem);
+    padding: clamp(1rem, 2vw, 1.35rem) clamp(1.25rem, 4vw, 2.6rem);
     border-left: 5px solid var(--scai-green);
     border-radius: 0 0.75rem 0.75rem 0;
     background: #eef4f0;
@@ -973,6 +974,10 @@ permalink: /scai-symposium/
   .scai-codec .scai-back-to-top,
   .scai-callout .scai-back-to-top {
     grid-column: 1 / -1;
+  }
+
+  .scai-codec .scai-back-to-top {
+    margin-top: 0;
   }
 
   .scai-callout .scai-back-to-top {
