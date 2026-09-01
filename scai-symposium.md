@@ -2040,7 +2040,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <time class="scai-program-time" datetime="2026-09-17T14:00">2:00&ndash;3:00 pm</time>
           <div class="scai-program-session">
             <strong>Faculty and emerging-researcher highlights</strong>
-            <p>Faculty talks: Juncheng Yang and Yuanrui Sang &middot; Job-market talks: Walid Abdelrahman Hanafy, Can Hankendi, Adam Lechowicz, Qingsong Liu, Talha Mehboob, and Christopher Yeh</p>
+            <p>Faculty talks: Juncheng Yang and Yuanrui Sang &middot; Job-market talks: Walid Abdelrahman Hanafy, Can Hankendi, Adam Lechowicz, Qingsong Liu, and Christopher Yeh</p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
@@ -2071,12 +2071,6 @@ This talk describes how AWS approaches this challenge across interconnected laye
                   <span>Caltech &amp; UMass Amherst</span>
                   <em>Talk: Decisions That Reshape the System: Closed-Loop Learning and Resource Allocation for Stateful AI Infrastructure</em>
                   <p class="scai-session-description">Modern computing systems must learn and allocate resources under uncertainty while meeting operational constraints. Yet their decisions often have persistent effects: configuration changes take time to settle, admitted workloads occupy capacity and shape future feedback, and repeated use can alter resource performance. These effects violate standard assumptions that feedback is immediate, resources are consumed only once, or system dynamics are fixed. My research develops algorithmic foundations with provable guarantees for such stateful online decision-making and translates them into closed-loop control for AI infrastructure. I will highlight three themes—convergence-aware learning, reusable capacity management, and deterioration-aware allocation—and show how they motivate a future agenda in capacity management for heterogeneous AI clusters, multi-timescale LLM serving, and agentic infrastructure.</p>
-                </div>
-                <div class="scai-session-person">
-                  <strong><a href="https://talhamehboob10.github.io" target="_blank" rel="noopener noreferrer">Talha Mehboob</a></strong>
-                  <span>University of Massachusetts Amherst</span>
-                  <em>Talk: Optimizing the Performance and Efficiency of Distributed Model Training under Resource Constraint</em>
-                  <p class="scai-session-description">This talk explores methods for efficiently distributing large-scale machine learning workloads across geographically dispersed, power-constrained data centers. As foundational models exceed single-site capacities, training infrastructure must adapt to dynamic power availability and heterogeneous network conditions. The presentation outlines systems like PowerTrip and PowerScale which utilize dynamic site selection and hierarchical aggregation to balance aggregate computing power against WAN communication overhead. These frameworks improve efficiency by adjusting synchronization frequencies based on runtime network constraints and cluster topologies. Carbon-aware execution architectures, including EcoLearn, mitigate environmental impacts by aligning workload schedules with time-varying grid carbon intensities. By combining computation-communication overlap with adaptive scheduling, these systems significantly reduce training energy and inference carbon footprints while maintaining strict time-to-accuracy objectives.</p>
                 </div>
                 <div class="scai-session-person">
                   <strong><a href="https://chrisyeh96.github.io" target="_blank" rel="noopener noreferrer">Christopher Yeh</a></strong>
