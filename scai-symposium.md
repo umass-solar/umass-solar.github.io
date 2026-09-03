@@ -1974,12 +1974,13 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <time class="scai-program-time" datetime="2026-09-17T09:20">9:20&ndash;10:30 am</time>
           <div class="scai-program-session">
             <strong>Expeditions Keynotes</strong>
-            <p>Adam Wierman and Prashant Shenoy</p>
+            <p>Adam Wierman and Prashant Shenoy &middot; Chair: Ramesh Sitaraman</p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
                 <div class="scai-session-person"><strong>Adam Wierman</strong><span>Carl F Braun Professor of Computing and Mathematical Sciences, Caltech</span><em>Talk: TBD</em></div>
                 <div class="scai-session-person"><strong>Prashant Shenoy</strong><span>Distinguished Professor of Computer Science and Director of the NSF CoDec Expedition, UMass Amherst</span><em>Talk: Data Centers, AI Workloads, and Efficiency: A Systems Perspective</em></div>
+                <div class="scai-session-person"><strong>Ramesh Sitaraman</strong><span>Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst; Chief Consulting Scientist, Akamai Technologies</span><em>Session chair</em></div>
               </div>
             </details>
           </div>
@@ -1992,12 +1993,13 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <time class="scai-program-time" datetime="2026-09-17T10:45">10:45 am&ndash;12:00 pm</time>
           <div class="scai-program-session">
             <strong>Industry Session I</strong>
-            <p>Karin Strauss and Fabio Grimaldi</p>
+            <p>Karin Strauss and Fabio Grimaldi &middot; Chair: David Irwin</p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
                 <div class="scai-session-person"><strong>Karin Strauss</strong><span>Innovation Strategist and Senior Principal Research Manager, Microsoft Research</span><em>Talk: AI Needs a Dose of Its Own Cure to Cut the Carbon. Let&rsquo;s Do It!</em></div>
                 <div class="scai-session-person"><strong>Fabio Grimaldi</strong><span>Senior Sustainability Scientist, Amazon Web Services</span><em>Talk: The Sustainability Stack for AI at Scale: An Industry Perspective</em></div>
+                <div class="scai-session-person"><strong>David Irwin</strong><span>Professor and Associate Department Head of Electrical and Computer Engineering; Adjunct Professor of Computer Science, UMass Amherst</span><em>Session chair</em></div>
               </div>
             </details>
           </div>
@@ -2040,7 +2042,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <time class="scai-program-time" datetime="2026-09-17T14:00">2:00&ndash;3:00 pm</time>
           <div class="scai-program-session">
             <strong>Faculty and emerging-researcher highlights</strong>
-            <p>Faculty talks: Juncheng Yang and Yuanrui Sang &middot; Job-market talks: Walid Abdelrahman Hanafy, Can Hankendi, Adam Lechowicz, Qingsong Liu, and Christopher Yeh</p>
+            <p>Faculty talks: Juncheng Yang and Yuanrui Sang &middot; Job-market talks: Walid Abdelrahman Hanafy, Can Hankendi, Adam Lechowicz, Qingsong Liu, and Christopher Yeh &middot; Chair: Mohammad Hajiesmaili</p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
@@ -2078,6 +2080,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
                   <em>Talk: Online conformal risk control for energy applications</em>
                   <p class="scai-session-description">Integrating AI into modern energy systems requires ensuring safety, even under distribution shift. Online conformal risk control presents a promising approach to achieve long-run online safety guarantees including under distribution shift, but typically without accounting for decision costs. In this work, we demonstrate that the trade-off between decision costs and long-run risk control is naturally formulated as an instance of constrained online convex optimization (COCO) with long-term constraints: the safety loss defines the per-round constraint, while the decision loss defines the per-round objective. Building upon results from the COCO literature, we derive the first sublinear static regret guarantees for online conformal prediction, including in settings where the safety constraint functions are either convex or monotone. We demonstrate the utility of our approach on battery storage arbitrage settings.</p>
                 </div>
+                <div class="scai-session-person"><strong>Mohammad Hajiesmaili</strong><span>Associate Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Session chair</em></div>
               </div>
             </details>
           </div>
@@ -2090,12 +2093,13 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <time class="scai-program-time" datetime="2026-09-17T15:15">3:15&ndash;4:00 pm</time>
           <div class="scai-program-session">
             <strong>Technical Session I: Responsible AI Infrastructure</strong>
-            <p>Shaolei Ren and Deepak Rajagopal</p>
+            <p>Shaolei Ren and Deepak Rajagopal &middot; Chair: Prashant Shenoy</p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
                 <div class="scai-session-person"><strong>Shaolei Ren</strong><span>Professor of Electrical and Computer Engineering, University of California, Riverside</span><em>Talk: Powering AI in a Thirsty World</em></div>
                 <div class="scai-session-person"><strong>Deepak Rajagopal</strong><span>Professor and Co-Chair, Environmental Science and Engineering Program, UCLA Institute of the Environment and Sustainability</span><em>Talk: The Challenges of Measuring AI&rsquo;s Environmental Footprint: An Industrial Ecology Perspective</em></div>
+                <div class="scai-session-person"><strong>Prashant Shenoy</strong><span>Distinguished Professor of Computer Science and Director of the NSF CoDec Expedition, UMass Amherst</span><em>Session chair</em></div>
               </div>
             </details>
           </div>
@@ -2151,13 +2155,14 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <time class="scai-program-time" datetime="2026-09-18T09:10">9:10&ndash;10:40 am</time>
           <div class="scai-program-session">
             <strong>Industry Session II: Flexible Data Centers</strong>
-            <p>Ayse K. Coskun, Jeremy Rice, and John Goodhue</p>
+            <p>Ayse K. Coskun, Jeremy Rice, and John Goodhue &middot; Chair: Prashant Shenoy</p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
                 <div class="scai-session-person"><strong>Ayse K. Coskun</strong><span>Professor of Electrical and Computer Engineering and Systems Engineering; Director of the Center for Information and Systems Engineering, Boston University; Chief Scientist, Emerald AI</span><em>Talk: AI Data Centers as Flexible Grid Assets</em></div>
                 <div class="scai-session-person"><strong>Jeremy Rice</strong><span>Mechanical Systems Lead, Verrus</span><em>Talk: Direct and Indirect Energy Resources Enabling the Data Center as a Grid Asset</em></div>
                 <div class="scai-session-person"><strong>John Goodhue</strong><span>Executive Director, Massachusetts Green High Performance Computing Center</span><em>Talk: Massachusetts Green High Performance Computing Center</em></div>
+                <div class="scai-session-person"><strong>Prashant Shenoy</strong><span>Distinguished Professor of Computer Science and Director of the NSF CoDec Expedition, UMass Amherst</span><em>Session chair</em></div>
               </div>
             </details>
           </div>
@@ -2170,12 +2175,13 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <time class="scai-program-time" datetime="2026-09-18T10:50">10:50 am&ndash;12:00 pm</time>
           <div class="scai-program-session">
             <strong>Technical Session II: Frontiers of AI Systems and Networking</strong>
-            <p>Mosharaf Chowdhury and Minlan Yu</p>
+            <p>Mosharaf Chowdhury and Minlan Yu &middot; Chair: Ramesh Sitaraman</p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
                 <div class="scai-session-person"><strong>Mosharaf Chowdhury</strong><span>Associate Professor of Computer Science and Engineering, University of Michigan</span><em>Talk: Toward Energy-Optimal AI</em></div>
                 <div class="scai-session-person"><strong>Minlan Yu</strong><span>Gordon McKay Professor of Computer Science, Harvard University</span><em>Talk: Resilient AI Infrastructure: From the GPU to the Grid</em></div>
+                <div class="scai-session-person"><strong>Ramesh Sitaraman</strong><span>Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst; Chief Consulting Scientist, Akamai Technologies</span><em>Session chair</em></div>
               </div>
             </details>
           </div>
@@ -2209,12 +2215,14 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <time class="scai-program-time" datetime="2026-09-18T15:00">3:00&ndash;3:15 pm</time>
           <div class="scai-program-session">
             <strong>Closing remarks</strong>
-            <p>Prashant Shenoy and David Irwin</p>
+            <p>Prashant Shenoy and David Irwin &middot; Chairs: Mohammad Hajiesmaili, Prashant Shenoy, Ramesh Sitaraman, and David Irwin</p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
-                <div class="scai-session-person"><strong>Prashant Shenoy</strong><span>Distinguished Professor of Computer Science and Director of the NSF CoDec Expedition, UMass Amherst</span><em>Closing remarks</em></div>
-                <div class="scai-session-person"><strong>David Irwin</strong><span>Professor and Associate Department Head of Electrical and Computer Engineering; Adjunct Professor of Computer Science, UMass Amherst</span><em>Closing remarks</em></div>
+                <div class="scai-session-person"><strong>Mohammad Hajiesmaili</strong><span>Associate Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Session chair</em></div>
+                <div class="scai-session-person"><strong>Prashant Shenoy</strong><span>Distinguished Professor of Computer Science and Director of the NSF CoDec Expedition, UMass Amherst</span><em>Closing remarks; session chair</em></div>
+                <div class="scai-session-person"><strong>Ramesh Sitaraman</strong><span>Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst; Chief Consulting Scientist, Akamai Technologies</span><em>Session chair</em></div>
+                <div class="scai-session-person"><strong>David Irwin</strong><span>Professor and Associate Department Head of Electrical and Computer Engineering; Adjunct Professor of Computer Science, UMass Amherst</span><em>Closing remarks; session chair</em></div>
               </div>
             </details>
           </div>
