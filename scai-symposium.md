@@ -2215,14 +2215,14 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <time class="scai-program-time" datetime="2026-09-18T15:00">3:00&ndash;3:15 pm</time>
           <div class="scai-program-session">
             <strong>Closing remarks</strong>
-            <p>Prashant Shenoy and David Irwin &middot; Chairs: Mohammad Hajiesmaili, Prashant Shenoy, Ramesh Sitaraman, and David Irwin</p>
+            <p>Mohammad Hajiesmaili, Prashant Shenoy, Ramesh Sitaraman, and David Irwin</p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
-                <div class="scai-session-person"><strong>Mohammad Hajiesmaili</strong><span>Associate Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Session chair</em></div>
-                <div class="scai-session-person"><strong>Prashant Shenoy</strong><span>Distinguished Professor of Computer Science and Director of the NSF CoDec Expedition, UMass Amherst</span><em>Closing remarks; session chair</em></div>
-                <div class="scai-session-person"><strong>Ramesh Sitaraman</strong><span>Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst; Chief Consulting Scientist, Akamai Technologies</span><em>Session chair</em></div>
-                <div class="scai-session-person"><strong>David Irwin</strong><span>Professor and Associate Department Head of Electrical and Computer Engineering; Adjunct Professor of Computer Science, UMass Amherst</span><em>Closing remarks; session chair</em></div>
+                <div class="scai-session-person"><strong>Mohammad Hajiesmaili</strong><span>Associate Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Closing remarks</em></div>
+                <div class="scai-session-person"><strong>Prashant Shenoy</strong><span>Distinguished Professor of Computer Science and Director of the NSF CoDec Expedition, UMass Amherst</span><em>Closing remarks</em></div>
+                <div class="scai-session-person"><strong>Ramesh Sitaraman</strong><span>Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst; Chief Consulting Scientist, Akamai Technologies</span><em>Closing remarks</em></div>
+                <div class="scai-session-person"><strong>David Irwin</strong><span>Professor and Associate Department Head of Electrical and Computer Engineering; Adjunct Professor of Computer Science, UMass Amherst</span><em>Closing remarks</em></div>
               </div>
             </details>
           </div>
