@@ -1771,6 +1771,21 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <h3><a href="https://www.cms.caltech.edu/people/adamw" target="_blank" rel="noopener noreferrer">Adam Wierman</a></h3>
           <div class="scai-speaker-labels"><span class="scai-speaker-label scai-speaker-label-speaker">Speaker</span><span class="scai-speaker-label scai-speaker-label-panelist">Panelist</span></div>
           <p class="scai-speaker-role">Carl F Braun Professor of Computing and Mathematical Sciences, Caltech</p>
+          <div class="scai-speaker-details">
+            <details class="scai-talk">
+              <summary>Talk</summary>
+              <div class="scai-talk-panel">
+                <h4>Asset or Burden: Navigating the Community Impact of Data Centers</h4>
+                <p>AI-driven data center growth imposes measurable externalities on local communities: noise, backup-generator emissions, water withdrawal, power quality degradation, and the potential for rising retail electricity prices. This talk characterizes what we can currently measure across each channel, then examines approaches for mitigating the community impacts and even providing benefits for community infrastructure using engineering, algorithmic, and policy levers such as siting, workload flexibility, energy and water storage, power-aware cooling, and policy levels.</p>
+              </div>
+            </details>
+            <details class="scai-talk">
+              <summary>Biography</summary>
+              <div class="scai-talk-panel">
+                <p>Adam Wierman is the Carl F Braun Professor in the Department of Computing and Mathematical Sciences at Caltech. He received his Ph.D., M.Sc., and B.Sc. in Computer Science from Carnegie Mellon University. Adam’s research strives to make the networked systems that govern our world sustainable and resilient. He is best known for his work spearheading the design of algorithms for sustainable and community-centric data centers, including pioneering work on net-zero data centers, data center demand response, geographical load balancing, the public health impact of data centers, and the water usage of data centers. His work has seen significant industry adoption (e.g. through the startup Verrus). Additionally, he is well known for his work on heavy tails, including co-authoring a book on “The Fundamentals of Heavy Tails.” He is an ACM Fellow and an IEEE Fellow. He has received the ACM Sigmetrics Rising Star award, the ACM Sigmetrics Test of Time award, the IEEE INFOCOM Test of Time award, the IEEE Communications Society William R. Bennett Prize, the Caltech IDEA Advocate award, the Caltech GSC Excellence in Mentoring award, multiple teaching awards, and is a co-author of papers that have received “best paper” awards at conferences across computer science, energy systems, and operations research.</p>
+              </div>
+            </details>
+          </div>
         </div>
       </article>
 
@@ -1978,7 +1993,13 @@ This talk describes how AWS approaches this challenge across interconnected laye
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
-                <div class="scai-session-person"><strong>Adam Wierman</strong><span>Carl F Braun Professor of Computing and Mathematical Sciences, Caltech</span><em>Talk: TBD</em></div>
+                <div class="scai-session-person">
+                  <strong>Adam Wierman</strong>
+                  <span>Carl F Braun Professor of Computing and Mathematical Sciences, Caltech</span>
+                  <em>Talk: Asset or Burden: Navigating the Community Impact of Data Centers</em>
+                  <p class="scai-session-description">AI-driven data center growth imposes measurable externalities on local communities: noise, backup-generator emissions, water withdrawal, power quality degradation, and the potential for rising retail electricity prices. This talk characterizes what we can currently measure across each channel, then examines approaches for mitigating the community impacts and even providing benefits for community infrastructure using engineering, algorithmic, and policy levers such as siting, workload flexibility, energy and water storage, power-aware cooling, and policy levels.</p>
+                  <p class="scai-session-description"><strong>Biography:</strong> Adam Wierman is the Carl F Braun Professor in the Department of Computing and Mathematical Sciences at Caltech. He received his Ph.D., M.Sc., and B.Sc. in Computer Science from Carnegie Mellon University. Adam’s research strives to make the networked systems that govern our world sustainable and resilient. He is best known for his work spearheading the design of algorithms for sustainable and community-centric data centers, including pioneering work on net-zero data centers, data center demand response, geographical load balancing, the public health impact of data centers, and the water usage of data centers. His work has seen significant industry adoption (e.g. through the startup Verrus). Additionally, he is well known for his work on heavy tails, including co-authoring a book on “The Fundamentals of Heavy Tails.” He is an ACM Fellow and an IEEE Fellow. He has received the ACM Sigmetrics Rising Star award, the ACM Sigmetrics Test of Time award, the IEEE INFOCOM Test of Time award, the IEEE Communications Society William R. Bennett Prize, the Caltech IDEA Advocate award, the Caltech GSC Excellence in Mentoring award, multiple teaching awards, and is a co-author of papers that have received “best paper” awards at conferences across computer science, energy systems, and operations research.</p>
+                </div>
                 <div class="scai-session-person"><strong>Prashant Shenoy</strong><span>Distinguished Professor of Computer Science and Director of the NSF CoDec Expedition, UMass Amherst</span><em>Talk: Data Centers, AI Workloads, and Efficiency: A Systems Perspective</em></div>
               </div>
             </details>
