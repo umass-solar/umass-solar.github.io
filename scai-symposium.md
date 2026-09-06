@@ -1864,12 +1864,12 @@ This talk describes how AWS approaches this challenge across interconnected laye
         <div class="scai-speaker-body">
           <h3><a href="https://www.umass.edu/engineering/about/directory/golbon-zakeri" target="_blank" rel="noopener noreferrer">Golbon Zakeri</a></h3>
           <div class="scai-speaker-labels"><span class="scai-speaker-label scai-speaker-label-panelist">Panelist</span></div>
-          <p class="scai-speaker-role">Professor of Mechanical and Industrial Engineering and Director of the Northeast Power Economics and Analytics Research Lab, UMass Amherst</p>
+          <p class="scai-speaker-role">Professor of Mechanical and Industrial Engineering, UMass Amherst</p>
           <div class="scai-speaker-details scai-speaker-details-single">
             <details class="scai-talk">
               <summary>Biography</summary>
               <div class="scai-talk-panel">
-                <p>Golbon Zakeri is a Professor of Operations Research in the Department of Mechanical and Industrial Engineering at UMass Amherst and Director of the Northeast Power Economics and Analytics Research Lab. Her research develops analytics, economic models, and optimization methods for decision-making under uncertainty, with particular emphasis on electricity markets and power systems. She uses mathematical modeling to study policies and system designs that support efficient, reliable, resilient, and equitable energy procurement.</p>
+                <p>Golbon Zakeri is a Professor of Operations Research in the Department of Mechanical and Industrial Engineering at UMass Amherst. Her research develops analytics, economic models, and optimization methods for decision-making under uncertainty, with particular emphasis on electricity markets and power systems. She uses mathematical modeling to study policies and system designs that support efficient, reliable, resilient, and equitable energy procurement.</p>
                 <p>Before joining UMass Amherst, Zakeri was a faculty member at the University of Auckland, where she directed the Electric Power Optimization Centre, served as Deputy Director of the University of Auckland Energy Centre, and was President of the Operations Research Society of New Zealand from 2013 to 2017. Her prior experience also includes research at Argonne National Laboratory. She serves as an Area Editor for Energy and Environment at <em>Operations Research</em>, an editor of the INFORMS-Springer book series, and an associate editor for <em>Computational Management Science</em>. She earned her Ph.D. in Mathematics and Computer Science from the University of Wisconsin–Madison.</p>
               </div>
             </details>
