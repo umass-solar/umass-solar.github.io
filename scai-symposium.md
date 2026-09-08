@@ -1973,11 +1973,10 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <time class="scai-program-time" datetime="2026-09-17T09:00">9:00&ndash;9:20 am</time>
           <div class="scai-program-session">
             <strong>Welcome remarks</strong>
-            <p>Mike Malone, Laura Vandenberg, and Sanjay Raman &middot; Chair: Mohammad Hajiesmaili</p>
+            <p>Laura Vandenberg and Sanjay Raman &middot; Chair: Mohammad Hajiesmaili</p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
-                <div class="scai-session-person"><strong>Mike Malone</strong><span>Vice Chancellor for Research and Engagement, UMass Amherst</span><em>Welcome remarks</em></div>
                 <div class="scai-session-person"><strong>Laura Vandenberg</strong><span>Associate Vice Chancellor and Vice Provost for Research and Engagement; Professor of Environmental Health Sciences, UMass Amherst</span><em>Welcome remarks</em></div>
                 <div class="scai-session-person"><strong>Sanjay Raman</strong><span>Daniel J. Riccio Jr. Dean of Engineering; Professor of Electrical and Computer Engineering, UMass Amherst</span><em>Welcome remarks</em></div>
                 <div class="scai-session-person"><strong>Mohammad Hajiesmaili</strong><span>Associate Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Session chair</em></div>
@@ -2033,10 +2032,11 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <time class="scai-program-time" datetime="2026-09-17T13:00">1:00&ndash;1:10 pm</time>
           <div class="scai-program-session">
             <strong>Afternoon welcome remarks</strong>
-            <p>Brian Levine</p>
+            <p>Mike Malone and Brian Levine</p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
+                <div class="scai-session-person"><strong>Mike Malone</strong><span>Vice Chancellor for Research and Engagement, UMass Amherst</span><em>Welcome remarks</em></div>
                 <div class="scai-session-person"><strong>Brian Levine</strong><span>Associate Dean of Research &amp; Engagement; Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Welcome remarks</em></div>
               </div>
             </details>
