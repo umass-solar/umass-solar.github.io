@@ -2143,7 +2143,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
         </div>
         <div class="scai-program-row">
           <time class="scai-program-time" datetime="2026-09-17T15:00">3:00&ndash;3:15 pm</time>
-          <div class="scai-program-session"><strong>Break and refreshments</strong></div>
+          <div class="scai-program-session"><strong>Break</strong></div>
         </div>
         <div class="scai-program-row">
           <time class="scai-program-time" datetime="2026-09-17T15:15">3:15&ndash;4:00 pm</time>
@@ -2193,12 +2193,12 @@ This talk describes how AWS approaches this challenge across interconnected laye
           </div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-17T16:45">4:45&ndash;6:00 pm</time>
+          <time class="scai-program-time" datetime="2026-09-17T16:45">4:45&ndash;5:45 pm</time>
           <div class="scai-program-session"><strong>Poster session</strong></div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-17T18:00">6:00&ndash;7:30 pm</time>
-          <div class="scai-program-session"><strong>Dinner and networking</strong></div>
+          <time class="scai-program-time" datetime="2026-09-17T17:45">5:45&ndash;7:00 pm</time>
+          <div class="scai-program-session"><strong>Dinner</strong></div>
         </div>
       </section>
 
@@ -2206,7 +2206,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
         <h3 id="day-two-heading">Day 2 &mdash; Friday, September 18</h3>
         <div class="scai-program-row">
           <time class="scai-program-time" datetime="2026-09-18T08:30">8:30&ndash;9:00 am</time>
-          <div class="scai-program-session"><strong>Light breakfast and arrival</strong></div>
+          <div class="scai-program-session"><strong>Breakfast</strong></div>
         </div>
         <div class="scai-program-row">
           <time class="scai-program-time" datetime="2026-09-18T09:00">9:00&ndash;9:10 am</time>
@@ -2294,7 +2294,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
         </div>
         <div class="scai-program-row">
           <time class="scai-program-time" datetime="2026-09-18T12:00">12:00&ndash;1:00 pm</time>
-          <div class="scai-program-session"><strong>Lunch and structured networking</strong></div>
+          <div class="scai-program-session"><strong>Lunch</strong></div>
         </div>
         <div class="scai-program-row">
           <time class="scai-program-time" datetime="2026-09-18T13:00">1:00&ndash;2:00 pm</time>
@@ -2314,11 +2314,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
           </div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-18T14:00">2:00&ndash;3:00 pm</time>
-          <div class="scai-program-session"><strong>Additional speakers</strong><p>Speakers TBD &middot; Talks TBD</p></div>
-        </div>
-        <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-18T15:00">3:00&ndash;3:15 pm</time>
+          <time class="scai-program-time" datetime="2026-09-18T14:00">2:00&ndash;2:15 pm</time>
           <div class="scai-program-session">
             <strong>Closing remarks</strong>
             <p>Mohammad Hajiesmaili, Prashant Shenoy, Ramesh Sitaraman, and David Irwin</p>
