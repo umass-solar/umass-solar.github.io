@@ -2079,10 +2079,10 @@ This talk describes how AWS approaches this challenge across interconnected laye
           </div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-17T14:00">2:00&ndash;3:00 pm</time>
+          <time class="scai-program-time" datetime="2026-09-17T14:00">2:00&ndash;2:30 pm</time>
           <div class="scai-program-session">
-            <strong>Faculty and emerging-researcher highlights</strong>
-            <p>Faculty talks: Juncheng Yang and Yuanrui Sang &middot; Job-market talks: Walid Abdelrahman Hanafy, Can Hankendi, Adam Lechowicz, Qingsong Liu, and Christopher Yeh &middot; Chair: Mohammad Hajiesmaili</p>
+            <strong>Faculty highlights</strong>
+            <p>Juncheng Yang and Yuanrui Sang &middot; Chair: Mohammad Hajiesmaili</p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
@@ -2104,7 +2104,19 @@ This talk describes how AWS approaches this challenge across interconnected laye
                   <p class="scai-session-description">Simultaneously considering optimization of operating cost, greenhouse gas, and toxic emissions, this talk discusses a tri-objective, multi-period, power system-constrained framework to schedule flexible data center load. The framework Models data center power consumption as the sum of latency-critical and best-effort loads and considers the temporal flexibility of best-effort workload. The framework was implemented on standard power system test systems with data centers, and pareto fronts were obtained from the solutions. Trade-offs between different objectives are analyzed, and the impacts on electricity prices and system congestions were discussed.</p>
                   <p class="scai-session-description"><strong>Biography:</strong> Yuanrui Sang is an assistant professor in the Department of Electrical and Computer Engineering at the University of Massachusetts Amherst. Before joining UMass in 2024, she was an assistant professor at The University of Texas at El Paso, and she received her Ph.D. in electrical and computer engineering from The University of Utah in 2019. Her research interests include power system operation and planning, grid-enhancing technologies, and the integration of flexible load, such as data centers and electric vehicles, in power systems.</p>
                 </div>
-                <div class="scai-session-group-label">Job-market talks</div>
+                <div class="scai-session-person"><strong>Mohammad Hajiesmaili</strong><span>Associate Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Session chair</em></div>
+              </div>
+            </details>
+          </div>
+        </div>
+        <div class="scai-program-row">
+          <time class="scai-program-time" datetime="2026-09-17T14:30">2:30&ndash;3:00 pm</time>
+          <div class="scai-program-session">
+            <strong>Emerging-researcher highlights</strong>
+            <p>Walid Abdelrahman Hanafy, Can Hankendi, Adam Lechowicz, Qingsong Liu, and Christopher Yeh &middot; Chair: Mohammad Hajiesmaili</p>
+            <details class="scai-session-details">
+              <summary>Full session details</summary>
+              <div class="scai-session-details-panel">
                 <div class="scai-session-person">
                   <strong><a href="https://people.cs.umass.edu/~whanafy/" target="_blank" rel="noopener noreferrer">Walid Abdelrahman Hanafy</a></strong>
                   <span>UMass Amherst</span>
