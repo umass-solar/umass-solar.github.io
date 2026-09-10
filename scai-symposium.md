@@ -2051,12 +2051,11 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <time class="scai-program-time" datetime="2026-09-17T13:00">1:00&ndash;1:10 pm</time>
           <div class="scai-program-session">
             <strong>Afternoon welcome remarks</strong>
-            <p>Mike Malone and Brian Levine</p>
+            <p>Mike Malone</p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
                 <div class="scai-session-person"><strong>Mike Malone</strong><span>Vice Chancellor for Research and Engagement, UMass Amherst</span><em>Welcome remarks</em></div>
-                <div class="scai-session-person"><strong>Brian Levine</strong><span>Associate Dean of Research &amp; Engagement; Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Welcome remarks</em></div>
               </div>
             </details>
           </div>
@@ -2188,7 +2187,21 @@ This talk describes how AWS approaches this challenge across interconnected laye
           </div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-17T16:00">4:00&ndash;5:00 pm</time>
+          <time class="scai-program-time" datetime="2026-09-17T16:00">4:00&ndash;4:15 pm</time>
+          <div class="scai-program-session">
+            <strong>Welcome remarks</strong>
+            <p>Audrey Chen and Brian Levine</p>
+            <details class="scai-session-details">
+              <summary>Full session details</summary>
+              <div class="scai-session-details-panel">
+                <div class="scai-session-person"><strong>Audrey Chen</strong><span>Deputy CTO and Director of AI, Commonwealth of Massachusetts</span><em>Welcome remarks</em></div>
+                <div class="scai-session-person"><strong>Brian Levine</strong><span>Associate Dean of Research &amp; Engagement; Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Welcome remarks</em></div>
+              </div>
+            </details>
+          </div>
+        </div>
+        <div class="scai-program-row">
+          <time class="scai-program-time" datetime="2026-09-17T16:15">4:15&ndash;5:15 pm</time>
           <div class="scai-program-session">
             <strong>Panel II: Can AI Infrastructure Scale Responsibly? Impacts on the Grid, Water, and Communities</strong>
             <p>Le Xie, Shaolei Ren, Deepak Rajagopal, and Erin Baker &middot; Moderator: Golbon Zakeri</p>
@@ -2205,11 +2218,11 @@ This talk describes how AWS approaches this challenge across interconnected laye
           </div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-17T16:45">4:45&ndash;5:45 pm</time>
+          <time class="scai-program-time" datetime="2026-09-17T17:15">5:15&ndash;6:00 pm</time>
           <div class="scai-program-session"><strong>Poster session</strong></div>
         </div>
         <div class="scai-program-row">
-          <time class="scai-program-time" datetime="2026-09-17T17:45">5:45&ndash;7:00 pm</time>
+          <time class="scai-program-time" datetime="2026-09-17T18:00">6:00&ndash;7:00 pm</time>
           <div class="scai-program-session"><strong>Dinner</strong></div>
         </div>
       </section>
