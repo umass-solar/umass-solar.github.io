@@ -757,19 +757,6 @@ permalink: /scai-symposium/
     box-shadow: 0 1rem 2.5rem rgba(7, 54, 102, 0.08);
   }
 
-  .scai-draft-badge {
-    display: inline-block;
-    margin-bottom: 0.55rem;
-    padding: 0.35rem 0.58rem;
-    border-radius: 999px;
-    background: #fff2cf;
-    color: #72540a !important;
-    font-size: 0.7rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
   .scai-program-days {
     display: grid;
     gap: 1.25rem;
@@ -1421,7 +1408,7 @@ permalink: /scai-symposium/
             <a class="scai-call-link" href="#call-for-lightning-talks">Call for lightning talks <span>Deadline: August 28, 2026</span></a>
           </div>
           <div class="scai-hero-actions scai-hero-status">
-            <a class="scai-call-link" href="#draft-agenda">Draft agenda <span>Subject to change</span></a>
+            <a class="scai-call-link" href="#agenda">Agenda</a>
           </div>
         </div>
         <div class="scai-logo-card">
@@ -1887,7 +1874,6 @@ This talk describes how AWS approaches this challenge across interconnected laye
         <button class="scai-speaker-reader-close" type="button" aria-label="Close speaker details">Close <span aria-hidden="true">&times;</span></button>
       </aside>
     </div>
-    <p class="scai-note">Participant and talk information reflects confirmations received to date and will be updated as additional details become available.</p>
     <a class="scai-back-to-top" href="#page-top">Back to top</a>
   </section>
 
@@ -1947,13 +1933,12 @@ This talk describes how AWS approaches this challenge across interconnected laye
     <a class="scai-back-to-top" href="#page-top">Back to top</a>
   </section>
 
-  <section class="scai-program" id="draft-agenda" aria-labelledby="draft-agenda-heading">
+  <section class="scai-program" id="agenda" aria-labelledby="agenda-heading">
     <div class="scai-section-header">
       <div>
-        <span class="scai-draft-badge">Draft &middot; Subject to change</span>
-        <h2 id="draft-agenda-heading">Symposium agenda</h2>
+        <h2 id="agenda-heading">Symposium agenda</h2>
       </div>
-      <p>Two days of invited talks, panels, research highlights, poster presentations, and structured conversation across AI systems, data-center infrastructure, power systems, environmental impacts, and public priorities. Times, session titles, and participation may change as the program is finalized.</p>
+      <p>Two days of invited talks, panels, research highlights, poster presentations, and structured conversation across AI systems, data-center infrastructure, power systems, environmental impacts, and public priorities.</p>
     </div>
 
     <div class="scai-agenda-view" aria-label="Agenda detail level">
@@ -2112,17 +2097,10 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <time class="scai-program-time" datetime="2026-09-17T14:30">2:30&ndash;3:00 pm</time>
           <div class="scai-program-session">
             <strong>Emerging-researcher highlights</strong>
-            <p>Walid Abdelrahman Hanafy, Can Hankendi, Adam Lechowicz, Qingsong Liu, and Christopher Yeh &middot; Chair: Mohammad Hajiesmaili</p>
+            <p>Can Hankendi, Adam Lechowicz, Qingsong Liu, and Christopher Yeh &middot; Chair: Mohammad Hajiesmaili</p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
-                <div class="scai-session-person">
-                  <strong><a href="https://people.cs.umass.edu/~whanafy/" target="_blank" rel="noopener noreferrer">Walid Abdelrahman Hanafy</a></strong>
-                  <span>UMass Amherst</span>
-                  <em>Talk: Flex: Grid-Responsive Provisioning and Scheduling for Elastic Cloud Clusters</em>
-                  <p class="scai-session-description">The talk will explain the workload and temporal coupling inherent in carbon-aware resource provisioning and scheduling for data centers, and why effective management must account for (i) the cluster’s current and anticipated demand and its elasticity, (ii) exogenous grid signals and their variability, and (iii) the trade-off between delaying work and the potential savings enabled by waiting.</p>
-                  <p class="scai-session-description">To address these challenges, I proposed Flex, a grid-responsive resource manager that jointly provisions cluster capacity and schedules elastic batch jobs. Flex addresses this coupling by computing optimal provisioning and scheduling decisions over recent historical conditions and reusing those decisions at runtime. I show that this approach provides an effective and practical method for grid-responsive management of elastic batch workloads</p>
-                </div>
                 <div class="scai-session-person">
                   <strong><a href="https://www.hankendi.com" target="_blank" rel="noopener noreferrer">Can Hankendi</a></strong>
                   <span>Boston University</span>
@@ -2189,12 +2167,12 @@ This talk describes how AWS approaches this challenge across interconnected laye
         <div class="scai-program-row">
           <time class="scai-program-time" datetime="2026-09-17T16:00">4:00&ndash;4:15 pm</time>
           <div class="scai-program-session">
-            <strong>Welcome remarks</strong>
+            <strong>Commonwealth perspective and welcome remarks</strong>
             <p>Audrey Chen and Brian Levine</p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
-                <div class="scai-session-person"><strong>Audrey Chen</strong><span>Deputy CTO and Director of AI, Commonwealth of Massachusetts</span><em>Welcome remarks</em></div>
+                <div class="scai-session-person"><strong>Audrey Chen</strong><span>Deputy CTO and Director of AI, Commonwealth of Massachusetts</span><em>Massachusetts AI initiatives</em></div>
                 <div class="scai-session-person"><strong>Brian Levine</strong><span>Associate Dean of Research &amp; Engagement; Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Welcome remarks</em></div>
               </div>
             </details>
@@ -2466,7 +2444,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
       <h2 id="participate-heading">Invitation-only symposium</h2>
       <p>The symposium will bring together invited researchers, infrastructure practitioners, utilities, policymakers, UMass campus leadership, state officials, and partners interested in the future of reliable, grid-aware AI systems. If you are interested in attending, please email <a href="mailto:hajiesmaili@cs.umass.edu" style="color: #fff; text-decoration: underline;">Mohammad Hajiesmaili</a> at <a href="mailto:hajiesmaili@cs.umass.edu" style="color: #fff; text-decoration: underline;">hajiesmaili@cs.umass.edu</a>.</p>
     </div>
-    <a class="scai-status" href="#draft-agenda">View draft agenda</a>
+    <a class="scai-status" href="#agenda">View agenda</a>
     <a class="scai-back-to-top" href="#page-top">Back to top</a>
   </section>
 </div>
@@ -2573,7 +2551,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
   }());
 
   (function () {
-    var agenda = document.getElementById("draft-agenda");
+    var agenda = document.getElementById("agenda");
     if (!agenda) return;
 
     var controls = agenda.querySelector(".scai-agenda-view");
