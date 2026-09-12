@@ -2036,11 +2036,12 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <time class="scai-program-time" datetime="2026-09-17T13:00">1:00&ndash;1:10 pm</time>
           <div class="scai-program-session">
             <strong>Afternoon welcome remarks</strong>
-            <p>Mike Malone</p>
+            <p>Mike Malone and Brian Levine</p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
                 <div class="scai-session-person"><strong>Mike Malone</strong><span>Vice Chancellor for Research and Engagement, UMass Amherst</span><em>Welcome remarks</em></div>
+                <div class="scai-session-person"><strong>Brian Levine</strong><span>Associate Dean of Research &amp; Engagement; Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Welcome remarks</em></div>
               </div>
             </details>
           </div>
@@ -2168,12 +2169,12 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <time class="scai-program-time" datetime="2026-09-17T16:00">4:00&ndash;4:15 pm</time>
           <div class="scai-program-session">
             <strong>Commonwealth perspective and welcome remarks</strong>
-            <p>Audrey Chen and Brian Levine</p>
+            <p>Audrey Chen and James Allan</p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
                 <div class="scai-session-person"><strong>Audrey Chen</strong><span>Deputy CTO and Director of AI, Commonwealth of Massachusetts</span><em>Massachusetts AI initiatives</em></div>
-                <div class="scai-session-person"><strong>Brian Levine</strong><span>Associate Dean of Research &amp; Engagement; Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Welcome remarks</em></div>
+                <div class="scai-session-person"><strong>James Allan</strong><span>Senior Associate Dean of Operations; Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Welcome remarks</em></div>
               </div>
             </details>
           </div>
@@ -2215,11 +2216,10 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <time class="scai-program-time" datetime="2026-09-18T09:00">9:00&ndash;9:10 am</time>
           <div class="scai-program-session">
             <strong>Welcome remarks</strong>
-            <p>James Allan and Caitlyn Butler</p>
+            <p>Caitlyn Butler</p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
-                <div class="scai-session-person"><strong>James Allan</strong><span>Senior Associate Dean of Operations; Distinguished Professor, Manning College of Information and Computer Sciences, UMass Amherst</span><em>Welcome remarks</em></div>
                 <div class="scai-session-person"><strong>Caitlyn Butler</strong><span>Associate Dean for Research and Graduate Affairs, Riccio College of Engineering; Professor of Civil and Environmental Engineering, UMass Amherst</span><em>Welcome remarks</em></div>
               </div>
             </details>
