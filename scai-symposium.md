@@ -938,6 +938,49 @@ permalink: /scai-symposium/
     line-height: 1.42;
   }
 
+  .scai-poster-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem;
+  }
+
+  .scai-poster-item {
+    min-width: 0;
+    padding: 0.8rem;
+    border: 1px solid rgba(5, 105, 151, 0.14);
+    border-left: 3px solid var(--scai-teal);
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.88);
+  }
+
+  .scai-poster-item h4 {
+    margin: 0;
+    color: var(--scai-navy);
+    font-size: 0.82rem;
+    line-height: 1.42;
+  }
+
+  .scai-poster-presenter {
+    margin: 0.48rem 0 0 !important;
+  }
+
+  .scai-poster-presenter strong,
+  .scai-poster-presenter span {
+    display: block;
+  }
+
+  .scai-poster-presenter strong {
+    color: var(--scai-green) !important;
+    font-size: 0.76rem !important;
+  }
+
+  .scai-poster-presenter span {
+    margin-top: 0.08rem;
+    color: var(--scai-muted) !important;
+    font-size: 0.72rem;
+    line-height: 1.35;
+  }
+
   .scai-back-to-top {
     display: block;
     width: fit-content;
@@ -1367,6 +1410,10 @@ permalink: /scai-symposium/
 
     .scai-layer:last-child {
       grid-column: auto;
+    }
+
+    .scai-poster-grid {
+      grid-template-columns: 1fr;
     }
 
     .scai-call-link {
@@ -2198,7 +2245,81 @@ This talk describes how AWS approaches this challenge across interconnected laye
         </div>
         <div class="scai-program-row">
           <time class="scai-program-time" datetime="2026-09-17T17:15">5:15&ndash;6:00 pm</time>
-          <div class="scai-program-session"><strong>Poster session</strong></div>
+          <div class="scai-program-session">
+            <strong>Poster session</strong>
+            <p>16 accepted posters</p>
+            <details class="scai-session-details">
+              <summary>View accepted posters</summary>
+              <div class="scai-session-details-panel">
+                <div class="scai-poster-grid">
+                  <article class="scai-poster-item">
+                    <h4>Green Bin Packing</h4>
+                    <p class="scai-poster-presenter"><strong>Jackson Bibbens</strong><span>UMass Amherst</span></p>
+                  </article>
+                  <article class="scai-poster-item">
+                    <h4>MetaKV: Adaptive KV Cache Compression Policy for Resource-Constrained Environments</h4>
+                    <p class="scai-poster-presenter"><strong>Roozbeh Bostadoost</strong><span>UMass Amherst</span></p>
+                  </article>
+                  <article class="scai-poster-item">
+                    <h4>Fairness as an Investment: Dynamic Participation and Long-Run Profit in Virtual Power Plants</h4>
+                    <p class="scai-poster-presenter"><strong>Liudong Chen</strong><span>Harvard University</span></p>
+                  </article>
+                  <article class="scai-poster-item">
+                    <h4>Ahead of the Curve: Leveraging Periodicity to Improve Job Placement in Data Centers</h4>
+                    <p class="scai-poster-presenter"><strong>Xiaoding (Rebecca) Guan</strong><span>UMass Amherst</span></p>
+                  </article>
+                  <article class="scai-poster-item">
+                    <h4>Estimating Data Center Power Flexibility via Machine Learning and Risk-Aware Stochastic Optimization</h4>
+                    <p class="scai-poster-presenter"><strong>Abdulkerim Korkmaz</strong><span>Boston University</span></p>
+                  </article>
+                  <article class="scai-poster-item">
+                    <h4>Carbonx: An open-source tool for computational decarbonization using time series foundation models</h4>
+                    <p class="scai-poster-presenter"><strong>Diptyaroop Maji</strong><span>UMass Amherst</span></p>
+                  </article>
+                  <article class="scai-poster-item">
+                    <h4>System-Level Impacts of Flexible Data Center Load Scheduling on Cost, Emissions, and Transmission Congestion</h4>
+                    <p class="scai-poster-presenter"><strong>Akibul Hasan Mazumder</strong><span>UMass Amherst</span></p>
+                  </article>
+                  <article class="scai-poster-item">
+                    <h4>Optimizing the Performance and Efficiency of Distributed Model Training under Resource Constraint</h4>
+                    <p class="scai-poster-presenter"><strong>Talha Mehboob</strong><span>UMass Amherst</span></p>
+                  </article>
+                  <article class="scai-poster-item">
+                    <h4>City-Scale Decarbonization of Residential Heating under Transformer Constraints</h4>
+                    <p class="scai-poster-presenter"><strong>Fabian Mkocheko</strong><span>UMass Amherst</span></p>
+                  </article>
+                  <article class="scai-poster-item">
+                    <h4>PowerRanger: A Software Control Plane for Grid Compliance in Datacenter Clusters</h4>
+                    <p class="scai-poster-presenter"><strong>Thanathorn Sukprasert</strong><span>UMass Amherst</span></p>
+                  </article>
+                  <article class="scai-poster-item">
+                    <h4>CarbonShare: Carbon-Fair Allocation for Shared Clusters</h4>
+                    <p class="scai-poster-presenter"><strong>John Thiede</strong><span>UMass Amherst</span></p>
+                  </article>
+                  <article class="scai-poster-item">
+                    <h4>ImCDN: An Immersive Content Delivery Network for Cooperative Tile-level 360° Video Streaming</h4>
+                    <p class="scai-poster-presenter"><strong>Ning Wang</strong><span>UMass Amherst</span></p>
+                  </article>
+                  <article class="scai-poster-item">
+                    <h4>HADIS: A Hybrid Architecture for Query-Aware Diffusion Model Serving</h4>
+                    <p class="scai-poster-presenter"><strong>Qizheng Yang</strong><span>UMass Amherst</span></p>
+                  </article>
+                  <article class="scai-poster-item">
+                    <h4>Cross-Technology Routing, Caching, and Controlled Redundancy for Disaster-Resilient SAGIN in ITS</h4>
+                    <p class="scai-poster-presenter"><strong>Shulun Yang</strong><span>UMass Amherst</span></p>
+                  </article>
+                  <article class="scai-poster-item">
+                    <h4>SyncSlack: Harvesting Synchronization Slack for Energy-Efficient Mixture-of-Experts Inference Serving</h4>
+                    <p class="scai-poster-presenter"><strong>Q. Lizzy Yue</strong><span>Boston University</span></p>
+                  </article>
+                  <article class="scai-poster-item">
+                    <h4>Building the Decision Infrastructure for the AI-Era Grid</h4>
+                    <p class="scai-poster-presenter"><strong>Qian Zhang</strong><span>Harvard University</span></p>
+                  </article>
+                </div>
+              </div>
+            </details>
+          </div>
         </div>
         <div class="scai-program-row">
           <time class="scai-program-time" datetime="2026-09-17T18:00">6:00&ndash;7:00 pm</time>
