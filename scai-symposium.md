@@ -2432,10 +2432,6 @@ This talk describes how AWS approaches this challenge across interconnected laye
                   <strong>Sean James</strong>
                   <span>Distinguished Engineer &ndash; Energy Systems, NVIDIA</span>
                   <em>Opening remarks</em>
-                  <p class="scai-session-description"><strong>Biography:</strong> At NVIDIA, Sean focuses on power, grid integration, and energy architecture for large-scale AI infrastructure and AI factories.</p>
-                  <p class="scai-session-description">Sean works at the intersection of compute, power, and land, helping define how next-generation AI data centers secure energy, scale rapidly, and integrate with constrained electrical grids. His work spans high-density power architecture, grid-forming and behind-the-meter energy systems, battery energy storage, fuel cells, and strategies to accelerate time-to-power for AI deployments worldwide.</p>
-                  <p class="scai-session-description">Before joining NVIDIA, Sean spent nearly two decades at Microsoft, where he held senior leadership roles in data center operations, construction, and technology commercialization. He led and scaled multiple next-generation data center programs, bridging early-stage R&amp;D with production deployment across Microsoft&rsquo;s global cloud footprint.</p>
-                  <p class="scai-session-description">Sean began his career in hands-on data center operations and previously served in the U.S. Navy Submarine Fleet as an electrician. He holds multiple patents related to data center and energy systems and a degree in Information Technology. Sean is a father of three sons.</p>
                 </div>
                 <div class="scai-session-person"><strong>Ayse K. Coskun</strong><span>Professor of Electrical and Computer Engineering and Systems Engineering; Director of the Center for Information and Systems Engineering, Boston University; Chief Scientist, Emerald AI</span><em>Panelist</em></div>
                 <div class="scai-session-person"><strong>Jeremy Rice</strong><span>Mechanical Systems Lead, Verrus</span><em>Panelist</em></div>
