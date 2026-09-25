@@ -850,6 +850,20 @@ permalink: /scai-symposium/
     line-height: 1.5;
   }
 
+  .scai-program-session p .scai-agenda-resource {
+    color: var(--scai-green) !important;
+    font-weight: 750;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 104, 92, 0.35);
+    text-underline-offset: 0.15em;
+  }
+
+  .scai-program-session p .scai-agenda-resource:hover,
+  .scai-program-session p .scai-agenda-resource:focus {
+    color: var(--scai-navy) !important;
+    text-decoration-color: currentColor;
+  }
+
   .scai-session-details {
     margin-top: 0.5rem;
     border-top: 1px solid rgba(5, 105, 151, 0.14);
@@ -2005,7 +2019,7 @@ This talk describes how AWS approaches this challenge across interconnected laye
           <time class="scai-program-time" datetime="2026-09-17T09:00">9:00&ndash;9:20 am</time>
           <div class="scai-program-session">
             <strong>Welcome remarks</strong>
-            <p>Laura Vandenberg and Sanjay Raman &middot; Chair: Mohammad Hajiesmaili</p>
+            <p>Laura Vandenberg and Sanjay Raman &middot; Chair: Mohammad Hajiesmaili &middot; <a class="scai-agenda-resource" href="https://docs.google.com/presentation/d/1kIh8Q4VwFo90bD4UJW9vIhkl6P-Bsg9K/edit?usp=sharing&amp;ouid=101963232780672974329&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">Opening remarks slides</a></p>
             <details class="scai-session-details">
               <summary>Full session details</summary>
               <div class="scai-session-details-panel">
