@@ -12,6 +12,7 @@
         <link rel="stylesheet"
               href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="{{ site.base }}/css/group.css">
+        {% if page.extra_css %}<link rel="stylesheet" href="{{ site.base }}/css/{{ page.extra_css }}">{% endif %}
         {% include analytics.html %}
     </head>
     <body>

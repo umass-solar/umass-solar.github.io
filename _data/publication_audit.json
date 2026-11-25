@@ -1,0 +1,1367 @@
+{
+  "checked_on": "2026-11-25",
+  "method": "Title, author, venue, and version matching against arXiv, publisher-deposited Crossref records, and official proceedings. Missing links mean no confident match, not proof of absence. Conference entries retain their conference classification, including SIGMETRICS presentations with POMACS journal versions.",
+  "records": [
+    {
+      "key": "zuo2023adversarial",
+      "title": "Adversarial Attacks on Online Learning to Rank with Click Feedback",
+      "arxiv": "2305.17071",
+      "official_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/820e42f39773c6cbbd875553db45658f-Abstract-Conference.html",
+      "publication_type": "conference",
+      "source": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/820e42f39773c6cbbd875553db45658f-Abstract-Conference.html",
+      "notes": []
+    },
+    {
+      "key": "sinha2023noregret",
+      "title": "No-regret Algorithms for Fair Resource Allocation",
+      "arxiv": "2303.06396",
+      "official_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/96842011407c2691ab4eefff48fc864d-Abstract-Conference.html",
+      "publication_type": "conference",
+      "source": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/96842011407c2691ab4eefff48fc864d-Abstract-Conference.html",
+      "notes": []
+    },
+    {
+      "key": "wang2023exploration",
+      "title": "Exploration for Free: How Does Reward Heterogeneity Improve Regret in Cooperative Multi-agent Bandits?",
+      "arxiv": null,
+      "official_url": "https://proceedings.mlr.press/v216/wang23a.html",
+      "publication_type": "conference",
+      "source": "https://proceedings.mlr.press/v216/wang23a.html",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "liu2023contextual",
+      "title": "Contextual Combinatorial Bandits with Probabilistically Triggered Arms",
+      "arxiv": "2303.17110",
+      "official_url": "https://proceedings.mlr.press/v202/liu23bf.html",
+      "publication_type": "conference",
+      "source": "https://proceedings.mlr.press/v202/liu23bf.html",
+      "notes": []
+    },
+    {
+      "key": "liu2023contextual",
+      "title": "Applied Online Algorithms with Heterogeneous Predictors",
+      "arxiv": null,
+      "official_url": "https://proceedings.mlr.press/v202/maghakian23a.html",
+      "publication_type": "conference",
+      "source": "https://proceedings.mlr.press/v202/maghakian23a.html",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "hanafy2023war",
+      "title": "The War of the Efficiencies: Understanding the Tension between Carbon and Energy Optimization",
+      "arxiv": "2306.16948",
+      "official_url": "https://doi.org/10.1145/3604930.3605709",
+      "publication_type": "workshop",
+      "source": "https://api.crossref.org/works/10.1145/3604930.3605709",
+      "notes": []
+    },
+    {
+      "key": "SunZLHWT23sigmetrics",
+      "title": "The Online Knapsack Problem with Departures",
+      "arxiv": "2209.11934",
+      "official_url": "https://doi.org/10.1145/3578338.3593576",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1145/3578338.3593576",
+      "notes": []
+    },
+    {
+      "key": "Lechowicz2023Decarb",
+      "title": " Equitable Network-Aware Decarbonization of Residential Heating at City Scale ",
+      "arxiv": "2301.04747",
+      "official_url": "https://doi.org/10.1145/3575813.3576870",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1145/3575813.3576870",
+      "notes": [],
+      "year": 2023
+    },
+    {
+      "key": "bostandoost2023nearoptimal",
+      "title": "Near-optimal Online Algorithms for Joint Pricing and Scheduling in EV Charging Networks ",
+      "arxiv": "2301.06087",
+      "official_url": "https://doi.org/10.1145/3575813.3576878",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1145/3575813.3576878",
+      "notes": []
+    },
+    {
+      "key": "sahebdel2023data",
+      "title": "Data-driven Algorithms for Reducing the Carbon Footprint of Ride-sharing Ecosystems (poster paper)",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3599733.3606300",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1145/3599733.3606300",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "WangYCLHLT23iclr",
+      "title": "Achieving Near-Optimal Individual Regret & Low Communications in Multi-Agent Bandits",
+      "arxiv": null,
+      "official_url": "https://openreview.net/forum?id=QTXKTXJKIh",
+      "publication_type": "conference",
+      "source": "https://www.cse.cuhk.edu.hk/~cslui/PUBLICATION/ICLR-23.pdf",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "chen2023ondemand",
+      "title": "On-Demand Communication for Asynchronous Multi-Agent Bandits",
+      "arxiv": "2302.07446",
+      "official_url": "https://proceedings.mlr.press/v206/chen23c.html",
+      "publication_type": "conference",
+      "source": "https://proceedings.mlr.press/v206/chen23c.html",
+      "notes": []
+    },
+    {
+      "key": "Yang2022Competitive",
+      "title": "Competitive Algorithms for Online Multidimensional Knapsack Problems",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3489048.3522627",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1145/3489048.3522627",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "YangCHHT22sigmetrics",
+      "title": "Hierarchical Learning Algorithms for Multi-scale Expert Problems",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3489048.3530967",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1145/3489048.3530967",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "Alinia2022SusComp",
+      "title": "Online {EV} Scheduling Algorithms for Adaptive Charging Networks with Global Peak Constraints",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1109/tsusc.2020.2979854",
+      "publication_type": "journal",
+      "source": "https://api.crossref.org/works/10.1109/tsusc.2020.2979854",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "Yang2022Distributed",
+      "title": "Distributed Bandits with Heterogeneous Agents",
+      "arxiv": "2201.09353",
+      "official_url": "https://doi.org/10.1109/INFOCOM48880.2022.9796901",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1109/INFOCOM48880.2022.9796901",
+      "notes": []
+    },
+    {
+      "key": "Sun2021NeurIPS",
+      "title": "Pareto-Optimal Learning-Augmented Algorithms for Online Conversion Problems",
+      "arxiv": "2109.01556",
+      "official_url": "https://proceedings.neurips.cc/paper/2021/hash/55a988dfb00a914717b3000a3374694c-Abstract.html",
+      "publication_type": "conference",
+      "source": "https://proceedings.neurips.cc/paper/2021/hash/55a988dfb00a914717b3000a3374694c-Abstract.html",
+      "notes": []
+    },
+    {
+      "key": "Yang2021NeurIPS",
+      "title": "Cooperative Stochastic Bandits with Asynchronous Agents and Constrained Feedback",
+      "arxiv": null,
+      "official_url": "https://proceedings.neurips.cc/paper/2021/hash/4a5876b450b45371f6cfe5047ac8cd45-Abstract.html",
+      "publication_type": "conference",
+      "source": "https://proceedings.neurips.cc/paper/2021/hash/4a5876b450b45371f6cfe5047ac8cd45-Abstract.html",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "FOCAS2021",
+      "title": "FOCAS: Practical Video Super Resolution using Foveated Rendering",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3474085.3475673",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1145/3474085.3475673",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "Competitive2021Lee",
+      "title": "Competitive Bidding Strategies for Online Linear Optimization with Inventory Management Constraints",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1016/j.peva.2021.102249",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1016/j.peva.2021.102249",
+      "notes": [
+        "Official full paper in Performance Evaluation, presented at IFIP Performance; retained conference category as listed.",
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "ride2021",
+      "title": "Ride Substitution Using Electric Bike Sharing: Feasibility, Cost and Carbon Analysis",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3448081",
+      "publication_type": "journal",
+      "source": "https://api.crossref.org/works/10.1145/3448081",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "SunZLHWT21sigmetrics",
+      "title": "Competitive Algorithms for the Online Multiple Knapsack Problem with Application to Electric Vehicle Charging",
+      "arxiv": "2010.00412",
+      "official_url": "https://doi.org/10.1145/3410220.3456271",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1145/3410220.3456271",
+      "notes": []
+    },
+    {
+      "key": "LeeMHLSL21eenergy",
+      "title": "Online Peak-Aware Energy Scheduling with Untrusted Advice",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3447555.3464860",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1145/3447555.3464860",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "SusCloud2021",
+      "title": "Enabling Sustainable Clouds: The Case for Virtualizing the Energy System",
+      "arxiv": "2106.08872",
+      "official_url": "https://doi.org/10.1145/3472883.3487009",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1145/3472883.3487009",
+      "notes": []
+    },
+    {
+      "key": "MaghakianLHLLS21ciss",
+      "title": "Leveraging Different Types of Predictors for Online Optimization (Invited Paper)",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1109/ciss50987.2021.9400315",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1109/ciss50987.2021.9400315",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "Data2021Zeynali",
+      "title": "Data-driven Competitive Algorithms for Online Knapsack and Set Cover",
+      "arxiv": "2012.05361",
+      "official_url": "https://doi.org/10.1609/aaai.v35i12.17294",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1609/aaai.v35i12.17294",
+      "notes": []
+    },
+    {
+      "key": "Yang2020NeurIPS",
+      "title": "Adversarial Bandits with Corruptions: Regret Lower Bound and No-regret Algorithm",
+      "arxiv": null,
+      "official_url": "https://papers.neurips.cc/paper_files/paper/2020/hash/e655c7716a4b3ea67f48c6322fc42ed6-Abstract.html",
+      "publication_type": "conference",
+      "source": "https://papers.neurips.cc/paper_files/paper/2020/hash/e655c7716a4b3ea67f48c6322fc42ed6-Abstract.html",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "YangHSWMW20sigmetrics",
+      "title": "Online Linear Optimization with Inventory Management Constraints",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3393691.3394207",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1145/3393691.3394207",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "Jha2020Emission",
+      "title": "Emission-aware Energy Storage Scheduling for a Greener Grid",
+      "arxiv": "2005.12234",
+      "official_url": "https://doi.org/10.1145/3396851.3397755",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1145/3396851.3397755",
+      "notes": []
+    },
+    {
+      "key": "AmbatiB0HS20ic2e",
+      "title": "Hedge Your Bets: Optimizing Long-term Cloud Costs by Mixing {VM} Purchasing Options",
+      "arxiv": "2004.04302",
+      "official_url": "https://doi.org/10.1109/ic2e48712.2020.00018",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1109/ic2e48712.2020.00018",
+      "notes": []
+    },
+    {
+      "key": "AliniaHC19tits",
+      "title": "Online {EV} Charging Scheduling With On-Arrival Commitment",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1109/tits.2018.2887194",
+      "publication_type": "journal",
+      "source": "https://api.crossref.org/works/10.1109/tits.2018.2887194",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "AhmadRHS19eenergy",
+      "title": "Learning from Optimal: Energy Procurement Strategies for Data Centers (notes paper)",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3307772.3328308",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1145/3307772.3328308",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "YekkehkhanyAHN19cdc",
+      "title": "Risk-Averse Explore-Then-Commit Algorithms for Finite-Time Bandits",
+      "arxiv": "1904.13387",
+      "official_url": "https://doi.org/10.1109/cdc40024.2019.9142286",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1109/cdc40024.2019.9142286",
+      "notes": []
+    },
+    {
+      "key": "JiHGM19amcc",
+      "title": "Coordinating Distribution System Resources for Co-optimized Participation in Energy and Ancillary Service Transmission System Markets",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.23919/acc.2019.8815242",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.23919/acc.2019.8815242",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "YangHW19ciss",
+      "title": "Online Linear Programming with Uncertain Constraints (Invited Paper)",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1109/ciss.2019.8693056",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1109/ciss.2019.8693056",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "YangDHTW18sigmetrics",
+      "title": "An Optimal Algorithm for Online Non-Convex Learning",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3219617.3219635",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1145/3219617.3219635",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "YangWH18sigmetrics",
+      "title": "An Optimal Randomized Online Algorithm for QoS Buffer Management",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3219617.3219629",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1145/3219617.3219629",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "AliniaTHYC18iwqos",
+      "title": "Competitive Online Scheduling Algorithms with Applications in Deadline-Constrained {EV} Charging",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1109/iwqos.2018.8624184",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1109/iwqos.2018.8624184",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "YiHZCL18tsg",
+      "title": "Impact of the Uncertainty of Distributed Renewable Generation on Deregulated Electricity Supply Chain",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1109/tsg.2017.2705289",
+      "publication_type": "journal",
+      "source": "https://api.crossref.org/works/10.1109/tsg.2017.2705289",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "ZhangHCCZ18tsg",
+      "title": "Peak-Aware Online Economic Dispatching for Microgrids",
+      "arxiv": "1508.03996",
+      "official_url": "https://doi.org/10.1109/tsg.2016.2551282",
+      "publication_type": "journal",
+      "source": "https://api.crossref.org/works/10.1109/tsg.2016.2551282",
+      "notes": []
+    },
+    {
+      "key": "HajiesmailiTK18tcns",
+      "title": "Multiperiod Network Rate Allocation With End-to-End Delay Constraints",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1109/tcns.2017.2677202",
+      "publication_type": "journal",
+      "source": "https://api.crossref.org/works/10.1109/tcns.2017.2677202",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "HajiesmailiCM17cdc",
+      "title": "Understanding the inefficiency of security-constrained economic dispatch",
+      "arxiv": "1706.00722",
+      "official_url": "https://doi.org/10.1109/cdc.2017.8263947",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1109/cdc.2017.8263947",
+      "notes": []
+    },
+    {
+      "key": "HajiesmailiCMC17eenergy",
+      "title": "Crowd-Sourced Storage-Assisted Demand Response in Microgrids",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3077839.3077841",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1145/3077839.3077841",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "HajiesmailiDCL17jsac",
+      "title": "Incentivizing Device-to-Device Load Balancing for Cellular Networks: An Online Auction Design",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1109/jsac.2017.2659558",
+      "publication_type": "journal",
+      "source": "https://api.crossref.org/works/10.1109/jsac.2017.2659558",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "HajiesmailiMWWC17tmm",
+      "title": "Cost-Effective Low-Delay Design for Multiparty Cloud Video Conferencing",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1109/tmm.2017.2710799",
+      "publication_type": "journal",
+      "source": "https://api.crossref.org/works/10.1109/tmm.2017.2710799",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "YekkehkhanyHH17sigmetrics",
+      "title": "{GB-PANDAS:} : Throughput and heavy-traffic optimality analysis for affinity scheduling",
+      "arxiv": "1709.08115",
+      "official_url": "https://doi.org/10.1145/3199524.3199528",
+      "publication_type": "journal",
+      "source": "https://api.crossref.org/works/10.1145/3199524.3199528",
+      "notes": []
+    },
+    {
+      "key": "YangHYC17sigmetrics",
+      "title": "Hour-Ahead Offering Strategies in Electricity Market for Power Producers with Storage and Intermittent Supply (poster paper)",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3078505.3078543",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1145/3078505.3078543",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "DengHCZ16eenergy",
+      "title": "Energy-efficient timely transportation of long-haul heavy-duty trucks",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/2934328.2934338",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1145/2934328.2934338",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "HajiesmailiCCH16eenergy",
+      "title": "Online microgrid energy generation scheduling revisited: the benefits of randomization and interval prediction",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/2934328.2934329",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1145/2934328.2934329",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "HajiesmailiTK15cdc",
+      "title": "Utility-optimal dynamic rate allocation under average end-to-end delay requirements",
+      "arxiv": "1509.03374",
+      "official_url": "https://doi.org/10.1109/cdc.2015.7402975",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1109/cdc.2015.7402975",
+      "notes": []
+    },
+    {
+      "key": "ZhangHC15eenergy",
+      "title": "Peak-Aware Online Economic Dispatching for Microgrids",
+      "arxiv": "1508.03996",
+      "official_url": "https://doi.org/10.1145/2768510.2768538",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1145/2768510.2768538",
+      "notes": []
+    },
+    {
+      "key": "AliniaHK15infocom",
+      "title": "On the construction of maximum-quality aggregation trees in deadline-constrained WSNs",
+      "arxiv": "1405.0597",
+      "official_url": "https://doi.org/10.1109/infocom.2015.7218386",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1109/infocom.2015.7218386",
+      "notes": []
+    },
+    {
+      "key": "HajiesmailiMWWC15icdcs",
+      "title": "Cost-Effective Low-Delay Cloud Video Conferencing",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1109/icdcs.2015.19",
+      "publication_type": "conference",
+      "source": "https://api.crossref.org/works/10.1109/icdcs.2015.19",
+      "notes": [
+        "No confidently matched arXiv version found in author feed or targeted title search."
+      ]
+    },
+    {
+      "key": "mirfakhar2026twosided",
+      "title": "Two-Sided Learning in Matching Markets with Interviews",
+      "arxiv": "2602.12224",
+      "official_url": null,
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2602.12224",
+        "https://amirmahdi-mirfakhar.github.io/",
+        "https://amirmahdi-mirfakhar.github.io/2021/10/01/releasing-not-pure-poole-v0-1-2/"
+      ],
+      "notes": [
+        "First author lists the preprint title as NeurIPS 2026 and links arXiv 2602.12224 directly from its detail page. All five authors match. His talks list uses existing website title. Retain existing publication title pending proceedings.",
+        "No official paper-specific proceedings link verified."
+      ]
+    },
+    {
+      "key": "liu2026adversarial",
+      "title": "Learning to Allocate Reusable Resources under Adversarial Arrivals and Delayed Feedback",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3842721.3849633",
+      "publication_type": "conference",
+      "source": [
+        "https://api.crossref.org/works/10.1145/3842721.3849633",
+        "https://www.sigmobile.org/mobihoc/2026/accepted-papers.html"
+      ],
+      "notes": [
+        "No matching arXiv record verified in author-wide feed and title searches.",
+        "Publisher-deposited Crossref title differs from existing website title; all four authors and MobiHoc 2026 venue match. Conference program has another variant: Reusable Capacity Management under Adversarial Arrivals: Learning with Delayed Feedback."
+      ],
+      "published_title": "Reusable Resource Allocation under Adversarial Arrivals: Learning with Delayed Feedback"
+    },
+    {
+      "key": "sahebdel2026pricing",
+      "title": "Online Joint Pricing and Scheduling in Distributed Networked Platforms",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3842721.3849667",
+      "publication_type": "conference",
+      "source": [
+        "https://api.crossref.org/works/10.1145/3842721.3849667"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Proceedings of the Twenty-seventh International Symposium on Theory, Algorithmic Foundations, and Protocol Design for Mobile Networks and Mobile Computing",
+        "No matching arXiv record verified in author-wide feed and title searches."
+      ]
+    },
+    {
+      "key": "Ghaffari2026Corruptions",
+      "title": "Online Learning to Rank under Corruption: A Robust Cascading Bandits Approach",
+      "arxiv": "2511.03074",
+      "official_url": "https://doi.org/10.1145/3770855.3818086",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2511.03074",
+        "https://api.crossref.org/works/10.1145/3770855.3818086"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2"
+      ]
+    },
+    {
+      "key": "lechowicz2026spade",
+      "title": "SPADE: Signal-Aware DAG Scheduling and Dynamic Provisioning for Data Processing Clusters",
+      "arxiv": null,
+      "official_url": "https://www.usenix.org/conference/osdi26/presentation/lechowicz",
+      "publication_type": "conference",
+      "source": [
+        "https://www.usenix.org/conference/osdi26/presentation/lechowicz"
+      ],
+      "notes": [
+        "No matching arXiv record verified in author-wide feed and title searches."
+      ]
+    },
+    {
+      "key": "liu2026clb",
+      "title": "Combinatorial Logistic Online Learning and Its Applications in Nonlinear Networked Systems",
+      "arxiv": "2410.17075",
+      "official_url": "https://doi.org/10.1109/ton.2026.3663325",
+      "publication_type": "journal",
+      "source": [
+        "https://api.crossref.org/works/10.1109/ton.2026.3663325"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: IEEE Transactions on Networking"
+      ]
+    },
+    {
+      "key": "yang2026mab",
+      "title": "Cooperative Bandit Algorithms with Optimal Regret and Communication Costs",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1109/ton.2026.3662342",
+      "publication_type": "journal",
+      "source": [
+        "https://api.crossref.org/works/10.1109/ton.2026.3662342",
+        "https://arxiv.org/abs/2308.04314"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: IEEE Transactions on Networking",
+        "arXiv 2308.04314 appears related but differs in title and author list (no Haoxu Chen); do not attach without explicit version linkage. No arXiv link on coauthor Xuchuang Wang publication page."
+      ]
+    },
+    {
+      "key": "liu2026unified",
+      "title": "A Unified Framework for Online Combinatorial Allocation of Reusable Resources under Endogenous Deterioration",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3801489.3806894",
+      "publication_type": "conference",
+      "source": [
+        "https://api.crossref.org/works/10.1145/3801489.3806894"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Abstracts of the 2026 ACM SIGMETRICS International Conference on Measurement and Modeling of Computer Systems",
+        "Full POMACS journal version: https://doi.org/10.1145/3805625",
+        "No matching arXiv record verified in author-wide feed and title searches."
+      ],
+      "journal_url": "https://doi.org/10.1145/3805625"
+    },
+    {
+      "key": "ativ2026reusable",
+      "title": "Learning to Allocate Reusable Resources under Stochastic Rewards and Durations",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3801489.3806839",
+      "publication_type": "conference",
+      "source": [
+        "https://api.crossref.org/works/10.1145/3801489.3806839"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Abstracts of the 2026 ACM SIGMETRICS International Conference on Measurement and Modeling of Computer Systems",
+        "Full POMACS journal version: https://doi.org/10.1145/3805641",
+        "No matching arXiv record verified in author-wide feed and title searches."
+      ],
+      "journal_url": "https://doi.org/10.1145/3805641"
+    },
+    {
+      "key": "lechowicz2026osdm",
+      "title": "Online Smoothed Demand Management",
+      "arxiv": "2511.18554",
+      "official_url": "https://doi.org/10.1145/3801489.3806838",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2511.18554",
+        "https://api.crossref.org/works/10.1145/3801489.3806838"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Abstracts of the 2026 ACM SIGMETRICS International Conference on Measurement and Modeling of Computer Systems"
+      ]
+    },
+    {
+      "key": "bibbens2026gbp",
+      "title": "Green Bin Packing",
+      "arxiv": "2510.26968",
+      "official_url": "https://doi.org/10.1145/3801489.3806882",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2510.26968",
+        "https://api.crossref.org/works/10.1145/3801489.3806882"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Abstracts of the 2026 ACM SIGMETRICS International Conference on Measurement and Modeling of Computer Systems",
+        "Full POMACS journal version: https://doi.org/10.1145/3788093"
+      ],
+      "journal_url": "https://doi.org/10.1145/3788093"
+    },
+    {
+      "key": "mengfan2026sbm",
+      "title": "Heterogeneous Multi-agent Multi-armed Bandit on Stochastic Block Models",
+      "arxiv": "2502.08003",
+      "official_url": "https://doi.org/10.1145/3801489.3806887",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2502.08003",
+        "https://api.crossref.org/works/10.1145/3801489.3806887"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Abstracts of the 2026 ACM SIGMETRICS International Conference on Measurement and Modeling of Computer Systems",
+        "Full POMACS journal version: https://doi.org/10.1145/3771570"
+      ],
+      "journal_url": "https://doi.org/10.1145/3771570"
+    },
+    {
+      "key": "joshi2026l4dc",
+      "title": "Online Caching in Tree Networks: Algorithms, Regret, and Complexity",
+      "arxiv": null,
+      "official_url": "https://proceedings.mlr.press/v331/joshi26a.html",
+      "publication_type": "conference",
+      "source": [
+        "https://proceedings.mlr.press/v331/joshi26a.html"
+      ],
+      "notes": [
+        "No matching arXiv record verified in author-wide feed and title searches."
+      ]
+    },
+    {
+      "key": "lechowicz2026competitive",
+      "title": "Competitive and Learned Online Algorithms for HVAC Demand Management in Thermal Networks",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3744255.3811734",
+      "publication_type": "conference",
+      "source": [
+        "https://api.crossref.org/works/10.1145/3744255.3811734"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Proceedings of the 17th ACM International Conference on Future and Sustainable Energy Systems",
+        "No matching arXiv record verified in author-wide feed and title searches."
+      ]
+    },
+    {
+      "key": "johnson2026signal",
+      "title": "Signal-Aware Workload Shifting Algorithms with Uncertainty-Quantified Predictors",
+      "arxiv": "2509.26511",
+      "official_url": "https://doi.org/10.1145/3744255.3798123",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2509.26511",
+        "https://api.crossref.org/works/10.1145/3744255.3798123"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Proceedings of the 17th ACM International Conference on Future and Sustainable Energy Systems"
+      ]
+    },
+    {
+      "key": "sigrist2026Price2Site",
+      "title": "The Price to Site: Cost-Effective Incentives for Solar Deployment",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3744256.3812576",
+      "publication_type": "conference",
+      "source": [
+        "https://api.crossref.org/works/10.1145/3744256.3812576"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Proceedings of the 13th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation",
+        "No matching arXiv record verified in author-wide feed and title searches."
+      ]
+    },
+    {
+      "key": "bostandoost2026DAG",
+      "title": "Quantifying the Carbon Reduction of DAG Workloads: A Job Shop Scheduling Perspective",
+      "arxiv": "2512.07799",
+      "official_url": "https://doi.org/10.1145/3802973.3804454",
+      "publication_type": "workshop",
+      "source": [
+        "https://arxiv.org/abs/2512.07799",
+        "https://api.crossref.org/works/10.1145/3802973.3804454"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Proceedings of the 2nd International Workshop on Systems and Methods for Sustainable Large-Scale AI (GreenSys)"
+      ]
+    },
+    {
+      "key": "chen2026360",
+      "title": "Learning-Augmented 360\u00b0 Video Streaming: Robust Viewport Adaptation with Simple Predictors",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3793853.3795754",
+      "publication_type": "conference",
+      "source": [
+        "https://api.crossref.org/works/10.1145/3793853.3795754"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Proceedings of the ACM Multimedia Systems Conference 2026",
+        "No matching arXiv record verified in author-wide feed and title searches."
+      ]
+    },
+    {
+      "key": "xuchuang2026qtomography",
+      "title": "Online Optimal Probe Allocation for Quantum Network Tomography",
+      "arxiv": "2504.21549",
+      "official_url": "https://doi.org/10.1109/qcnc69040.2026.00012",
+      "publication_type": "conference",
+      "source": [
+        "https://api.crossref.org/works/10.1109/qcnc69040.2026.00012",
+        "https://arxiv.org/abs/2504.21549"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: 2026 International Conference on Quantum Communications, Networking, and Computing (QCNC)",
+        "Preprint title differs from publication title; author set and topic agree."
+      ]
+    },
+    {
+      "key": "zeynali2026smooth",
+      "title": "Smoothed Online Optimization for Target Tracking: Robust and Learning-Augmented Algorithms",
+      "arxiv": "2509.05930",
+      "official_url": "https://proceedings.mlr.press/v313/zeynali26a.html",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2509.05930",
+        "https://proceedings.mlr.press/v313/zeynali26a.html"
+      ],
+      "notes": []
+    },
+    {
+      "key": "danesh2026kserver",
+      "title": "Fairness in the k-Server Problem",
+      "arxiv": "2512.20960",
+      "official_url": "https://doi.org/10.4230/LIPIcs.ITCS.2026.45",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2512.20960",
+        "https://doi.org/10.4230/LIPIcs.ITCS.2026.45"
+      ],
+      "notes": []
+    },
+    {
+      "key": "karisani2026secretary",
+      "title": "The Secretary Problem with Predictions and a Chosen Order",
+      "arxiv": "2601.07482",
+      "official_url": "https://doi.org/10.4230/LIPIcs.ITCS.2026.86",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2601.07482",
+        "https://doi.org/10.4230/LIPIcs.ITCS.2026.86"
+      ],
+      "notes": []
+    },
+    {
+      "key": "zeynali2026bola360",
+      "title": "BOLA360: Near-optimal View and Bitrate Adaptation for 360-degree Video Streaming",
+      "arxiv": "2309.04023",
+      "official_url": "https://doi.org/10.1145/3785137",
+      "publication_type": "journal",
+      "source": [
+        "https://arxiv.org/abs/2309.04023",
+        "https://api.crossref.org/works/10.1145/3785137"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: ACM Transactions on Multimedia Computing, Communications, and Applications"
+      ]
+    },
+    {
+      "key": "li2025combinatorial",
+      "title": "Combinatorial Ski Rental Problem: Robust and Learning-Augmented Algorithms",
+      "arxiv": null,
+      "official_url": "https://papers.neurips.cc/paper_files/paper/2025/hash/ae3e173398d6e43fea63cbcc16fbaa98-Abstract-Conference.html",
+      "publication_type": "conference",
+      "source": [
+        "https://api.crossref.org/works/10.52202/085713-4014",
+        "https://papers.neurips.cc/paper_files/paper/2025/hash/ae3e173398d6e43fea63cbcc16fbaa98-Abstract-Conference.html"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Advances in Neural Information Processing Systems 38",
+        "No matching arXiv record verified in author-wide feed and title searches."
+      ]
+    },
+    {
+      "key": "sigrist2025learning",
+      "title": "Learning to Site: A Multi-objective Optimization of Rooftop Solar Installations using Evolutionary Neural Networks",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3736425.3770115",
+      "publication_type": "conference",
+      "source": [
+        "https://doi.org/10.1145/3736425.3770115",
+        "https://adamlechowicz.github.io/publications",
+        "https://api.crossref.org/works/10.1145/3736425.3770115"
+      ],
+      "notes": [
+        "Author page and Crossref verify BuildSys full-paper title is Multi-objective Evolutionary Learning for Near Pareto-Optimal Optimization of Solar Deployment; existing site title is workshop title but listed authors match BuildSys full paper. Recommend title correction.",
+        "No matching arXiv record verified in author-wide feed and title searches."
+      ],
+      "published_title": "Multi-objective Evolutionary Learning for Near Pareto-Optimal Optimization of Solar Deployment"
+    },
+    {
+      "key": "chen2025NIVM",
+      "title": "NIVM: Real-time View Morphing via Neural Implicit Function",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3746027.3755485",
+      "publication_type": "conference",
+      "source": [
+        "https://api.crossref.org/works/10.1145/3746027.3755485"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Proceedings of the 33rd ACM International Conference on Multimedia",
+        "No matching arXiv record verified in author-wide feed and title searches."
+      ]
+    },
+    {
+      "key": "lechowicz2025dag",
+      "title": "Carbon- and Precedence-Aware Scheduling for Data Processing Clusters (SIGCOMM short)",
+      "arxiv": "2502.09717",
+      "official_url": "https://doi.org/10.1145/3718958.3750478",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2502.09717",
+        "https://api.crossref.org/works/10.1145/3718958.3750478"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Proceedings of the ACM SIGCOMM 2025 Conference"
+      ]
+    },
+    {
+      "key": "hajiesmaili2025Equity",
+      "title": "Towards Environmentally Equitable {AI}",
+      "arxiv": "2412.16539",
+      "official_url": "https://doi.org/10.1145/3725980",
+      "publication_type": "journal",
+      "source": [
+        "https://arxiv.org/abs/2412.16539",
+        "https://api.crossref.org/works/10.1145/3725980"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Communications of the ACM"
+      ]
+    },
+    {
+      "key": "irwin2025CoDec",
+      "title": "A Vision for Computational Decarbonization of Societal Infrastructure",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1109/mic.2025.3575016",
+      "publication_type": "journal",
+      "source": [
+        "https://doi.org/10.1109/MIC.2025.3575016",
+        "https://api.crossref.org/works/10.1109/mic.2025.3575016"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: IEEE Internet Computing",
+        "No matching arXiv record verified in author-wide feed and title searches."
+      ]
+    },
+    {
+      "key": "wang2025FusingReward",
+      "title": "Fusing Reward and Dueling Feedback in Stochastic Bandits",
+      "arxiv": "2504.15812",
+      "official_url": "https://proceedings.mlr.press/v267/wang25eh.html",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2504.15812",
+        "https://proceedings.mlr.press/v267/wang25eh.html"
+      ],
+      "notes": []
+    },
+    {
+      "key": "daneshvaramoli2025Knapsack",
+      "title": "Near-Optimal Consistency-Robustness Trade-Offs for Learning-Augmented Online Knapsack Problems",
+      "arxiv": "2406.18752",
+      "official_url": "https://proceedings.mlr.press/v267/daneshvaramoli25a.html",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2406.18752",
+        "https://proceedings.mlr.press/v267/daneshvaramoli25a.html"
+      ],
+      "notes": []
+    },
+    {
+      "key": "sitaraman2025JCSS",
+      "title": "Dynamic Incentive Allocation for City-scale Deep Decarbonization",
+      "arxiv": "2502.08877",
+      "official_url": "https://doi.org/10.1145/3736650",
+      "publication_type": "journal",
+      "source": [
+        "https://arxiv.org/abs/2502.08877",
+        "https://api.crossref.org/works/10.1145/3736650"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: ACM Journal on Computing and Sustainable Societies"
+      ]
+    },
+    {
+      "key": "sahebdel2025FAccT",
+      "title": "LEAD: Towards Learning-Based Equity-Aware Decarbonization in Ridesharing Platforms",
+      "arxiv": "2408.10201",
+      "official_url": "https://doi.org/10.1145/3715275.3732051",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2408.10201",
+        "https://api.crossref.org/works/10.1145/3715275.3732051"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Proceedings of the 2025 ACM Conference on Fairness, Accountability, and Transparency"
+      ]
+    },
+    {
+      "key": "sigrist2025siting",
+      "title": "Lost in Siting: The Hidden Carbon Cost of Inequitable Residential Solar Installations",
+      "arxiv": "2501.13868",
+      "official_url": "https://doi.org/10.1145/3679240.3734603",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2501.13868",
+        "https://api.crossref.org/works/10.1145/3679240.3734603"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Proceedings of the 16th ACM International Conference on Future and Sustainable Energy Systems"
+      ]
+    },
+    {
+      "key": "lechowicz2025incentives",
+      "title": "Optimizing Individualized Incentives from Grid Measurements and Limited Knowledge of Agent Behavior",
+      "arxiv": "2410.14936",
+      "official_url": "https://doi.org/10.1145/3679240.3734594",
+      "publication_type": "conference",
+      "source": [
+        "https://doi.org/10.1145/3679240.3734594",
+        "https://research-hub.nlr.gov/en/publications/optimizing-individualized-incentives-from-grid-measurements-under/"
+      ],
+      "notes": [
+        "National Laboratory of the Rockies publication repository confirms conference paper; published title uses under Limited Knowledge rather than and Limited Knowledge."
+      ],
+      "published_title": "Optimizing Individualized Incentives from Grid Measurements under Limited Knowledge"
+    },
+    {
+      "key": "qingsong2025fair",
+      "title": "Online Fair Allocation of Reusable Resources",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3726854.3727300",
+      "publication_type": "conference",
+      "source": [
+        "https://api.crossref.org/works/10.1145/3726854.3727300"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Abstracts of the 2025 ACM SIGMETRICS International Conference on Measurement and Modeling of Computer Systems",
+        "Full POMACS journal version: https://doi.org/10.1145/3727121",
+        "No matching arXiv record verified in author-wide feed and title searches."
+      ],
+      "journal_url": "https://doi.org/10.1145/3727121"
+    },
+    {
+      "key": "xuchuang2025asynchronous",
+      "title": "Asynchronous Multi-Agent Bandits: Fully Distributed vs. Leader-Coordinated Algorithms",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3726854.3727272",
+      "publication_type": "conference",
+      "source": [
+        "https://api.crossref.org/works/10.1145/3726854.3727272"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Abstracts of the 2025 ACM SIGMETRICS International Conference on Measurement and Modeling of Computer Systems",
+        "Full POMACS journal version: https://doi.org/10.1145/3711696",
+        "No matching arXiv record verified in author-wide feed and title searches."
+      ],
+      "journal_url": "https://doi.org/10.1145/3711696"
+    },
+    {
+      "key": "lechowicz2025SOAD",
+      "title": "Learning-Augmented Competitive Algorithms for Spatiotemporal Online Allocation with Deadline Constraints",
+      "arxiv": "2408.07831",
+      "official_url": "https://doi.org/10.1145/3726854.3727292",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2408.07831",
+        "https://api.crossref.org/works/10.1145/3726854.3727292"
+      ],
+      "notes": [
+        "DOI from arXiv metadata: Proc. ACM Meas. Anal. Comput. Syst. Volume 9, Issue 1, Article 8 (March 2025), 49 pages",
+        "Publisher-deposited Crossref metadata matches title and venue: Abstracts of the 2025 ACM SIGMETRICS International Conference on Measurement and Modeling of Computer Systems",
+        "Full POMACS journal version: https://doi.org/10.1145/3711701"
+      ],
+      "journal_url": "https://doi.org/10.1145/3711701"
+    },
+    {
+      "key": "liu2025combinatrial",
+      "title": "Combinatorial Logistic Bandits",
+      "arxiv": "2410.17075",
+      "official_url": "https://doi.org/10.1145/3726854.3727279",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2410.17075",
+        "https://api.crossref.org/works/10.1145/3726854.3727279"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Abstracts of the 2025 ACM SIGMETRICS International Conference on Measurement and Modeling of Computer Systems"
+      ]
+    },
+    {
+      "key": "Ghaffari2025Corruptions",
+      "title": "Multi-Agent Stochastic Bandits Robust to Adversarial Corruptions",
+      "arxiv": "2411.08167",
+      "official_url": "https://proceedings.mlr.press/v283/ghaffari25a.html",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2411.08167",
+        "https://proceedings.mlr.press/v283/ghaffari25a.html"
+      ],
+      "notes": []
+    },
+    {
+      "key": "xuchuang2025learning",
+      "title": "Learning Best Paths in Quantum Networks",
+      "arxiv": "2506.12462",
+      "official_url": "https://doi.org/10.1109/infocom55648.2025.11044499",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2506.12462",
+        "https://api.crossref.org/works/10.1109/infocom55648.2025.11044499"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: IEEE INFOCOM 2025 - IEEE Conference on Computer Communications"
+      ]
+    },
+    {
+      "key": "xuchuang2025stochastic",
+      "title": "Stochastic Bandits Robust to Adversarial Attacks",
+      "arxiv": "2408.08859",
+      "official_url": "https://openreview.net/forum?id=vOFx8HDcvF",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2408.08859",
+        "https://openreview.net/forum?id=vOFx8HDcvF"
+      ],
+      "notes": []
+    },
+    {
+      "key": "xuchuang2025quantum",
+      "title": "Quantum Best Arm Identification with Quantum Oracles",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1609/aaai.v39i20.35432",
+      "publication_type": "conference",
+      "source": [
+        "https://api.crossref.org/works/10.1609/aaai.v39i20.35432"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Proceedings of the AAAI Conference on Artificial Intelligence",
+        "No matching arXiv record verified in author-wide feed and title searches."
+      ]
+    },
+    {
+      "key": "amirmahdi2025hetero",
+      "title": "Heterogeneous Multi-Agent Bandits with Parsimonious Hints",
+      "arxiv": "2502.16128",
+      "official_url": "https://doi.org/10.1609/aaai.v39i18.34143",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2502.16128",
+        "https://api.crossref.org/works/10.1609/aaai.v39i18.34143"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Proceedings of the AAAI Conference on Artificial Intelligence"
+      ]
+    },
+    {
+      "key": "chen2024soda",
+      "title": "SODA: An Adaptive Bitrate Controller for Consistent High-Quality Video Streaming",
+      "arxiv": null,
+      "official_url": "https://doi.org/10.1145/3651890.3672260",
+      "publication_type": "conference",
+      "source": [
+        "https://api.crossref.org/works/10.1145/3651890.3672260"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Proceedings of the ACM SIGCOMM 2024 Conference",
+        "No matching arXiv record verified in author-wide feed and title searches."
+      ]
+    },
+    {
+      "key": "liu2024combinatorial",
+      "title": "Combinatorial Multivariant Multi-Armed Bandits with Applications to Episodic Reinforcement Learning and Beyond",
+      "arxiv": "2406.01386",
+      "official_url": "https://proceedings.mlr.press/v235/liu24bp.html",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2406.01386",
+        "https://proceedings.mlr.press/v235/liu24bp.html"
+      ],
+      "notes": []
+    },
+    {
+      "key": "zeynali2024robust",
+      "title": "Robust Learning-Augmented Dictionaries",
+      "arxiv": "2402.09687",
+      "official_url": "https://proceedings.mlr.press/v235/zeynali24a.html",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2402.09687",
+        "https://proceedings.mlr.press/v235/zeynali24a.html"
+      ],
+      "notes": []
+    },
+    {
+      "key": "lechowicz2024cfl",
+      "title": "Chasing Convex Functions with Long-term Constraints",
+      "arxiv": "2402.14012",
+      "official_url": "https://proceedings.mlr.press/v235/lechowicz24a.html",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2402.14012",
+        "https://proceedings.mlr.press/v235/lechowicz24a.html"
+      ],
+      "notes": []
+    },
+    {
+      "key": "sun2023online",
+      "title": "Online Algorithms with Uncertainty-Quantified Predictions",
+      "arxiv": "2310.11558",
+      "official_url": "https://proceedings.mlr.press/v235/sun24f.html",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2310.11558",
+        "https://proceedings.mlr.press/v235/sun24f.html"
+      ],
+      "notes": []
+    },
+    {
+      "key": "bostandoost2024hotcarbon",
+      "title": "Data-driven Algorithm Selection for Carbon-Aware Scheduling",
+      "arxiv": null,
+      "official_url": "https://hotcarbon.org/assets/2024/pdf/hotcarbon24-final23.pdf",
+      "publication_type": "workshop",
+      "source": [
+        "https://hotcarbon.org/assets/2024/pdf/hotcarbon24-final23.pdf"
+      ],
+      "notes": [
+        "Official workshop PDF; also later journal reprint 10.1145/3727200.3727222.",
+        "No matching arXiv record verified in author-wide feed and title searches."
+      ]
+    },
+    {
+      "key": "lechowicz2024ocs",
+      "title": "Online Conversion with Switching Costs: Robust and Learning-Augmented Algorithms",
+      "arxiv": "2310.20598",
+      "official_url": "https://doi.org/10.1145/3652963.3655074",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2310.20598",
+        "https://api.crossref.org/works/10.1145/3652963.3655074"
+      ],
+      "notes": [
+        "DOI from arXiv metadata: ",
+        "Publisher-deposited Crossref metadata matches title and venue: Abstracts of the 2024 ACM SIGMETRICS/IFIP PERFORMANCE Joint International Conference on Measurement and Modeling of Computer Systems"
+      ]
+    },
+    {
+      "key": "wang2024bones",
+      "title": "BONES: Near-Optimal Neural-Enhanced Video Streaming",
+      "arxiv": "2310.09920",
+      "official_url": "https://doi.org/10.1145/3652963.3655047",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2310.09920",
+        "https://api.crossref.org/works/10.1145/3652963.3655047"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: Abstracts of the 2024 ACM SIGMETRICS/IFIP PERFORMANCE Joint International Conference on Measurement and Modeling of Computer Systems",
+        "Full POMACS journal version: https://doi.org/10.1145/3656014"
+      ],
+      "journal_url": "https://doi.org/10.1145/3656014"
+    },
+    {
+      "key": "lechowicz2023online",
+      "title": "The Online Pause and Resume Problem: Optimal Algorithms and An Application to Carbon-Aware Load Shifting",
+      "arxiv": "2303.17551",
+      "official_url": "https://doi.org/10.1145/3652963.3655086",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2303.17551",
+        "https://api.crossref.org/works/10.1145/3652963.3655086"
+      ],
+      "notes": [
+        "DOI from arXiv metadata: Proc. ACM Meas. Anal. Comput. Syst. Volume 7, Issue 3, Article 45 (December 2023), 32 pages",
+        "Publisher-deposited Crossref metadata matches title and venue: Abstracts of the 2024 ACM SIGMETRICS/IFIP PERFORMANCE Joint International Conference on Measurement and Modeling of Computer Systems",
+        "Full POMACS journal version: https://doi.org/10.1145/3626776"
+      ],
+      "journal_url": "https://doi.org/10.1145/3626776"
+    },
+    {
+      "key": "bostandoost2024lacs",
+      "title": "LACS: Learning-Augmented Algorithms for Carbon-Aware Resource Scaling with Uncertain Demand",
+      "arxiv": "2404.15211",
+      "official_url": "https://doi.org/10.1145/3632775.3661942",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2404.15211",
+        "https://api.crossref.org/works/10.1145/3632775.3661942"
+      ],
+      "notes": [
+        "DOI from arXiv metadata: ",
+        "Publisher-deposited Crossref metadata matches title and venue: The 15th ACM International Conference on Future and Sustainable Energy Systems"
+      ]
+    },
+    {
+      "key": "lee2024online",
+      "title": "Online Search with Predictions: Pareto-optimal Algorithm and its Applications in Energy Markets",
+      "arxiv": "2211.06567",
+      "official_url": "https://doi.org/10.1145/3632775.3639590",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2211.06567",
+        "https://api.crossref.org/works/10.1145/3632775.3639590"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: The 15th ACM International Conference on Future and Sustainable Energy Systems"
+      ]
+    },
+    {
+      "key": "sahebdel2024ridesharing",
+      "title": "A Holistic Approach for Equity-aware Carbon Reduction of the Ridesharing Platforms",
+      "arxiv": "2402.01644",
+      "official_url": "https://doi.org/10.1145/3632775.3639586",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2402.01644",
+        "https://api.crossref.org/works/10.1145/3632775.3639586"
+      ],
+      "notes": [
+        "Publisher-deposited Crossref metadata matches title and venue: The 15th ACM International Conference on Future and Sustainable Energy Systems"
+      ]
+    },
+    {
+      "key": "lechowicz2023time",
+      "title": "Time Fairness in Online Knapsack Problems",
+      "arxiv": "2305.13293",
+      "official_url": "https://openreview.net/forum?id=9kG7TwgLYu",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2305.13293",
+        "https://openreview.net/forum?id=9kG7TwgLYu"
+      ],
+      "notes": []
+    },
+    {
+      "key": "zeynali2023bola360",
+      "title": "BOLA360: Near-optimal View and Bitrate Adaptation for 360-degree Video Streaming",
+      "arxiv": "2309.04023",
+      "official_url": "https://doi.org/10.1145/3625468.3647607",
+      "publication_type": "conference",
+      "source": [
+        "https://arxiv.org/abs/2309.04023",
+        "https://doi.org/10.1145/3625468.3647607",
+        "https://api.crossref.org/works/10.1145/3625468.3647607"
+      ],
+      "notes": [
+        "MMSys 2024 conference version, distinct from TOMM 2026 journal version."
+      ]
+    }
+  ]
+}

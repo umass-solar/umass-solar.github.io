@@ -1,0 +1,55 @@
+/* Scoped to the publication explorer; the rest of the lab site is unchanged. */
+.publication-browser { --pub-green: #17533b; --pub-ink: #202d29; --pub-muted: #58655f; --pub-line: #dce4df; color: var(--pub-ink); margin-bottom: 4rem; }
+.publication-browser [hidden] { display: none !important; }
+.pub-intro { display: flex; justify-content: space-between; gap: 1.5rem; align-items: baseline; margin: .5rem 0 1.8rem; }
+.pub-intro p { max-width: 42rem; color: var(--pub-muted); margin: 0; font-size: 1rem; line-height: 1.6; }
+.pub-download { font-size: .875rem; white-space: nowrap; text-decoration: underline; text-underline-offset: .2em; }
+.publication-browser a { color: var(--pub-green); }
+.pub-filters { background: #f5f8f6; padding: 1.5rem; border: 1px solid var(--pub-line); border-radius: 10px; margin-bottom: 2.5rem; }
+.pub-search-label, .pub-types legend, .pub-select-label { font-size: .875rem; font-weight: 600; color: var(--pub-ink); }
+.pub-search-label { display: block; margin-bottom: .5rem; }
+#pub-search { width: 100%; border: 1px solid #aebeb4; border-radius: 6px; padding: .8rem 1rem; background: #fff; color: var(--pub-ink); font: inherit; }
+#pub-search::placeholder { color: #65716b; opacity: 1; }
+.pub-filter-row { display: grid; grid-template-columns: minmax(0, 1fr) 130px 185px; gap: 1.2rem; align-items: end; margin-top: 1.2rem; }
+.pub-types { margin: 0; padding: 0; min-width: 0; border: 0; }
+.pub-types legend { margin-bottom: .5rem; line-height: 1.5; }
+.pub-type-options { display: flex; flex-wrap: wrap; gap: .4rem; }
+.pub-type-options label { margin: 0; position: relative; cursor: pointer; }
+.pub-type-options input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.pub-type-options span { display: block; padding: .6rem .8rem; border: 1px solid #aebeb4; border-radius: 5px; background: #fff; color: #35483e; font-size: .875rem; line-height: 1.5; }
+.pub-type-options input:checked + span { color: #fff; background: var(--pub-green); border-color: var(--pub-green); }
+.pub-type-options label:hover span { border-color: var(--pub-green); }
+.pub-select-label { margin: 0; }
+.pub-select-label select { display: block; margin-top: .5rem; width: 100%; appearance: none; font: inherit; font-weight: 400; padding: .6rem 2rem .6rem .75rem; border: 1px solid #aebeb4; border-radius: 5px; color: var(--pub-ink); background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%2335483e' stroke-width='1.5'/%3E%3C/svg%3E") right .75rem center / 12px no-repeat; line-height: 1.5; }
+.pub-filter-footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-top: 1px solid var(--pub-line); margin-top: 1.25rem; padding-top: 1rem; font-size: .875rem; }
+#pub-count { margin: 0; color: var(--pub-muted); }
+#pub-reset, #pub-empty-reset { cursor: pointer; color: var(--pub-green); border: 0; padding: .25rem 0; background: transparent; font: inherit; text-decoration: underline; text-underline-offset: .2em; }
+#pub-reset:disabled { color: #67756d; text-decoration: none; cursor: default; }
+.publication-browser a:focus-visible, .publication-browser button:focus-visible, .publication-browser input:focus-visible, .publication-browser select:focus-visible, .pub-type-options input:focus-visible + span { outline: 3px solid #2d7b59; outline-offset: 4px; }
+.pub-year-section { margin: 0 0 2.5rem; }
+.pub-year-heading { display: flex; align-items: baseline; gap: .8rem; border-bottom: 2px solid var(--pub-green); padding-bottom: .75rem; }
+.pub-year-heading h2 { font-size: 1.6rem; font-weight: 650; margin: 0; letter-spacing: -.025em; }
+.pub-year-count { color: var(--pub-muted); font-size: .875rem; }
+.publication-browser ol.bibliography { padding: 0; margin: 0; list-style: none; }
+.publication-browser ol.bibliography > li { padding: 1.6rem 0; margin: 0; border-bottom: 1px solid var(--pub-line); }
+.pub-meta { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; font-size: .8125rem; margin-bottom: .65rem; }
+.pub-type { display: inline-block; padding: .18rem .55rem; border-radius: 4px; font-weight: 600; line-height: 1.5; }
+.pub-type-conference { color: #20553c; background: #e9f3ed; }
+.pub-type-journal { color: #254b76; background: #edf2fa; }
+.pub-type-workshop { color: #704c20; background: #f8f0e4; }
+.pub-venue { color: var(--pub-muted); font-weight: 600; }
+.pub-title { font-size: 1.125rem; line-height: 1.45; font-weight: 650; margin: 0 0 .5rem; color: var(--pub-ink); max-width: 65rem; }
+.pub-authors { font-size: 1rem; line-height: 1.6; margin: 0 0 .35rem; }
+.pub-citation { font-size: .875rem; line-height: 1.6; color: var(--pub-muted); margin: 0; }
+.pub-note { color: #684a1b; font-size: .875rem; margin: .6rem 0 0; }
+.pub-links { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .8rem; }
+.pub-links a { display: inline-block; font-size: .875rem; padding: .28rem .65rem; border: 1px solid #b9cdc0; border-radius: 4px; font-weight: 600; line-height: 1.5; }
+.pub-links a:hover { background: #edf5ef; border-color: var(--pub-green); text-decoration: none; }
+.pub-empty { padding: 3rem 1rem; text-align: center; background: #f5f8f6; border-radius: 8px; }
+.pub-empty h2 { font-size: 1.25rem; }
+.pub-empty p, .pub-link-note { color: var(--pub-muted); }
+.pub-link-note { font-size: .875rem; margin: 2rem 0; }
+.pub-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media (max-width: 991px) { .pub-filter-row { grid-template-columns: 1fr 1fr; } .pub-types { grid-column: 1 / -1; } }
+@media (max-width: 575px) { .pub-intro { display: block; } .pub-download { display: inline-block; margin-top: .8rem; } .pub-filters { padding: 1rem; } .pub-filter-row { gap: 1rem .75rem; } .pub-type-options { gap: .35rem; } .pub-type-options span { padding: .55rem .65rem; } .pub-title { font-size: 1.0625rem; } }
+@media print { .pub-filters, .pub-download, .pub-link-note { display: none !important; } .pub-entry { break-inside: avoid; } .pub-links a { border: none; padding: 0; } }

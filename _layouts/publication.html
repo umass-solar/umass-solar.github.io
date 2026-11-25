@@ -1,0 +1,20 @@
+---
+---
+{% assign publication_type = entry.publication_type | default: 'conference' %}
+{% assign venue = entry.abbr | strip_html | strip %}
+{% if venue == '' %}{% assign venue = entry.journal | default: entry.booktitle %}{% endif %}
+<article class="pub-entry" id="{{ entry.key }}" data-aliases="{{ entry.alternate_title | escape }}" data-type="{{ publication_type | escape }}" data-year="{{ entry.year }}" data-venue="{{ venue | escape }}">
+    <div class="pub-meta"><span class="pub-type pub-type-{{ publication_type }}">{{ publication_type | capitalize }}</span><span class="pub-venue">{{ venue }}</span></div>
+    <h3 class="pub-title">{{ entry.title }}</h3>
+    <p class="pub-authors">{% for author in entry.author_array %}{{ author.first }} {{ author.last }}{% unless forloop.last %}{% if forloop.rindex == 2 %}{% if forloop.length > 2 %},{% endif %} and {% else %}, {% endif %}{% endunless %}{% endfor %}</p>
+    <p class="pub-citation">{{ entry.journal | default: entry.booktitle }}{% if entry.month %} · {{ entry.month | capitalize }}{% endif %} {{ entry.year }}</p>
+    {% if entry.note %}<p class="pub-note">{{ entry.note }}</p>{% endif %}
+    {% if entry.arxiv or entry.official_url or entry.pdf or entry.code %}
+    <div class="pub-links" aria-label="Links for {{ entry.title | escape }}">
+        {% if entry.arxiv %}<a href="https://arxiv.org/abs/{{ entry.arxiv }}">arXiv<span class="pub-sr-only">: {{ entry.title }}</span></a>{% endif %}
+        {% if entry.official_url %}<a href="{{ entry.official_url | escape }}">Publisher<span class="pub-sr-only">: {{ entry.title }}</span></a>{% endif %}
+        {% if entry.pdf %}{% assign pdf_prefix = site.base | append: '/assets/pdf/' %}{% if entry.pdf contains '://' %}{% assign pdf_prefix = '' %}{% endif %}<a href="{{ pdf_prefix }}{{ entry.pdf }}">PDF<span class="pub-sr-only">: {{ entry.title }}</span></a>{% endif %}
+        {% if entry.code %}<a href="{{ entry.code | escape }}">Code<span class="pub-sr-only">: {{ entry.title }}</span></a>{% endif %}
+    </div>
+    {% endif %}
+</article>
