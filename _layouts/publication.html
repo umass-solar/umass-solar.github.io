@@ -12,7 +12,7 @@
     {% if entry.arxiv or entry.official_url or entry.pdf or entry.code %}
     <div class="pub-links" aria-label="Links for {{ entry.title | escape }}">
         {% if entry.arxiv %}<a href="https://arxiv.org/abs/{{ entry.arxiv }}">arXiv<span class="pub-sr-only">: {{ entry.title }}</span></a>{% endif %}
-        {% if entry.official_url %}<a href="{{ entry.official_url | escape }}">Publisher<span class="pub-sr-only">: {{ entry.title }}</span></a>{% endif %}
+        {% if entry.official_url %}<a href="{{ entry.official_url | escape }}">Link<span class="pub-sr-only">: {{ entry.title }}</span></a>{% endif %}
         {% if entry.pdf %}{% assign pdf_prefix = site.base | append: '/assets/pdf/' %}{% if entry.pdf contains '://' %}{% assign pdf_prefix = '' %}{% endif %}<a href="{{ pdf_prefix }}{{ entry.pdf }}">PDF<span class="pub-sr-only">: {{ entry.title }}</span></a>{% endif %}
         {% if entry.code %}<a href="{{ entry.code | escape }}">Code<span class="pub-sr-only">: {{ entry.title }}</span></a>{% endif %}
     </div>
