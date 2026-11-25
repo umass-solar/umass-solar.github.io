@@ -2,15 +2,18 @@
 layout: default
 title: Publications
 extra_css: publications.css
+body_class: publications-page
+hide_heading: true
 years: [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015]
 ---
 <div class="publication-browser" id="publication-browser">
-    <div class="pub-intro">
+    <div class="pub-page-heading">
+        <h1>Publications</h1>
         <a class="pub-download" href="{{ site.base }}/bib/pubs.bib" download>Download bibliography</a>
     </div>
 
     <form class="pub-filters" id="pub-filters" role="search" aria-label="Filter publications" hidden>
-        <label class="pub-search-label" for="pub-search">Search publications</label>
+        <label class="pub-search-label pub-sr-only" for="pub-search">Search publications</label>
         <input type="search" id="pub-search" name="q" placeholder="Title, author, or keyword" autocomplete="off">
         <div class="pub-filter-row">
             <fieldset class="pub-types">
