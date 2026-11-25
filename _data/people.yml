@@ -269,11 +269,18 @@ anu:
 
 # staff
 
+janice:
+  display_name: Janice Chen
+  image: /img/people/janice.jpg
+  role: staff
+  bio: Ph.D. from UMass Amherst <br> 2026-present <br> (co-advised with Don Towsley)
+  webpage: https://jjanicechen.com/
+
 qingsong:
   display_name: Qingsong Liu
   image: /img/people/qingsong.png
   role: staff
-  bio: Ph.D. from Tsinghua <br> 2024-
+  bio: Ph.D. from Tsinghua <br> 2024-present <br> Joint with Caltech (Adam Wierman), 2026-2027
   webpage: https://qingsong-liu.github.io/
 
 qingsong2:
