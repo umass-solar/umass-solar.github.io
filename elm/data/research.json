@@ -1,0 +1,154 @@
+[
+  {
+    "title": "Facial Recognition Technologies in the Wild: A Call for a Federal Office",
+    "image": "FRTCover.png"
+  },
+  {
+    "title": "A New Confidence Interval for the Mean of a Bounded Random Variable",
+    "image": "conservativeCompletion.jpg"
+  },
+  {
+    "title": "Super SloMo: High quality estimation of multiple intermediate frames for video interpolation",
+    "image": "SuperSLOMO.jpg"
+  },
+  {
+    "title": "Active bias: Training a more accurate neural network by emphasizing high variance samples (NeurIPS 2017)",
+    "image": "ActiveBias.jpg"
+  },
+  {
+    "title": "A framework for dexterous manipulation (IROS 2018)",
+    "image": "Dexterous.jpg"
+  },
+  {
+    "title": "Automatic adaptation of object detectors to new domains using self-training (CVPR 2019)",
+    "image": "domainAdapt.jpg"
+  },
+  {
+    "title": "Self-supervised relative depth learning for urban scene understanding (ECCV 2018)",
+    "image": "self_supervised.jpg"
+  },
+  {
+    "title": "Pixel Adaptive Convolutional Neural Networks (CVPR 2019)",
+    "image": "PACNET.jpg"
+  },
+  {
+    "title": "The best of both worlds: Combining CNNs and geometric constraints for hierarchichal motion segmentation (CVPR 2018)",
+    "image": "BestOfBoth.jpg"
+  },
+  {
+    "title": "End-to-end face detection and cast grouping in movies using Erdos-Renyi clustering (ICCV 2017)",
+    "image": "ICCV2017.jpg"
+  },
+  {
+    "title": "Causal Motion Segmentation in Moving Camera Videos (ECCV 2016)",
+    "image": "methodOverview.png"
+  },
+  {
+    "title": "Labeled Faces in the Wild: A Survey",
+    "image": "Six_Face_Panels_sm.jpg"
+  },
+  {
+    "title": "Multi-view Convolutional Neural Networks for 3D Shape Recognition (ICCV 2015)",
+    "image": "multiview.jpg"
+  },
+  {
+    "title": "Coherent Motion Segmentation in Moving Camera Videos using Optical Flow Orientations",
+    "image": "FOF.jpg"
+  },
+  {
+    "title": "Augmenting CRFs with Boltzmann Machine Shape Priors",
+    "image": "FaceSeg.jpg"
+  },
+  {
+    "title": "Improving Open-Vocabulary Scene Text Recognition",
+    "image": "bilateral_seg.jpg"
+  },
+  {
+    "title": "Scene Text Segmentation via Inverse Rendering",
+    "image": "inverse_render.jpg"
+  },
+  {
+    "title": "Distribution Fields with Adaptive Kernels for Large Displacement Image Alignment",
+    "image": "Kanade.jpg"
+  },
+  {
+    "title": "Improvements in Joint Domain-Range Modeling for Background Subtraction",
+    "image": "Background2012.jpg"
+  },
+  {
+    "title": "Tracking with Distribution Fields",
+    "image": "cameraman_DF_vs_blur.png"
+  },
+  {
+    "title": "Joint Alignment and Clustering",
+    "image": "joint_cluster.jpg"
+  },
+  {
+    "title": "Distribution Fields: A Representation for Low-Level Vision Problems",
+    "image": "DFstackSuperBlurred.png"
+  },
+  {
+    "title": "Learning Hierarchical Representations for Face Verification",
+    "image": "face_feature.jpg"
+  },
+  {
+    "title": "Online Domain Adaptation of a Pre-Trained Cascade of Classifiers",
+    "image": "cvpr11adaptive_img.png"
+  },
+  {
+    "title": "Congealing of Complex Images (trying moving your mouse over the image at left)",
+    "image": "face_start.jpg"
+  },
+  {
+    "title": "Scene Text Recognition",
+    "image": "signs.jpg"
+  },
+  {
+    "title": "Recognition from One Example using Hyper-Features",
+    "image": "cars.jpg"
+  },
+  {
+    "title": "Congealing for Automatic Alignment",
+    "image": "0_big_unaligned_36.gif"
+  },
+  {
+    "title": "Dexter",
+    "image": "dexter.jpg"
+  },
+  {
+    "title": "Text Recognition",
+    "image": "vidi-welcome.gif"
+  },
+  {
+    "title": "RADICAL, a New ICA Algorithm",
+    "image": "RADfig.jpg"
+  },
+  {
+    "title": "Learned Color Constancy",
+    "image": "erikFaces.jpg"
+  },
+  {
+    "title": "Screening for Acromegaly",
+    "image": "acromegaly_classic_woman.gif"
+  },
+  {
+    "title": "Mathematical Expression Recognition",
+    "image": "math_demo.jpg"
+  },
+  {
+    "title": "MR Bias Correction",
+    "image": "babybrains.jpg"
+  },
+  {
+    "title": "Near Uniform Partitions",
+    "image": "Hyper_Voronoi_Gauss2_4000.gif"
+  },
+  {
+    "title": "Probability Distributions on Curved Manifolds",
+    "image": "totalMap.jpg"
+  },
+  {
+    "title": "Masters Thesis: Improved Surface Area Estimates Using Alternative Voxel Shapes",
+    "image": "three_spheres.jpg"
+  }
+]
