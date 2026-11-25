@@ -11,7 +11,7 @@
   const empty = document.getElementById('pub-empty');
   const normalize = text => text.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
   const papers = Array.from(root.querySelectorAll('.pub-entry')).map(node => ({
-    node, item: node.closest('li'), type: node.dataset.type,
+    node, item: node.closest('li'), types: node.dataset.type.split(','),
     year: node.dataset.year, venue: node.dataset.venue,
     text: normalize((node.dataset.aliases || '') + ' ' + ['.pub-title', '.pub-authors', '.pub-citation', '.pub-meta'].map(selector => node.querySelector(selector)?.textContent || '').join(' '))
   }));
@@ -37,7 +37,7 @@
     const terms = normalize(search.value).split(' ').filter(Boolean);
     let shown = 0;
     papers.forEach(paper => {
-      const visible = (type === 'all' || paper.type === type) &&
+      const visible = (type === 'all' || paper.types.includes(type)) &&
         (year.value === 'all' || paper.year === year.value) &&
         (venue.value === 'all' || paper.venue === venue.value) &&
         terms.every(term => paper.text.includes(term));

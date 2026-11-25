@@ -1,6 +1,6 @@
 {
   "checked_on": "2026-11-25",
-  "method": "Title, author, venue, and version matching against arXiv, publisher-deposited Crossref records, and official proceedings. Missing links mean no confident match, not proof of absence. Conference entries retain their conference classification, including SIGMETRICS presentations with POMACS journal versions.",
+  "method": "Title, author, venue, and version matching against arXiv, publisher-deposited Crossref records, and official proceedings. Missing links mean no confident match, not proof of absence. SIGMETRICS papers with matching POMACS journal records in DBLP are classified as both conference and journal in one entry; both publisher links are retained. Other classifications are unchanged.",
   "records": [
     {
       "key": "zuo2023adversarial",
@@ -41,7 +41,7 @@
       "notes": []
     },
     {
-      "key": "liu2023contextual",
+      "key": "maghakian2023applied",
       "title": "Applied Online Algorithms with Heterogeneous Predictors",
       "arxiv": null,
       "official_url": "https://proceedings.mlr.press/v202/maghakian23a.html",
@@ -65,9 +65,12 @@
       "title": "The Online Knapsack Problem with Departures",
       "arxiv": "2209.11934",
       "official_url": "https://doi.org/10.1145/3578338.3593576",
-      "publication_type": "conference",
+      "publication_type": "conference,journal",
       "source": "https://api.crossref.org/works/10.1145/3578338.3593576",
-      "notes": []
+      "notes": [],
+      "journal_url": "https://doi.org/10.1145/3570618",
+      "classification_source": "https://dblp.org/rec/journals/pomacs/SunYHWLTT21",
+      "classification_checked_on": "2026-11-25"
     },
     {
       "key": "Lechowicz2023Decarb",
@@ -124,22 +127,28 @@
       "title": "Competitive Algorithms for Online Multidimensional Knapsack Problems",
       "arxiv": null,
       "official_url": "https://doi.org/10.1145/3489048.3522627",
-      "publication_type": "conference",
+      "publication_type": "conference,journal",
       "source": "https://api.crossref.org/works/10.1145/3489048.3522627",
       "notes": [
         "No confidently matched arXiv version found in author feed or targeted title search."
-      ]
+      ],
+      "journal_url": "https://doi.org/10.1145/3491042",
+      "classification_source": "https://dblp.org/rec/journals/pomacs/YangZHST21",
+      "classification_checked_on": "2026-11-25"
     },
     {
       "key": "YangCHHT22sigmetrics",
       "title": "Hierarchical Learning Algorithms for Multi-scale Expert Problems",
       "arxiv": null,
       "official_url": "https://doi.org/10.1145/3489048.3530967",
-      "publication_type": "conference",
+      "publication_type": "conference,journal",
       "source": "https://api.crossref.org/works/10.1145/3489048.3530967",
       "notes": [
         "No confidently matched arXiv version found in author feed or targeted title search."
-      ]
+      ],
+      "journal_url": "https://doi.org/10.1145/3530900",
+      "classification_source": "https://dblp.org/rec/journals/pomacs/YangCHHT22",
+      "classification_checked_on": "2026-11-25"
     },
     {
       "key": "Alinia2022SusComp",
@@ -220,9 +229,12 @@
       "title": "Competitive Algorithms for the Online Multiple Knapsack Problem with Application to Electric Vehicle Charging",
       "arxiv": "2010.00412",
       "official_url": "https://doi.org/10.1145/3410220.3456271",
-      "publication_type": "conference",
+      "publication_type": "conference,journal",
       "source": "https://api.crossref.org/works/10.1145/3410220.3456271",
-      "notes": []
+      "notes": [],
+      "journal_url": "https://doi.org/10.1145/3428336",
+      "classification_source": "https://dblp.org/rec/journals/pomacs/SunZLHWT20",
+      "classification_checked_on": "2026-11-25"
     },
     {
       "key": "LeeMHLSL21eenergy",
@@ -280,11 +292,14 @@
       "title": "Online Linear Optimization with Inventory Management Constraints",
       "arxiv": null,
       "official_url": "https://doi.org/10.1145/3393691.3394207",
-      "publication_type": "conference",
+      "publication_type": "conference,journal",
       "source": "https://api.crossref.org/works/10.1145/3393691.3394207",
       "notes": [
         "No confidently matched arXiv version found in author feed or targeted title search."
-      ]
+      ],
+      "journal_url": "https://doi.org/10.1145/3379482",
+      "classification_source": "https://dblp.org/rec/journals/pomacs/YangHSWMW20",
+      "classification_checked_on": "2026-11-25"
     },
     {
       "key": "Jha2020Emission",
@@ -362,22 +377,28 @@
       "title": "An Optimal Algorithm for Online Non-Convex Learning",
       "arxiv": null,
       "official_url": "https://doi.org/10.1145/3219617.3219635",
-      "publication_type": "conference",
+      "publication_type": "conference,journal",
       "source": "https://api.crossref.org/works/10.1145/3219617.3219635",
       "notes": [
         "No confidently matched arXiv version found in author feed or targeted title search."
-      ]
+      ],
+      "journal_url": "https://doi.org/10.1145/3224420",
+      "classification_source": "https://dblp.org/rec/journals/pomacs/YangDHTW18",
+      "classification_checked_on": "2026-11-25"
     },
     {
       "key": "YangWH18sigmetrics",
       "title": "An Optimal Randomized Online Algorithm for QoS Buffer Management",
       "arxiv": null,
       "official_url": "https://doi.org/10.1145/3219617.3219629",
-      "publication_type": "conference",
+      "publication_type": "conference,journal",
       "source": "https://api.crossref.org/works/10.1145/3219617.3219629",
       "notes": [
         "No confidently matched arXiv version found in author feed or targeted title search."
-      ]
+      ],
+      "journal_url": "https://doi.org/10.1145/3154494",
+      "classification_source": "https://dblp.org/rec/journals/pomacs/YangWH17",
+      "classification_checked_on": "2026-11-25"
     },
     {
       "key": "AliniaTHYC18iwqos",
@@ -649,7 +670,7 @@
       "title": "A Unified Framework for Online Combinatorial Allocation of Reusable Resources under Endogenous Deterioration",
       "arxiv": null,
       "official_url": "https://doi.org/10.1145/3801489.3806894",
-      "publication_type": "conference",
+      "publication_type": "conference,journal",
       "source": [
         "https://api.crossref.org/works/10.1145/3801489.3806894"
       ],
@@ -658,14 +679,16 @@
         "Full POMACS journal version: https://doi.org/10.1145/3805625",
         "No matching arXiv record verified in author-wide feed and title searches."
       ],
-      "journal_url": "https://doi.org/10.1145/3805625"
+      "journal_url": "https://doi.org/10.1145/3805625",
+      "classification_source": "https://dblp.org/rec/journals/pomacs/LiuH26",
+      "classification_checked_on": "2026-11-25"
     },
     {
       "key": "ativ2026reusable",
       "title": "Learning to Allocate Reusable Resources under Stochastic Rewards and Durations",
       "arxiv": null,
       "official_url": "https://doi.org/10.1145/3801489.3806839",
-      "publication_type": "conference",
+      "publication_type": "conference,journal",
       "source": [
         "https://api.crossref.org/works/10.1145/3801489.3806839"
       ],
@@ -674,7 +697,9 @@
         "Full POMACS journal version: https://doi.org/10.1145/3805641",
         "No matching arXiv record verified in author-wide feed and title searches."
       ],
-      "journal_url": "https://doi.org/10.1145/3805641"
+      "journal_url": "https://doi.org/10.1145/3805641",
+      "classification_source": "https://dblp.org/rec/journals/pomacs/JoshiLH26",
+      "classification_checked_on": "2026-11-25"
     },
     {
       "key": "lechowicz2026osdm",
@@ -695,7 +720,7 @@
       "title": "Green Bin Packing",
       "arxiv": "2510.26968",
       "official_url": "https://doi.org/10.1145/3801489.3806882",
-      "publication_type": "conference",
+      "publication_type": "conference,journal",
       "source": [
         "https://arxiv.org/abs/2510.26968",
         "https://api.crossref.org/works/10.1145/3801489.3806882"
@@ -704,14 +729,16 @@
         "Publisher-deposited Crossref metadata matches title and venue: Abstracts of the 2026 ACM SIGMETRICS International Conference on Measurement and Modeling of Computer Systems",
         "Full POMACS journal version: https://doi.org/10.1145/3788093"
       ],
-      "journal_url": "https://doi.org/10.1145/3788093"
+      "journal_url": "https://doi.org/10.1145/3788093",
+      "classification_source": "https://dblp.org/rec/journals/pomacs/BibbensSSKH26",
+      "classification_checked_on": "2026-11-25"
     },
     {
       "key": "mengfan2026sbm",
       "title": "Heterogeneous Multi-agent Multi-armed Bandit on Stochastic Block Models",
       "arxiv": "2502.08003",
       "official_url": "https://doi.org/10.1145/3801489.3806887",
-      "publication_type": "conference",
+      "publication_type": "conference,journal",
       "source": [
         "https://arxiv.org/abs/2502.08003",
         "https://api.crossref.org/works/10.1145/3801489.3806887"
@@ -720,7 +747,9 @@
         "Publisher-deposited Crossref metadata matches title and venue: Abstracts of the 2026 ACM SIGMETRICS International Conference on Measurement and Modeling of Computer Systems",
         "Full POMACS journal version: https://doi.org/10.1145/3771570"
       ],
-      "journal_url": "https://doi.org/10.1145/3771570"
+      "journal_url": "https://doi.org/10.1145/3771570",
+      "classification_source": "https://dblp.org/rec/journals/pomacs/XuSGWLH25",
+      "classification_checked_on": "2026-11-25"
     },
     {
       "key": "joshi2026l4dc",
@@ -1045,7 +1074,7 @@
       "title": "Online Fair Allocation of Reusable Resources",
       "arxiv": null,
       "official_url": "https://doi.org/10.1145/3726854.3727300",
-      "publication_type": "conference",
+      "publication_type": "conference,journal",
       "source": [
         "https://api.crossref.org/works/10.1145/3726854.3727300"
       ],
@@ -1054,14 +1083,16 @@
         "Full POMACS journal version: https://doi.org/10.1145/3727121",
         "No matching arXiv record verified in author-wide feed and title searches."
       ],
-      "journal_url": "https://doi.org/10.1145/3727121"
+      "journal_url": "https://doi.org/10.1145/3727121",
+      "classification_source": "https://dblp.org/rec/journals/pomacs/LiuH25",
+      "classification_checked_on": "2026-11-25"
     },
     {
       "key": "xuchuang2025asynchronous",
       "title": "Asynchronous Multi-Agent Bandits: Fully Distributed vs. Leader-Coordinated Algorithms",
       "arxiv": null,
       "official_url": "https://doi.org/10.1145/3726854.3727272",
-      "publication_type": "conference",
+      "publication_type": "conference,journal",
       "source": [
         "https://api.crossref.org/works/10.1145/3726854.3727272"
       ],
@@ -1070,14 +1101,16 @@
         "Full POMACS journal version: https://doi.org/10.1145/3711696",
         "No matching arXiv record verified in author-wide feed and title searches."
       ],
-      "journal_url": "https://doi.org/10.1145/3711696"
+      "journal_url": "https://doi.org/10.1145/3711696",
+      "classification_source": "https://dblp.org/rec/journals/pomacs/WangCLYHTL25",
+      "classification_checked_on": "2026-11-25"
     },
     {
       "key": "lechowicz2025SOAD",
       "title": "Learning-Augmented Competitive Algorithms for Spatiotemporal Online Allocation with Deadline Constraints",
       "arxiv": "2408.07831",
       "official_url": "https://doi.org/10.1145/3726854.3727292",
-      "publication_type": "conference",
+      "publication_type": "conference,journal",
       "source": [
         "https://arxiv.org/abs/2408.07831",
         "https://api.crossref.org/works/10.1145/3726854.3727292"
@@ -1087,7 +1120,9 @@
         "Publisher-deposited Crossref metadata matches title and venue: Abstracts of the 2025 ACM SIGMETRICS International Conference on Measurement and Modeling of Computer Systems",
         "Full POMACS journal version: https://doi.org/10.1145/3711701"
       ],
-      "journal_url": "https://doi.org/10.1145/3711701"
+      "journal_url": "https://doi.org/10.1145/3711701",
+      "classification_source": "https://dblp.org/rec/journals/pomacs/LechowiczCSBHWS25",
+      "classification_checked_on": "2026-11-25"
     },
     {
       "key": "liu2025combinatrial",
@@ -1265,7 +1300,7 @@
       "title": "BONES: Near-Optimal Neural-Enhanced Video Streaming",
       "arxiv": "2310.09920",
       "official_url": "https://doi.org/10.1145/3652963.3655047",
-      "publication_type": "conference",
+      "publication_type": "conference,journal",
       "source": [
         "https://arxiv.org/abs/2310.09920",
         "https://api.crossref.org/works/10.1145/3652963.3655047"
@@ -1274,14 +1309,16 @@
         "Publisher-deposited Crossref metadata matches title and venue: Abstracts of the 2024 ACM SIGMETRICS/IFIP PERFORMANCE Joint International Conference on Measurement and Modeling of Computer Systems",
         "Full POMACS journal version: https://doi.org/10.1145/3656014"
       ],
-      "journal_url": "https://doi.org/10.1145/3656014"
+      "journal_url": "https://doi.org/10.1145/3656014",
+      "classification_source": "https://dblp.org/rec/journals/pomacs/WangSCHS24",
+      "classification_checked_on": "2026-11-25"
     },
     {
       "key": "lechowicz2023online",
       "title": "The Online Pause and Resume Problem: Optimal Algorithms and An Application to Carbon-Aware Load Shifting",
       "arxiv": "2303.17551",
       "official_url": "https://doi.org/10.1145/3652963.3655086",
-      "publication_type": "conference",
+      "publication_type": "conference,journal",
       "source": [
         "https://arxiv.org/abs/2303.17551",
         "https://api.crossref.org/works/10.1145/3652963.3655086"
@@ -1291,7 +1328,9 @@
         "Publisher-deposited Crossref metadata matches title and venue: Abstracts of the 2024 ACM SIGMETRICS/IFIP PERFORMANCE Joint International Conference on Measurement and Modeling of Computer Systems",
         "Full POMACS journal version: https://doi.org/10.1145/3626776"
       ],
-      "journal_url": "https://doi.org/10.1145/3626776"
+      "journal_url": "https://doi.org/10.1145/3626776",
+      "classification_source": "https://dblp.org/rec/journals/pomacs/LechowiczCZBHWS23",
+      "classification_checked_on": "2026-11-25"
     },
     {
       "key": "bostandoost2024lacs",
