@@ -13,24 +13,20 @@ years: [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015]
     </div>
 
     <form class="pub-filters" id="pub-filters" role="search" aria-label="Filter publications" hidden>
-        <label class="pub-search-label pub-sr-only" for="pub-search">Search publications</label>
-        <input type="search" id="pub-search" name="q" placeholder="Title, author, or keyword" autocomplete="off">
         <div class="pub-filter-row">
-            <fieldset class="pub-types">
-                <legend>Publication type</legend>
-                <div class="pub-type-options">
-                    <label><input type="radio" name="type" value="all" checked><span>All types</span></label>
-                    <label><input type="radio" name="type" value="conference"><span>Conference</span></label>
-                    <label><input type="radio" name="type" value="journal"><span>Journal</span></label>
-                    <label><input type="radio" name="type" value="workshop"><span>Workshop</span></label>
-                </div>
-            </fieldset>
-            <label class="pub-select-label" for="pub-year">Year
-                <select id="pub-year" name="year"><option value="all">All years</option></select>
-            </label>
-            <label class="pub-select-label" for="pub-venue">Venue
-                <select id="pub-venue" name="venue"><option value="all">All venues</option></select>
-            </label>
+            <label class="pub-sr-only" for="pub-search">Search publications</label>
+            <input type="search" id="pub-search" name="q" placeholder="Search by title, author, or keyword" autocomplete="off">
+            <label class="pub-sr-only" for="pub-type">Publication type</label>
+            <select id="pub-type" name="type">
+                <option value="all">All types</option>
+                <option value="conference">Conference</option>
+                <option value="journal">Journal</option>
+                <option value="workshop">Workshop</option>
+            </select>
+            <label class="pub-sr-only" for="pub-year">Year</label>
+            <select id="pub-year" name="year"><option value="all">All years</option></select>
+            <label class="pub-sr-only" for="pub-venue">Venue</label>
+            <select id="pub-venue" name="venue"><option value="all">All venues</option></select>
         </div>
         <div class="pub-filter-footer">
             <p id="pub-count" role="status" aria-live="polite" aria-atomic="true"></p>

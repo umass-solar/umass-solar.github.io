@@ -4,6 +4,7 @@
   if (!root) return;
   const form = document.getElementById('pub-filters');
   const search = document.getElementById('pub-search');
+  const typeSelect = document.getElementById('pub-type');
   const year = document.getElementById('pub-year');
   const venue = document.getElementById('pub-venue');
   const count = document.getElementById('pub-count');
@@ -28,12 +29,11 @@
     venue.value = params.get('venue') || 'all';
     if (!year.value) year.value = 'all';
     if (!venue.value) venue.value = 'all';
-    const type = params.get('type') || 'all';
-    const radios = Array.from(form.querySelectorAll('[name="type"]'));
-    (radios.find(input => input.value === type) || radios[0]).checked = true;
+    typeSelect.value = params.get('type') || 'all';
+    if (!typeSelect.value) typeSelect.value = 'all';
   }
   function update(writeURL = true) {
-    const type = form.querySelector('[name="type"]:checked').value;
+    const type = typeSelect.value;
     const terms = normalize(search.value).split(' ').filter(Boolean);
     let shown = 0;
     papers.forEach(paper => {
